@@ -1,0 +1,520 @@
+---
+title: "Creating Learning Paths with Prerequisites"
+description: "Build structured learning paths with prerequisite requirements"
+category: "Course Setup"
+order: 7
+tags: ["learning paths", "prerequisites", "sequencing", "progress"]
+---
+
+# Creating Learning Paths with Prerequisites
+
+## Overview
+
+Learning paths in Brightspace allow you to create structured, sequential journeys through your course content. By combining release conditions, completion tracking, and content prerequisites, you can guide students through materials in a specific order, ensure they engage with foundational content before advancing, and create personalized learning experiences based on performance.
+
+This guide covers everything you need to know about building effective learning paths, from basic sequential content to complex branching scenarios that adapt to individual student needs.
+
+## Before You Begin
+
+- You need Instructor access to your Brightspace course
+- Content items must be created before you can add prerequisites
+- Plan your learning path structure before implementation
+- Decide which completion tracking method best fits your course goals
+- Consider how you will communicate the learning path structure to students
+
+<Callout type="info" title="What Students See">
+Students cannot see the release conditions attached to content items. They only see content that is currently available to them. Always explain your learning path structure in your syllabus or introductory materials so students understand what they need to do to progress.
+</Callout>
+
+## Understanding Learning Paths
+
+A learning path is a structured sequence of content, activities, and assessments that guides students through your course in a specific order. In Brightspace, learning paths are created using a combination of:
+
+| Component | Purpose |
+|-----------|---------|
+| **Release Conditions** | Control when content becomes visible based on student actions |
+| **Completion Tracking** | Track whether students have viewed or completed content |
+| **Prerequisites** | Require specific actions before accessing new content |
+| **Date Restrictions** | Time-based availability of content |
+
+### Types of Learning Paths
+
+| Path Type | Description | Best For |
+|-----------|-------------|----------|
+| **Linear/Sequential** | Students must complete items in a fixed order | Courses where concepts build on each other |
+| **Branching** | Students take different paths based on performance | Differentiated instruction and remediation |
+| **Self-Paced** | Students progress at their own speed with required activities | Asynchronous courses |
+| **Modular** | Students choose their own path through independent modules | Courses with distinct, non-sequential topics |
+
+## Setting Up Completion Tracking
+
+Completion tracking is the foundation of learning paths. It determines how Brightspace knows when a student has engaged with content.
+
+### Completion Tracking Types
+
+**Automatic Completion**: The system automatically marks content as complete when learners view it. For activities like discussions, file submissions, quizzes, or surveys, learners must participate before completion registers.
+
+**Manual Completion**: Learners indicate completion by selecting a checkbox at the bottom of content topics. This works well when you want students to self-assess their understanding.
+
+### Configuring Completion Tracking
+
+<Steps>
+<Step title="Navigate to Content">
+From your course navbar, click **Content** to access the Content area.
+</Step>
+
+<Step title="Select the content item">
+Click on the module or topic you want to configure.
+</Step>
+
+<Step title="Access the edit options">
+Click the three-dot menu (...) next to the content item and select **Edit Properties in Place**.
+</Step>
+
+<Step title="Expand the Completion section">
+Click on the **Completion** accordion to expand the completion settings.
+</Step>
+
+<Step title="Choose the completion method">
+Select one of the following options:
+- **Automatically when opened**: Content is marked complete when the student views it
+- **Manually by learner**: Student must check a box to indicate completion
+</Step>
+
+<Step title="Save your changes">
+Click **Save** to apply the completion tracking settings.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Switching Completion Methods">
+Changing from automatic to manual completion resets tracking for that topic. Students do not need to resubmit assignments or assessments, but their completion status will be cleared.
+</Callout>
+
+### Setting Content as Required or Optional
+
+You can designate content as required (counts toward completion) or optional (does not count toward completion):
+
+<Steps>
+<Step title="Locate the content item">
+Navigate to the module containing your content item.
+</Step>
+
+<Step title="Access the options menu">
+Click the three-dot menu (...) next to the content item.
+</Step>
+
+<Step title="Set the requirement status">
+Select either:
+- **Set as Required**: The topic is mandatory for completion tracking
+- **Set as Optional**: The topic is excluded from completion tracking
+</Step>
+</Steps>
+
+<Callout type="tip" title="Required Content Best Practice">
+Only set content as "Required" if students truly need to engage with it to succeed in the course. Too many required items can feel overwhelming. Use optional items for supplementary resources.
+</Callout>
+
+## Creating Sequential Content Prerequisites
+
+Sequential learning paths ensure students engage with content in a specific order. Use release conditions to hide later topics until earlier ones are completed.
+
+### Basic Sequential Path Setup
+
+<Steps>
+<Step title="Create your content structure">
+Create all modules and topics in the order you want students to access them.
+</Step>
+
+<Step title="Navigate to the second topic">
+Go to the topic that should be hidden until the first topic is complete.
+</Step>
+
+<Step title="Add a release condition">
+Click **Add dates and restrictions** below the topic title, or access it through **Edit Properties in Place**.
+</Step>
+
+<Step title="Create the prerequisite condition">
+Click **Create** under Release Conditions, then configure:
+- **Condition Type**: Select "Visited Content Topic" or "Completed Content Topic"
+- **Content Item**: Select the first topic that must be viewed/completed
+</Step>
+
+<Step title="Save the condition">
+Click **Create** to add the condition, then **Save** to apply changes.
+</Step>
+
+<Step title="Repeat for subsequent topics">
+Continue adding release conditions to each subsequent topic, requiring completion of the previous topic.
+</Step>
+</Steps>
+
+### Example: Linear Module Path
+
+To create a path where students must complete Week 1 before accessing Week 2:
+
+| Content Item | Release Condition |
+|--------------|-------------------|
+| Week 1: Introduction | None (always visible) |
+| Week 1 Quiz | Visited Content Topic: Week 1 Readings |
+| Week 2: Advanced Topics | Grade Value on Week 1 Quiz >= 70% |
+| Week 2 Quiz | Visited Content Topic: Week 2 Readings |
+
+<Callout type="info" title="Chained Prerequisites">
+You do not need to add every prior condition to each item. If Week 2 requires completing Week 1 Quiz, and Week 1 Quiz requires viewing Week 1 Readings, students automatically must complete the readings to access Week 2. Conditions "chain" naturally.
+</Callout>
+
+## Using Release Conditions for Sequencing
+
+Release conditions are the primary tool for creating learning path prerequisites. They determine when content becomes visible to students.
+
+### Available Condition Types
+
+**Content Conditions**
+| Condition | Use Case |
+|-----------|----------|
+| Visited Content Topic | Student has viewed a specific topic |
+| Visited All Content Topics | Student has viewed all topics in a module |
+| Completed Content Topic | Student has marked a topic complete (manual) or viewed it (automatic) |
+| Not Visited Content Topic | Student has NOT viewed a topic (inverse condition) |
+
+**Assessment Conditions**
+| Condition | Use Case |
+|-----------|----------|
+| Grade Value on Grade Item | Student achieved a specific score/percentage |
+| Score on a Quiz | Student achieved a specific quiz score |
+| Completed Quiz Attempt | Student has submitted a quiz attempt |
+| Score on Associated Rubric | Student received a specific rubric score |
+
+**Participation Conditions**
+| Condition | Use Case |
+|-----------|----------|
+| Posts Authored in Topic | Student has posted in a discussion |
+| Completed Survey Attempt | Student has completed a survey |
+| Checklist Item Completed | Student has completed a checklist item |
+
+**Enrollment Conditions**
+| Condition | Use Case |
+|-----------|----------|
+| Group Enrollment | Student is enrolled in a specific group |
+| Section Enrollment | Student is in a specific section |
+
+### Condition Logic: AND vs OR
+
+When you attach multiple release conditions to a single item, you control the logic:
+
+**All conditions must be met (AND)**: Students must satisfy every condition before gaining access. This is the default behavior.
+
+**Any condition must be met (OR)**: Students only need to meet one condition to gain access.
+
+<Steps>
+<Step title="Add multiple conditions">
+Add your first release condition, then click **Create** again to add additional conditions.
+</Step>
+
+<Step title="Select the logic type">
+Look for the option that says **All conditions must be met** or **Any condition must be met** and select the appropriate logic.
+</Step>
+
+<Step title="Save your changes">
+Click **Save** to apply all conditions to the content item.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Avoid Circular Conditions">
+Never create conditions that students cannot meet. For example, do not require viewing Topic B to access Topic A if Topic A is also required to access Topic B. This creates an impossible loop.
+</Callout>
+
+## Creating Branching Paths
+
+Branching paths allow students to take different routes through your content based on their performance or choices. This enables differentiated instruction and personalized learning.
+
+### Performance-Based Branching
+
+Create different paths based on quiz or assignment scores:
+
+<Steps>
+<Step title="Create the assessment">
+Create a quiz or assignment that will determine the branching point.
+</Step>
+
+<Step title="Create content for each path">
+Create separate modules or topics for each branch:
+- **Mastery Path**: Advanced content for students who demonstrate understanding
+- **Remediation Path**: Additional practice for students who need more support
+</Step>
+
+<Step title="Set conditions for the mastery path">
+On your advanced content, create a release condition:
+- **Condition Type**: Grade Value on Grade Item
+- **Grade Item**: Select your assessment
+- **Condition**: Score is greater than or equal to 80%
+</Step>
+
+<Step title="Set conditions for the remediation path">
+On your remediation content, create a release condition:
+- **Condition Type**: Grade Value on Grade Item
+- **Grade Item**: Select your assessment
+- **Condition**: Score is less than 80%
+</Step>
+
+<Step title="Add a convergence point">
+Create content where both paths merge back together, with release conditions that allow access from either path.
+</Step>
+</Steps>
+
+### Example: Quiz-Based Branching
+
+| Content Item | Release Condition | Purpose |
+|--------------|-------------------|---------|
+| Unit 1 Content | None | Core instruction |
+| Unit 1 Quiz | Completed Unit 1 Content | Assessment |
+| Unit 2: Standard | Quiz Score >= 70% | Normal progression |
+| Unit 1B: Extra Practice | Quiz Score < 70% | Remediation |
+| Unit 1 Quiz Retake | Completed Unit 1B Content | Second attempt |
+| Unit 2: Standard | Quiz Retake Score >= 70% OR original >= 70% | Access after remediation |
+
+<Callout type="tip" title="Communicate the Path Structure">
+Students seeing remediation content may feel discouraged. Frame remediation positively as "additional practice" or "skill building" rather than as a penalty for poor performance.
+</Callout>
+
+### Group-Based Branching
+
+Deliver different content to different groups for projects, role-based learning, or differentiated assignments:
+
+<Steps>
+<Step title="Create your groups">
+Use the Groups tool to create the groups you need (Project Team A, Project Team B, etc.).
+</Step>
+
+<Step title="Create group-specific content">
+Create separate modules or topics for each group's unique content.
+</Step>
+
+<Step title="Set group-based conditions">
+On each group's content, create a release condition:
+- **Condition Type**: Group Enrollment
+- **Group Category**: Select your group category
+- **Group**: Select the specific group
+</Step>
+</Steps>
+
+## Self-Paced Learning Configurations
+
+Self-paced learning allows students to progress through content at their own speed while still ensuring they engage with required materials.
+
+### Setting Up Self-Paced Modules
+
+<Steps>
+<Step title="Create modular content">
+Organize content into independent modules that can be completed in any order, or sequential modules that build on each other.
+</Step>
+
+<Step title="Set completion requirements">
+For each module, set completion tracking on all required content items.
+</Step>
+
+<Step title="Create module assessments">
+Add a quiz or assignment at the end of each module to assess understanding.
+</Step>
+
+<Step title="Configure progression rules">
+If modules are sequential, add release conditions requiring:
+- Completion of all required topics in the previous module
+- Achieving a minimum score on the module assessment
+</Step>
+
+<Step title="Remove date restrictions (optional)">
+For true self-paced learning, remove start and end dates so students can access content when ready.
+</Step>
+</Steps>
+
+### Combining Self-Paced with Deadlines
+
+You can create flexible self-paced learning with soft structure:
+
+| Element | Configuration |
+|---------|---------------|
+| Content modules | Available immediately, self-paced completion |
+| Module assessments | Soft due dates as guidelines |
+| Major assignments | Hard due dates for accountability |
+| Final exam/project | Fixed date all students must meet |
+
+<Callout type="info" title="Self-Paced Best Practice">
+Even in self-paced courses, provide recommended timelines to help students stay on track. Use checklists to show what needs to be completed and by when.
+</Callout>
+
+## Viewing Student Progress Through Paths
+
+Brightspace provides tools to monitor how students are progressing through your learning paths.
+
+### Using Class Progress
+
+<Steps>
+<Step title="Access Class Progress">
+From your course navbar, click **Course Tools** > **Class Progress**. If Class Progress is on your navbar, click it directly.
+</Step>
+
+<Step title="View the class overview">
+The dashboard displays all students with key metrics: Content Completed, Logins, Grades, and Objectives by default.
+</Step>
+
+<Step title="Customize your view">
+Click the settings icon to choose which indicators to display. Options include:
+- Content Completed
+- Content Visited
+- Assignment Submissions
+- Quiz Performance
+- Discussion Participation
+- Checklist Completion
+</Step>
+
+<Step title="Filter by groups or sections">
+Use the filters to view progress for specific groups or sections if using differentiated paths.
+</Step>
+
+<Step title="View individual progress">
+Click on a student's name to see their complete Progress Summary with all metrics.
+</Step>
+</Steps>
+
+### Key Progress Metrics
+
+| Metric | What It Shows |
+|--------|---------------|
+| **Content Completed** | Number of required content topics marked as complete |
+| **Content Visited** | Topics accessed (whether completed or not) |
+| **Quiz Performance** | Average scores and individual quiz results |
+| **Discussion Participation** | Posts read, created, and replies |
+| **Login History** | When and how often students access the course |
+| **System Access** | Most recent activity and engagement patterns |
+
+<Callout type="tip" title="Early Intervention">
+Check Class Progress regularly during the first weeks of a course. Students who fall behind on content completion early often struggle later. Reach out to those students proactively.
+</Callout>
+
+### Viewing Content Completion Summary
+
+For specific content items, you can see who has completed them:
+
+<Steps>
+<Step title="Navigate to the content item">
+Go to **Content** and click on the specific topic.
+</Step>
+
+<Step title="View completion details">
+Click on the **Completion Summary** tab to see which students have completed the item.
+</Step>
+
+<Step title="Filter the results">
+Use filters to view **All**, **Completed**, or **Incomplete** learners.
+</Step>
+
+<Step title="Take action">
+Hover over student names to send emails or messages to those who have not completed the content.
+</Step>
+</Steps>
+
+## Best Practices for Learning Path Design
+
+### Planning Your Learning Path
+
+<Steps>
+<Step title="Map your learning objectives">
+Start by identifying what students should know or be able to do at each stage of the course.
+</Step>
+
+<Step title="Identify dependencies">
+Determine which content truly requires prerequisites versus content that can be accessed independently.
+</Step>
+
+<Step title="Keep paths simple">
+Start with simple linear paths before adding complexity. Too many conditions can confuse students and make troubleshooting difficult.
+</Step>
+
+<Step title="Document your conditions">
+Keep a record of all release conditions you create. This helps with troubleshooting and course maintenance.
+</Step>
+
+<Step title="Test thoroughly">
+Before students access the course, test your learning path using a test student account if possible.
+</Step>
+</Steps>
+
+### Condition Best Practices
+
+**Minimize conditions**: Each condition requires additional processing time. Use only the conditions you truly need.
+
+**Avoid redundant conditions**: If Topic C requires Topic B, and Topic B requires Topic A, you do not need to add Topic A as a condition for Topic C.
+
+**Use descriptive names**: Name your conditions clearly so you can identify them later (e.g., "Week 1 Quiz Passed" rather than "Quiz Score >= 70").
+
+**Reuse existing conditions**: Once created, conditions can be attached to multiple items. Reuse rather than recreate.
+
+### Communicating with Students
+
+<Callout type="info" title="Transparency">
+Students often feel frustrated when they cannot access content without understanding why. Proactively explain your learning path structure.
+</Callout>
+
+Include in your course introduction:
+- An explanation of how the learning path works
+- What students need to do to unlock content
+- How to check their progress
+- Who to contact if they believe content should be available but is not
+
+### Performance Considerations
+
+| Issue | Solution |
+|-------|----------|
+| Slow page loading | Reduce the number of conditions per item |
+| Student confusion | Simplify the path structure |
+| Difficult troubleshooting | Document all conditions and test before launch |
+| Accessibility concerns | Ensure all paths lead to the same learning objectives |
+
+## Troubleshooting Learning Paths
+
+### Common Issues and Solutions
+
+| Problem | Possible Cause | Solution |
+|---------|---------------|----------|
+| Student cannot access content | Release condition not met | Check which conditions are unsatisfied |
+| Condition appears met but content hidden | Completion tracking not configured | Verify completion tracking is enabled |
+| Content visible to some students but not others | Group-based conditions | Check student group enrollment |
+| Circular dependency error | Conflicting conditions | Review condition logic and remove circular references |
+| Completion not registering | External tools (LTI) | External tools may not track completion; use manual |
+
+### Checking Student Conditions
+
+<Steps>
+<Step title="Go to Class Progress">
+Navigate to **Course Tools** > **Class Progress**.
+</Step>
+
+<Step title="Find the student">
+Locate the student having issues.
+</Step>
+
+<Step title="View their content completion">
+Click on their name and check the Content Visited/Completed metrics.
+</Step>
+
+<Step title="Verify prerequisite completion">
+Confirm they have completed the items required by your release conditions.
+</Step>
+
+<Step title="Check grade conditions">
+If using grade-based conditions, verify the student has the required score in the Grades tool.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Condition Reset Limitation">
+Once a learner meets a release condition, it is permanently cleared for that individual and cannot be reset, even if circumstances change. The only way to reset conditions is to remove and re-add the learner to the course.
+</Callout>
+
+## Related Guides
+
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Class Progress Tracking](/docs/analytics/class-progress)
+- [Creating Groups](/docs/groups/creating-groups)
+- [Quiz Settings](/docs/quizzes/quiz-settings)

@@ -1,0 +1,401 @@
+---
+title: "Using the Accessibility Checker"
+description: "Use Brightspace's built-in tools to check content accessibility"
+category: "Accessibility"
+order: 2
+tags: ["accessibility checker", "a11y", "WCAG", "compliance"]
+---
+
+# Using the Accessibility Checker
+
+## Overview
+
+Brightspace includes a built-in Accessibility Checker that scans your HTML content for common accessibility issues. This tool helps ensure your course materials meet WCAG 2.1 AA standards and are accessible to all students, including those using assistive technologies like screen readers.
+
+The Accessibility Checker is available within the Brightspace Editor (HTML Editor) wherever you create or edit content, including Content pages, Announcements, Discussion topics, Quiz questions, Assignment instructions, and Calendar events.
+
+<Callout type="info" title="Icon Update (February 2025)">
+The Accessibility Checker icon was updated in the February 2025 Brightspace release. The icon is now a human figure within a circle, replacing the previous eye symbol with a check mark. This change improves user recognition and understanding.
+</Callout>
+
+## Accessing the Accessibility Checker
+
+<Steps>
+<Step title="Open the HTML Editor">
+Navigate to any content area where you can edit HTML. This includes Content pages, Announcements, Discussion topics, Quiz questions, and Assignment instructions. Click **Edit HTML** or use the editor to create new content.
+</Step>
+
+<Step title="Expand the toolbar if needed">
+If you do not see the full toolbar, click the **three dots (More Actions)** button in the upper right corner of the editor to expand it and reveal additional tools.
+</Step>
+
+<Step title="Locate the Accessibility Checker">
+Find the **Check Accessibility** icon on the far right of the editor toolbar. It appears as a human figure within a circle (updated February 2025). The icon is typically located next to the Spellcheck button.
+</Step>
+
+<Step title="Run the checker">
+Click the **Check Accessibility** icon. The checker will automatically scan your content and display the results in a panel.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Check Before Publishing">
+Make it a habit to run the Accessibility Checker before saving and publishing any HTML content. This takes just a few seconds and can catch issues before students encounter them.
+</Callout>
+
+## What the Checker Looks For
+
+The Accessibility Checker scans for common accessibility issues that violate WCAG standards. Here is what it detects:
+
+| Issue Category | What It Checks |
+|----------------|----------------|
+| **Images** | Missing or inadequate alternative text |
+| **Headings** | Skipped heading levels or improper hierarchy |
+| **Color Contrast** | Text that does not meet contrast ratio requirements |
+| **Tables** | Missing table headers, captions, or proper structure |
+| **Links** | Ambiguous or uninformative link text |
+| **Lists** | Improperly formatted lists |
+| **Text Formatting** | Text formatted to look like headings without proper tags |
+
+### Limitations of Automated Checking
+
+<Callout type="warning" title="Automated Tools Have Limits">
+The Accessibility Checker cannot verify everything. It cannot determine if alt text accurately describes an image, if content is logically organized, or if captions are correct. Always perform manual checks in addition to using the automated tool. The checker does not replace real-user testing.
+</Callout>
+
+## Understanding Accessibility Scores
+
+When you run the Accessibility Checker, results are organized by severity:
+
+### Issue Severity Levels
+
+| Level | Description | Action Required |
+|-------|-------------|-----------------|
+| **Errors** | Definite accessibility barriers that will prevent some users from accessing content | Must fix before publishing |
+| **Warnings** | Potential issues that may affect accessibility | Review and address when possible |
+| **Manual Checks** | Items that require human judgment to verify | Review to ensure accessibility |
+
+### Reading the Results
+
+For each issue found, the checker provides:
+
+1. **Issue description**: A clear explanation of what the problem is
+2. **Why it matters**: Information about how the issue affects users
+3. **Location**: Where the issue occurs in your content
+4. **Repair option**: A way to fix the issue directly in the checker
+
+## Fixing Common Issues
+
+### Image Alt Text Warnings
+
+Missing or inadequate alternative text is one of the most common accessibility issues.
+
+<Steps>
+<Step title="Identify the flagged image">
+The checker will display the message "Images must have alternative text" and highlight the image missing alt text.
+</Step>
+
+<Step title="Open the repair panel">
+Click the **Repair** button or the **question mark icon** next to the warning to see repair options.
+</Step>
+
+<Step title="Add descriptive alt text">
+Enter alternative text that describes what the image conveys. Keep it concise (under 100 characters when possible) and focus on the image's purpose in context.
+
+**Good example**: "Bar chart showing enrollment growth of 25% from 2023 to 2024"
+
+**Poor example**: "Chart" or "image1.jpg"
+</Step>
+
+<Step title="Mark decorative images appropriately">
+If the image is purely decorative and adds no informational value, select **This image is decorative**. This inserts null alt text so screen readers skip the image.
+</Step>
+</Steps>
+
+<Callout type="info" title="Alt Text Best Practices">
+Do not begin alt text with "Image of" or "Picture of" because screen readers already announce that it is an image. Focus on what the image communicates, not its visual appearance.
+</Callout>
+
+### Heading Structure Issues
+
+The checker flags heading problems when the hierarchical structure is incorrect.
+
+**Common heading errors:**
+- "Heading order must be sequential" - You skipped a heading level (e.g., H1 to H3)
+- "Page must contain a heading" - No heading structure exists
+
+<Steps>
+<Step title="Understand the correct hierarchy">
+Headings must follow a logical order:
+- **H1**: Page title (use only once per page)
+- **H2**: Major sections
+- **H3**: Subsections within H2
+- **H4**: Sub-subsections within H3
+
+Never skip levels. Do not jump from H1 to H3.
+</Step>
+
+<Step title="Fix using the Format dropdown">
+Select the incorrectly formatted text, click the **Format** dropdown (may show "Paragraph"), and choose the appropriate heading level.
+</Step>
+
+<Step title="Remove false headings">
+If you made text bold and large to look like a heading without using heading styles, either apply the correct heading level or change it back to normal paragraph text.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Bold Text Is Not a Heading">
+Making text bold and larger does not create a heading. You must use the Heading styles (H1-H6) in the editor. Bold text that looks like a heading is invisible to screen reader navigation.
+</Callout>
+
+### Color Contrast Problems
+
+The Accessibility Checker identifies text that does not meet WCAG contrast requirements.
+
+**Contrast requirements:**
+- Normal text (under 18pt or 14pt bold): **4.5:1** minimum contrast ratio
+- Large text (18pt+ or 14pt+ bold): **3:1** minimum contrast ratio
+
+<Steps>
+<Step title="Review the flagged content">
+The checker will highlight text with insufficient contrast and display a message like "Text must have a contrast ratio of at least 4.5:1" or "Large text must have a contrast ratio of at least 3:1."
+</Step>
+
+<Step title="Use the built-in color checker">
+When you select a font color in the Brightspace HTML Editor, the Contrast Ratio is calculated and indicates whether it conforms to WCAG 2.0 standards.
+</Step>
+
+<Step title="Adjust colors">
+Choose a darker text color or lighter background color to increase contrast. Use a contrast checker tool like WebAIM Contrast Checker to find compliant color combinations.
+</Step>
+
+<Step title="Consider using default colors">
+The safest approach is to stick with Brightspace default colors, which are designed for accessibility.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Test Your Colors">
+Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to verify your color combinations before applying them.
+</Callout>
+
+### Link Text Issues
+
+Ambiguous link text like "click here" or raw URLs are flagged by the checker.
+
+**Problematic link text:**
+- "Click here"
+- "Read more"
+- "Link"
+- Raw URLs (e.g., https://example.com/page/12345)
+
+<Steps>
+<Step title="Identify problematic links">
+The checker will flag links with vague or uninformative text.
+</Step>
+
+<Step title="Edit the link text">
+Click on the link and edit the displayed text to describe where the link leads.
+
+| Instead of | Use |
+|------------|-----|
+| Click here for the syllabus | Download the course syllabus (PDF) |
+| Read more | Read the complete assignment guidelines |
+| https://example.edu/policies | View the university academic policies |
+</Step>
+
+<Step title="Add link titles when using the Insert Link tool">
+When inserting a link, fill in both the URL field and a descriptive title. Screen readers will announce the title, making navigation much easier than hearing a URL read letter by letter.
+</Step>
+</Steps>
+
+### Table Accessibility
+
+Tables without proper headers and structure are flagged as accessibility issues.
+
+**Common table errors:**
+- "Tables must have captions"
+- "Table headers must be defined"
+- Missing row or column headers
+
+<Steps>
+<Step title="Add table headers">
+Select the cells that should be headers (typically the first row). Right-click and choose **Table Cell Properties**, then set **Cell Type** to **Column Header** or **Row Header**.
+</Step>
+
+<Step title="Add a table caption">
+Add a brief descriptive caption that indicates the content of the table. This helps all users understand the table's purpose.
+</Step>
+
+<Step title="Avoid complex structures">
+Do not use merged cells or nested tables. Keep tables simple with clearly defined headers.
+</Step>
+
+<Step title="Never leave cells empty">
+Empty cells confuse screen readers. Use "N/A", "-", or "None" when a cell has no applicable data.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Tables Are for Data Only">
+Do not use tables for visual layout purposes. Tables should contain actual tabular data with logical row and column relationships. For layout purposes, use other formatting options.
+</Callout>
+
+## Running Checks on Uploaded Files
+
+The built-in Brightspace Accessibility Checker only works on HTML content created directly in the editor. It does not check uploaded files like Word documents, PDFs, or PowerPoint presentations.
+
+### For Uploaded Documents
+
+<Steps>
+<Step title="Check documents before uploading">
+Use Microsoft Word's built-in accessibility checker (**Review > Check Accessibility**) before uploading documents to Brightspace.
+</Step>
+
+<Step title="Fix issues in the source file">
+Address all errors and warnings in the original document, then re-upload to Brightspace.
+</Step>
+
+<Step title="Consider HTML alternatives">
+Whenever possible, copy content from documents into Brightspace HTML pages. This allows the built-in checker to help you and ensures consistent accessibility.
+</Step>
+</Steps>
+
+## Ally Integration (If Available)
+
+Some institutions integrate **Anthology Ally** (formerly Blackboard Ally) with Brightspace. Ally provides additional accessibility features beyond the built-in checker.
+
+<Callout type="info" title="Check with Your Institution">
+Ally is a separate product that must be purchased and enabled by your institution. Contact your IT department or instructional technology team to find out if Ally is available.
+</Callout>
+
+### What Ally Provides
+
+If your institution has Ally enabled, you will see additional features:
+
+#### Accessibility Score Gauges
+
+When you upload content (documents, presentations, PDFs, HTML pages) to your course, colored gauge indicators appear next to each item. These gauges show the accessibility score:
+
+| Score Range | Gauge Color | Description |
+|-------------|-------------|-------------|
+| **0-33% (Low)** | Red | Severe accessibility issues that need immediate attention |
+| **34-66% (Medium)** | Orange/Yellow | Somewhat accessible but needs improvement |
+| **67-99% (High)** | Light Green | Accessible with minor improvements possible |
+| **100% (Perfect)** | Green | No accessibility issues detected |
+
+<Callout type="tip" title="Instructor-Only Visibility">
+Ally score indicators are visible only to instructors. Students do not see these gauges, so do not worry about unfinished content showing low scores to your class.
+</Callout>
+
+#### Instructor Feedback Panel
+
+Click on any Ally gauge indicator to open the feedback panel, which provides:
+
+- A preview of the document with accessibility issues highlighted
+- The file's accessibility score
+- Detailed explanations of each issue
+- Step-by-step instructions for fixing problems
+- The ability to download, fix, and re-upload files directly
+
+#### AI Alt Text Assistant
+
+When images lack alternative text, Ally's AI Alt Text Assistant can generate suggestions to help you write appropriate descriptions.
+
+#### Course Accessibility Report
+
+Ally can generate a comprehensive Course Accessibility Report that shows:
+
+- Overall accessibility score for the entire course
+- Breakdown of content by file type
+- Quick links to content with the easiest issues to fix
+- Content with the most severe issues
+- A complete list of all files with accessibility issues
+
+<Steps>
+<Step title="Access the Course Accessibility Report">
+If available, you can add the Course Accessibility Report as a Content item in your course. Check with your institution for specific instructions on accessing this feature.
+</Step>
+
+<Step title="Prioritize your fixes">
+Start with content that has low scores (red gauges) and severe issues. The report helps you identify which fixes will have the greatest impact.
+</Step>
+
+<Step title="Track your progress">
+Return to the report periodically to see how your course accessibility improves as you fix issues.
+</Step>
+</Steps>
+
+#### Alternative Formats for Students
+
+With Ally, students can download course materials in alternative formats including:
+
+- Mobile-friendly HTML
+- Audio (MP3)
+- ePub (for e-readers)
+- Electronic Braille
+- Translated versions
+
+<Callout type="warning" title="Alternative Formats Are Not a Substitute">
+Ally's alternative formats are based on your original content quality. If your source document lacks alt text or proper structure, the alternative formats will have the same problems. Always create accessible source documents.
+</Callout>
+
+## Accessibility Checker Quick Reference
+
+Use this checklist when running the Accessibility Checker:
+
+### Before Running the Checker
+
+- [ ] Content is complete and ready for review
+- [ ] Images have been added with the Insert Image tool (not copy-pasted)
+- [ ] Headings use proper heading styles (not just bold text)
+
+### After Running the Checker
+
+- [ ] All **Errors** have been fixed
+- [ ] **Warnings** have been reviewed and addressed where appropriate
+- [ ] **Manual Checks** have been verified by visual inspection
+
+### Common Fixes at a Glance
+
+| Issue | Quick Fix |
+|-------|-----------|
+| Missing alt text | Click Repair, add descriptive text |
+| Skipped heading level | Use Format dropdown to apply correct level |
+| Low contrast | Choose darker text or lighter background |
+| Vague link text | Edit link to describe destination |
+| Table without headers | Set first row cells as Column Headers |
+| Table without caption | Add descriptive caption in table properties |
+
+## Troubleshooting
+
+### Checker Not Finding Issues
+
+If the checker reports no issues but you suspect problems exist:
+
+- The checker only scans HTML content in the current editor, not uploaded files
+- Some issues require manual verification (like whether alt text is accurate)
+- Copy-pasted content may have hidden accessibility problems
+
+### Checker Shows Issues That Seem Incorrect
+
+- **Decorative image flagged**: If you marked an image as decorative and the checker still flags it, click **Ignore**. The checker is asking you to confirm the image is truly decorative.
+- **Heading levels flagged in templates**: Some templates include pre-set headings. Adjust your content headings to work with the template structure.
+
+### Cannot Find the Accessibility Checker Icon
+
+- Click the **three dots (More Actions)** button to expand the toolbar
+- The icon is a human figure in a circle (updated February 2025)
+- The icon is typically on the far right of the toolbar, near Spellcheck
+
+## Related Guides
+
+- [Making Content Accessible](/docs/accessibility/making-content-accessible)
+- [Using the HTML Editor](/docs/course-setup/html-editor)
+- [Creating Content Modules](/docs/course-setup/creating-modules)
+- [Uploading Files](/docs/course-setup/uploading-files)
+
+## Additional Resources
+
+- [WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG21/) - Official W3C specifications
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Test color combinations
+- [D2L Community: Brightspace Accessibility Checker](https://community.d2l.com/brightspace/kb/articles/1382-improve-your-course-with-brightspace-accessibility-checker) - Official D2L documentation
+- [D2L Community: Use the Accessibility Checker on HTML-authored content](https://community.d2l.com/brightspace/kb/articles/1799-use-the-accessibility-checker-on-html-authored-content) - Detailed usage guide
+- [Anthology Ally Help](https://help.blackboard.com/Ally/Ally_for_LMS/Instructor) - If your institution uses Ally

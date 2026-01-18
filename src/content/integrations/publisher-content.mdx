@@ -1,0 +1,655 @@
+---
+title: "Publisher Content Integration"
+description: "Integrate McGraw Hill, Pearson, Cengage, and other publisher content"
+category: "Integrations"
+order: 3
+tags: ["publisher", "McGraw Hill", "Pearson", "Cengage", "textbook", "LTI"]
+---
+
+# Publisher Content Integration
+
+## Overview
+
+Publisher content integrations allow you to connect courseware from major educational publishers directly to your Brightspace course. These integrations enable single sign-on access for students, automatic grade synchronization, and deep linking to specific content. This guide covers the most common publisher integrations: McGraw Hill Connect, Pearson MyLab and Mastering, and Cengage MindTap.
+
+## Before You Begin
+
+- Your institution must have the publisher integration configured by a Brightspace administrator
+- You need instructor-level access to your Brightspace course
+- You will need an instructor account with the publisher (often created during first-time setup)
+- Students will need access codes or licenses for publisher content
+- Verify with your IT department which LTI version (1.1 or 1.3) is installed
+
+<Callout type="info" title="LTI Version Matters">
+Most publishers now support LTI 1.3 (LTI Advantage), which offers improved security and more reliable grade sync. If your institution still uses LTI 1.1, contact your administrator about upgrading. New integrations should use LTI 1.3 whenever possible.
+</Callout>
+
+## How LTI Grade Passback Works
+
+Understanding how grades flow between publisher platforms and Brightspace helps you troubleshoot issues and set up your courses correctly.
+
+### The Grade Sync Process
+
+1. **Link Creation**: When you add a graded activity link from a publisher tool, Brightspace automatically creates a corresponding grade column in your gradebook
+2. **Student Launch**: Students click the link in your course content to access the publisher platform
+3. **Account Linking**: The first time students launch, their Brightspace account is linked to their publisher account
+4. **Work Completion**: Students complete assignments within the publisher platform
+5. **Score Transmission**: The publisher platform sends scores back to Brightspace via the LTI connection
+6. **Gradebook Update**: Scores appear in your Brightspace gradebook automatically
+
+<Callout type="warning" title="First Launch Required">
+Students MUST click the LTI link from within your Brightspace course at least once to establish the connection between their accounts. Grades will not sync for students who have not launched through Brightspace.
+</Callout>
+
+### Grade Sync Timing
+
+- **Automatic sync**: Most integrations sync grades within seconds to 15 minutes of submission
+- **Batch sync**: Some platforms sync grades in batches at regular intervals
+- **Manual sync**: You can usually force a manual sync from within the publisher platform if needed
+
+### What Does NOT Transfer
+
+Be aware of these limitations with grade passback:
+
+- **Grade categories**: Publisher category structures do not transfer to Brightspace
+- **Weighted scores**: You must set up weighting manually in your Brightspace gradebook
+- **Late penalties**: Some publisher late penalty settings may not reflect in Brightspace
+- **Extra credit**: May require manual adjustment in Brightspace
+
+---
+
+## McGraw Hill Connect Setup
+
+McGraw Hill Connect provides online homework, adaptive learning, and course content. The integration has been updated recently, so follow these current instructions.
+
+<Callout type="warning" title="Course Copy Warning">
+McGraw Hill changed their integration process. If you copy your course from a previous semester with McGraw Hill links, you must DELETE the old links and pair your Connect course using the new process. Old links will not work in your new course.
+</Callout>
+
+### Initial Setup
+
+<Steps>
+<Step title="Navigate to your course content">
+Log into Brightspace and open the course you want to integrate with McGraw Hill Connect. Click **Content** in the course navbar.
+</Step>
+
+<Step title="Create a module for Connect content">
+Create a new module (e.g., "McGraw Hill Connect" or "Homework") where students will access Connect. This keeps your course organized and makes the link easy to find.
+</Step>
+
+<Step title="Add the McGraw Hill Connect link">
+In your new module, click **Existing Activities** and select **McGraw Hill Connect** from the dropdown menu. If you don't see it listed, contact your IT administrator to verify the integration is enabled.
+</Step>
+
+<Step title="Create or link your McGraw Hill account">
+When the McGraw Hill window opens:
+- Click **Create Account** if you're new to McGraw Hill Connect
+- Click **Sign In** if you already have a McGraw Hill instructor account
+
+Your Brightspace and McGraw Hill accounts will be linked permanently.
+</Step>
+
+<Step title="Pair with a Connect section">
+Click **Pair with a Connect Section** and either:
+- Select an existing Connect course you've already created
+- Create a new Connect section for this Brightspace course
+
+Follow the McGraw Hill prompts to complete the pairing.
+</Step>
+</Steps>
+
+### Deploying Assignments to Brightspace
+
+After pairing your accounts, you need to deploy specific assignments to your Brightspace course.
+
+<Steps>
+<Step title="Access Connect course setup">
+From the McGraw Hill Connect link in your Brightspace course, navigate to your Connect course dashboard.
+</Step>
+
+<Step title="Select assignments to deploy">
+In Connect, browse or create the assignments you want students to complete. Select the assignments you wish to add to your Brightspace course.
+</Step>
+
+<Step title="Deploy to Brightspace">
+For each assignment, choose the deployment option that sends it to your Brightspace course. Select the target module in Brightspace where the link should appear, then click **Deploy**.
+</Step>
+
+<Step title="Verify deployment">
+Deployed assignments will show a D2L logo in Connect. Return to your Brightspace course and verify the assignment links appear in the correct module.
+</Step>
+
+<Step title="Check gradebook columns">
+Open your Brightspace gradebook and confirm that grade columns were automatically created for each deployed assignment.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Configure Before Deploying">
+Set up all assignment settings (due dates, point values, attempts) in Connect BEFORE deploying to Brightspace. This ensures the correct information syncs to your course.
+</Callout>
+
+### McGraw Hill Grade Sync
+
+Grades sync automatically when students submit work in Connect. To manually sync or check sync status:
+
+<Steps>
+<Step title="Access grade sync settings">
+Click the McGraw Hill Connect quicklink in your Brightspace course and navigate to the grade sync section.
+</Step>
+
+<Step title="Review sync status">
+Check the status of each assignment to see when grades were last synced and if any errors occurred.
+</Step>
+
+<Step title="Force a manual sync if needed">
+Click **Grade Sync** or **Sync Grades** to manually push all current grades to Brightspace. This is useful after making grade adjustments in Connect.
+</Step>
+</Steps>
+
+---
+
+## Pearson MyLab and Mastering Setup
+
+Pearson MyLab and Mastering products integrate with Brightspace to provide homework, tutorials, and assessments. Pearson offers both LTI 1.1 and LTI 1.3 (Access Pearson) integrations.
+
+<Callout type="info" title="Use Access Pearson (LTI 1.3)">
+If available at your institution, use the **Access Pearson** link (LTI 1.3) rather than the legacy **MyLab and Mastering** link (LTI 1.1). LTI 1.3 provides better security and more reliable grade sync.
+</Callout>
+
+### Initial Setup (LTI 1.3 - Access Pearson)
+
+<Steps>
+<Step title="Navigate to your course content">
+Open your Brightspace course and click **Content**. Select or create the module where you want to add Pearson content.
+</Step>
+
+<Step title="Add the Pearson integration">
+Click **Existing Activities** and select:
+- **Access Pearson** (LTI 1.3) - Recommended
+- Or **Third-party Integrations** > **Pearson LTI 1.3**
+
+Do NOT select "MyLab and Mastering" if you want to use the newer integration.
+</Step>
+
+<Step title="Sign in to Pearson">
+When prompted, sign in to your Pearson instructor account. If you don't have one, follow the prompts to create an account.
+</Step>
+
+<Step title="Link or create your MyLab course">
+Follow the Pearson prompts to either:
+- Link to an existing MyLab or Mastering course
+- Create a new course for this Brightspace section
+</Step>
+
+<Step title="Configure grade sync">
+After linking your course:
+1. Navigate to **Grade sync** in your Pearson course
+2. Select which assignments should sync to Brightspace
+3. Enable **Automatic Grade Sync** for continuous synchronization
+</Step>
+
+<Step title="Wait for sync to complete">
+After enabling grade sync, it can take up to 15 minutes for assignments to appear in your Brightspace gradebook. Look for an "Items synced" confirmation message.
+</Step>
+</Steps>
+
+### Pearson Grade Sync Configuration
+
+<Steps>
+<Step title="Access grade sync settings">
+From within your Brightspace course, click the Pearson link to open your MyLab course. Navigate to the grade sync or gradebook section.
+</Step>
+
+<Step title="Select assignments for sync">
+Choose which graded activities should send scores to Brightspace. You can select individual assignments or all assignments.
+</Step>
+
+<Step title="Configure sync frequency">
+Enable automatic grade sync for real-time score updates. Some versions also allow you to set specific sync intervals.
+</Step>
+
+<Step title="Review sync status">
+Check the sync status regularly to ensure grades are transferring correctly. Look for the "Items synced" indicator.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Weighting Not Transferred">
+Weighted scores and grade categories from Pearson are NOT transferred to Brightspace. You must set up categories and weighting manually in your Brightspace gradebook after grades sync.
+</Callout>
+
+### Transitioning from LTI 1.1 to LTI 1.3
+
+If your institution is transitioning to Access Pearson (LTI 1.3):
+
+1. Do NOT use old MyLab and Mastering links in new courses
+2. Create new links using the Access Pearson option
+3. For active courses, consult Pearson documentation on transitioning mid-semester
+4. Contact your LMS administrator if you need assistance with the transition
+
+---
+
+## Cengage MindTap Setup
+
+Cengage MindTap provides interactive course content and assignments. MindTap integrates with Brightspace through both LTI 1.0/1.1 and LTI Advantage (1.3).
+
+### Creating a New Integrated Course
+
+If you haven't created your MindTap course yet, create it directly from Brightspace:
+
+<Steps>
+<Step title="Navigate to your course content">
+Open your Brightspace course and click **Content**. Create a module for your MindTap content.
+</Step>
+
+<Step title="Add the Cengage integration">
+Click **Existing Activities** and select **Cengage** or the specific Cengage product name configured at your institution.
+</Step>
+
+<Step title="Sign in to Cengage">
+Sign in to your Cengage instructor account. Your Brightspace and Cengage accounts will be linked.
+</Step>
+
+<Step title="Select your textbook or product">
+On the Select Title page:
+- Search for your textbook or product by title, author, or ISBN
+- Filter by Platform (MindTap) or License Type
+- Select your product and click **Continue**
+</Step>
+
+<Step title="Configure your MindTap course">
+On the Course Details page:
+- Specify the course name
+- Set start and end dates
+- Configure other course settings
+- Click **Finish** to create your course
+</Step>
+</Steps>
+
+### Linking an Existing MindTap Course
+
+If you already have a MindTap course created (with no students enrolled):
+
+<Steps>
+<Step title="Add the Cengage integration">
+From your Brightspace course **Content**, click **Existing Activities** > **Cengage**.
+</Step>
+
+<Step title="Choose to link existing course">
+When prompted, select the option to link an existing MindTap course rather than creating a new one.
+</Step>
+
+<Step title="Select your MindTap course">
+Browse your available MindTap courses and select the one you want to link. Note that courses with student enrollments or courses already linked to another LMS cannot be linked.
+</Step>
+
+<Step title="Confirm the link">
+Follow the prompts to confirm the connection between your Brightspace section and MindTap course.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Multi-Section Courses">
+For courses with multiple sections, first create your complete MindTap course with all learning path and scoring settings configured. Then duplicate it for each section before linking to Brightspace. This ensures consistent settings across sections.
+</Callout>
+
+### Adding Deep Links to MindTap Activities
+
+After setting up your MindTap course, create links to specific activities:
+
+<Steps>
+<Step title="Ensure MindTap course is fully configured">
+Before adding activity links:
+- Add and organize all assigned activities and course materials
+- Configure grading, attempts, feedback, and time limits
+- Set due dates and point values
+- Use consistent scheduling across your course
+</Step>
+
+<Step title="Add activity links from Brightspace">
+In your Brightspace module, click **Existing Activities** > **Cengage**. You'll see options to link to specific MindTap content.
+</Step>
+
+<Step title="Select activities to link">
+Browse your MindTap activities and select those you want to add. Note: Selecting a group does NOT select all activities in that group - you must select each activity individually.
+</Step>
+
+<Step title="Configure link settings">
+For each activity:
+- **Add to Gradebook**: Creates a grade column in Brightspace (default is on)
+- **Add to Course**: Creates a clickable link in your content module
+
+You can add to gradebook only (for grade sync) or add to course only (for navigation without grade sync).
+</Step>
+
+<Step title="Verify links and grade columns">
+Check that your activity links appear in the correct Brightspace module and that grade columns were created as expected.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Avoid Duplicates">
+Graded activities that have already been added are marked in MindTap. Do not import the same activity twice, as this creates duplicate activity links and gradebook columns.
+</Callout>
+
+### MindTap Date Synchronization
+
+Important considerations for due dates:
+
+- Due dates set in MindTap sync to Brightspace automatically
+- If your school uses Brightspace Partner integration, availability dates also sync
+- **Date changes in MindTap overwrite dates set in Brightspace**
+- Ensure your MindTap and Brightspace courses use the same time zone for consistency
+
+### MindTap Grade Sync
+
+Scores sync automatically when:
+- Assignment attempts are submitted in MindTap
+- You enter or edit scores in your MindTap gradebook
+
+For manual score syncing:
+
+<Steps>
+<Step title="Access MindTap gradebook">
+Open your MindTap course and navigate to the gradebook section.
+</Step>
+
+<Step title="Force LMS score sync">
+Click **Gradebook Actions** > **Force LMS Score Sync**. Note that manual syncs can only be requested once every 24 hours.
+</Step>
+
+<Step title="Wait for sync completion">
+Manual score syncs are processed after all current automatic syncs, so they may not be instant.
+</Step>
+</Steps>
+
+---
+
+## Student Registration and Pairing
+
+Students must properly register with publisher platforms through your Brightspace course. Incorrect registration is a common source of problems.
+
+### Student Access Process
+
+<Steps>
+<Step title="Students navigate to your course">
+Students log into Brightspace and access your course.
+</Step>
+
+<Step title="Students click the publisher link">
+Students click the publisher integration link (McGraw Hill, Pearson, Cengage, etc.) within your course content. This is the ONLY correct way to access publisher content.
+</Step>
+
+<Step title="Students create or link their account">
+On first launch, students either:
+- Create a new account with the publisher
+- Link an existing publisher account to their Brightspace account
+</Step>
+
+<Step title="Students enter their access code">
+If required, students enter their access code, which can be:
+- A code purchased with the textbook
+- A code purchased separately online
+- A code provided through an institutional program (e.g., Inclusive Access)
+
+Many publishers offer 14-day temporary access for students waiting for their access code.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Critical: Access Through Brightspace Only">
+Students should NEVER go directly to the publisher website to register. The only correct route is through the links in your Brightspace course. Registering directly on the publisher site creates separate accounts that will not sync grades.
+</Callout>
+
+### Common Student Registration Issues
+
+**Problem: Student registered on publisher site directly**
+- The student created a separate account not linked to Brightspace
+- **Solution**: Have the student click the Brightspace link. They may need to link their existing publisher account or contact publisher support to merge accounts.
+
+**Problem: Student used different email address**
+- Grades won't sync if email addresses don't match between systems
+- **Solution**: Ensure students use their school email address in both Brightspace and the publisher platform.
+
+**Problem: Student has two publisher accounts**
+- Work completed in one account won't sync if a different account is linked to Brightspace
+- **Solution**: Contact publisher technical support to merge the accounts.
+
+**Problem: Access code not working**
+- Code may be expired, already used, or for wrong product
+- **Solution**: Have student contact publisher support with their access code details.
+
+### Student Access Code Options
+
+Most publishers offer multiple ways for students to gain access:
+
+| Option | Description |
+|--------|-------------|
+| **Access code with textbook** | Physical or digital code bundled with textbook purchase |
+| **Standalone access code** | Purchased separately from bookstore or publisher website |
+| **Credit/debit card** | Direct purchase within the publisher platform |
+| **Institutional program** | Inclusive Access, First Day, or similar programs with automatic billing |
+| **Temporary access** | 14-day free trial while waiting for access code |
+
+---
+
+## Managing Multiple Publisher Tools
+
+Many courses use content from multiple publishers. Here's how to manage this effectively.
+
+### Organization Best Practices
+
+<Steps>
+<Step title="Create separate modules for each publisher">
+Create distinct modules in your Brightspace course for each publisher:
+- "McGraw Hill Connect Assignments"
+- "Pearson MyLab Homework"
+- "Cengage MindTap Readings"
+
+This helps students navigate and reduces confusion.
+</Step>
+
+<Step title="Use clear naming conventions">
+Name links clearly so students know what they're accessing:
+- "Chapter 1 Connect Homework" (not just "Assignment 1")
+- "MyLab Quiz: Algebra Fundamentals"
+</Step>
+
+<Step title="Provide instructions for each platform">
+Add a text item or page at the top of each publisher module explaining:
+- What the platform is
+- How to register/access it
+- Where to get help
+</Step>
+
+<Step title="Organize your gradebook">
+Create categories in your Brightspace gradebook to organize publisher grade items:
+- McGraw Hill Connect (category)
+- Pearson MyLab (category)
+- Other Brightspace Assignments (category)
+</Step>
+</Steps>
+
+### Communicating Requirements to Students
+
+Create a course information page that lists:
+- All required digital platforms and their costs
+- Access code requirements for each platform
+- Step-by-step first access instructions
+- Links to publisher technical support
+- Your institution's bookstore information
+
+<Callout type="tip" title="Syllabus Information">
+Include publisher platform requirements in your syllabus with clear cost information. Students appreciate knowing total course material costs upfront.
+</Callout>
+
+---
+
+## Troubleshooting Grade Sync Issues
+
+Grade sync problems are the most common issue with publisher integrations. Use this guide to diagnose and resolve them.
+
+### Quick Diagnostic Checklist
+
+| Check | What to Verify |
+|-------|----------------|
+| Student launched from Brightspace | Student clicked the LTI link at least once |
+| Automatic sync enabled | Grade sync is turned on in publisher settings |
+| Grade column exists | Brightspace has a grade item for the assignment |
+| Time elapsed | Allow 15-30 minutes for sync to complete |
+| Assignment submitted | Student actually completed and submitted work |
+| Due date respected | Submission was before due date (some tools check this) |
+| Matching accounts | Student's email matches in both systems |
+
+### Common Issues and Solutions
+
+**Grades not appearing at all**
+
+<Steps>
+<Step title="Check sync settings">
+Open the publisher platform and verify automatic grade sync is enabled for your course.
+</Step>
+
+<Step title="Verify grade column exists">
+Check your Brightspace gradebook to confirm a grade column was created for the assignment.
+</Step>
+
+<Step title="Wait and recheck">
+Allow 15-30 minutes for sync to complete, then check again.
+</Step>
+
+<Step title="Force manual sync">
+Use the manual sync option in the publisher platform to push all grades.
+</Step>
+
+<Step title="Have students relaunch">
+Ask students with missing grades to click the LTI link again from Brightspace.
+</Step>
+</Steps>
+
+**Only some students' grades syncing**
+
+- **Unlinked accounts**: Students who haven't clicked the Brightspace link won't have linked accounts
+- **Different emails**: Students may have registered with different email addresses
+- **Duplicate accounts**: Students may have multiple publisher accounts
+- **Solution**: Have affected students click the Brightspace link. If issues persist, contact publisher support about account linking.
+
+**Duplicate grade columns appearing**
+
+- Often occurs when upgrading from LTI 1.1 to LTI 1.3
+- May happen if the same assignment is deployed twice
+- **Solution**: Delete the duplicate column in Brightspace. Verify which column is receiving grades before deleting.
+
+**Scores don't match between systems**
+
+- Check point values in both systems
+- Verify no weighting is applied in one system but not the other
+- Some publishers send percentage scores, not raw points
+- **Solution**: Adjust point values or weighting as needed in Brightspace.
+
+**Grades syncing late or after due date**
+
+- Check that the date range in the publisher platform covers the current term
+- Verify time zones match between systems
+- Some tools only sync grades for submissions before the due date
+- **Solution**: Adjust date settings or manually enter late grades.
+
+### When to Contact Support
+
+**Contact your institution's IT help desk when:**
+- The publisher tool is not available in your course
+- You receive persistent launch errors after clearing cache
+- You need to upgrade from LTI 1.1 to LTI 1.3
+- Grade sync issues persist after troubleshooting
+
+**Contact the publisher's technical support when:**
+- Students have account or access code issues
+- You need help with publisher platform features
+- Scores in the publisher gradebook appear incorrect
+- You need accounts merged for students
+
+### Publisher Support Contacts
+
+| Publisher | Support Resources |
+|-----------|-------------------|
+| **McGraw Hill** | Email and live chat: Sunday 12pm-12am ET, Mon-Thu 24 hours, Friday 12am-9pm ET, Saturday 10am-8pm ET |
+| **Pearson** | Contact through your Pearson rep or support.pearson.com |
+| **Cengage** | cengage.com/support or contact your Cengage representative |
+
+---
+
+## Deep Linking to Specific Content
+
+Deep linking allows you to create direct links to specific activities, chapters, or resources within publisher platforms.
+
+### Benefits of Deep Linking
+
+- Students go directly to relevant content without navigating the publisher platform
+- You can organize content by topic rather than by platform
+- Reduces confusion when using multiple resources
+- Enables grade passback for specific activities
+
+### Creating Deep Links
+
+<Steps>
+<Step title="Access the publisher integration">
+From your Brightspace module, click **Existing Activities** and select the publisher tool.
+</Step>
+
+<Step title="Browse available content">
+Navigate through the publisher's content to find the specific item you want to link (chapter, assignment, quiz, etc.).
+</Step>
+
+<Step title="Select the content item">
+Click on or select the specific item. The system will create a deep link directly to that content.
+</Step>
+
+<Step title="Configure link settings">
+Set options like:
+- Whether to include in gradebook
+- Display name for the link
+- Availability dates (if applicable)
+</Step>
+
+<Step title="Save and verify">
+Save the link and test it to ensure it opens directly to the intended content.
+</Step>
+</Steps>
+
+<Callout type="info" title="Deep Links and Grade Sync">
+Graded deep links (like specific assignments or quizzes) will create corresponding grade columns in Brightspace. Non-graded links (like reading content) will not affect the gradebook.
+</Callout>
+
+---
+
+## Best Practices for Publisher Integrations
+
+### Before the Semester
+
+1. **Test all integrations**: Click through every publisher link before students access the course
+2. **Verify grade sync**: Create a test submission and confirm grades appear in Brightspace
+3. **Document access requirements**: Clearly list what students need to purchase
+4. **Set up gradebook categories**: Organize publisher grade items into categories
+5. **Confirm time zones**: Ensure consistent time zones across all platforms
+
+### During the Semester
+
+1. **Monitor grade sync regularly**: Check weekly that grades are syncing correctly
+2. **Respond to access issues quickly**: Address student login problems promptly
+3. **Keep accounts linked**: Avoid changing email addresses or passwords mid-semester
+4. **Communicate platform requirements**: Remind students to access through Brightspace
+
+### When Copying Courses
+
+1. **Delete old publisher links**: Many integrations require fresh links each semester
+2. **Re-pair with publisher**: Follow the full setup process for the new course
+3. **Verify all settings**: Check grade sync, due dates, and availability settings
+4. **Test before students access**: Always test after copying a course
+
+<Callout type="warning" title="LTI Links and Course Copies">
+When you copy a Brightspace course, LTI links often do not work in the copied course. You must delete old links and create new ones using the publisher integration process. This is especially true for McGraw Hill Connect after their 2024 integration update.
+</Callout>
+
+## Related Guides
+
+- [External Tool Integrations](/docs/integrations/external-tools)
+- [Gradebook Setup Wizard](/docs/gradebook/setup-wizard)
+- [Creating Grade Items](/docs/gradebook/grade-items)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
+- [Common Issues and Troubleshooting](/docs/troubleshooting/common-issues)

@@ -1,0 +1,439 @@
+---
+title: "Forums vs Topics vs Threads"
+description: "Understanding the discussion structure in Brightspace"
+category: "Discussions"
+order: 1
+tags: ["forums", "topics", "threads", "discussions", "structure"]
+---
+
+# Forums vs Topics vs Threads
+
+## Overview
+
+Understanding how Brightspace organizes discussions is essential before creating your first discussion activity. Brightspace uses a four-level hierarchy: Forums contain Topics, Topics contain Threads, and Threads contain Replies. This guide explains each level, when to use forums versus topics, the settings available at each level, and best practices for organizing discussions effectively.
+
+<Callout type="info" title="Key Concept">
+Students cannot post directly to a Forum. You must create at least one Topic within a Forum for students to participate. A common mistake is creating only a forum and wondering why students cannot post anything.
+</Callout>
+
+## The Discussion Hierarchy
+
+Brightspace discussions follow a strict four-level structure. Each level has a specific purpose and different settings available.
+
+### Visual Hierarchy
+
+```
+Course Discussions
+    Forum: Module 1 Discussions
+        Topic: Week 1 Reading Response
+            Thread: Student A's Response
+                Reply: Student B's Comment
+                Reply: Instructor Feedback
+            Thread: Student C's Response
+                Reply: Student A's Comment
+        Topic: Week 2 Case Study Analysis
+            Thread: Student B's Analysis
+```
+
+### Level 1: Forums (Container)
+
+**What they are**: Forums are the top-level organizational containers for grouping related discussion topics. Think of them as folders or categories.
+
+**Who creates them**: Instructors only
+
+**Key characteristics**:
+- Forums cannot contain actual posts - only Topics
+- Students cannot write directly in a forum
+- An empty forum is essentially non-functional
+- Forum settings cascade down to all Topics within them
+- Forums can be organized by week, module, unit, or theme
+
+**Example forum names**:
+- "Weekly Reflections"
+- "Module 1: Introduction to Psychology"
+- "Group Project Discussions"
+- "Q&A and Help"
+
+### Level 2: Topics (Discussion Prompt)
+
+**What they are**: Topics are the actual discussion prompts where conversations take place. Each topic contains your question or assignment instructions.
+
+**Who creates them**: Instructors only
+
+**Key characteristics**:
+- Topics live within Forums
+- This is where you write your discussion prompt or question
+- Topics can be graded and linked to the Gradebook
+- Most discussion settings are configured at the Topic level
+- Topics can have their own availability dates and release conditions
+
+**Example topic names**:
+- "Introduce Yourself to the Class"
+- "Week 3: Analyze the Case Study"
+- "Chapter 5 Reading Response"
+- "Group A: Project Planning Discussion"
+
+### Level 3: Threads (Student Posts)
+
+**What they are**: Threads are individual posts created by students (or instructors) in response to a Topic. Each thread represents one person's initial contribution.
+
+**Who creates them**: Students and instructors
+
+**Key characteristics**:
+- Threads do NOT copy when you copy a course (they are student-generated content)
+- Each student typically creates one thread per topic
+- Threads can include file attachments, videos, and audio
+- Instructors can grade individual threads
+- Threads can be pinned to the top of the topic for visibility
+
+### Level 4: Replies (Responses)
+
+**What they are**: Replies are responses to existing threads. They form the conversational back-and-forth within a discussion.
+
+**Who creates them**: Students and instructors
+
+**Key characteristics**:
+- Replies are nested under the original thread
+- Students can reply to classmates or to instructor posts
+- Replies can also include attachments
+- Some grading schemes include both threads AND replies
+
+## When to Create a Forum vs a Topic
+
+Understanding when to create new forums versus adding topics to existing forums helps keep your discussions organized and navigable for students.
+
+### Create a New Forum When:
+
+<Steps>
+
+<Step title="Organizing by Major Course Section">
+Create separate forums for each module, unit, or major topic in your course. This keeps discussions organized and easy to navigate.
+
+**Example**: "Module 1: Foundations", "Module 2: Advanced Concepts", "Module 3: Practical Applications"
+</Step>
+
+<Step title="Separating Discussion Types">
+Create different forums for different purposes, such as graded discussions versus informal Q&A.
+
+**Example**: "Graded Weekly Discussions", "Course Q&A", "Study Groups"
+</Step>
+
+<Step title="Setting Different Forum-Level Options">
+If you need different base settings (anonymous posting, moderation requirements) for different discussion areas, use separate forums.
+</Step>
+
+</Steps>
+
+### Create a New Topic When:
+
+<Steps>
+
+<Step title="Adding a New Discussion Prompt">
+Each new question or discussion assignment should be its own topic within the appropriate forum.
+</Step>
+
+<Step title="Continuing in an Existing Category">
+If the new discussion belongs to the same module or category, add it as a topic within the existing forum.
+</Step>
+
+<Step title="Needing Individual Grade Tracking">
+Each graded discussion typically needs its own topic since grades are tracked at the topic level.
+</Step>
+
+</Steps>
+
+<Callout type="tip" title="Organization Strategy">
+A good rule of thumb: Use forums to mirror your course structure (modules/weeks), and use topics for individual assignments or discussion prompts within each module.
+</Callout>
+
+## Forum-Level Settings
+
+When you create or edit a forum, you can configure settings that apply to ALL topics within that forum.
+
+### Available Forum Settings
+
+| Setting | Description | When to Use |
+|---------|-------------|-------------|
+| **Allow anonymous posts** | Students can hide their names from classmates (instructors still see names) | Sensitive topics where students may hesitate to share openly |
+| **A moderator must approve posts** | All posts require instructor approval before appearing | High-stakes discussions or when monitoring is critical |
+| **Users must start a thread before viewing others** | Students must post their own thread before seeing classmates' posts | Ensures original thinking before peer influence |
+| **Display forum description in topics** | Shows the forum description when viewing individual topics | Provides context within topics |
+
+<Callout type="warning" title="Inheritance">
+Settings applied at the forum level affect ALL topics within that forum. If you need different settings for individual discussions, you must apply them at the topic level instead, or create separate forums.
+</Callout>
+
+### Forum Availability Options
+
+Forums have their own visibility settings:
+
+- **Visible with access restricted**: Students see the forum name but cannot open it
+- **Visible with submission restricted**: Students can browse but not post (read-only)
+- **Hidden**: Forum is completely invisible to students
+
+<Callout type="danger" title="Critical">
+Forum-level visibility and availability settings OVERRIDE topic settings. If a forum is unavailable, all topics within it will be inaccessible regardless of their individual settings.
+</Callout>
+
+## Topic-Level Settings
+
+Topics have more configuration options than forums because this is where actual assessment and participation happens.
+
+### Assessment Settings
+
+| Setting | Description |
+|---------|-------------|
+| **Grade Out Of** | Maximum points for the discussion (leave blank for ungraded) |
+| **In Grade Book** | Choose to create a new grade item, link to existing, or exclude from gradebook |
+| **Add Rubric** | Attach a rubric for consistent grading criteria |
+| **Allow evaluation of individual posts** | Grade specific posts rather than overall participation |
+| **Calculation method** | How to calculate scores when grading individual posts |
+
+<Callout type="danger" title="Important">
+Do NOT enter zero for ungraded discussions. Leave the "Grade Out Of" field completely blank. Entering zero creates a graded item worth 0 points, which can cause confusion in your gradebook.
+</Callout>
+
+### Availability Settings
+
+| Setting | Description |
+|---------|-------------|
+| **Start Date** | When the topic becomes available |
+| **End Date** | When the topic closes |
+| **Visibility before start/after end** | What students see outside the active dates |
+| **Release Conditions** | Prerequisites students must meet before accessing |
+| **Group/Section Restrictions** | Limit visibility to specific groups or course sections |
+
+### Participation Settings
+
+| Setting | Description |
+|---------|-------------|
+| **Must start a thread before viewing others** | Ensures original responses before peer influence |
+| **Allow anonymous posts** | Students can choose to hide their name per post |
+| **Require moderator approval** | Posts held for review before appearing |
+| **Allow post ratings** | Enable five-star, up/down vote, or like functionality |
+
+### Rating Options
+
+You can enable peer ratings on posts:
+
+| Rating Type | Description |
+|-------------|-------------|
+| **Five-Star Rating** | Students rate posts on a 1-5 star scale |
+| **Up Vote / Down Vote** | Reddit-style voting with positive and negative options |
+| **Up Vote Only** | Only positive votes (like a "like" button) |
+
+## How Threads Work
+
+### Creating a Thread
+
+When students access a topic, they click "Start a New Thread" to create their initial post. Each thread includes:
+
+- **Subject line**: A title for their post
+- **Message body**: The main content with rich text formatting
+- **Attachments**: Optional files, videos, or audio recordings
+
+### Thread Features
+
+<Steps>
+
+<Step title="File Attachments">
+Students can attach documents, images, or other files by clicking "Add Attachments" below the text editor. They can upload from their computer or record video/audio directly.
+</Step>
+
+<Step title="Thread Pinning">
+Instructors can pin important threads to the top of a topic so they remain visible above other posts.
+</Step>
+
+<Step title="Thread Subscription">
+Students can subscribe to threads to receive notifications when new replies are posted.
+</Step>
+
+<Step title="Editing and Deleting">
+Students can edit or delete their own threads (unless restricted by settings). Instructors can edit or delete any thread.
+</Step>
+
+</Steps>
+
+### What Happens When Copying a Course
+
+<Callout type="warning" title="Threads Do Not Copy">
+When you copy a course from one term to another, threads (student posts) do NOT copy over. This is by design since threads are student-generated content. Only your forums, topics, and their settings will transfer.
+</Callout>
+
+## Reply Threading
+
+### How Replies Are Organized
+
+Replies appear nested under the thread they respond to, creating a conversation tree. Students can:
+
+- Reply directly to the original thread
+- Reply to another student's reply (creating nested conversations)
+- Tag other students in their replies (if enabled)
+
+### Threaded vs Unthreaded View
+
+Students can choose how to view discussions:
+
+| View | Description |
+|------|-------------|
+| **Threaded View** | Replies nested under their parent post, showing conversation hierarchy |
+| **Unthreaded View** | All posts in chronological order, regardless of what they reply to |
+
+### Managing Long Discussions
+
+For topics with many threads and replies:
+
+<Steps>
+
+<Step title="Use Sorting Options">
+Sort threads by date, author, subject, or number of replies to find specific content.
+</Step>
+
+<Step title="Pin Important Threads">
+Pin threads containing important information or exemplary responses to keep them visible.
+</Step>
+
+<Step title="Use the Search Function">
+Use the search bar within discussions to find specific content or student posts.
+</Step>
+
+<Step title="Mark Posts as Read/Unread">
+Track which posts you have reviewed by marking them as read or unread.
+</Step>
+
+</Steps>
+
+## Organizing Discussions Effectively
+
+### Best Practices for Forum Structure
+
+<Steps>
+
+<Step title="Mirror Your Course Structure">
+Create forums that match your course modules or units. This helps students find discussions relevant to their current coursework.
+</Step>
+
+<Step title="Use Consistent Naming">
+Name forums and topics consistently (e.g., "Week 1: Topic Name", "Week 2: Topic Name") so students know what to expect.
+</Step>
+
+<Step title="Limit the Number of Active Discussions">
+Too many open discussions can overwhelm students. Consider having only 1-2 active discussions at a time.
+</Step>
+
+<Step title="Provide Clear Instructions">
+Include detailed instructions in your topic description about expectations, required length, and grading criteria.
+</Step>
+
+</Steps>
+
+### Common Organizational Patterns
+
+**Pattern 1: Weekly Discussions**
+```
+Forum: Weekly Discussions
+    Topic: Week 1 Discussion
+    Topic: Week 2 Discussion
+    Topic: Week 3 Discussion
+```
+
+**Pattern 2: Module-Based Forums**
+```
+Forum: Module 1 - Introduction
+    Topic: Reading Response
+    Topic: Case Study Analysis
+Forum: Module 2 - Core Concepts
+    Topic: Concept Discussion
+    Topic: Application Exercise
+```
+
+**Pattern 3: Activity-Type Forums**
+```
+Forum: Graded Discussions
+    Topic: Week 1 Graded Discussion
+    Topic: Week 2 Graded Discussion
+Forum: Class Q&A
+    Topic: Questions About Assignments
+    Topic: Study Group Coordination
+Forum: Informal Chat
+    Topic: Introduce Yourself
+```
+
+## Examples of Good Discussion Structure
+
+### Example 1: Introductory Course
+
+```
+Forum: Getting Started
+    Topic: Introduce Yourself (Week 1)
+    Topic: Learning Goals Reflection
+
+Forum: Unit 1: Foundations
+    Topic: Chapter 1 Discussion
+    Topic: Case Study: Real-World Application
+
+Forum: Unit 2: Theory and Practice
+    Topic: Theory Discussion
+    Topic: Practice Reflection
+
+Forum: Course-Wide
+    Topic: Questions for the Instructor
+    Topic: Study Group Formation
+```
+
+<Callout type="tip" title="Why This Works">
+This structure separates introductory activities, groups graded discussions by unit, and provides a space for ongoing questions and informal collaboration.
+</Callout>
+
+### Example 2: Project-Based Course
+
+```
+Forum: Team Discussions
+    Topic: Team A Project Discussion (Group-restricted)
+    Topic: Team B Project Discussion (Group-restricted)
+    Topic: Team C Project Discussion (Group-restricted)
+
+Forum: Weekly Check-ins
+    Topic: Week 3: Progress Update
+    Topic: Week 5: Mid-Project Reflection
+    Topic: Week 7: Final Preparation
+
+Forum: Class-Wide Sharing
+    Topic: Share Your Project Ideas
+    Topic: Peer Feedback on Presentations
+```
+
+### Example 3: Seminar-Style Course
+
+```
+Forum: Reading Discussions
+    Topic: Week 1: Smith (2020) Analysis
+    Topic: Week 2: Johnson & Lee (2019) Discussion
+    Topic: Week 3: Cross-Text Comparison
+
+Forum: Student-Led Discussions
+    Topic: Student A's Discussion Lead
+    Topic: Student B's Discussion Lead
+
+Forum: Synthesis and Reflection
+    Topic: Mid-Term Reflection
+    Topic: Final Course Reflection
+```
+
+## Common Issues and Solutions
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Students cannot post to a forum | Forums need topics - students post to topics, not forums | Create at least one topic within the forum |
+| "Must post first" not working | Anonymous posting is enabled (incompatible settings) | Disable anonymous posting to use "must post first" |
+| Discussion invisible to students | Forum or topic has restrictive availability settings | Check visibility settings at both forum AND topic level |
+| Grades not syncing to gradebook | Grade item not properly linked | Verify "Grade Out Of" is set and grade item is linked |
+| Cannot add group restriction after creation | Group settings cannot be changed after topic creation | Delete topic and create a new one with correct group settings |
+
+## Related Guides
+
+- [Creating Discussion Forums and Topics](/docs/discussions/creating-discussions) - Step-by-step instructions for creating discussions
+- [Grading Discussions](/docs/discussions/grading-discussions) - How to evaluate and grade student participation
+- [Moderating Discussions](/docs/discussions/moderating-discussions) - Managing post approval and moderation
+- [Creating Groups](/docs/groups/creating-groups) - Set up groups for group discussions
+- [Release Conditions](/docs/course-setup/release-conditions) - Control when discussions become available

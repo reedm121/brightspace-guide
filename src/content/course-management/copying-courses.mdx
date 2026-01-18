@@ -1,0 +1,301 @@
+---
+title: "Copying Courses Between Terms"
+description: "Copy course content from one term to another"
+category: "Course Management"
+order: 1
+tags: ["course copy", "import", "export", "semester", "terms"]
+---
+
+# Copying Courses Between Terms
+
+## Overview
+
+When a new semester begins, you don't need to rebuild your course from scratch. Brightspace's Import/Export/Copy Components tool allows you to copy content from a previous course into a new course shell, saving hours of setup time. This guide covers how to copy courses effectively, manage dates, and avoid common pitfalls.
+
+## Before You Begin
+
+- You must have **Instructor** role access in both the source course (the one you're copying from) and the destination course (the one you're copying to)
+- Use **Chrome or Firefox** for copying courses (Safari may cause issues with the copy process)
+- Wait for any requested course merges to complete before copying
+- Have both course start dates handy if you plan to offset dates
+
+<Callout type="warning" title="No Undo Available">
+There is no way to reverse the copy process once you submit the request. Always double-check that you are in the correct destination course and have selected the correct source course before proceeding.
+</Callout>
+
+## When to Copy vs. Create New
+
+### Copy Your Course When:
+- Teaching the same course in a new term
+- Reusing content, assignments, quizzes, and rubrics from a previous offering
+- Setting up multiple sections of the same course
+- Transferring materials from a development course to a live course
+
+### Create New When:
+- Starting a completely new course design
+- The previous course structure needs major overhaul
+- You want a fresh start without any legacy content
+
+<Callout type="tip" title="Copy All for Complex Courses">
+If your course uses extensive release conditions, grade item associations, or group restrictions, copying all components at once preserves these connections. Copying items individually may break these links.
+</Callout>
+
+## Course Components You Can Copy
+
+When copying a course, you can choose to copy all components or select specific items:
+
+| Component | What Copies | Notes |
+|-----------|-------------|-------|
+| **Content** | Modules, topics, HTML pages, files | Core course structure |
+| **Assignments** | Assignment folders, settings, instructions | Turnitin settings reset to default |
+| **Quizzes** | Quizzes, questions, settings | Question randomization preserved |
+| **Question Library** | All question pools and categories | Keeps question organization |
+| **Discussions** | Forums, topics, settings | Student posts do NOT copy |
+| **Grades** | Grade items, categories | Student grades do NOT copy |
+| **Grade Settings** | Calculation methods, preferences | Weighted vs. points settings |
+| **Rubrics** | All rubrics and criteria | Maintains grade associations |
+| **Intelligent Agents** | Agent rules and criteria | Agents are disabled after copy |
+| **Checklists** | Checklist items and categories | Student progress does NOT copy |
+| **Course Homepage** | Homepage layout and widgets | Only copies with "Copy All" |
+
+## What Does NOT Copy
+
+Student-specific data is never copied between courses:
+
+- **Class lists** - Student enrollments stay with the original course
+- **Student grades** - All gradebook entries for students
+- **Assignment submissions** - Files students have submitted
+- **Discussion posts** - Student contributions to forums
+- **Quiz attempts** - Student quiz submissions and scores
+- **Release conditions for specific users** - Special access settings
+- **Calendar events** - Manually added calendar entries
+
+<Callout type="info" title="Student Data Protection">
+This is by design. Each course offering should start fresh with no previous student data. If you need to retain student work, export it separately before the term ends.
+</Callout>
+
+## Copying a Course: Step by Step
+
+<Steps>
+<Step title="Navigate to the destination course">
+Log into Brightspace and enter the **new course shell** where you want the content copied TO. This is crucial - you must be in the destination course, not the source course.
+</Step>
+
+<Step title="Access Course Admin">
+Click **Course Admin** in the course navbar. If you don't see this option, look for **Course Tools** or a gear icon.
+</Step>
+
+<Step title="Select Import/Export/Copy Components">
+On the Course Administration page, locate and click **Import/Export/Copy Components** under the Site Resources section.
+</Step>
+
+<Step title="Choose Copy Components from another Org Unit">
+Select the **Copy Components from another Org Unit** option and click **Search for offering**.
+</Step>
+
+<Step title="Find your source course">
+In the Select Course Offering window:
+- Enter the course code, name, or CRN from your source course
+- Click **Search**
+- Select the checkbox next to the correct course
+- Click **Add Selected**
+</Step>
+
+<Step title="Choose what to copy">
+You have two options:
+
+**Copy All Components** - Recommended for most cases
+- Copies everything including homepage layout
+- Preserves release conditions and grade associations
+- Fastest option
+
+**Select Components** - For selective copying
+- Choose specific items to copy
+- Useful when merging content from multiple courses
+- May require manual linking afterward
+</Step>
+
+<Step title="Wait for the copy to complete">
+A progress indicator will show the copy status. For large courses, this may take several minutes. Do not navigate away until the process completes.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Avoid Copying Announcements">
+Deselect Announcements when copying components. Copied announcements may trigger email notifications to students enrolled in the destination course, potentially revealing content before you're ready.
+</Callout>
+
+## Offsetting Dates After Copying
+
+When you copy a course from a previous term, all dates (due dates, availability dates, end dates) copy with their original values. You'll need to adjust these for the new term.
+
+### Using the Manage Dates Tool
+
+<Steps>
+<Step title="Access Manage Dates">
+After copying, go to **Course Admin** and click **Manage Dates** under the Site Resources section.
+</Step>
+
+<Step title="View all dated items">
+You'll see a list of all items with dates across your course - assignments, quizzes, discussions, content topics, and more.
+</Step>
+
+<Step title="Select items to offset">
+Check the boxes next to items you want to update. You can:
+- Select all items at once
+- Filter by tool type (Assignments, Quizzes, etc.) using the **Filter by Tool** option
+- Click **Apply Filter** after making your selection
+</Step>
+
+<Step title="Click Bulk Offset Dates">
+With your items selected, click the **Bulk Offset Dates** button.
+</Step>
+
+<Step title="Choose date types to offset">
+Select which dates to adjust:
+- **Due Date** - When work is due
+- **Start Date** - When items become available
+- **End Date** - When items are no longer accessible
+- **Other activity dates** - Additional tool-specific dates
+</Step>
+
+<Step title="Calculate the offset">
+Choose **Calculate range between two dates** (recommended):
+- In the **From** field, enter the start date of your source course (e.g., the first day of the previous semester)
+- In the **To** field, enter the start date of your destination course (e.g., the first day of the new semester)
+- Brightspace calculates the exact offset needed
+</Step>
+
+<Step title="Save and apply">
+Review the calculated offset, then click **Save**. Brightspace will update all selected dates automatically.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Verify Critical Dates">
+After bulk offsetting, manually verify important dates like exam availability windows and assignment deadlines. Double-check that dates don't fall on weekends or holidays.
+</Callout>
+
+## Special Considerations
+
+### Turnitin Assignments
+
+Turnitin settings reset to default when copied. After copying:
+
+1. Go to **Assignments** in your destination course
+2. Click **Enable** in the top right corner to regenerate Turnitin connections
+3. Verify Turnitin settings on each assignment
+
+<Callout type="warning" title="PeerMark Does Not Copy">
+PeerMark assignments cannot be copied via the course copy process. You must recreate PeerMark assignments manually in your destination course.
+</Callout>
+
+### Intelligent Agents
+
+All Intelligent Agents are **disabled by default** after copying. To enable them:
+
+1. Go to **Course Admin > Intelligent Agents**
+2. Click on each agent you want to use
+3. Toggle the agent to **Enabled**
+4. Verify the agent criteria and actions are correct for the new term
+
+### Respondus LockDown Browser
+
+If your quizzes use Respondus LockDown Browser:
+
+1. After copying, access the **Respondus LockDown Browser Dashboard** from Course Admin
+2. This updates the RLDB settings for the destination course
+3. Students cannot take RLDB-enabled exams until you complete this step
+
+### Third-Party Integrations
+
+These items typically do NOT copy and require manual setup:
+
+- **VoiceThread** links
+- **Echo360** video links
+- **Publisher content** (McGraw Hill, Pearson, etc.)
+- **External LTI tools** may need reconfiguration
+
+## Troubleshooting Common Issues
+
+### Cannot Find Source Course
+
+- Verify you have Instructor access in the source course
+- Try searching by course code instead of course name
+- Contact your IT department if the course isn't appearing
+
+### Duplicated Content
+
+If you run the copy process multiple times, content will be duplicated:
+
+- Delete duplicate items manually
+- Exception: Course files with the same name are overwritten, not duplicated
+
+### Broken Links and Associations
+
+If you copy components individually rather than all at once:
+
+- Grade item associations may be broken - manually link items to grade items
+- Release conditions may need to be reattached
+- Group associations may need to be recreated
+
+### Items Still Showing Old Dates
+
+- Use **Manage Dates** to find items with incorrect dates
+- Some tool-specific dates may need manual adjustment
+- Check availability windows in addition to due dates
+
+### Copy Process Fails or Times Out
+
+- Try copying fewer components at a time
+- Clear browser cache and try again
+- Use a wired internet connection for large courses
+- Contact IT support if issues persist
+
+## Best Practices for Course Reuse
+
+### Before the Term Ends
+
+1. **Clean up your source course** - Remove outdated content, fix any issues
+2. **Document your course structure** - Note any special configurations
+3. **Export student data** if needed for records
+
+### When Copying
+
+1. **Use Chrome or Firefox** - Safari can cause issues
+2. **Copy all at once** for complex courses with release conditions
+3. **Skip Announcements** to avoid accidental emails
+4. **Verify the source course** before clicking submit
+
+### After Copying
+
+1. **Offset dates immediately** using Manage Dates
+2. **Check homepage layout** - ensure widgets display correctly
+3. **Enable Intelligent Agents** if using them
+4. **Update Turnitin** connections
+5. **Verify external tool links** (publisher content, videos)
+6. **Review visibility settings** - all visible items remain visible
+7. **Test as a student** - use Student View to verify the course experience
+
+<Callout type="tip" title="Create a Checklist">
+Create a post-copy checklist for yourself with all the items you need to verify. This ensures consistency each time you copy a course.
+</Callout>
+
+## Common Issues
+
+### Can I copy from multiple courses into one?
+
+Yes, you can run the copy process multiple times from different source courses. Be aware that running multiple copies can create duplicate items if components have the same names.
+
+### Will my course homepage copy?
+
+Yes, but only if you select **Copy All Components**. If you copy individual components, the homepage layout does not transfer.
+
+### Can I copy to multiple destination courses at once?
+
+No, you must copy to one destination course at a time. However, you can repeat the process for each destination course using the same source.
+
+## Related Guides
+
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Release Conditions](/docs/course-setup/release-conditions)
+- [Setting Up the Gradebook](/docs/gradebook/setup-wizard)
+- [Creating Assignments](/docs/assignments/creating-assignments)

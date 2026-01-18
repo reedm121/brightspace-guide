@@ -30,10 +30,17 @@ export interface SearchResult {
   excerpt: string;
 }
 
+export interface ChatSource {
+  title: string;
+  slug: string;
+  section?: string;
+  url: string;
+}
+
 export interface ChatMessage {
   id: string;
   role: "user" | "assistant";
   content: string;
   timestamp: Date;
-  sources?: string[];
+  sources?: ChatSource[];
 }

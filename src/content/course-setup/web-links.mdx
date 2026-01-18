@@ -1,0 +1,565 @@
+---
+title: "Adding Web Links and External Content"
+description: "Embed external websites, videos, and resources in your course"
+category: "Course Setup"
+order: 5
+tags: ["links", "external content", "embed", "websites", "videos"]
+---
+
+# Adding Web Links and External Content
+
+## Overview
+
+Brightspace allows you to incorporate external resources, websites, and multimedia into your course to enhance the learning experience. From simple web links to embedded YouTube videos and interactive content, this guide covers all the ways to connect your students with resources outside of Brightspace.
+
+Understanding the difference between internal links (Quicklinks) and external links is essential for building a well-organized, portable course that works reliably across terms.
+
+## Before You Begin
+
+- Verify that external websites are accessible to students (not behind paywalls or institutional logins)
+- Test all links in an incognito/private browser window to simulate the student experience
+- Ensure videos are publicly available or have appropriate sharing settings
+- Consider accessibility implications for all external content
+- Note that some websites block iframe embedding and must open in new tabs
+
+## Understanding Quicklinks vs. External Links
+
+Brightspace offers two fundamentally different types of links. Understanding when to use each is crucial for course maintenance and portability.
+
+| Feature | Quicklinks | External Links |
+|---------|-----------|----------------|
+| **Purpose** | Link to content inside your Brightspace course | Link to websites outside Brightspace |
+| **Examples** | Assignments, quizzes, discussions, uploaded files | YouTube, websites, online articles |
+| **Portability** | Links survive course copies to new terms | May need updating if URLs change |
+| **Best Practice** | Always use for internal course content | Use for external web resources |
+
+<Callout type="warning" title="Never Copy-Paste Brightspace URLs">
+When linking to content within your course (like an assignment or discussion), always use the Quicklink feature instead of copying and pasting the URL from your browser. Quicklinks automatically update when you copy a course to a new term, while pasted URLs will break.
+</Callout>
+
+## Adding Web Links to Modules
+
+There are two main methods for adding external web links to your course content: creating a link topic or inserting links within an HTML page.
+
+### Method 1: Create a Link Topic
+
+Use this method when you want a web link to appear as its own item in the module navigation.
+
+<Steps>
+<Step title="Navigate to your module">
+Go to **Content** in your course navbar and select the module where you want to add the link.
+</Step>
+
+<Step title="Create a new link">
+Click the **Upload/Create** button and select **Create a Link**.
+</Step>
+
+<Step title="Enter the link details">
+In the Create Link dialog:
+1. Enter a **Title** - use a descriptive name that tells students what they will find
+2. Paste the **URL** of the website (make sure it starts with https://)
+3. Optionally add a **Description** to provide context
+</Step>
+
+<Step title="Configure how the link opens">
+Decide how the link should behave:
+- **Check "Open as External Resource"** (recommended) - The link opens in a new browser tab
+- **Leave unchecked** - The website loads embedded within Brightspace (if the site allows it)
+</Step>
+
+<Step title="Create the link">
+Click **Create** to add the link to your module. The link appears as a topic with a globe icon.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Best Practice: Open in New Tab">
+It is recommended to check "Open as External Resource" for most web links. This opens the site in a new tab, which is more reliable since many websites block embedding and gives students a better browsing experience.
+</Callout>
+
+### Method 2: Insert Links in an HTML Page
+
+Use this method to include web links within a larger content page alongside text, images, and other materials.
+
+<Steps>
+<Step title="Create or edit an HTML page">
+In your module, click **Upload/Create** > **Create a File** (or edit an existing HTML file).
+</Step>
+
+<Step title="Write your content">
+Add text and other content as needed. Position your cursor where you want the link to appear.
+</Step>
+
+<Step title="Insert the link">
+1. Select the text you want to turn into a hyperlink
+2. Click the **Insert Quicklink** button (chain link icon) in the HTML editor toolbar
+3. Select **URL** from the link type options
+4. Paste the external URL and click **Insert**
+</Step>
+
+<Step title="Configure the link target">
+To make the link open in a new tab:
+1. Right-click on the link you just created
+2. Select **Edit Link** or access link properties
+3. Set the Target to **New Window** (target="_blank")
+</Step>
+
+<Step title="Save the page">
+Click **Save and Close** to save your content page.
+</Step>
+</Steps>
+
+## Using Quicklinks for Internal Content
+
+Quicklinks are hyperlinks to content that already exists within your Brightspace course, such as assignments, quizzes, discussions, and uploaded files.
+
+### When to Use Quicklinks
+
+- Linking to an assignment from a content page
+- Referencing a discussion forum in an announcement
+- Creating navigation between related topics
+- Adding links in quiz or assignment instructions
+- Cross-referencing content across modules
+
+### Creating a Quicklink
+
+<Steps>
+<Step title="Open the HTML editor">
+Quicklinks can be inserted anywhere the HTML editor is available: content pages, announcements, discussion posts, assignment instructions, quiz descriptions, and more.
+</Step>
+
+<Step title="Position your cursor or select text">
+Place your cursor where you want the link, or highlight existing text to convert it into a link.
+</Step>
+
+<Step title="Click Insert Quicklink">
+Click the **Insert Quicklink** button in the editor toolbar (the chain link icon with a small arrow).
+</Step>
+
+<Step title="Select the content type">
+Choose what type of content you want to link to:
+- **Content** - Topics and modules
+- **Assignments** - Assignment folders
+- **Discussions** - Forums and topics
+- **Quizzes** - Quiz activities
+- **And more...**
+</Step>
+
+<Step title="Select the specific item">
+Browse or search for the specific item you want to link to and select it.
+</Step>
+
+<Step title="Insert the link">
+Click **Insert** to add the Quicklink. The link will display with the item's title by default, which you can edit.
+</Step>
+</Steps>
+
+<Callout type="info" title="Quicklinks Are Portable">
+When you copy your course to a new term using Import/Export/Copy Components, Quicklinks automatically update to point to the correct content in the new course. This is why you should always use Quicklinks instead of copying URLs from your browser's address bar.
+</Callout>
+
+## Embedding YouTube and Other Videos
+
+Embedding videos directly in your course allows students to watch without leaving Brightspace. There are several methods available.
+
+### Method 1: Video/Audio Topic (Simplest)
+
+<Steps>
+<Step title="Navigate to your module">
+Open **Content** and select the module where you want to add the video.
+</Step>
+
+<Step title="Add a video">
+Click **Upload/Create** and select **Video or Audio**.
+</Step>
+
+<Step title="Paste the video URL">
+Paste the YouTube URL (or URL from another video platform) directly into the field.
+</Step>
+
+<Step title="Enter a title">
+Provide a descriptive title for the video topic.
+</Step>
+
+<Step title="Add the video">
+Click **Add** or **Create**. The video will appear as a playable topic in your module.
+</Step>
+</Steps>
+
+<Callout type="info" title="Video-Only Display">
+This method displays only the video. If you need to include additional content like instructions, discussion questions, or attachments alongside the video, use Method 2 instead.
+</Callout>
+
+### Method 2: Embed in an HTML Page (Most Flexible)
+
+Use this method to combine videos with text, images, and other content on a single page.
+
+<Steps>
+<Step title="Get the video embed code">
+On YouTube:
+1. Click **Share** below the video
+2. Click **Embed**
+3. Copy the entire embed code (starts with `<iframe`)
+</Step>
+
+<Step title="Create an HTML page">
+In your module, click **Upload/Create** > **Create a File**. Enter a title for your page.
+</Step>
+
+<Step title="Insert the embed code">
+1. Click the **Insert Stuff** button in the editor toolbar (or look for the embed icon)
+2. Select **Enter Embed Code**
+3. Paste the embed code you copied from YouTube
+4. Click **Next** or **Insert**
+</Step>
+
+<Step title="Add surrounding content">
+Add any additional text, instructions, or materials around the embedded video.
+</Step>
+
+<Step title="Save the page">
+Click **Save and Close** to save your content page.
+</Step>
+</Steps>
+
+### Method 3: Search YouTube from Brightspace
+
+<Steps>
+<Step title="Create an HTML page">
+In your module, click **Upload/Create** > **Create a File**.
+</Step>
+
+<Step title="Open Insert Stuff">
+Click the **Insert Stuff** button in the HTML editor toolbar.
+</Step>
+
+<Step title="Select YouTube">
+Look for the **YouTube** option in the Insert Stuff menu.
+</Step>
+
+<Step title="Search for your video">
+Enter keywords to search YouTube directly from Brightspace. Select your desired video from the results.
+</Step>
+
+<Step title="Preview and insert">
+Preview the video to confirm it is correct, then click **Insert** to embed it in your page.
+</Step>
+</Steps>
+
+### Supported Video Platforms
+
+Most major video platforms support embedding in Brightspace:
+
+| Platform | Embed Support | Notes |
+|----------|--------------|-------|
+| YouTube | Yes | Full embed code or direct URL |
+| Vimeo | Yes | Use embed code from share options |
+| Microsoft Stream | Yes | Often integrated via LTI or embed |
+| Kaltura/MediaSpace | Yes | Institutional media server |
+| TED Talks | Yes | Use embed code from share button |
+
+<Callout type="warning" title="Copyright Considerations">
+Only embed videos that you have permission to use. For YouTube, this generally includes videos marked as public. For copyrighted films or documentaries, check with your library about licensed streaming options.
+</Callout>
+
+## Link Descriptions and Accessibility
+
+Making your links accessible ensures all students, including those using screen readers, can navigate your course effectively.
+
+### Writing Accessible Link Text
+
+| Avoid | Better |
+|-------|--------|
+| Click here | Read the research methodology guide |
+| Link | View the assignment rubric |
+| https://example.com/page | APA Citation Style Guide |
+| More info | Learn more about plagiarism prevention |
+
+<Steps>
+<Step title="Use descriptive link text">
+Link text should describe where the link goes, not just say "click here" or "link." Screen reader users often navigate by jumping between links, so each link must make sense out of context.
+</Step>
+
+<Step title="Add a title attribute">
+When creating links, use the Title field to add additional context that appears when users hover over the link.
+</Step>
+
+<Step title="Indicate external links">
+Consider noting when a link goes to an external website: "View the APA Style Guide (external site, opens in new tab)"
+</Step>
+
+<Step title="Run the accessibility checker">
+After creating content with links, click the accessibility checker button in the HTML editor toolbar to identify any issues.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Do Not Underline Non-Link Text">
+Avoid underlining text that is not a link. Users with visual disabilities may confuse underlined text for clickable links, causing frustration when clicking does nothing.
+</Callout>
+
+### Adding Link Descriptions in Content
+
+When adding links as topics (via Upload/Create > Create a Link), use the Description field to explain:
+- What students will find at the link
+- Why it is relevant to the course
+- How long it might take to read/watch
+- Any required actions (like completing a form)
+
+## Embedding External Content with Iframes
+
+Some external content beyond videos can be embedded directly in Brightspace using iframes, including interactive simulations, forms, and document viewers.
+
+### What Can Be Embedded
+
+- **Google Forms and Docs** - Surveys, shared documents
+- **Microsoft Forms** - Quizzes and surveys
+- **H5P content** - Interactive learning objects
+- **Padlet** - Collaborative boards
+- **Interactive simulations** - PhET, GeoGebra, etc.
+- **Document viewers** - Some PDF and presentation embeds
+
+### How to Embed External Content
+
+<Steps>
+<Step title="Get the embed code">
+On the external website, look for a Share or Embed option. Copy the provided iframe embed code.
+</Step>
+
+<Step title="Create an HTML page">
+In your module, create a new file using **Upload/Create** > **Create a File**.
+</Step>
+
+<Step title="Insert the embed code">
+1. Click the **Insert Stuff** button
+2. Select **Enter Embed Code**
+3. Paste the iframe code
+4. Click **Insert** or **Embed**
+</Step>
+
+<Step title="Adjust sizing if needed">
+If the embedded content appears too small or too large, you may need to edit the width and height values in the iframe code. Common sizes:
+- Width: 100% (fills available space)
+- Height: 400px to 600px (depending on content)
+</Step>
+
+<Step title="Save and test">
+Save the page and test it in Student View to ensure the embedded content displays correctly.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Not All Sites Allow Embedding">
+Many websites block iframe embedding for security reasons. If embedded content shows a blank space or error message, you will need to use a regular link instead with "Open as External Resource" checked.
+</Callout>
+
+### Embedding Google Docs/Slides/Sheets
+
+<Steps>
+<Step title="Open your Google document">
+In Google Drive, open the document, spreadsheet, or presentation you want to embed.
+</Step>
+
+<Step title="Publish to the web">
+Go to **File** > **Share** > **Publish to web**. Select the **Embed** tab.
+</Step>
+
+<Step title="Configure options">
+Choose your display options (such as auto-advance for slides) and click **Publish**.
+</Step>
+
+<Step title="Copy the embed code">
+Copy the entire iframe code provided.
+</Step>
+
+<Step title="Insert in Brightspace">
+Create an HTML page and use Insert Stuff > Enter Embed Code to paste the iframe.
+</Step>
+</Steps>
+
+## Inserting Content from Other Courses
+
+You can bring links, files, and other content from courses you have previously taught into your current course.
+
+### Using Import/Export/Copy Components
+
+<Steps>
+<Step title="Access the copy tool">
+In your destination course, go to **Course Admin** and select **Import/Export/Copy Components**.
+</Step>
+
+<Step title="Select copy option">
+Choose **Copy Components from another Org Unit** and click **Search for Offering**.
+</Step>
+
+<Step title="Find the source course">
+Search for the course you want to copy from by name or course code. You must be an instructor in both courses.
+</Step>
+
+<Step title="Select what to copy">
+Choose either:
+- **Copy All Components** - Copies everything
+- **Select Components** - Choose specific items (recommended)
+</Step>
+
+<Step title="Choose specific content (if selecting)">
+Check the boxes for the content types you want, such as:
+- Content (modules and topics)
+- Links
+- Files
+Then click **Select individual items to copy** to choose specific items within each category.
+</Step>
+
+<Step title="Complete the copy">
+Review your selections and click **Continue**, then **Finish**. Copied content is added to your course without replacing existing content.
+</Step>
+</Steps>
+
+<Callout type="info" title="What Does Not Copy">
+The following cannot be copied between courses:
+- Student data (submissions, grades, discussion posts)
+- Class roster
+- Manually added calendar events
+- Release conditions (must be recreated)
+- Intelligent Agents are copied but disabled by default
+</Callout>
+
+### Alternative: Copy from Table of Contents
+
+<Steps>
+<Step title="Navigate to Content">
+Go to **Content** in your destination course.
+</Step>
+
+<Step title="Access import options">
+Click on **Table of Contents**, then look for **Import Course** or a similar option.
+</Step>
+
+<Step title="Select source course">
+Choose **Copy Existing Course** and search for your source course.
+</Step>
+
+<Step title="Select content to import">
+Follow the prompts to select which modules and content items to copy.
+</Step>
+</Steps>
+
+## Broken Link Management
+
+Over time, external links can break when websites are reorganized, pages are removed, or URLs change. Brightspace provides tools to identify and fix broken links.
+
+### Using the Broken Link Viewer
+
+<Steps>
+<Step title="Access the Broken Link Viewer">
+Go to **Course Admin** and look for **Broken Links** (may be under an Administration or Site Resources section, depending on your institution's configuration).
+</Step>
+
+<Step title="Set the time frame">
+Select the time period you want to check for broken links (e.g., last 30 days, all time).
+</Step>
+
+<Step title="Apply and review">
+Click **Apply** to generate the list of broken links found in your course. The tool shows:
+- The broken URL
+- Where the link appears in your course
+- When the link was last checked
+</Step>
+
+<Step title="Fix each broken link">
+For each broken link:
+1. Navigate to the location shown
+2. Either update the URL if the content moved, or remove the link if the content no longer exists
+3. Test the fixed link
+</Step>
+</Steps>
+
+<Callout type="info" title="Common Causes of Broken Links">
+- Website redesigns that change URL structures
+- Removed or expired content
+- Links copied from other courses that reference non-existent content
+- Course migrations from other LMS platforms (like Blackboard)
+- Subscription-based content that has expired
+</Callout>
+
+### Preventing Broken Links
+
+1. **Use Quicklinks for internal content** - They update automatically when courses are copied
+2. **Avoid linking to temporary URLs** - Such as those with session IDs or expiration dates
+3. **Link to stable resources** - Library databases, DOIs, and institutional repositories are more reliable than direct publisher links
+4. **Check links before each term** - Review all external links when preparing your course for a new semester
+5. **Use library permalinks** - For journal articles and databases, use the persistent URLs provided by your library
+
+### What Students See with Broken Links
+
+When students click a broken Quicklink, they may see a "Not Authorized" message, which can be confusing. For external broken links, they typically see a 404 error or "Page not found" message from the external website.
+
+<Callout type="warning" title="Test as a Student">
+Use the **View as Student** feature or have a teaching assistant test links to catch issues before students encounter them.
+</Callout>
+
+## Best Practices for External Content
+
+### Do
+
+- **Test all links** before publishing and at the start of each term
+- **Use descriptive link text** that explains where the link goes
+- **Open external sites in new tabs** to keep students oriented in Brightspace
+- **Provide context** explaining why the resource is relevant
+- **Use Quicklinks** for all internal course content
+- **Run the accessibility checker** after adding links to content pages
+- **Consider mobile users** - ensure linked content works on phones and tablets
+
+### Avoid
+
+- **Linking to paywalled content** students cannot access
+- **Embedding sites that block iframes** - use regular links instead
+- **Copy-pasting Brightspace URLs** - use Quicklinks instead
+- **Vague link text** like "click here" or "link"
+- **Underlining non-link text** which confuses screen reader users
+- **Over-relying on external content** that could disappear
+
+### Organizing External Resources
+
+Consider creating a dedicated module for external resources:
+
+1. **Create a "Resources" or "Useful Links" module**
+2. **Organize links by topic or type** (e.g., Writing Resources, Research Tools, Video Tutorials)
+3. **Add descriptions** explaining each resource's purpose
+4. **Include access instructions** if students need to log in or create accounts
+
+<Callout type="tip" title="Library Integration">
+Many external resources (databases, ebooks, streaming video) may be available through your institution's library with seamless student access. Contact your librarian about linking to library-licensed content, which often provides more stable and accessible links.
+</Callout>
+
+## Common Issues
+
+### Embedded content shows blank or error
+
+- The website may block iframe embedding
+- Solution: Use a regular link with "Open as External Resource" checked instead
+
+### Link works for instructor but not students
+
+- The content may require login credentials you already have
+- Solution: Test in an incognito window or ask a student to test; consider using library permalinks
+
+### YouTube video shows "Video unavailable"
+
+- The video may be private, unlisted with sharing restrictions, or removed
+- Solution: Verify the video is public or that you have the correct sharing link
+
+### Links break after course copy
+
+- You likely copied browser URLs instead of using Quicklinks
+- Solution: Recreate the links using the Quicklink feature
+
+### Students report "Not Authorized" error
+
+- The Quicklink may point to content that was deleted or not copied properly
+- Solution: Check the Broken Link Viewer and recreate the link
+
+## Related Guides
+
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Uploading Files](/docs/course-setup/uploading-files)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
+- [External Tool Integrations](/docs/integrations/external-tools)
+- [Making Content Accessible](/docs/accessibility/making-content-accessible)

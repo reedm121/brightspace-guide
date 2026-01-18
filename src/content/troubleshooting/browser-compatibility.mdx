@@ -1,0 +1,406 @@
+---
+title: "Browser Compatibility"
+description: "Supported browsers and how to resolve browser-related issues"
+category: "Troubleshooting"
+order: 2
+tags: ["browser", "compatibility", "Chrome", "Firefox", "Safari", "Edge"]
+---
+
+# Browser Compatibility
+
+## Overview
+
+Brightspace is designed to work with modern web browsers, but ensuring you have the right browser and settings configured correctly is essential for a smooth experience. This guide covers supported browsers, recommended settings, and solutions to common browser-related problems.
+
+<Callout type="info" title="Recommended Browser">
+D2L recommends using the latest version of **Google Chrome** or **Mozilla Firefox** for the best Brightspace experience. These browsers receive the most testing and have the fewest reported issues.
+</Callout>
+
+## Supported Browsers and Versions
+
+Brightspace supports the latest stable versions of the following browsers:
+
+| Browser | Minimum Version | Notes |
+|---------|----------------|-------|
+| Google Chrome | 129+ | Recommended for best compatibility |
+| Mozilla Firefox | 130+ | Excellent alternative to Chrome |
+| Microsoft Edge | 129+ | Chromium-based Edge works well |
+| Apple Safari | 18+ | May require additional configuration |
+
+### Legacy Browser Support
+
+Brightspace can be accessed with older browser versions (legacy browsers), but D2L does not actively test against them. If you use a legacy browser, you may encounter:
+
+- Unexpected user interface behavior
+- Visual appearance issues
+- Broken or unsupported functionality
+- "Unsupported Browser" warnings
+
+### Blocked Browsers
+
+The following browsers are explicitly blocked and will not work with Brightspace:
+
+- Microsoft Internet Explorer (all versions)
+- Microsoft Edge Legacy (non-Chromium version)
+
+<Callout type="danger" title="Internet Explorer Not Supported">
+Internet Explorer is completely unsupported. If you are still using IE, you must switch to a modern browser like Chrome, Firefox, or the new Chromium-based Edge to access Brightspace.
+</Callout>
+
+## Recommended Browser Settings
+
+To ensure Brightspace works correctly, configure your browser with these settings:
+
+### Required Settings
+
+1. **JavaScript must be enabled** - Brightspace relies heavily on JavaScript for interactivity
+2. **Cookies must be enabled** - Session management requires cookies
+3. **Pop-ups should be allowed** for your Brightspace domain
+4. **Third-party cookies** may be required for integrated tools
+
+### Checking Your Browser Settings
+
+<Steps>
+<Step title="Verify JavaScript is enabled">
+JavaScript is enabled by default in all modern browsers. If you have disabled it, re-enable it in your browser settings. In Chrome, go to Settings > Privacy and security > Site settings > JavaScript.
+</Step>
+
+<Step title="Enable cookies">
+Ensure cookies are not blocked. In Chrome, navigate to Settings > Privacy and security > Cookies and other site data. Select "Allow all cookies" or add your Brightspace domain to the allowed list.
+</Step>
+
+<Step title="Allow pop-ups for Brightspace">
+Some features open in new windows. Add your institution's Brightspace URL (e.g., `https://yourschool.brightspace.com`) to the allowed sites for pop-ups.
+</Step>
+
+<Step title="Disable content blockers for Brightspace">
+Ad blockers and privacy extensions can interfere with Brightspace functionality. Add your Brightspace domain to the allowlist for these extensions.
+</Step>
+</Steps>
+
+## Clearing Cache and Cookies
+
+Many Brightspace issues are resolved by clearing your browser's cached data. Cached files can become outdated and cause display or functionality problems.
+
+### How to Clear Cache in Each Browser
+
+<Steps>
+<Step title="Google Chrome">
+1. Click the three-dot menu in the top-right corner
+2. Select **Settings**
+3. Click **Privacy and security** in the left menu
+4. Click **Clear browsing data**
+5. Set time range to "All time"
+6. Check "Cached images and files" and "Cookies and other site data"
+7. Click **Clear data**
+8. Close and reopen Chrome
+</Step>
+
+<Step title="Mozilla Firefox">
+1. Click the menu button (three horizontal lines)
+2. Select **Settings**
+3. Click **Privacy & Security** in the left menu
+4. Under "Cookies and Site Data," click **Clear Data**
+5. Check both boxes and click **Clear**
+6. Close and reopen Firefox
+</Step>
+
+<Step title="Microsoft Edge">
+1. Click the three-dot menu in the top-right corner
+2. Select **Settings**
+3. Click **Privacy, search, and services**
+4. Under "Clear browsing data," click **Choose what to clear**
+5. Set time range to "All time"
+6. Check "Cached images and files" and "Cookies and other site data"
+7. Click **Clear now**
+8. Close and reopen Edge
+</Step>
+
+<Step title="Apple Safari">
+1. Click **Safari** in the menu bar
+2. Select **Settings** (or Preferences)
+3. Click the **Privacy** tab
+4. Click **Manage Website Data**
+5. Search for your Brightspace domain and remove it, or click **Remove All**
+6. Close and reopen Safari
+</Step>
+</Steps>
+
+<Callout type="tip" title="Quick Refresh">
+Before clearing all cache, try a hard refresh first. Press **Ctrl+Shift+R** (Windows/Linux) or **Cmd+Shift+R** (Mac) to reload the page without cached data.
+</Callout>
+
+## Disabling Extensions That Interfere
+
+Browser extensions can block Brightspace functionality, especially ad blockers, privacy tools, and VPN extensions.
+
+### Common Problematic Extensions
+
+- Ad blockers (uBlock Origin, AdBlock Plus, etc.)
+- Privacy extensions (Privacy Badger, Ghostery)
+- Script blockers (NoScript, ScriptSafe)
+- VPN extensions
+- PDF viewers that intercept downloads
+
+### How to Identify and Disable Problematic Extensions
+
+<Steps>
+<Step title="Test in Incognito or Private mode">
+Open Brightspace in an incognito window (Ctrl+Shift+N in Chrome) or private window (Ctrl+Shift+P in Firefox). If Brightspace works correctly, an extension is likely causing the issue.
+</Step>
+
+<Step title="Disable extensions one by one">
+In Chrome, go to **chrome://extensions** and toggle off extensions one at a time. Test Brightspace after each one to identify the culprit.
+</Step>
+
+<Step title="Add Brightspace to extension allowlists">
+Instead of completely disabling an extension, add your Brightspace URL to its allowlist. Most ad blockers have an option to "trust" or "pause on this site."
+</Step>
+
+<Step title="Keep essential extensions only">
+Remove extensions you no longer use. More extensions mean more potential conflicts and slower browser performance.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Ad Blockers and Zoom">
+Many ad blockers detect the Zoom integration in Brightspace as a tracker and block it. If Zoom is not working in Brightspace, check your ad blocker settings first.
+</Callout>
+
+## Pop-up Blocker Settings
+
+Brightspace and its integrated tools often require pop-up windows. If pop-ups are blocked, you may experience issues with:
+
+- External learning tools (LTI integrations)
+- Quiz launches in new windows
+- File downloads
+- Microsoft 365 integrations
+- Zoom and video tools
+
+### Allowing Pop-ups for Brightspace
+
+<Steps>
+<Step title="Chrome">
+1. Go to **Settings > Privacy and security > Site settings > Pop-ups and redirects**
+2. Under "Allowed to send pop-ups and use redirects," click **Add**
+3. Enter your Brightspace URL (e.g., `https://yourschool.brightspace.com`)
+4. Click **Add**
+</Step>
+
+<Step title="Firefox">
+1. Go to **Settings > Privacy & Security**
+2. Scroll to "Permissions" and find "Block pop-up windows"
+3. Click **Exceptions** next to it
+4. Enter your Brightspace URL and click **Allow**
+5. Click **Save Changes**
+</Step>
+
+<Step title="Edge">
+1. Go to **Settings > Cookies and site permissions > Pop-ups and redirects**
+2. Under "Allow," click **Add**
+3. Enter your Brightspace URL
+4. Click **Add**
+</Step>
+
+<Step title="Safari">
+1. Open Safari Preferences/Settings
+2. Go to the **Websites** tab
+3. Select **Pop-up Windows** from the left sidebar
+4. Find your Brightspace site and change the setting to **Allow**
+</Step>
+</Steps>
+
+## JavaScript Requirements
+
+Brightspace requires JavaScript to be enabled for nearly all functionality. Without JavaScript, you will see a non-functional or blank page.
+
+### Verifying JavaScript is Enabled
+
+In most browsers, JavaScript is enabled by default. However, if you or your IT department have disabled it:
+
+**Chrome:**
+1. Go to **Settings > Privacy and security > Site settings > JavaScript**
+2. Ensure "Sites can use JavaScript" is selected
+3. Verify your Brightspace domain is not in the "Not allowed to use JavaScript" list
+
+**Firefox:**
+1. Type `about:config` in the address bar and press Enter
+2. Search for `javascript.enabled`
+3. Ensure it is set to `true`
+
+**Safari:**
+1. Go to **Safari > Settings > Security**
+2. Ensure "Enable JavaScript" is checked
+
+<Callout type="info" title="JavaScript Errors">
+If you see JavaScript errors in Brightspace, clearing your browser cache often resolves them. Outdated cached JavaScript files can conflict with updated Brightspace code.
+</Callout>
+
+## Browser-Specific Issues
+
+### Safari Issues
+
+Safari users frequently encounter problems that do not occur in other browsers. Known issues include:
+
+- Media playback problems with Kaltura videos
+- Third-party tool integration failures (Zoom, LockDown Browser)
+- Cross-site tracking blocking essential cookies
+- File upload inconsistencies
+
+<Steps>
+<Step title="Disable Prevent Cross-Site Tracking">
+Go to **Safari > Settings > Privacy** and uncheck **Prevent cross-site tracking**. This setting blocks cookies that many Brightspace integrations require.
+</Step>
+
+<Step title="Allow cookies from Brightspace">
+In the same Privacy settings, ensure **Block all cookies** is unchecked. You can also click **Manage Website Data** to verify cookies are stored for your Brightspace domain.
+</Step>
+
+<Step title="Consider using Chrome or Firefox">
+If Safari issues persist, D2L recommends switching to Chrome or Firefox for accessing Brightspace. These browsers have better compatibility with Brightspace features and integrations.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Safari Known Limitation">
+D2L is aware of ongoing compatibility issues with Safari. While they work to resolve them, using Chrome or Firefox is the most reliable solution for Mac users.
+</Callout>
+
+### Firefox Issues
+
+Firefox occasionally has issues with:
+
+- Certain rich content editors
+- Drag-and-drop file uploads
+- Some LTI tool integrations
+
+**Solution:** Ensure Enhanced Tracking Protection is set to "Standard" rather than "Strict" for your Brightspace domain. Click the shield icon in the address bar and adjust settings for the site.
+
+### Edge Issues
+
+Microsoft Edge based on Chromium generally works well with Brightspace. However:
+
+- Ensure you are using the new Chromium-based Edge, not Edge Legacy
+- Check that the browser is up to date
+- Configure third-party cookie settings similar to Chrome
+
+## Mobile Browser Limitations
+
+Accessing Brightspace through mobile browsers (Safari on iOS, Chrome on Android) works for basic navigation and content viewing, but has limitations.
+
+### What Works on Mobile Browsers
+
+- Viewing course content and announcements
+- Reading discussion posts
+- Checking grades
+- Viewing the calendar
+- Basic navigation
+
+### What May Not Work on Mobile Browsers
+
+- Taking quizzes and exams (especially proctored)
+- Complex file uploads
+- Some LTI tool integrations
+- Interactive content (H5P, SCORM)
+- Full editing capabilities
+
+### Mobile Browser Tips
+
+<Steps>
+<Step title="Use desktop mode when needed">
+Most mobile browsers have a "Request Desktop Site" option. This can help with features that do not display correctly in mobile view.
+</Step>
+
+<Step title="Disable cross-site tracking (iOS Safari)">
+On iPhone/iPad, go to **Settings > Safari** and turn off **Prevent Cross-Site Tracking**. This affects all websites but is often necessary for Brightspace.
+</Step>
+
+<Step title="Keep your mobile browser updated">
+Mobile browsers update frequently. Ensure automatic updates are enabled to get the latest compatibility fixes.
+</Step>
+
+<Step title="Consider the Brightspace Pulse app">
+For mobile access, the Brightspace Pulse app provides a better experience than mobile browsers for common tasks like checking due dates and viewing announcements. However, it also has limitations for quizzes and complex activities.
+</Step>
+</Steps>
+
+<Callout type="info" title="Tablet Recommendation">
+If you frequently use Brightspace on a tablet, consider using a Bluetooth keyboard for easier text entry and treat it more like a laptop experience for full functionality.
+</Callout>
+
+## Testing in Different Browsers
+
+Before reporting an issue to IT support, test the problem in a different browser. This helps identify whether the issue is browser-specific or a broader Brightspace problem.
+
+### Testing Checklist
+
+<Steps>
+<Step title="Reproduce the issue">
+Document exactly what you were doing when the problem occurred. Note the steps, any error messages, and what you expected to happen.
+</Step>
+
+<Step title="Clear cache in your current browser">
+Try clearing cache and cookies first, then attempt the action again.
+</Step>
+
+<Step title="Test in Incognito/Private mode">
+Open a private browsing window in your current browser. This tests without extensions and with fresh cookies.
+</Step>
+
+<Step title="Test in a different browser">
+Open Brightspace in Chrome if you normally use Firefox, or vice versa. Repeat the steps that caused the issue.
+</Step>
+
+<Step title="Document your findings">
+Note which browser(s) have the issue and which do not. This information is valuable for IT support.
+</Step>
+</Steps>
+
+### Comparing Browser Behavior
+
+| Test Scenario | If Issue Persists | If Issue Resolves |
+|--------------|-------------------|-------------------|
+| Same browser, cleared cache | Extension or deeper browser issue | Caching issue - resolved |
+| Same browser, incognito mode | Browser or Brightspace issue | Extension conflict |
+| Different browser | Brightspace or account issue | Browser-specific issue |
+| Different computer | Account or Brightspace system issue | Computer-specific issue |
+
+## When to Switch Browsers
+
+Consider switching browsers if you experience:
+
+- Persistent issues that clearing cache does not fix
+- Problems only occurring in one specific browser
+- Slow performance or freezing
+- Features that do not work despite correct settings
+- Frequent JavaScript or loading errors
+
+### Recommended Browser Order
+
+If you are having persistent issues, try browsers in this order:
+
+1. **Google Chrome** - Best overall compatibility
+2. **Mozilla Firefox** - Excellent alternative with strong privacy features
+3. **Microsoft Edge** (Chromium) - Good option for Windows users
+4. **Apple Safari** - Use only if other browsers are not available
+
+<Callout type="tip" title="Browser Profiles">
+If you must use a specific browser for other work but need a different one for Brightspace, create a separate browser profile or use a portable browser installation just for Brightspace.
+</Callout>
+
+## Summary: Quick Troubleshooting Steps
+
+When you encounter browser issues in Brightspace:
+
+1. **Refresh** - Try a hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+2. **Clear cache** - Clear browser cache and cookies
+3. **Disable extensions** - Test in incognito/private mode
+4. **Check settings** - Verify cookies, JavaScript, and pop-ups are enabled
+5. **Try another browser** - Test in Chrome or Firefox
+6. **Update browser** - Ensure you have the latest version
+7. **Contact IT** - If none of the above works, contact your institution's help desk
+
+## Related Guides
+
+- [Troubleshooting Common Issues](/docs/troubleshooting/common-issues)
+- [Mobile App Limitations](/docs/troubleshooting/mobile-app)
+- [Video Playback Problems](/docs/troubleshooting/video-issues)
+- [External Learning Tools](/docs/integrations/external-tools)

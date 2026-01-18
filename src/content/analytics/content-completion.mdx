@@ -1,0 +1,459 @@
+---
+title: "Content Completion Tracking"
+description: "Track student progress through course content"
+category: "Analytics"
+order: 2
+tags: ["completion", "tracking", "progress", "content"]
+---
+
+# Content Completion Tracking
+
+## Overview
+
+Content Completion Tracking in Brightspace allows instructors to monitor how students engage with course materials. By setting completion requirements on content items, you can track student progress, create prerequisite learning paths, and identify students who may be falling behind.
+
+This guide covers how to set up completion tracking, the difference between automatic and manual completion, how to view completion data, and best practices for using this feature effectively.
+
+## Before You Begin
+
+- You must have Instructor or TA access to the course
+- Content items must already exist before you can configure completion tracking
+- The Class Progress tool should be enabled in your course navbar for viewing completion reports
+- Plan your completion strategy before configuring (which items should be required vs optional)
+
+<Callout type="info" title="Default Setting">
+By default, all content in Brightspace is set to "Not Required." If you want to track content completion, you must manually change each module or topic to "Required." Without this setting, completion data will not be collected.
+</Callout>
+
+## Understanding Completion Types
+
+Brightspace offers three completion tracking options for each content item:
+
+### Required: Automatic
+
+The system automatically marks content as complete when students interact with it. This is the recommended option for most content types.
+
+**How automatic completion works for different content:**
+
+| Content Type | Marked Complete When... |
+|--------------|-------------------------|
+| **HTML pages/Documents** | Student views the page |
+| **Links** | Student clicks the link |
+| **Files (PDF, Word, etc.)** | Student opens/views the file |
+| **Discussions** | Student makes their first post |
+| **Assignment folders** | Student submits at least once |
+| **Quizzes** | Student submits an attempt |
+| **Surveys** | Student submits a response |
+
+<Callout type="warning" title="External Tools Limitation">
+External Learning Tools such as Kaltura, BigBlueButton, H5P, and Zoom are not included in automatic completion tracking. Use manual completion for these content types.
+</Callout>
+
+### Required: Manual
+
+Students must manually click a checkbox to mark the item as complete. Use this when:
+
+- Automatic tracking does not apply (external tools, offline activities)
+- Discussions require multiple posts before students should mark complete
+- You want students to self-assess whether they understood the material
+- The activity involves reflection or external work
+
+### Not Required (Optional)
+
+No completion tracking is recorded. The item will not appear in progress calculations or affect the progress bar. Use this for:
+
+- Supplementary or bonus materials
+- Reference resources students may revisit
+- Content that does not affect course progression
+
+## Setting Up Completion Tracking
+
+### Configuring Individual Topics
+
+<Steps>
+<Step title="Navigate to Content">
+From your course navbar, click **Content** to access the content area.
+</Step>
+
+<Step title="Locate the content item">
+Click on the module containing the topic you want to configure, then find the specific topic.
+</Step>
+
+<Step title="Access the completion setting">
+Click the **double dash (--) icon** to the right of the topic title. This opens the completion dropdown menu.
+</Step>
+
+<Step title="Select the completion type">
+Choose one of the three options:
+- **Required - Automatic**: System tracks completion automatically
+- **Required - Manual**: Students mark their own completion
+- **Not Required**: No tracking for this item
+</Step>
+
+<Step title="Confirm the change">
+The icon updates to reflect the new status:
+- **Checkmark**: Required content
+- **Double dash**: Not required content
+</Step>
+</Steps>
+
+### Setting Completion for an Entire Module
+
+You can set the same completion type for all topics within a module at once.
+
+<Steps>
+<Step title="Select the module">
+Navigate to the module you want to configure in the Content area.
+</Step>
+
+<Step title="Access module settings">
+Click the dropdown arrow next to the module name to reveal the menu.
+</Step>
+
+<Step title="Choose Set All Completion">
+Select **Set All Completion** from the dropdown menu.
+</Step>
+
+<Step title="Select the completion type">
+Choose **Required - Automatic**, **Required - Manual**, or **Not Required**. This setting will apply to all topics currently in the module.
+</Step>
+</Steps>
+
+<Callout type="tip" title="New Items Inherit Settings">
+When you add new topics to a module, check the completion settings. New items may default to "Not Required" even if other items in the module are set to "Required."
+</Callout>
+
+### Changing Default Completion Settings
+
+You can set a default completion type that applies to new content you create.
+
+<Steps>
+<Step title="Access Content Settings">
+From the Content area, click the **Settings** link in the upper right corner.
+</Step>
+
+<Step title="Locate Completion Tracking">
+Scroll to the bottom of the settings page to find the **Completion Tracking** section.
+</Step>
+
+<Step title="Choose the default">
+Select either **Automatic** or **Manual** as the default for new content items.
+</Step>
+
+<Step title="Save changes">
+Click the **Save** button to apply the new default.
+</Step>
+</Steps>
+
+<Callout type="info" title="Course Copy Note">
+When copying courses, completion tracking settings from the source course carry over. If an older course had "Not Required" as the default, this will override your institution's default. Always verify completion settings after copying a course.
+</Callout>
+
+## Viewing Completion Reports
+
+### Completion Summary for a Topic
+
+<Steps>
+<Step title="Navigate to the topic">
+Go to **Content** and click on the specific topic you want to view data for.
+</Step>
+
+<Step title="Open the Completion Summary tab">
+Below the topic content, click the **Completion Summary** tab.
+</Step>
+
+<Step title="Review the data">
+The table shows each student's completion status for this topic:
+- **Completed**: Student has met the completion criteria
+- **Incomplete**: Student has not yet completed the item
+</Step>
+
+<Step title="Filter the view">
+Use the dropdown filters to view by:
+- Completion status (Completed/Incomplete)
+- Groups or sections in your course
+</Step>
+</Steps>
+
+### Content Statistics Reports
+
+For a broader view of content engagement across your entire course:
+
+<Steps>
+<Step title="Access the Content area">
+Navigate to **Content** from your course navbar.
+</Step>
+
+<Step title="Open Table of Contents">
+Click **Table of Contents** in the left sidebar if not already selected.
+</Step>
+
+<Step title="Access View Reports">
+Click the **Related Tools** dropdown menu and select **View Reports**.
+</Step>
+
+<Step title="Review the Content tab">
+The Content tab shows:
+- Total learners with access to each module
+- Number of users who visited each module
+- Average time spent viewing content
+</Step>
+
+<Step title="Export if needed">
+Click **Export Statistics** to download the data as a CSV file for further analysis.
+</Step>
+</Steps>
+
+### User-Level Statistics
+
+To see detailed engagement data for individual students:
+
+<Steps>
+<Step title="Access View Reports">
+From the Content area, go to **Related Tools > View Reports**.
+</Step>
+
+<Step title="Select the Users tab">
+Click the **Users** tab to switch to individual student data.
+</Step>
+
+<Step title="Review student data">
+This view shows for each student:
+- Content topics available to them
+- Topics they have visited
+- Last visit date
+- Number of visits
+- Total and average time spent
+</Step>
+
+<Step title="Drill down for details">
+Click a student's name to see a detailed breakdown of their content engagement.
+</Step>
+</Steps>
+
+### Class Progress Dashboard
+
+The Class Progress tool provides a summary view of completion across all students.
+
+<Steps>
+<Step title="Navigate to Class Progress">
+Click **Class Progress** in your course navbar. If not visible, access it through **Course Admin**.
+</Step>
+
+<Step title="Review Content Completion Summary">
+By default, one of the four indicators shows **Content Completion Summary**, displaying how many required content topics each student has completed.
+</Step>
+
+<Step title="Click for details">
+Click on a student's name to see their individual progress across all indicators.
+</Step>
+</Steps>
+
+## Using Completion in Release Conditions
+
+Completion tracking integrates with Brightspace's release conditions to create adaptive learning paths.
+
+### Creating Content Prerequisites
+
+You can require students to complete specific content before accessing other materials.
+
+<Steps>
+<Step title="Navigate to the target content">
+Go to the content item you want to restrict access to.
+</Step>
+
+<Step title="Edit properties">
+Click the three-dot menu (...) and select **Edit Properties in Place**.
+</Step>
+
+<Step title="Expand Availability Dates and Conditions">
+Click to expand the **Availability Dates & Conditions** section.
+</Step>
+
+<Step title="Add a release condition">
+Click **Create** or **Add Release Condition** under Release Conditions.
+</Step>
+
+<Step title="Select completion condition">
+Choose one of these condition types:
+- **Completed Content Topic**: Requires completion of a specific topic
+- **Not Completed Content Topic**: Shows content only to those who have NOT completed something
+- **Visited Content Topic**: Requires visiting (but not necessarily completing) a topic
+- **Visited All Content Topics**: Requires visiting all topics in a module
+</Step>
+
+<Step title="Select the prerequisite">
+Choose the specific topic that must be completed before this content unlocks.
+</Step>
+
+<Step title="Save the condition">
+Click **Create** then **Save** to apply the release condition.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Sequential Learning Paths">
+To create a linear path through your content, add a release condition to each topic requiring completion of the previous topic. Topic 2 requires completing Topic 1, Topic 3 requires completing Topic 2, and so on.
+</Callout>
+
+### Course Completion Tracking
+
+Brightspace also offers course-level completion tracking that provides an overall progress bar.
+
+<Steps>
+<Step title="Access Course Administration">
+Navigate to **Course Admin** from your course navbar.
+</Step>
+
+<Step title="Find Course Completion Tracking">
+Locate and click **Course Completion Tracking** in the admin tools.
+</Step>
+
+<Step title="Enable the feature">
+Turn on Course Completion Tracking for your course.
+</Step>
+
+<Step title="Choose tracking method">
+Select either:
+- **Topic-based**: Progress based on completing required content topics
+- **Release condition-based**: Progress based on meeting specific release conditions
+</Step>
+
+<Step title="Save settings">
+Click **Save** to enable the course-level progress bar for students.
+</Step>
+</Steps>
+
+## Student View of Progress
+
+Understanding how students see their completion progress helps you design better tracking.
+
+### What Students See
+
+When completion tracking is enabled, students experience:
+
+- **Progress bar**: A visual bar at the top of each module showing completion percentage
+- **Checkmarks**: A checkmark icon appears next to completed topics
+- **Count indicators**: Numbers beside each module showing remaining items to complete
+- **Black dots**: Uncompleted items display a dot instead of a checkmark
+- **Class Progress page**: Students can view their overall completion summary
+
+### Student Actions for Manual Completion
+
+For items set to **Required - Manual**:
+
+1. Students see a checkbox next to the topic title
+2. After engaging with the content, they click the checkbox
+3. The checkmark turns solid to indicate completion
+4. Progress bars and counts update automatically
+
+<Callout type="warning" title="Manual Completion Limitation">
+Students can mark manual items as complete without actually engaging with the content. This does not affect quiz scores or assignment submissions, but it does affect progress tracking. Consider this when deciding between automatic and manual completion.
+</Callout>
+
+## Completion Tracking vs Grades
+
+Understanding the difference between completion tracking and grades helps you use each appropriately.
+
+### Key Differences
+
+| Aspect | Completion Tracking | Grades |
+|--------|---------------------|--------|
+| **What it measures** | Engagement and access | Quality of work/performance |
+| **How it is recorded** | Automatic or student-initiated | Instructor-assigned scores |
+| **Where it appears** | Class Progress, progress bars | Gradebook |
+| **Student control** | Can mark manual items complete | Cannot change their grades |
+| **Assessment impact** | No effect on scores | Directly affects final grade |
+
+### When to Use Each
+
+**Use Completion Tracking for:**
+- Monitoring if students are engaging with materials
+- Creating prerequisites and learning paths
+- Identifying disengaged students early
+- Tracking progress through non-graded content
+
+**Use Grades for:**
+- Evaluating the quality of student work
+- Calculating final course grades
+- Providing performance feedback
+- Meeting institutional assessment requirements
+
+<Callout type="info" title="They Work Together">
+Completion tracking and grades are complementary. A student might complete a quiz (completion tracking) and then receive a score (grade). Both pieces of data appear in Class Progress, giving you a complete picture of student engagement and performance.
+</Callout>
+
+## Best Practices for Completion Tracking
+
+### Planning Your Tracking Strategy
+
+- **Identify essential content**: Not everything needs to be tracked. Focus on core learning materials.
+- **Use automatic when possible**: Reduces student burden and ensures accurate tracking
+- **Reserve manual for special cases**: Use only when automatic tracking cannot work
+- **Communicate expectations**: Tell students what is required and how completion affects their access
+
+### Setting Up Effective Tracking
+
+- **Be consistent within modules**: Use the same completion type for similar content
+- **Check settings after course copy**: Verify completion settings transferred correctly
+- **Test the student experience**: Use View as Student or a test account to see how tracking works
+- **Review external tools**: Remember that LTI tools and external links may not track automatically
+
+### Using Tracking Data Effectively
+
+- **Check regularly**: Review completion data weekly to catch struggling students early
+- **Focus on patterns**: One incomplete item is not concerning; consistent incompletion is
+- **Use with Intelligent Agents**: Automate outreach to students falling behind on completion
+- **Do not use for assessment**: Time and completion data are for engagement insights, not grading
+
+### Avoiding Common Pitfalls
+
+<Callout type="warning" title="Common Mistakes to Avoid">
+- **Forgetting to set items as Required**: The default "Not Required" means no tracking occurs
+- **Overusing manual completion**: Students may mark complete without engaging
+- **Ignoring external tool limitations**: LTI tools and embedded content often do not track
+- **Using completion for grades**: Completion is about access, not assessment quality
+</Callout>
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Completion always shows 0% | Content set to "Not Required" | Change to "Required - Automatic" or "Required - Manual" |
+| Some students show incomplete but claim they finished | External tool or link did not track | Use manual completion or different content format |
+| Progress bar not updating | Browser cache issue | Have student refresh or clear cache |
+| Completion reset unexpectedly | Changed from automatic to manual | Resetting is expected; students must re-complete manually |
+| Student marked complete without doing work | Manual completion allows this | Switch to automatic if possible, or accept this limitation |
+| Time spent data seems wrong | Approximate tracking only | Do not use time data for assessment; use for engagement insights only |
+
+### Checking Individual Student Status
+
+<Steps>
+<Step title="Go to Class Progress">
+Navigate to the **Class Progress** tool in your course.
+</Step>
+
+<Step title="Find the student">
+Locate the student in the list or use filters to narrow down.
+</Step>
+
+<Step title="Click their name">
+Click on the student's name to open their individual progress view.
+</Step>
+
+<Step title="Review Content Completion">
+Check the Content Completion indicator to see which required topics they have completed.
+</Step>
+
+<Step title="Contact if needed">
+Hover over the student's profile image to quickly send an email if intervention is needed.
+</Step>
+</Steps>
+
+## Related Guides
+
+- [Using Class Progress](/docs/analytics/class-progress)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Using Intelligent Agents](/docs/communication/intelligent-agents)

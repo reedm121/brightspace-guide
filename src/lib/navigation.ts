@@ -10,6 +10,8 @@ export const navigation: NavItem[] = [
       { title: "Logging In", href: "/docs/getting-started/logging-in" },
       { title: "Interface Tour", href: "/docs/getting-started/interface-tour" },
       { title: "Course Homepage", href: "/docs/getting-started/course-homepage" },
+      { title: "Navbar & Tools", href: "/docs/getting-started/navbar" },
+      { title: "Using the Sandbox", href: "/docs/getting-started/sandbox" },
     ],
   },
   {
@@ -20,7 +22,10 @@ export const navigation: NavItem[] = [
       { title: "Creating Modules", href: "/docs/course-setup/creating-modules" },
       { title: "Uploading Files", href: "/docs/course-setup/uploading-files" },
       { title: "HTML Editor", href: "/docs/course-setup/html-editor" },
+      { title: "Web Links", href: "/docs/course-setup/web-links" },
+      { title: "Manage Files", href: "/docs/course-setup/manage-files" },
       { title: "Release Conditions", href: "/docs/course-setup/release-conditions" },
+      { title: "Learning Paths", href: "/docs/course-setup/learning-paths" },
     ],
   },
   {
@@ -30,6 +35,7 @@ export const navigation: NavItem[] = [
     children: [
       { title: "Creating Assignments", href: "/docs/assignments/creating-assignments" },
       { title: "Submission Settings", href: "/docs/assignments/submission-settings" },
+      { title: "Special Access", href: "/docs/assignments/special-access" },
       { title: "Turnitin", href: "/docs/assignments/turnitin" },
       { title: "Grading Submissions", href: "/docs/assignments/grading-submissions" },
     ],
@@ -41,6 +47,7 @@ export const navigation: NavItem[] = [
     children: [
       { title: "Creating Quizzes", href: "/docs/quizzes/creating-quizzes" },
       { title: "Question Types", href: "/docs/quizzes/question-types" },
+      { title: "Question Library", href: "/docs/quizzes/question-library" },
       { title: "Quiz Settings", href: "/docs/quizzes/quiz-settings" },
       { title: "Grading Quizzes", href: "/docs/quizzes/grading-quizzes" },
     ],
@@ -53,7 +60,18 @@ export const navigation: NavItem[] = [
       { title: "Setup Wizard", href: "/docs/gradebook/setup-wizard" },
       { title: "Grade Categories", href: "/docs/gradebook/grade-categories" },
       { title: "Grade Items", href: "/docs/gradebook/grade-items" },
+      { title: "Entering Grades", href: "/docs/gradebook/entering-grades" },
       { title: "Quick Eval", href: "/docs/gradebook/quick-eval" },
+      { title: "Final Grades", href: "/docs/gradebook/final-grades" },
+    ],
+  },
+  {
+    title: "Rubrics",
+    href: "/docs/rubrics",
+    icon: "clipboard-list",
+    children: [
+      { title: "Creating Rubrics", href: "/docs/rubrics/creating-rubrics" },
+      { title: "Using Rubrics", href: "/docs/rubrics/using-rubrics" },
     ],
   },
   {
@@ -63,7 +81,7 @@ export const navigation: NavItem[] = [
     children: [
       { title: "Forums vs Topics", href: "/docs/discussions/forums-vs-topics" },
       { title: "Creating Discussions", href: "/docs/discussions/creating-discussions" },
-      { title: "Moderating", href: "/docs/discussions/moderating" },
+      { title: "Moderating", href: "/docs/discussions/moderating-discussions" },
       { title: "Grading Discussions", href: "/docs/discussions/grading-discussions" },
     ],
   },
@@ -74,7 +92,57 @@ export const navigation: NavItem[] = [
     children: [
       { title: "Announcements", href: "/docs/communication/announcements" },
       { title: "Email", href: "/docs/communication/email" },
+      { title: "Calendar", href: "/docs/communication/calendar" },
+      { title: "Notifications", href: "/docs/communication/notifications" },
       { title: "Intelligent Agents", href: "/docs/communication/intelligent-agents" },
+    ],
+  },
+  {
+    title: "Groups",
+    href: "/docs/groups",
+    icon: "users",
+    children: [
+      { title: "Creating Groups", href: "/docs/groups/creating-groups" },
+      { title: "Group Assignments", href: "/docs/groups/group-assignments" },
+    ],
+  },
+  {
+    title: "Analytics",
+    href: "/docs/analytics",
+    icon: "trending-up",
+    children: [
+      { title: "Class Progress", href: "/docs/analytics/class-progress" },
+      { title: "Content Completion", href: "/docs/analytics/content-completion" },
+    ],
+  },
+  {
+    title: "Video & Multimedia",
+    href: "/docs/video",
+    icon: "video",
+    children: [
+      { title: "Recording Video", href: "/docs/video/recording-video" },
+      { title: "Video Assignments", href: "/docs/video/video-assignments" },
+      { title: "Virtual Classroom", href: "/docs/video/virtual-classroom" },
+    ],
+  },
+  {
+    title: "Integrations",
+    href: "/docs/integrations",
+    icon: "plug",
+    children: [
+      { title: "External Tools", href: "/docs/integrations/external-tools" },
+      { title: "Zoom & Teams", href: "/docs/integrations/zoom-teams" },
+      { title: "Publisher Content", href: "/docs/integrations/publisher-content" },
+    ],
+  },
+  {
+    title: "Course Management",
+    href: "/docs/course-management",
+    icon: "settings",
+    children: [
+      { title: "Copying Courses", href: "/docs/course-management/copying-courses" },
+      { title: "Course Templates", href: "/docs/course-management/course-templates" },
+      { title: "Backup & Restore", href: "/docs/course-management/backup-restore" },
     ],
   },
   {
@@ -83,6 +151,7 @@ export const navigation: NavItem[] = [
     icon: "accessibility",
     children: [
       { title: "Making Content Accessible", href: "/docs/accessibility/making-content-accessible" },
+      { title: "Accessibility Checker", href: "/docs/accessibility/accessibility-checker" },
     ],
   },
   {
@@ -90,8 +159,9 @@ export const navigation: NavItem[] = [
     href: "/docs/troubleshooting",
     icon: "alert-circle",
     children: [
-      { title: "Common Errors", href: "/docs/troubleshooting/common-errors" },
-      { title: "Browser Issues", href: "/docs/troubleshooting/browser-issues" },
+      { title: "Common Issues", href: "/docs/troubleshooting/common-issues" },
+      { title: "Browser Compatibility", href: "/docs/troubleshooting/browser-compatibility" },
+      { title: "Mobile App", href: "/docs/troubleshooting/mobile-app" },
       { title: "Video Problems", href: "/docs/troubleshooting/video-problems" },
     ],
   },

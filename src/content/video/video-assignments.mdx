@@ -1,0 +1,427 @@
+---
+title: "Video Assignments"
+description: "Create assignments where students submit video responses"
+category: "Video & Multimedia"
+order: 2
+tags: ["video assignments", "student video", "presentations", "multimedia"]
+---
+
+# Video Assignments
+
+## Overview
+
+Video assignments allow students to submit recorded video responses for presentations, reflections, demonstrations, and other multimedia projects. Brightspace supports multiple methods for video submissions, from simple file uploads to embedded streaming video through integrated platforms like Kaltura, Panopto, or YuJa.
+
+<Callout type="info" title="Submission Type Matters">
+The key to successful video assignments is choosing the right submission type. For embedded, streamable video submissions, use **Text Submission** so students can access the HTML editor with Insert Stuff functionality. For simple file uploads, use **File Submission**.
+</Callout>
+
+## Before You Begin
+
+- Determine which video submission method works best for your assignment (file upload vs. embedded video)
+- Check with your institution which video platforms are integrated (Kaltura, Panopto, YuJa, Bongo, etc.)
+- Consider file size limits and storage constraints
+- Plan your grading approach (rubric, inline feedback, video feedback)
+- Ensure students know how to record and submit videos before the deadline
+
+## Setting Up Video Submission Assignments
+
+There are two primary approaches to collecting video submissions: file uploads and embedded video through the HTML editor.
+
+### Method 1: Text Submission (Recommended for Embedded Video)
+
+This method allows students to embed videos directly from integrated platforms, making viewing and grading seamless.
+
+<Steps>
+
+<Step title="Create a New Assignment">
+Navigate to **Assessments** > **Assignments** and click **New Assignment**. Enter a descriptive title that indicates this is a video assignment (e.g., "Video Presentation: Course Topic").
+</Step>
+
+<Step title="Set Submission Type to Text">
+In the **Submission & Completion** panel on the right side, change the submission type from "File Submission" to **Text Submission**.
+
+<Callout type="tip" title="Why Text Submission?">
+Text Submission provides students with the full HTML editor, including the **Insert Stuff** button. This allows them to embed videos from Kaltura, Panopto, YuJa, or other integrated platforms so videos play directly in Brightspace.
+</Callout>
+</Step>
+
+<Step title="Write Clear Instructions">
+In the Instructions field, explain:
+- What video platform students should use (Kaltura, Panopto, Video Note, etc.)
+- Recording requirements (length, content, format)
+- How to embed the video using Insert Stuff
+- Any technical requirements (lighting, audio quality, etc.)
+
+Example instructions:
+```
+## Video Presentation Requirements
+
+Record a 3-5 minute video presentation on your assigned topic.
+
+### How to Submit
+1. Record your video using Kaltura My Media or upload an existing video
+2. Click the "Insert Stuff" button below
+3. Select your video platform (Kaltura, Panopto, etc.)
+4. Choose your video and click Insert
+5. Click Submit
+
+### Technical Requirements
+- Clear audio (use a quiet location)
+- Good lighting (face a window or light source)
+- Stable camera (use a tripod or prop your device)
+```
+</Step>
+
+<Step title="Configure Dates and Settings">
+Set your start date, due date, and end date. For video assignments, consider allowing extra time for students to troubleshoot technical issues.
+</Step>
+
+<Step title="Link to Gradebook (Optional)">
+Connect the assignment to a grade item if you want grades to sync with your gradebook.
+</Step>
+
+<Step title="Make Visible and Save">
+Toggle the **Visibility** switch to make the assignment visible to students, then click **Save and Close**.
+</Step>
+
+</Steps>
+
+### Method 2: File Submission (Direct Upload)
+
+Use this method when students need to upload video files directly rather than embedding from a video platform.
+
+<Steps>
+
+<Step title="Create Assignment with File Submission">
+Create a new assignment and keep the default **File Submission** type.
+</Step>
+
+<Step title="Configure File Settings">
+Under Submission & Completion:
+- **Files Allowed Per Submission**: Usually "One File" for video assignments
+- **Submission File Types**: Optionally restrict to video formats (.mp4, .mov, .webm)
+
+<Callout type="warning" title="File Size Limits">
+The default maximum file size in Brightspace is typically 1GB per file, though some institutions may have different limits. Files larger than 1.5GB may experience upload issues. Advise students to compress videos if needed.
+</Callout>
+</Step>
+
+<Step title="Provide Format Guidelines">
+In your instructions, specify:
+- Preferred format: MP4 is recommended (plays directly in browser)
+- Maximum file size
+- Video length requirements
+- File naming convention
+</Step>
+
+<Step title="Save and Publish">
+Complete the remaining settings and make the assignment visible to students.
+</Step>
+
+</Steps>
+
+## Student Recording Options
+
+Students have several options for recording and submitting video:
+
+### Video Note (Built-in Tool)
+
+Video Note is Brightspace's native webcam recording tool, available anywhere the HTML editor appears.
+
+**Features:**
+- No external software needed
+- Records directly in browser
+- 30-minute maximum recording length
+- Automatic upload to Brightspace
+- Audio-only option available
+
+**Limitations:**
+- Cannot be downloaded or embedded elsewhere
+- Videos only accessible within the original Brightspace course
+- Best for one-time, course-specific recordings
+
+<Callout type="info" title="Best Use Cases for Video Note">
+Video Note works well for discussion responses, quick reflections, assignment feedback, and informal video responses under 30 minutes.
+</Callout>
+
+### Integrated Video Platforms
+
+Most institutions integrate one or more video platforms with Brightspace:
+
+| Platform | Key Features |
+|----------|--------------|
+| **Kaltura** | Unlimited storage, editing tools, auto-captioning |
+| **Panopto** | Lecture capture, screen recording, searchable transcripts |
+| **YuJa** | Multi-camera recording, video editing, analytics |
+| **Bongo** | Video assignments, peer review, group projects |
+
+Students access these through the **Insert Stuff** button in the HTML editor.
+
+### External Recording
+
+Students can also:
+- Record on their phone or computer and upload the file
+- Use screen recording software (OBS, Loom, Screencast-O-Matic)
+- Record with Zoom and upload the recording
+
+## Video File Size and Format Requirements
+
+### Supported Video Formats
+
+| Format | Browser Support | Recommendation |
+|--------|-----------------|----------------|
+| **.mp4** | All browsers | **Recommended** - plays embedded |
+| **.webm** | Most browsers | Good alternative |
+| **.mov** | Limited | May appear as download link only |
+| **.wmv** | Limited | May require download to view |
+| **.flv/.f4v** | Limited | Legacy format, avoid if possible |
+
+<Callout type="tip" title="MP4 is Best">
+Always recommend MP4 format for video submissions. It has the widest browser compatibility and can be embedded directly in Brightspace without requiring a download.
+</Callout>
+
+### File Size Considerations
+
+| Scenario | Limit | Notes |
+|----------|-------|-------|
+| Standard file upload | 1-2 GB | Institution-dependent |
+| Video Note upload | ~5 MB default | Configurable by admin |
+| Chunked upload timeout | 2 minutes per 10MB | Slow connections may fail |
+
+**Tips for Large Videos:**
+- Compress videos before uploading (HandBrake is a free tool)
+- Use a wired internet connection for large uploads
+- Upload during off-peak hours
+- Consider using Kaltura or another video platform for files over 500MB
+
+## Viewing Student Video Submissions
+
+### Accessing Submissions
+
+<Steps>
+
+<Step title="Open the Assignment">
+Navigate to **Assessments** > **Assignments** and click on the video assignment.
+</Step>
+
+<Step title="View Submissions List">
+Click **View Submissions** to see all student submissions. The list shows submission status, date/time, and late indicators.
+</Step>
+
+<Step title="Open Individual Submission">
+Click on a student's name to open their submission. For text submissions with embedded video, the video will appear in the submission area and can be played directly.
+</Step>
+
+<Step title="Play Embedded Videos">
+For videos embedded via Insert Stuff (Kaltura, Panopto, etc.), click the play button to stream the video directly in Brightspace. You can often adjust playback speed and enable captions.
+</Step>
+
+<Step title="Download if Needed">
+For file submissions, click the file name to download the video. MOV and other non-MP4 formats may require downloading to view.
+</Step>
+
+</Steps>
+
+### Using Quick Eval
+
+Quick Eval provides a streamlined interface for viewing and grading multiple submissions:
+
+1. Go to **Assessments** > **Quick Eval**
+2. Filter by the video assignment
+3. Click through submissions to view and grade in sequence
+4. Video submissions with embedded media will play inline
+
+## Providing Video Feedback
+
+One of the most powerful features in Brightspace is the ability to provide video feedback to students, creating a more personal grading experience.
+
+### Recording Video Feedback on Assignments
+
+<Steps>
+
+<Step title="Open the Student Submission">
+Navigate to the assignment and click on the student's submission to open the evaluation view.
+</Step>
+
+<Step title="Locate the Feedback Area">
+On the right side of the screen, find the **Overall Feedback** section.
+</Step>
+
+<Step title="Start Video Recording">
+Below the text feedback box, click **Record Video** (or look for a video camera icon). This opens the Video Note recorder.
+</Step>
+
+<Step title="Record Your Feedback">
+- Allow camera and microphone access if prompted
+- Click Record to start
+- Provide your verbal feedback (up to 30 minutes)
+- Click Stop when finished
+
+<Callout type="tip" title="Effective Video Feedback">
+Keep feedback videos concise (2-5 minutes). Start with positive observations, address areas for improvement, and end with encouragement. Students appreciate hearing your voice and seeing your expressions.
+</Callout>
+</Step>
+
+<Step title="Add Accessibility Information">
+Complete the Title, Description, and Audio Language fields. Check the box to automatically generate captions for accessibility.
+</Step>
+
+<Step title="Insert and Save">
+Click **Insert** to add the video to the feedback, then save your evaluation.
+</Step>
+
+</Steps>
+
+### Video Feedback in Gradebook
+
+You can also provide video feedback directly in the Gradebook:
+
+1. Go to **Assessments** > **Grades**
+2. Select a grade item and click **Enter Grades**
+3. Click the pencil icon in the feedback column for a student
+4. In the editor toolbar, click the **+** (plus sign) and select **Insert Stuff**
+5. Choose **Add Video Note** and record your feedback
+
+## Grading Video Submissions
+
+### Using Rubrics for Video Assignments
+
+Rubrics are particularly helpful for video assignments where multiple criteria need assessment:
+
+<Steps>
+
+<Step title="Create or Attach a Rubric">
+Before students submit, attach a rubric to your assignment that includes criteria for:
+- Content/Knowledge demonstrated
+- Presentation skills (clarity, organization)
+- Technical quality (audio, video, lighting)
+- Timing/Length requirements
+- Professionalism
+</Step>
+
+<Step title="Grade with the Rubric">
+When evaluating a submission:
+1. Open the student's submission
+2. Watch the video (you can pause and take notes)
+3. Click **Rubrics** to open the attached rubric
+4. Select achievement levels for each criterion
+5. The rubric automatically calculates the score
+</Step>
+
+<Step title="Add Written or Video Feedback">
+Complement the rubric score with personalized feedback in writing or via Video Note.
+</Step>
+
+<Step title="Publish the Grade">
+Save your evaluation. Grades sync to the gradebook if connected.
+</Step>
+
+</Steps>
+
+### Sample Video Assignment Rubric Criteria
+
+| Criterion | Excellent | Good | Needs Improvement |
+|-----------|-----------|------|-------------------|
+| **Content** | Thorough, accurate, insightful | Adequate coverage | Incomplete or inaccurate |
+| **Organization** | Clear structure, logical flow | Mostly organized | Difficult to follow |
+| **Delivery** | Confident, engaging, clear | Generally clear | Hard to understand |
+| **Technical Quality** | Professional audio/video | Acceptable quality | Poor audio or video |
+| **Time Management** | Within requirements | Slightly over/under | Significantly off |
+
+## Common Video Submission Issues
+
+### Student Issues
+
+| Problem | Solution |
+|---------|----------|
+| "Insert Stuff" button not available | Assignment must be set to Text Submission, not File Submission |
+| Video won't upload | Check file size (under 1GB) and format (use MP4) |
+| Upload seems stuck | May have timed out; use faster connection or compress video |
+| Camera/microphone not working | Check browser permissions; try Chrome, Firefox, or Edge |
+| Video submitted but instructor can't see it | Video may still be processing; wait 10-15 minutes |
+| "Third-party cookies" error | Enable third-party cookies in browser settings |
+
+### Instructor Issues
+
+| Problem | Solution |
+|---------|----------|
+| Can't view embedded video | Check if video platform access is configured |
+| Video plays as audio only | Student may have recorded audio-only; check original submission |
+| Student list doesn't match | For Bongo/external tools, students must click the link to register |
+| Captions not appearing | Check if auto-captioning is enabled at institution level |
+| Can't download student video | Embedded videos may not be downloadable; contact student for file |
+
+### Technical Troubleshooting
+
+<Callout type="warning" title="Browser Compatibility">
+For best results with video assignments, students should use:
+- Google Chrome (recommended)
+- Mozilla Firefox
+- Microsoft Edge
+- Safari (Mac)
+
+Disable browser extensions that block third-party cookies, as these can interfere with video platform integrations.
+</Callout>
+
+**If Video Note isn't working:**
+1. Check the camera icon in the browser address bar
+2. Click to allow camera and microphone access
+3. Refresh the page and try again
+4. Try a different browser
+5. Clear browser cache and cookies
+
+## Best Practices for Video Assignments
+
+### For Instructors
+
+1. **Provide Clear Guidelines**
+   - Specify video length, format, and content requirements
+   - Include sample videos or exemplars when possible
+   - Create a how-to guide for students unfamiliar with video submission
+
+2. **Test the Workflow**
+   - Submit a test video yourself to understand the student experience
+   - Verify you can view embedded videos from all integrated platforms
+
+3. **Allow Time for Technical Issues**
+   - Set due dates that allow buffer time for troubleshooting
+   - Have a backup submission method (email, file drop) for emergencies
+
+4. **Consider Accessibility**
+   - Require or encourage captions for all videos
+   - Provide alternatives for students who cannot create video
+
+5. **Use Video Feedback**
+   - Students value personalized video feedback
+   - Keep feedback videos concise (2-5 minutes)
+
+### For Students (Share These Tips)
+
+1. **Plan and Practice**
+   - Write an outline or script
+   - Do a test recording before the final version
+
+2. **Technical Setup**
+   - Use good lighting (face a window)
+   - Find a quiet location
+   - Use a stable camera position
+
+3. **Recording Tips**
+   - Speak clearly and at a moderate pace
+   - Make eye contact with the camera
+   - Keep background professional and non-distracting
+
+4. **Before Submitting**
+   - Review the entire video
+   - Check audio quality
+   - Verify the file format and size
+   - Submit early to allow time for issues
+
+## Related Guides
+
+- [Creating Assignment Folders](/docs/assignments/creating-assignments)
+- [Viewing and Grading Submissions](/docs/assignments/grading-submissions)
+- [Creating Rubrics](/docs/rubrics/creating-rubrics)
+- [Using Rubrics for Grading](/docs/rubrics/using-rubrics)
+- [Recording Video in Brightspace](/docs/video/recording-video)

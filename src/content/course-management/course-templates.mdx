@@ -1,0 +1,357 @@
+---
+title: "Course Templates"
+description: "Create and use course templates for consistent course design"
+category: "Course Management"
+order: 2
+tags: ["templates", "course design", "standardization", "reuse"]
+---
+
+# Course Templates
+
+## Overview
+
+Course templates in Brightspace are organizational containers that help you standardize course design, streamline course creation, and maintain consistency across multiple sections of the same course. Think of templates as master blueprints that contain reusable components like content, assignments, discussions, and gradebook configurations that can be copied to new course offerings.
+
+Templates serve two primary purposes:
+
+1. **Organizational Structure**: Every course offering in Brightspace must be linked to a course template, which connects it to a parent organizational unit (typically a department)
+2. **Reusable Content Repository**: Templates store standardized course components that can be shared or copied to individual course offerings
+
+<Callout type="info" title="Templates vs. Course Copies">
+Course templates are different from simply copying a previous course. Templates act as centralized repositories maintained at the department or institutional level, while course copies are one-time duplications. Templates allow for controlled sharing and updating of components across multiple sections.
+</Callout>
+
+## Understanding How Templates Work
+
+### Template Structure
+
+Brightspace templates follow a hierarchical structure:
+
+| Level | Description | Example |
+|-------|-------------|---------|
+| **Organization** | Top-level institutional structure | University of Example |
+| **Department** | Academic unit or program | History Department |
+| **Course Template** | Container for related offerings | HIST 101: World History |
+| **Course Offering** | Individual course section | HIST 101 - Fall 2026 Section A |
+
+### Key Characteristics
+
+- **No Automatic Inheritance**: Settings and content do not automatically flow from templates to course offerings. You must explicitly share or copy items.
+- **Department Association**: The department assigned to a template applies to all attached course offerings.
+- **Flexible Content**: Nearly any course component can be stored in templates, including assignments, discussions, grade books, content modules, rubrics, and more.
+
+<Callout type="warning" title="Template Access Limitations">
+Templates are harder to access from the Course Selector and My Courses widget than regular courses. Avoid using templates as general content libraries. For mix-and-match content reuse across different subjects, consider the Brightspace Learning Repository instead.
+</Callout>
+
+## Creating a Course Template
+
+<Callout type="note" title="Administrator Permissions Required">
+Creating course templates typically requires administrator-level permissions. If you do not see the Templates option, contact your institution's Brightspace administrator.
+</Callout>
+
+<Steps>
+<Step title="Access the Courses tool">
+Navigate to **Admin Tools** from the admin menu, then select **Courses**. This opens the course and template management interface.
+</Step>
+
+<Step title="Switch to the Templates tab">
+At the top of the Courses page, click the **Templates** tab to view existing templates and access template creation options.
+</Step>
+
+<Step title="Create a new template">
+Click the **Create Template** button. A form will appear with the following fields:
+
+- **Name** (required): Enter a descriptive name that clearly identifies the course (e.g., "Introduction to Psychology - PSYC 101")
+- **Code** (required): Enter a unique identifier code (e.g., "PSYC101-TEMPLATE")
+</Step>
+
+<Step title="Associate with a department">
+Click **Choose Department** to link the template to an organizational unit:
+
+1. Use the search field to find your department
+2. Select the appropriate department from the results
+3. Click **Done** to confirm
+
+If your department does not exist, you may be able to create one by entering a **Name** and **Code**, clicking **Save**, then **Done**.
+</Step>
+
+<Step title="Save the template">
+Click **Save** to create the template, or click **Save and Manage** to immediately access the Course Admin page where you can begin adding content.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Naming Conventions">
+Use consistent naming conventions for templates across your institution. Include the course code, course name, and optionally "TEMPLATE" in the name to distinguish templates from active course offerings.
+</Callout>
+
+## What to Include in a Template
+
+A well-designed course template should include the foundational elements that remain consistent across all sections of a course. Here is a recommended structure:
+
+### Essential Components
+
+| Component | Description |
+|-----------|-------------|
+| **Start Here Module** | Welcome message placeholder, course overview, navigation instructions |
+| **Syllabus Template** | Standardized syllabus document with placeholders for section-specific details |
+| **Module Structure** | Pre-built modules with consistent organization (overview, content, activities, assessment) |
+| **Gradebook Setup** | Grade categories, weights, and calculation settings |
+| **Assignment Templates** | Common assignments with instructions, rubrics, and submission settings |
+| **Discussion Templates** | Recurring discussion forums with prompts and grading criteria |
+| **Quiz Templates** | Assessment structures with question pools where applicable |
+
+### Instructor Resources Section
+
+Create a "For Instructors Only" module that is hidden from students containing:
+
+- Setup checklist and instructions
+- Template modification guidelines
+- Course-specific teaching notes
+- Links to departmental resources
+- Information about required customizations
+
+<Callout type="tip" title="Placeholder Content">
+Use clear placeholder text like "[INSERT INSTRUCTOR NAME]" or "[CUSTOMIZE FOR YOUR SECTION]" to indicate where instructors need to add section-specific information.
+</Callout>
+
+### Recommended Module Structure
+
+For each content module in your template, include:
+
+1. **Module Introduction**: Learning objectives and overview
+2. **Content Placeholders**: Sections for readings, videos, and materials
+3. **Activity Sections**: Discussion prompts, group work, or practice activities
+4. **Assessment Section**: Quizzes, assignments, or other graded work
+5. **Module Conclusion**: Summary and preview of next module
+
+## Applying Templates to New Courses
+
+When a new semester begins, you can apply template content to your new course offerings using the Import/Export/Copy Components tool.
+
+<Steps>
+<Step title="Access your destination course">
+Navigate to the new course where you want to apply the template content. This should be an empty or minimally populated course shell.
+</Step>
+
+<Step title="Open Import/Export/Copy Components">
+There are two ways to access this tool:
+
+- Click the **gear icon** (Settings) in the top-right corner and select **Import/Export/Copy Components**
+- Or navigate to **Course Tools** > **Course Admin** > **Import/Export/Copy Components**
+</Step>
+
+<Step title="Select Copy Components">
+Click **Copy Components from another Org Unit**. This allows you to pull content from your template or another course.
+</Step>
+
+<Step title="Search for your template">
+Click **Search for offering** and search for your course template by name or code. Select the template from the results and click **Add Selected**.
+</Step>
+
+<Step title="Choose components to copy">
+You have two options:
+
+- **Copy All Components**: Copies everything from the template (quickest method)
+- **Select Components**: Choose specific items to copy (more control)
+
+If you select individual components, check the boxes next to the items you want:
+- Content
+- Assignments
+- Discussions
+- Quizzes
+- Grade Items
+- Rubrics
+- And more
+</Step>
+
+<Step title="Offset dates (recommended)">
+Enable **Offset all dates of copied components** to automatically adjust due dates for the new semester:
+
+1. Check the offset option
+2. Enter the number of days to shift dates forward or backward
+3. Or specify a date range to map old dates to new dates
+</Step>
+
+<Step title="Complete the copy">
+Click **Finish** to begin the copy process. Brightspace will notify you when the operation completes. For large templates, this may take several minutes.
+</Step>
+</Steps>
+
+<Callout type="warning" title="After Copying">
+Always review your course after copying from a template. Check that:
+- All dates are correct for the current semester
+- Links and references work properly
+- Section-specific content has been updated
+- Hidden instructor resources remain hidden from students
+</Callout>
+
+## Department and Institution Templates
+
+Many institutions maintain templates at different organizational levels:
+
+### Department-Level Templates
+
+Department templates are managed by department administrators and typically include:
+
+- Standardized course structures for all courses in the department
+- Department-specific policies and resources
+- Common rubrics and assessment criteria
+- Shared learning outcomes and competencies
+
+### Institution-Level Templates
+
+Institution-wide templates may include:
+
+- University syllabus templates with required policy language
+- Accessibility statement templates
+- Academic integrity acknowledgment forms
+- Links to campus-wide student support resources
+- Standardized navigation and branding elements
+
+<Callout type="info" title="Check with Your Institution">
+Before creating templates, check with your instructional design team or Brightspace administrator. Your institution may already have approved templates you should use or specific requirements for template structure.
+</Callout>
+
+## Sharing vs. Copying Components
+
+Brightspace supports two approaches for distributing template content:
+
+### Sharing (Linked Components)
+
+Some components can be **shared** between templates and course offerings:
+
+- **Rubrics**: Shared rubrics update across all linked courses when edited
+- **Competencies**: Learning outcomes can be shared institution-wide
+- **External Learning Tools**: LTI connections can be shared
+
+**Advantages**: Single source of truth, automatic updates, consistent standards
+
+### Copying (Independent Components)
+
+Most components are **copied** to course offerings:
+
+- Content modules and topics
+- Assignments and discussions
+- Quizzes and question libraries
+- Grade book configuration
+
+**Advantages**: Instructors can customize without affecting other sections
+
+<Callout type="tip" title="When to Share vs. Copy">
+Share components that should remain standardized across all sections (like departmental rubrics). Copy components that instructors may need to customize for their teaching style or student needs.
+</Callout>
+
+## Updating Templates
+
+Templates should be updated regularly to reflect course improvements, policy changes, and Brightspace updates.
+
+<Steps>
+<Step title="Plan your updates">
+Document what changes need to be made and why. Consider timing updates between semesters when no active courses are using the template.
+</Step>
+
+<Step title="Access the template">
+Navigate to **Admin Tools** > **Courses** > **Templates** tab. Click on your template name to open it.
+</Step>
+
+<Step title="Make your changes">
+Update content, assignments, discussions, or other components as needed. Use the same tools you would use in a regular course.
+</Step>
+
+<Step title="Document changes">
+Update your instructor resources section to note what changed and when. This helps instructors using the template understand recent modifications.
+</Step>
+
+<Step title="Notify stakeholders">
+Inform instructors and department administrators about template updates, especially if changes affect courses currently being set up.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Template Updates Do Not Propagate">
+Changes made to a template do not automatically update existing course offerings. Instructors who have already copied template content will need to manually incorporate updates or re-copy affected components.
+</Callout>
+
+## Template Best Practices
+
+### Design Principles
+
+- **Accessibility First**: Ensure all template content meets WCAG accessibility standards
+- **Mobile-Friendly**: Use responsive design elements that work on phones and tablets
+- **Consistent Navigation**: Maintain the same structure across all modules
+- **Clear Instructions**: Include guidance for both students and instructors
+
+### Organization Tips
+
+- Keep the number of main modules manageable (10-12 maximum)
+- Avoid deep nesting of sub-modules, which complicates navigation
+- Use consistent naming conventions for all components
+- Group related items together logically
+
+### Maintenance Schedule
+
+| Frequency | Task |
+|-----------|------|
+| **Each Semester** | Review and update dates, verify links, check for broken content |
+| **Annually** | Major content review, incorporate instructor feedback, update policies |
+| **As Needed** | Address Brightspace updates, fix reported issues, add new features |
+
+## Maintaining Consistency Across Sections
+
+When multiple instructors teach sections of the same course, templates help ensure students have a consistent experience.
+
+### Establishing Standards
+
+Work with your department to define:
+
+- Required template components that cannot be modified
+- Optional components that instructors may customize
+- Minimum content and assessment requirements
+- Grading scale and calculation methods
+
+### Quality Assurance
+
+Implement processes to maintain consistency:
+
+1. **Template Review Committee**: Have multiple people review template updates
+2. **Instructor Training**: Provide guidance on using templates correctly
+3. **Regular Audits**: Periodically review active courses for consistency
+4. **Feedback Collection**: Gather input from instructors and students
+
+<Callout type="tip" title="Balance Standardization and Flexibility">
+While consistency benefits students, allow some flexibility for instructors to bring their expertise and teaching style to the course. Focus standardization on structural elements and core assessments while allowing customization of supplementary materials.
+</Callout>
+
+## Troubleshooting Common Issues
+
+### Content Not Copying Correctly
+
+- Verify you have permission to access both the source template and destination course
+- Try copying smaller sets of components rather than everything at once
+- Check that the template does not contain corrupted files
+
+### Broken Links After Copying
+
+- Links to external content should transfer correctly
+- Internal links (to other course pages) may need to be updated
+- Re-upload any files that show as missing
+
+### Missing Images
+
+- Ensure images are stored in the course files, not linked from external locations
+- Check that file paths are relative, not absolute
+- Re-upload images that do not transfer
+
+### Date Offset Issues
+
+- Verify the offset calculation before applying
+- Check that the source course had dates set on components
+- Manually adjust any dates that did not offset correctly
+
+## Related Guides
+
+- [Copying Courses Between Terms](/docs/course-management/copying-courses)
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Release Conditions](/docs/course-setup/release-conditions)
+- [Creating Rubrics](/docs/rubrics/creating-rubrics)
+- [Gradebook Setup Wizard](/docs/gradebook/setup-wizard)

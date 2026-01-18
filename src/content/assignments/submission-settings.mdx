@@ -1,0 +1,505 @@
+---
+title: "Submission Settings"
+description: "Configure submission types, file restrictions, and late policies"
+category: "Assignments"
+order: 2
+tags: ["submissions", "settings", "file types", "late policy"]
+---
+
+# Submission Settings
+
+## Overview
+
+Brightspace provides flexible submission settings that allow you to customize how students submit their work, what file types are accepted, and how late submissions are handled. Understanding these settings helps ensure students can submit successfully while maintaining your assessment requirements.
+
+This guide covers all the submission options available when creating or editing an assignment folder.
+
+## Before You Begin
+
+- Have Instructor or TA access to the course
+- Know your assignment requirements (file format, size limits, etc.)
+- Decide your policy for late submissions and resubmissions
+- Consider whether you need Turnitin integration (affects file type options)
+
+## Submission Types
+
+Brightspace offers five submission types to accommodate different assignment formats. Choose the one that best matches how students will complete and submit their work.
+
+### File Submission (Default)
+
+The most common submission type. Students upload one or more files to complete the assignment.
+
+<Steps>
+
+<Step title="Select File Submission">
+When creating or editing an assignment, expand the **Submission & Completion** section. Select **File submission** from the Submission Type dropdown.
+</Step>
+
+<Step title="Configure File Options">
+Set the following options:
+
+- **Files Allowed Per Submission**: Choose "Unlimited" to allow multiple files or "One File" if only a single document is required
+- **Submissions**: Select how resubmissions are handled (see Resubmission Settings below)
+</Step>
+
+</Steps>
+
+<Callout type="info" title="When to Use File Submission">
+Use file submission for essays, research papers, projects, spreadsheets, presentations, or any assignment where students create a document outside of Brightspace and upload it.
+</Callout>
+
+### Text Submission
+
+Students type their response directly into Brightspace using the built-in HTML editor. No file upload is required or allowed.
+
+**Best for:**
+- Short answer responses
+- Reflections and journal entries
+- Quick responses that don't require formatting
+- Assignments where you want to prevent formatting inconsistencies
+
+<Callout type="warning" title="No File Uploads">
+When using text submission, students cannot attach files. They can only use the text editor. If students need to include images or formatted content, consider using File or Text submission instead.
+</Callout>
+
+### File or Text Submission
+
+Gives students the flexibility to either upload a file or type directly into Brightspace. This is the most accommodating option.
+
+**Best for:**
+- Assignments where some students prefer to write online while others want to upload a formatted document
+- When you want to give students flexibility in how they submit
+- Rough drafts or informal assignments
+
+### On Paper Submission
+
+For physical paper submissions collected in person. No digital submission occurs in Brightspace, but you can still:
+
+- Track which students have submitted
+- Enter grades and provide feedback
+- Upload scanned copies back to students
+
+<Steps>
+
+<Step title="Select On Paper Submission">
+In the **Submission & Completion** section, select **On paper submission** from the Submission Type dropdown.
+</Step>
+
+<Step title="Set Completion Method">
+Choose how the assignment is marked complete:
+
+- **Manually marked as completed by the learner**: Students click a button to indicate they've handed in their paper
+- **Automatically on evaluation**: Marked complete when you enter a grade
+- **Automatically on due date**: Marked complete when the due date passes
+</Step>
+
+</Steps>
+
+<Callout type="tip" title="Tracking Paper Submissions">
+Even though submissions are physical, use the assignment folder in Brightspace to track who has submitted and to record grades. This keeps all your assessment data in one place.
+</Callout>
+
+### Observed in Person
+
+For performance-based assessments where students demonstrate skills in person but don't submit anything digitally. Examples include:
+
+- Oral presentations
+- Lab demonstrations
+- Musical or artistic performances
+- In-class activities
+- Participation-based assessments
+
+Like On Paper submissions, you can still provide grades and feedback through Brightspace.
+
+## File Type Restrictions
+
+You can restrict which file types students are allowed to submit. This helps ensure you receive files in formats you can open and grade.
+
+<Steps>
+
+<Step title="Access Submission Settings">
+In the assignment editor, expand the **Submission & Completion** section.
+</Step>
+
+<Step title="Find File Type Options">
+Look for the **Allowable File Extensions** or **Submission File Types** setting.
+</Step>
+
+<Step title="Choose Restriction Type">
+Select from the following options:
+
+| Option | Description |
+|--------|-------------|
+| **All file types allowed** | Students can submit any file format |
+| **Annotatable files only** | Restricts to file types supported by Brightspace's annotation tool (PDF, Word, images, etc.) |
+| **Compatible with Turnitin** | Only allows file types that Turnitin can analyze (if Turnitin is enabled) |
+| **Custom extensions** | Specify exact file extensions you'll accept |
+</Step>
+
+<Step title="Specify Custom Extensions (Optional)">
+If you select custom extensions, enter the allowed file types separated by commas. For example: `.pdf, .docx, .doc`
+
+<Callout type="info" title="Include the Period">
+When specifying custom extensions, include the period before the extension (e.g., `.pdf` not `pdf`).
+</Callout>
+</Step>
+
+</Steps>
+
+### Common File Type Configurations
+
+| Assignment Type | Recommended Extensions |
+|----------------|----------------------|
+| Written essays | `.pdf, .docx, .doc` |
+| Presentations | `.pptx, .ppt, .pdf` |
+| Spreadsheets | `.xlsx, .xls, .csv` |
+| Images | `.jpg, .jpeg, .png, .gif` |
+| Code files | `.py, .java, .js, .html, .css` |
+| Video projects | `.mp4, .mov, .avi` |
+
+<Callout type="warning" title="Turnitin Compatibility">
+If you're using Turnitin for plagiarism detection, it only supports certain file types: `.doc, .docx, .pdf, .txt, .rtf, .odt, .htm, .html, .pptx, .ppt, .xls, .xlsx`. Files in other formats won't generate Similarity Reports.
+</Callout>
+
+## File Size Limits
+
+Brightspace has file size limits that can vary by institution. Understanding these limits helps you advise students appropriately.
+
+### Default Limits
+
+| Context | Typical Limit |
+|---------|--------------|
+| Standard file upload | Up to 2GB per file |
+| Recommended maximum | 1.5GB or less for reliable uploads |
+| With Turnitin enabled | 40MB and 400 pages or fewer |
+| Turnitin plain text files | 2MB maximum |
+
+<Callout type="info" title="Institution-Specific Limits">
+Your institution may have different file size limits configured. Contact your IT department if students report upload failures with smaller files.
+</Callout>
+
+### Advising Students on Large Files
+
+For video or multimedia projects that may exceed size limits:
+
+1. **Compress files** before uploading (reduce video resolution or quality)
+2. **Use cloud storage** links (OneDrive, Google Drive) as an alternative
+3. **Split into multiple files** if allowed
+4. **Contact IT** about increasing limits for specific assignments
+
+<Callout type="warning" title="Browser Timeouts">
+Even if file size is within limits, very large files may fail to upload due to browser timeouts. Recommend that students use a stable internet connection and avoid uploading during high-traffic periods.
+</Callout>
+
+## Number of Files Allowed
+
+Control how many files students can include in a single submission.
+
+### Configuration Options
+
+<Steps>
+
+<Step title="Access Submission Settings">
+In the assignment editor, expand the **Submission & Completion** section.
+</Step>
+
+<Step title="Set Files Per Submission">
+Choose one of the following:
+
+- **Unlimited**: Students can upload as many files as needed in one submission
+- **One File**: Students can only upload a single file per submission
+</Step>
+
+</Steps>
+
+### When to Use Each Setting
+
+| Setting | Best For |
+|---------|----------|
+| **Unlimited** | Projects with multiple components, portfolios, group work with separate contributions |
+| **One File** | Essays, papers, or assignments where you want a single consolidated document |
+
+<Callout type="tip" title="Combining Multiple Documents">
+If you require multiple items but want to limit to one file, instruct students to combine their work into a single PDF or use a ZIP archive.
+</Callout>
+
+## File Naming Requirements
+
+Brightspace has restrictions on file names that students should be aware of.
+
+### Characters Not Allowed
+
+Students cannot submit files with these special characters in the filename:
+
+`< > : " / \ | ? *`
+
+### Best Practices for File Names
+
+Advise students to:
+
+- Use only letters, numbers, spaces, hyphens, and underscores
+- Keep filenames reasonably short (under 40 characters recommended)
+- Avoid special characters, accents, or symbols
+- Follow your specified naming convention (if any)
+
+**Example naming convention:**
+```
+LastName_FirstName_AssignmentName.pdf
+```
+
+<Callout type="warning" title="File Name Errors">
+If students receive an error when uploading, the most common cause is special characters in the filename. Have them rename the file and try again.
+</Callout>
+
+## Late Submission Policies
+
+Brightspace handles late submissions through a combination of due dates, end dates, and visibility settings.
+
+### Understanding Date Types
+
+| Date Type | Purpose | Effect on Submissions |
+|-----------|---------|----------------------|
+| **Start Date** | When assignment becomes available | Students cannot view or submit before this date |
+| **Due Date** | Submission deadline | Submissions after this are flagged as "Late" but still accepted |
+| **End Date** | Hard cutoff | No submissions accepted after this date |
+
+### Configuring Late Submission Access
+
+<Steps>
+
+<Step title="Access Availability Settings">
+In the assignment editor, expand the **Availability Dates & Conditions** section.
+</Step>
+
+<Step title="Set the Due Date">
+Enable the **Due Date** checkbox and set your deadline. This is when on-time submissions must be received.
+</Step>
+
+<Step title="Configure Late Submission Window">
+To allow late submissions for a specific period:
+
+- Set the **End Date** to the final date you'll accept work
+- The time between Due Date and End Date is your late submission window
+
+To stop all submissions at the deadline:
+
+- Set the **End Date** to the same time as the **Due Date**
+
+To allow late submissions indefinitely:
+
+- Leave the **End Date** blank
+</Step>
+
+</Steps>
+
+### Viewing Late Submissions
+
+When grading, late submissions are clearly marked with a "Late" indicator showing:
+
+- The exact submission timestamp
+- How long after the due date the submission was received
+
+## Late Penalty Configuration
+
+<Callout type="warning" title="No Automatic Penalties">
+Brightspace does not have a built-in feature to automatically deduct points for late submissions. Late penalties must be applied manually or through workarounds.
+</Callout>
+
+### Manual Penalty Application
+
+The most common approach is calculating and applying late penalties manually when grading:
+
+<Steps>
+
+<Step title="View the Submission">
+Open the submission to grade. Note the late indicator and how much time elapsed since the due date.
+</Step>
+
+<Step title="Calculate the Penalty">
+Apply your late policy. For example:
+- 10% per day late
+- 5 points per day
+- Flat percentage deduction
+</Step>
+
+<Step title="Apply to Grade">
+Enter the adjusted grade after deducting the late penalty. Note the deduction in your feedback.
+</Step>
+
+</Steps>
+
+### Workarounds for Tracking Penalties
+
+**Method 1: Negative Bonus Grade Item**
+
+Create a separate grade item called "Late Penalties" with negative points:
+
+1. Create a grade item in the Gradebook called "Late Penalty"
+2. Set it as a Bonus item so it subtracts from the total
+3. Enter negative values (e.g., -10) for late submissions
+
+**Method 2: Calculated Grade Item**
+
+Create a formula-based grade item that factors in late deductions:
+
+1. Create the primary assignment grade item
+2. Create a second item for "Days Late" (enter manually)
+3. Create a calculated grade item that applies the penalty formula
+
+<Callout type="info" title="Feature Request">
+Automatic late penalties are a frequently requested feature in Brightspace. This functionality is tracked in the D2L Product Idea Exchange as "Late Submission Penalty Deduction Toggle (D8470)."
+</Callout>
+
+## Resubmission Settings
+
+Control whether students can submit multiple times and which submissions are retained.
+
+<Steps>
+
+<Step title="Access Submission Settings">
+In the assignment editor, expand the **Submission & Completion** section.
+</Step>
+
+<Step title="Select Submission Behavior">
+Choose one of three options:
+
+| Option | Behavior |
+|--------|----------|
+| **All submissions are kept** | Students can submit unlimited times; all versions are retained for review |
+| **Only one submission allowed** | Students can submit only once; no resubmissions permitted |
+| **Only the most recent submission is kept** | Students can resubmit; previous versions are replaced |
+</Step>
+
+</Steps>
+
+### Choosing the Right Setting
+
+| Setting | Best For | Considerations |
+|---------|----------|----------------|
+| **All submissions are kept** | Drafts, iterative work, portfolios | More files to manage; can compare versions |
+| **Only one submission allowed** | Exams, final submissions, time-sensitive work | Students cannot correct mistakes |
+| **Only the most recent submission is kept** | Standard assignments where only final version matters | Students can fix errors; less storage used |
+
+<Callout type="tip" title="Recommended Default">
+**"Only the most recent submission is kept"** is often the best default choice. It allows students to fix accidental mistakes (wrong file uploaded) while keeping your grading simple with only one version to review.
+</Callout>
+
+### Student Experience with Resubmissions
+
+- Students see a "Resubmit" button after their initial submission
+- When all submissions are kept, students see a counter showing how many files they've uploaded
+- Students do not receive a warning message when resubmitting (it just overwrites or adds)
+
+## Email Notifications on Submission
+
+Brightspace can notify you when students submit assignments.
+
+### Enabling Instructor Notifications
+
+<Steps>
+
+<Step title="Open Assignment Settings">
+In the assignment editor, expand the **Submission & Completion** section.
+</Step>
+
+<Step title="Find Notification Settings">
+Locate the **Notification Email** field.
+</Step>
+
+<Step title="Enter Email Addresses">
+Enter the email addresses that should receive notifications when students submit. Separate multiple addresses with commas.
+</Step>
+
+<Step title="Save the Assignment">
+Click **Save and Close** to apply the notification settings.
+</Step>
+
+</Steps>
+
+<Callout type="info" title="Account-Level Notifications">
+You can also enable assignment notifications for all courses in your account settings:
+
+1. Click your profile icon in the top-right corner
+2. Select **Notifications**
+3. Enable notifications for Assignments under Instant Notifications
+4. Click **Save**
+</Callout>
+
+### Student Submission Confirmation
+
+Students automatically receive a submission confirmation in Brightspace. Depending on their notification settings, they may also receive an email confirmation.
+
+**What students see:**
+- A confirmation page immediately after submitting
+- The submission appears in their Assignments list with a timestamp
+- Email confirmation (if enabled in their notification settings)
+
+<Callout type="warning" title="Cannot Disable Student Emails">
+Students receive automatic confirmation emails when they submit. This cannot be disabled by instructors. Students can manage their own notification preferences in their account settings.
+</Callout>
+
+## Submission Confirmation Details
+
+### What Students See After Submitting
+
+When a student successfully submits an assignment, they see:
+
+1. **Confirmation Page**: Shows the assignment name, submission timestamp, and files submitted
+2. **Submission List**: Their submission appears in the assignment folder with status indicators
+3. **Confirmation Email**: Sent to their registered email address (if notifications are enabled)
+
+### Tracking Submission Status
+
+Students can verify their submission status by:
+
+1. Navigating to **Assignments** in the course
+2. Finding the assignment in the list
+3. Checking the **Submissions** column for their submission count
+4. Clicking the assignment to view submission details and timestamps
+
+<Callout type="tip" title="Advise Students to Verify">
+Encourage students to check their submission confirmation email and verify their file uploaded correctly. Common issues include accidentally submitting the wrong file or an incomplete upload.
+</Callout>
+
+## Best Practices
+
+### Setting Up Submissions
+
+1. **Be specific about file types**: Only allow formats you can open and grade
+2. **Consider resubmission needs**: Allow resubmissions unless there's a specific reason not to
+3. **Set clear late policies**: Communicate your late penalty structure in the assignment instructions
+4. **Test the student experience**: Submit a test file to verify settings work as expected
+
+### Communicating Requirements
+
+Include in your assignment instructions:
+
+- Accepted file types and any restrictions
+- File naming conventions (if required)
+- Resubmission policy
+- Late submission policy and penalties
+- How students can verify their submission was successful
+
+### Troubleshooting Common Issues
+
+| Issue | Likely Cause | Solution |
+|-------|--------------|----------|
+| Student can't submit | End date has passed | Extend end date or grant special access |
+| Upload fails | File too large or special characters in name | Reduce file size; rename file |
+| Wrong file submitted | Only one submission allowed | Either allow resubmission or clear the submission manually |
+| Turnitin not processing | Unsupported file type | Have student resubmit as PDF or Word document |
+| No submission confirmation | Email notification issues | Have student check spam folder; verify in Brightspace directly |
+
+## Related Guides
+
+- [Creating Assignment Folders](/docs/assignments/creating-assignments)
+- [Viewing and Grading Submissions](/docs/assignments/grading-submissions)
+- [Managing Special Access](/docs/assignments/special-access)
+- [Enabling Turnitin](/docs/assignments/turnitin)
+- [Gradebook Setup](/docs/gradebook/setup-wizard)
+
+## Additional Resources
+
+- [D2L Community - Submit and Manage Assignments](https://community.d2l.com/brightspace/kb/articles/18122-submit-and-manage-assignments)
+- [Assignment Submission Type Overview - Vanderbilt](https://www.vanderbilt.edu/brightspace/assignment-submission-type-overview/)
+- [D2L Community - Recommended Submission Settings Discussion](https://community.d2l.com/brightspace/discussion/7935/what-is-the-recommended-submission-setting-and-why)

@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Send, MessageCircle, X, Sparkles, Loader2 } from "lucide-react";
+import Link from "next/link";
+import { Send, MessageCircle, X, Sparkles, Loader2, FileText } from "lucide-react";
 import { useChatStore } from "@/stores/chat-store";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +15,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import type { ChatSource } from "@/types/content";
 
 function formatTime(date: Date): string {
   return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
@@ -23,7 +25,7 @@ interface ChatMessageItemProps {
   role: "user" | "assistant";
   content: string;
   timestamp: Date;
-  sources?: string[];
+  sources?: ChatSource[];
 }
 
 function ChatMessageItem({
@@ -66,14 +68,21 @@ function ChatMessageItem({
         <p className="whitespace-pre-wrap leading-relaxed">{content}</p>
       </div>
       {sources && sources.length > 0 && (
-        <div className="mt-1 flex flex-wrap gap-1.5">
-          {sources.map((source, index) => (
-            <span
-              key={index}
-              className="inline-flex items-center rounded-full bg-primary/10 text-primary px-2.5 py-0.5 text-xs font-medium"
+        <div className="mt-1 flex flex-wrap gap-1.5 max-w-[85%]">
+          {sources.map((source) => (
+            <Link
+              key={source.url}
+              href={source.url}
+              className="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary px-2.5 py-0.5 text-xs font-medium hover:bg-primary/20 transition-colors"
             >
-              {source}
-            </span>
+              <FileText className="size-3" />
+              <span className="truncate max-w-[120px]">{source.title}</span>
+              {source.section && (
+                <span className="text-primary/70 truncate max-w-[80px]">
+                  → {source.section}
+                </span>
+              )}
+            </Link>
           ))}
         </div>
       )}
@@ -139,23 +148,58 @@ export function ChatSidebar() {
     setInputValue("");
     setLoading(true);
 
-    // TODO: Implement actual API call to chat backend
-    // For now, simulate a response
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: trimmedValue,
+          currentPage: currentPage,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to get response");
+      }
+
+      const data = await response.json();
+
+      // Format sources with full metadata for clickable links
+      const formattedSources: ChatSource[] = (data.sources || []).map(
+        (s: { title: string; slug: string; section?: string; url?: string }) => ({
+          title: s.title,
+          slug: s.slug,
+          section: s.section,
+          url: s.url || `/docs/${s.slug}`,
+        })
+      );
+
+      addMessage({
+        role: "assistant",
+        content: data.message,
+        sources: formattedSources.length > 0 ? formattedSources : undefined,
+      });
+    } catch (error) {
+      console.error("Chat error:", error);
       addMessage({
         role: "assistant",
         content:
-          "I'm here to help you with Brightspace! This is a placeholder response. The chat backend will be implemented soon.",
-        sources: ["Brightspace Guide"],
+          error instanceof Error
+            ? `Sorry, I encountered an error: ${error.message}. Please try again.`
+            : "Sorry, I encountered an error. Please try again.",
       });
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
-  const handleAskAboutPage = () => {
+  const handleAskAboutPage = async () => {
     if (!currentPage || isLoading) return;
 
-    const question = `Can you help me understand the content on this page: ${currentPage}?`;
+    const question = `Can you summarize and help me understand the content on this page: ${currentPage}?`;
     addMessage({
       role: "user",
       content: question,
@@ -163,15 +207,52 @@ export function ChatSidebar() {
 
     setLoading(true);
 
-    // TODO: Implement actual API call with page context
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: question,
+          currentPage: currentPage,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to get response");
+      }
+
+      const data = await response.json();
+
+      // Format sources with full metadata for clickable links
+      const formattedSources: ChatSource[] = (data.sources || []).map(
+        (s: { title: string; slug: string; section?: string; url?: string }) => ({
+          title: s.title,
+          slug: s.slug,
+          section: s.section,
+          url: s.url || `/docs/${s.slug}`,
+        })
+      );
+
       addMessage({
         role: "assistant",
-        content: `I'll help you understand the "${currentPage}" page. This feature will provide contextual help based on the current page content once the backend is implemented.`,
-        sources: ["Current Page Context"],
+        content: data.message,
+        sources: formattedSources.length > 0 ? formattedSources : undefined,
       });
+    } catch (error) {
+      console.error("Chat error:", error);
+      addMessage({
+        role: "assistant",
+        content:
+          error instanceof Error
+            ? `Sorry, I encountered an error: ${error.message}. Please try again.`
+            : "Sorry, I encountered an error. Please try again.",
+      });
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
 
   return (

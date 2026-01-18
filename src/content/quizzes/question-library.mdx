@@ -1,0 +1,583 @@
+---
+title: "Building Question Libraries"
+description: "Create and manage reusable question pools for quizzes"
+category: "Quizzes"
+order: 4
+tags: ["question library", "question pools", "quiz questions", "reuse"]
+---
+
+# Building Question Libraries
+
+## Overview
+
+The Question Library in Brightspace is a central repository for storing, organizing, and managing quiz questions. Think of it as your personal question bank where you can create, import, and organize questions for reuse across multiple quizzes, surveys, and self-assessments. By building questions in the Question Library first, you gain the ability to easily update questions, track statistics, and create randomized assessments using question pools.
+
+## Before You Begin
+
+- You need **Instructor** or **Teaching Assistant** permissions in the course
+- Plan your organizational structure (by chapter, topic, difficulty, or question type)
+- Gather any existing questions you want to import
+- Decide on consistent naming conventions for sections
+
+<Callout type="tip" title="Best Practice">
+Always create and organize quiz questions in the Question Library first, then import them into quizzes. This workflow makes questions easier to find, update, and reuse across multiple assessments.
+</Callout>
+
+---
+
+## Understanding the Question Library
+
+The Question Library stores questions separately from quizzes. When you import questions into a quiz, Brightspace creates a copy of those questions. This means:
+
+- The original question stays in the Question Library
+- A duplicate is placed in your quiz
+- Editing in one location can optionally update the other
+- Deleting from the library does not automatically remove from quizzes
+
+<Callout type="info" title="Key Concept">
+Questions in the Question Library are independent from quiz questions. Changes you make in the library can be pushed to quizzes, but the connection is not automatic without your confirmation.
+</Callout>
+
+---
+
+## Creating Sections in the Question Library
+
+Sections are folders that help you organize questions by topic, chapter, unit, or any other category. Creating a logical section structure before adding questions saves time and makes building quizzes much easier.
+
+<Steps>
+<Step title="Navigate to the Question Library">
+From your course navbar, click **Assessments** and select **Quizzes**. Then click the **Question Library** tab at the top of the page.
+
+You will see the Question Library interface with a navigation tree on the left showing any existing sections.
+</Step>
+
+<Step title="Create a new section">
+Click the **New** button and select **Section** from the dropdown menu.
+</Step>
+
+<Step title="Configure the section">
+Enter a **Section Title** that clearly identifies the content. For example:
+- "Chapter 1 - Introduction to Biology"
+- "Unit 3 - Civil War Era"
+- "Module 5 - Functions and Variables"
+
+Optionally add **Section Text** to provide a description or notes about this section. Check **Hide section text from learners** if you want this text visible only to instructors.
+</Step>
+
+<Step title="Enable shuffling (optional)">
+If you plan to use this section for randomized quizzes, select **Shuffle questions in this section**. This randomizes the order of questions when imported into a quiz.
+</Step>
+
+<Step title="Save the section">
+Click **Save** to create the section. It will appear in the navigation tree on the left side.
+</Step>
+</Steps>
+
+### Creating Subsections
+
+You can create subsections within sections for more granular organization:
+
+<Steps>
+<Step title="Select the parent section">
+Click on the section where you want to create a subsection. Sections are identified with a folder icon.
+</Step>
+
+<Step title="Create the subsection">
+Click **New** and select **Section**. Configure the subsection title and settings, then click **Save**.
+</Step>
+</Steps>
+
+### Recommended Section Structure
+
+| Organization Method | Example Structure |
+|---------------------|-------------------|
+| **By Chapter** | Chapter 1, Chapter 2, Chapter 3... |
+| **By Topic** | Photosynthesis, Cell Division, Genetics... |
+| **By Difficulty** | Easy, Medium, Hard |
+| **By Question Type** | Multiple Choice, True/False, Written Response... |
+| **By Unit and Topic** | Unit 1 > Topic A, Unit 1 > Topic B... |
+
+<Callout type="tip" title="Naming Convention">
+Use consistent, descriptive names for sections. Including chapter numbers or unit identifiers makes it easier to locate questions when building quizzes later.
+</Callout>
+
+---
+
+## Adding Questions to the Library
+
+You can add questions directly to the Question Library or import them from files.
+
+### Creating Questions Directly
+
+<Steps>
+<Step title="Navigate to the target section">
+In the Question Library, click on the section where you want to add questions. The section name will be highlighted in the navigation tree.
+</Step>
+
+<Step title="Create a new question">
+Click **New** and select the question type you want to create:
+- True/False (T/F)
+- Multiple Choice (M/C)
+- Multi-Select (M-S)
+- Written Response (WR)
+- Short Answer (SA)
+- Fill in the Blanks (FIB)
+- Matching (MAT)
+- Ordering (ORD)
+- Arithmetic (2+2)
+- Significant Figures (x10)
+</Step>
+
+<Step title="Configure the question">
+1. Enter the **Question Text** in the rich text editor
+2. Add answer options as required by the question type
+3. Mark the correct answer(s)
+4. Set the **Points** value
+5. Optionally add feedback, hints, or images
+</Step>
+
+<Step title="Save the question">
+Click **Save** to add the question to the selected section. You can continue adding more questions or return to the section list.
+</Step>
+</Steps>
+
+### Moving Questions Between Sections
+
+<Steps>
+<Step title="Select questions to move">
+In the Question Library, check the boxes next to the questions you want to move.
+</Step>
+
+<Step title="Use the Move action">
+Click **Move** from the action bar. A dialog will appear showing available sections.
+</Step>
+
+<Step title="Select the destination">
+Choose the section where you want to move the questions and confirm the action.
+</Step>
+</Steps>
+
+---
+
+## Importing Questions from Files
+
+Brightspace supports importing questions from CSV files and QTI (Question and Test Interoperability) packages.
+
+### Importing from CSV Files
+
+CSV imports support seven question types: Written Response, Short Answer, Matching, Multiple Choice, True/False, Multi-Select, and Ordering.
+
+<Steps>
+<Step title="Access the import function">
+In the Question Library, click **Import** and select **Upload a File**.
+</Step>
+
+<Step title="Download the template (optional)">
+Click **Download Template** to get a properly formatted CSV file. This template shows the required columns and format for each question type.
+</Step>
+
+<Step title="Prepare your CSV file">
+Open the template in a spreadsheet application (Excel, Google Sheets). Enter your questions following the format:
+- Each row represents one question
+- Columns define question type, text, answers, and correct responses
+- Save as CSV with UTF-8 encoding if using special characters
+</Step>
+
+<Step title="Upload the file">
+Click **Browse** to select your CSV file, then click **Import**. The questions will be added to your current section.
+</Step>
+</Steps>
+
+<Callout type="warning" title="CSV Encoding">
+If your questions contain non-ASCII characters (accents, symbols, non-English text), save the CSV file with UTF-8 encoding to prevent character display issues.
+</Callout>
+
+### Importing QTI Packages
+
+QTI (Question and Test Interoperability) is a standard format used by many learning management systems and textbook publishers.
+
+<Steps>
+<Step title="Access Course Admin">
+From your course, click the gear icon and select **Import/Export/Copy Components**.
+</Step>
+
+<Step title="Select Import from File">
+Choose **Import Components** and then **from a file**.
+</Step>
+
+<Step title="Upload the QTI package">
+Select your QTI file (usually a .zip archive) and click **Import**.
+</Step>
+
+<Step title="Complete the import">
+Follow the prompts to complete the import process. Questions will appear in the Question Library under a folder with the same name as the imported file.
+</Step>
+</Steps>
+
+### Importing from Publisher Content
+
+Many textbook publishers provide question banks in Brightspace-compatible formats:
+
+<Steps>
+<Step title="Obtain the question bank">
+Download the question bank file from your publisher's instructor resources portal. Common formats include QTI, Respondus, or native Brightspace packages.
+</Step>
+
+<Step title="Import using the appropriate method">
+- For QTI files: Use the Import/Export/Copy Components method
+- For Respondus files: Use Respondus 4.0 to publish directly to Brightspace
+- For native packages: Use Course Admin > Import
+</Step>
+
+<Step title="Organize imported questions">
+After import, review the questions and move them to appropriate sections if needed.
+</Step>
+</Steps>
+
+<Callout type="info" title="Publisher Integration">
+Contact your textbook publisher for specific instructions on importing their question banks into Brightspace. Most major publishers (McGraw Hill, Pearson, Cengage) provide detailed guides.
+</Callout>
+
+---
+
+## Organizing Questions by Topic or Chapter
+
+Effective organization makes quiz creation faster and helps maintain question quality over time.
+
+### Recommended Workflow
+
+<Steps>
+<Step title="Plan your structure">
+Before adding questions, map out your section hierarchy. Consider how you will use questions in assessments (by chapter for chapter quizzes, by topic for cumulative exams).
+</Step>
+
+<Step title="Create the section structure">
+Build all your sections and subsections first. This prevents having to move questions later.
+</Step>
+
+<Step title="Add questions to appropriate sections">
+As you create or import questions, place them directly in the correct section. If creating in bulk, sort questions before importing.
+</Step>
+
+<Step title="Review and maintain">
+Periodically review your Question Library organization. Remove outdated questions, update incorrect ones, and ensure new content is properly categorized.
+</Step>
+</Steps>
+
+### Tips for Large Question Libraries
+
+| Challenge | Solution |
+|-----------|----------|
+| Too many questions in one section | Create subsections by subtopic or difficulty |
+| Duplicate questions | Use search to find existing questions before creating new ones |
+| Outdated content | Add dates to section names or use a "Review Needed" section |
+| Finding specific questions | Use consistent naming in question text |
+
+---
+
+## Using Question Pools in Quizzes
+
+Question pools allow you to randomly select a subset of questions from a larger set, giving each student a different quiz experience.
+
+### Creating a Question Pool
+
+<Steps>
+<Step title="Open your quiz">
+Navigate to **Assessments** > **Quizzes** and click on your quiz to edit it.
+</Step>
+
+<Step title="Add a question pool">
+In the quiz editing screen, click **Add/Edit Questions**, then click **New** and select **Question Pool**.
+</Step>
+
+<Step title="Name the pool">
+Enter a descriptive name for the pool (e.g., "Chapter 3 Random Questions" or "Vocabulary Pool").
+</Step>
+
+<Step title="Configure pool settings">
+- **Number of Questions to Select**: Enter how many questions each student will receive from this pool
+- **Points per Question**: Set the point value for each question in the pool
+</Step>
+
+<Step title="Add questions to the pool">
+Click **Browse Question Library** and navigate to the section containing your questions. Select the questions you want to include in the pool by checking the boxes, then click **Import**.
+</Step>
+
+<Step title="Save the pool">
+Click **Save** to finalize the question pool.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Equal Points Required">
+All questions in a question pool must have the same point value. Since each student receives different questions, point values must be consistent to ensure fair grading.
+</Callout>
+
+### Example: Random Selection
+
+If you have 50 questions in a section and want each student to receive 10 random questions:
+
+1. Create a question pool in your quiz
+2. Import all 50 questions from the Question Library section
+3. Set "Number of Questions to Select" to 10
+4. Each student will receive a randomly selected set of 10 questions from the 50 available
+
+### Multiple Pools in One Quiz
+
+You can include multiple question pools in a single quiz to randomize different sections:
+
+| Pool | Source | Questions Available | Questions Selected |
+|------|--------|---------------------|-------------------|
+| Pool 1: Chapter 1 | Chapter 1 Section | 25 | 5 |
+| Pool 2: Chapter 2 | Chapter 2 Section | 30 | 5 |
+| Pool 3: Chapter 3 | Chapter 3 Section | 20 | 5 |
+| **Total** | | 75 | 15 |
+
+<Callout type="info" title="2025 Update">
+Brightspace now shows a warning indicator when a question pool has insufficient questions. If a pool tries to select more questions than available (e.g., 12 requested but only 10 available), you will see an alert before students begin.
+</Callout>
+
+---
+
+## Random Question Selection
+
+Beyond question pools, Brightspace offers additional randomization options.
+
+### Shuffling Question Order
+
+<Steps>
+<Step title="Enable quiz-level shuffling">
+In the quiz settings under **Timing & Display**, enable **Shuffle Quiz** to randomize the order of all questions for each student.
+</Step>
+
+<Step title="Enable section-level shuffling">
+When creating sections in the Question Library, check **Shuffle questions in this section** to randomize questions within that section when imported.
+</Step>
+
+<Step title="Combine with pools">
+Use question pools for random selection combined with shuffling for random order, maximizing quiz variation.
+</Step>
+</Steps>
+
+### Shuffling Answer Options
+
+For individual multiple choice questions:
+
+1. Edit the question in the Question Library
+2. Check **Randomize answers for this question**
+3. Save the question
+
+<Callout type="warning" title="Avoid All of the Above">
+Do not use "All of the above" or "None of the above" options when randomizing answers. These options become confusing when moved to different positions.
+</Callout>
+
+---
+
+## Sharing Questions Between Courses
+
+There are several methods to share questions across courses.
+
+### Method 1: Course Copy
+
+<Steps>
+<Step title="Access Course Admin">
+In the destination course, click the gear icon and select **Import/Export/Copy Components**.
+</Step>
+
+<Step title="Select Copy Components">
+Choose **Copy Components from Another Org Unit**.
+</Step>
+
+<Step title="Find the source course">
+Search for and select the course containing the questions you want to copy.
+</Step>
+
+<Step title="Select Question Library">
+Click **Select Components** and check **Question Library**. Choose to copy all questions or select specific sections.
+</Step>
+
+<Step title="Complete the copy">
+Follow the prompts to complete the copy process. Questions will appear in the destination course's Question Library.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Copy Quizzes with Question Library">
+When copying quizzes that use question pools, always copy the Question Library along with the quizzes. Copying only quizzes creates "orphaned" questions that cannot be edited or reused in the Question Library.
+</Callout>
+
+### Method 2: Export and Import
+
+<Steps>
+<Step title="Export from source course">
+In the source course, go to **Import/Export/Copy Components** and select **Export Components**. Choose the Question Library and create an export package.
+</Step>
+
+<Step title="Download the package">
+Download the exported .zip file to your computer.
+</Step>
+
+<Step title="Import to destination course">
+In the destination course, use **Import Components** > **from a file** and upload the package.
+</Step>
+</Steps>
+
+### Method 3: Learning Object Repository (LOR)
+
+If your institution has enabled the Learning Object Repository:
+
+<Steps>
+<Step title="Publish to LOR">
+In the Question Library, select questions and choose **Publish to LOR**.
+</Step>
+
+<Step title="Access from other courses">
+In another course, browse the LOR and import the shared questions.
+</Step>
+</Steps>
+
+<Callout type="info" title="Institutional Feature">
+The Learning Object Repository may not be available at all institutions. Contact your Brightspace administrator to check availability.
+</Callout>
+
+---
+
+## Question Statistics and Analysis
+
+After students complete quizzes, Brightspace provides detailed statistics to help you evaluate question quality.
+
+### Accessing Question Statistics
+
+<Steps>
+<Step title="Navigate to quiz statistics">
+Go to **Assessments** > **Quizzes**, click the dropdown arrow next to your quiz, and select **Statistics**.
+</Step>
+
+<Step title="View Question Stats tab">
+Click the **Question Stats** tab to see performance data for each question.
+</Step>
+
+<Step title="Review Question Details">
+Click the **Question Details** tab for in-depth analysis of individual questions, including answer distribution.
+</Step>
+</Steps>
+
+### Understanding Key Metrics
+
+| Metric | Description | Interpretation |
+|--------|-------------|----------------|
+| **Average Score** | Mean score for the question | Low averages may indicate difficult or unclear questions |
+| **Standard Deviation** | Spread of scores | Higher values indicate more variation in student responses |
+| **Discrimination Index** | Difference between top and bottom performers | Higher values (positive) indicate good questions that distinguish learners |
+| **Point Biserial** | Correlation between question and quiz scores | Values close to +1.00 indicate strong positive correlation |
+
+### Discrimination Index Explained
+
+The Discrimination Index measures how well a question separates high-performing from low-performing students:
+
+- **Positive values (0 to 100%)**: High performers answer correctly more often than low performers (good question)
+- **Near zero**: Question does not discriminate between ability levels
+- **Negative values**: Low performers answer correctly more often (potentially flawed question)
+
+<Callout type="warning" title="Question Pool Limitation">
+Questions from random question pools do not generate individual item statistics because different students receive different questions. Use fixed questions for detailed statistical analysis.
+</Callout>
+
+### Using Statistics to Improve Questions
+
+1. **Review low discrimination questions**: These may be ambiguous or have incorrect answer keys
+2. **Check answer distribution**: If many students select a particular wrong answer, the question or options may be confusing
+3. **Identify too-easy questions**: Very high average scores with no discrimination may not add assessment value
+4. **Update the Question Library**: Use insights to revise questions for future quizzes
+
+---
+
+## Editing Library Questions
+
+You can edit questions in the Question Library at any time. Changes can optionally be pushed to quizzes where the questions are used.
+
+### Editing a Question
+
+<Steps>
+<Step title="Locate the question">
+In the Question Library, navigate to the section containing the question. Click on the question to open it for editing.
+</Step>
+
+<Step title="Make your changes">
+Edit the question text, answer options, point value, feedback, or any other settings.
+</Step>
+
+<Step title="Save and update linked quizzes">
+When you save, Brightspace will ask if you want to update the question in quizzes where it is used. Select **Yes** to push changes to all linked quizzes, or **No** to update only the Question Library version.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Browser Recommendation">
+Use Google Chrome when editing questions in the Question Library. Some users have reported that Firefox does not consistently display the prompt to update linked quizzes.
+</Callout>
+
+### Deleting Questions
+
+<Steps>
+<Step title="Select questions to delete">
+Check the boxes next to the questions you want to remove.
+</Step>
+
+<Step title="Click Delete">
+Click the **Delete** button and confirm the action.
+</Step>
+
+<Step title="Update quizzes manually">
+Deleting questions from the Question Library does not automatically remove them from quizzes. You must manually remove deleted questions from each quiz if desired.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Deletion Warning">
+Questions deleted from the Question Library will remain in any quizzes where they were used. These "orphaned" quiz questions can still be used but cannot be edited from the Question Library.
+</Callout>
+
+### Bulk Operations
+
+The Question Library supports several bulk operations:
+
+| Action | Description |
+|--------|-------------|
+| **Move** | Move selected questions to a different section |
+| **Copy** | Create duplicates in another section |
+| **Delete** | Remove selected questions |
+| **Edit** | Open each selected question for editing (one at a time) |
+
+---
+
+## Common Issues
+
+### Questions not appearing in quiz
+- Verify you imported questions from the Question Library, not just created sections
+- Check that the correct section was selected during import
+- Ensure question pools have sufficient questions configured
+
+### Edits not syncing to quizzes
+- Use Google Chrome when editing Question Library questions
+- When prompted, select "Yes" to update linked quizzes
+- For questions already in quizzes, you may need to edit within the quiz directly
+
+### Question pool statistics showing N/A
+- This is expected behavior; random pool questions do not generate individual statistics
+- Use fixed (non-pooled) questions if you need item-level analysis
+
+### Orphaned questions after course copy
+- Always copy the Question Library along with quizzes
+- If questions become orphaned, copy the Question Library separately to re-link them
+
+### Import errors with CSV files
+- Verify the CSV format matches the template exactly
+- Save with UTF-8 encoding for special characters
+- Check that question types are supported (Written Response, Short Answer, Matching, Multiple Choice, True/False, Multi-Select, Ordering)
+
+---
+
+## Related Guides
+
+- [Creating Quizzes](/docs/quizzes/creating-quizzes) - Build quizzes using Question Library content
+- [Quiz Question Types](/docs/quizzes/question-types) - Detailed guide to all question types
+- [Quiz Settings](/docs/quizzes/quiz-settings) - Configure timing, attempts, and display options
+- [Gradebook Setup](/docs/gradebook/setup-wizard) - Connect quizzes to the gradebook
+- [Release Conditions](/docs/course-setup/release-conditions) - Control quiz availability

@@ -1,0 +1,620 @@
+---
+title: "Final Grade Calculation and Release"
+description: "Calculate, adjust, and release final grades to students"
+category: "Gradebook"
+order: 4
+tags: ["final grades", "grade release", "calculation", "transcripts"]
+---
+
+# Final Grade Calculation and Release
+
+## Overview
+
+Managing final grades in Brightspace involves understanding how grades are calculated, when to use manual adjustments, and how to properly release grades to students. This guide covers the entire final grade workflow from calculation through release, including exporting grades for institutional records and transferring to your registrar system.
+
+<Callout type="info" title="Final Grades Are Hidden by Default">
+By default, students cannot see their final grades in Brightspace. You must explicitly configure and release final grades for students to view them. This is one of the most common oversights instructors make.
+</Callout>
+
+## Before You Begin
+
+- Complete the [Gradebook Setup Wizard](/docs/gradebook/setup-wizard) and verify your grading system
+- Ensure all grade items and categories are properly configured
+- Enter grades for all assignments, quizzes, and other assessments
+- Review your institution's grade submission deadlines and procedures
+
+## Understanding Final Grade Types
+
+Brightspace provides two distinct final grade columns that serve different purposes:
+
+### Calculated Final Grade
+
+The **Calculated Final Grade** is automatically computed based on your gradebook configuration:
+
+- Reflects the sum of all grade items according to your chosen grading system (weighted, points, or formula)
+- Updates automatically as you enter grades throughout the semester
+- Cannot be manually edited directly - changes require modifying individual grade item scores
+- Ideal for showing students their running grade during the course
+
+### Adjusted Final Grade
+
+The **Adjusted Final Grade** provides manual override capability:
+
+- Allows you to enter a final grade that differs from the calculated result
+- Overrides the calculated grade when released to students
+- Useful for curving grades, rounding up borderline scores, or applying special circumstances
+- Once entered, it supersedes the calculated grade completely
+
+<Callout type="warning" title="All-or-Nothing for Adjusted Grades">
+If you use adjusted final grades for even one student, you must decide whether to release calculated or adjusted grades for the entire class. Students whose grades you do not adjust should have no entry in the Adjusted Final Grade column - leave it blank for them.
+</Callout>
+
+### Comparison Table
+
+| Feature | Calculated Final Grade | Adjusted Final Grade |
+|---------|------------------------|----------------------|
+| Automatic calculation | Yes | No |
+| Manual override | No | Yes |
+| Updates with new grades | Yes | No (static once entered) |
+| Best for mid-semester | Yes | No |
+| Best for end of term | Yes (if no adjustments needed) | Yes (if adjustments needed) |
+
+## How Final Grades Are Calculated
+
+Final grade calculation depends on your grading system choice made during setup:
+
+### Weighted System Calculation
+
+In a weighted gradebook:
+
+1. Each category contributes a percentage to the final grade
+2. Items within a category are averaged (or weighted by points, depending on your settings)
+3. Category scores are multiplied by their weight percentage
+4. All weighted category scores are summed for the final grade
+
+**Example:**
+- Assignments (30%): Student earned 85% average = 0.30 x 85 = 25.5 points
+- Quizzes (20%): Student earned 90% average = 0.20 x 90 = 18 points
+- Midterm (20%): Student earned 78% = 0.20 x 78 = 15.6 points
+- Final Exam (30%): Student earned 82% = 0.30 x 82 = 24.6 points
+- **Final Grade: 83.7%**
+
+### Points System Calculation
+
+In a points-based gradebook:
+
+1. All points earned across all grade items are summed
+2. All possible points are summed
+3. Final grade = (Total Earned / Total Possible) x 100
+
+**Example:**
+- Assignment 1: 45/50 points
+- Assignment 2: 42/50 points
+- Quiz 1: 18/20 points
+- Midterm: 78/100 points
+- **Final Grade: (183/220) x 100 = 83.2%**
+
+### Handling Ungraded Items
+
+Your gradebook settings determine how ungraded items affect the final grade:
+
+| Setting | Effect | Best Used When |
+|---------|--------|----------------|
+| Drop ungraded items | Items without grades are excluded from calculation | During the semester (shows accurate current standing) |
+| Treat ungraded as 0 | Items without grades count as zero | End of term (shows true final standing) |
+
+<Callout type="tip" title="Recommended Approach">
+Use "Drop ungraded items" during the semester so students see their actual performance on completed work. Switch to "Treat ungraded as 0" at the end of the term when calculating true final grades.
+</Callout>
+
+## Grade Schemes and Letter Grades
+
+Grade schemes convert numeric percentages into letter grades or other symbols.
+
+### Applying a Grade Scheme to Final Grades
+
+<Steps>
+
+<Step title="Access Manage Grades">
+Navigate to **Grades** in your course navbar, then click the **Manage Grades** tab.
+</Step>
+
+<Step title="Edit the Final Grade item">
+At the bottom of the Manage Grades page, click on **Final Calculated Grade** (or **Final Adjusted Grade** if you plan to use adjustments).
+</Step>
+
+<Step title="Select a grade scheme">
+In the **Grade Scheme** dropdown menu, select your desired scheme (e.g., "Letter Grades," "Pass/Fail," or a custom scheme).
+</Step>
+
+<Step title="Save changes">
+Click **Save and Close** to apply the scheme.
+</Step>
+
+</Steps>
+
+### Creating a Custom Grade Scheme
+
+If your institution does not have a pre-configured scheme that matches your needs:
+
+<Steps>
+
+<Step title="Access Grade Schemes">
+Navigate to **Grades** and click the **Schemes** tab at the top of the page.
+</Step>
+
+<Step title="Create a new scheme">
+Click **New Scheme** to open the scheme editor.
+</Step>
+
+<Step title="Define scheme levels">
+For each grade level, enter:
+- **Symbol**: The letter or text to display (A, B+, Pass, etc.)
+- **Start %**: The minimum percentage for this level
+- **Color** (optional): A color to visually represent the grade
+
+Example letter grade ranges:
+- A: 90% - 100%
+- B: 80% - 89.99%
+- C: 70% - 79.99%
+- D: 60% - 69.99%
+- F: 0% - 59.99%
+</Step>
+
+<Step title="Save the scheme">
+Click **Save and Close**. The scheme is now available for use throughout your course.
+</Step>
+
+</Steps>
+
+<Callout type="info" title="Scheme Application">
+Grade schemes affect how grades display but do not change the underlying numeric values. A student with 87.4% will display as "B+" if your scheme assigns that symbol to the 85-89.99% range, but the actual percentage remains stored in the gradebook.
+</Callout>
+
+## Manual Final Grade Overrides
+
+When you need to adjust a student's final grade manually (for curving, rounding, or special circumstances), use the Adjusted Final Grade column.
+
+### Entering Adjusted Final Grades
+
+<Steps>
+
+<Step title="Enable Adjusted Final Grades">
+Go to **Grades** > **Settings** (gear icon) > **Calculation Options** tab. Under "Final Grade Released," select **Adjusted Final Grade**. Click **Save**.
+</Step>
+
+<Step title="Access the Final Grade entry">
+From the **Enter Grades** tab, click the dropdown arrow next to **Final Calculated Grade** and select **Enter Grades**.
+</Step>
+
+<Step title="Transfer calculated grades (optional)">
+To start with the calculated grades as a baseline, click the dropdown next to **Final Grades** at the top and select **Transfer All**. Confirm by clicking **Yes**. This copies all calculated grades to the Adjusted column.
+</Step>
+
+<Step title="Adjust individual grades">
+In the **Final Adjusted Grade** column, modify grades as needed:
+- Enter a numeric value to override the percentage
+- Select from a grade scheme dropdown if using letter grades
+- Leave blank for students who need no adjustment
+</Step>
+
+<Step title="Save changes">
+Click **Save** to record your adjustments.
+</Step>
+
+</Steps>
+
+<Callout type="warning" title="Override Behavior">
+Once you enter an adjusted final grade for a student, that grade will not change even if you subsequently enter additional scores for that student. The adjusted grade is static and requires manual updating.
+</Callout>
+
+### When to Use Manual Overrides
+
+Common scenarios for using adjusted final grades:
+
+- **Curving**: Adding points to bring class grades up to a desired distribution
+- **Rounding**: Bumping 89.5% to 90% for students on grade boundaries
+- **Incomplete grades**: Assigning "INC" or "I" for students who need extensions
+- **Pass/Fail conversion**: Converting numeric grades to P/F for specific students
+- **Special circumstances**: Accommodating documented emergencies or accommodations
+
+## Releasing Final Grades to Students
+
+Students cannot see their final grade until you explicitly release it.
+
+### Automatic Release Configuration
+
+<Steps>
+
+<Step title="Access Grade Settings">
+Navigate to **Grades** and click the **Settings** icon (gear) in the top-right corner.
+</Step>
+
+<Step title="Open Calculation Options">
+Click the **Calculation Options** tab.
+</Step>
+
+<Step title="Configure release settings">
+Scroll to the **Final Grade Released** section and configure:
+- Select **Calculated Final Grade** or **Adjusted Final Grade** (choose which to show students)
+- Check **Automatically release final grade** to make grades visible immediately
+- Check **Automatically keep final grades updated** to refresh as new grades are entered
+</Step>
+
+<Step title="Save settings">
+Click **Save** to apply your configuration.
+</Step>
+
+</Steps>
+
+<Callout type="tip" title="Running Total for Students">
+If you want students to see their running grade throughout the semester, enable automatic release of the Calculated Final Grade with "Drop ungraded items" selected. This shows them their current standing based on completed work.
+</Callout>
+
+### Manual Release to Individual Students
+
+<Steps>
+
+<Step title="Access Enter Grades">
+Navigate to **Grades** > **Enter Grades**.
+</Step>
+
+<Step title="Open Final Grade entry">
+Click the dropdown arrow next to **Final Calculated Grade** (or **Final Adjusted Grade**) and select **Enter Grades**.
+</Step>
+
+<Step title="Select students">
+Check the boxes next to the students whose grades you want to release.
+</Step>
+
+<Step title="Release the grades">
+Click the dropdown next to **Final Grades** at the top and select **Release/Unrelease**. Confirm the action.
+</Step>
+
+<Step title="Save and verify">
+Click **Save and Close**. Verify release by checking for the open eye icon next to each student's grade.
+</Step>
+
+</Steps>
+
+### Releasing All Final Grades at Once
+
+<Steps>
+
+<Step title="Navigate to Enter Grades">
+Go to **Grades** > **Enter Grades**.
+</Step>
+
+<Step title="Access the Final Grade column">
+Click the dropdown arrow next to your chosen final grade column and select **Enter Grades**.
+</Step>
+
+<Step title="Release all">
+Click the dropdown next to **Final Grades** at the top and select **Release All**. Click **Yes** to confirm.
+</Step>
+
+<Step title="Save changes">
+Click **Save and Close** to complete the release.
+</Step>
+
+</Steps>
+
+### Verifying Grade Visibility
+
+To confirm what students can see:
+
+| Icon | Meaning |
+|------|---------|
+| Open eye | Grade is visible to the student |
+| Eye with slash | Grade is hidden from the student |
+
+You can also preview the student view:
+1. Click the dropdown arrow next to a student's name
+2. Select **Preview** to see their grade view
+3. Verify the final grade appears as expected
+
+## Final Grade Visibility Settings
+
+Control exactly what grade information students can access.
+
+### Display Options Configuration
+
+<Steps>
+
+<Step title="Access Display Options">
+Navigate to **Grades** > **Settings** > **Org Unit Display Options** tab.
+</Step>
+
+<Step title="Configure student view">
+Set the following options:
+- **Points grade**: Show numeric points earned
+- **Weighted grade**: Show weighted percentage
+- **Grade scheme symbol**: Show letter grade or scheme symbol
+- **Grade scheme color**: Display color coding
+</Step>
+
+<Step title="Configure calculation display">
+Under **Final Grade Calculation**:
+- Enable **Display how final grade was calculated to users** to show students a calculator icon they can click to see the breakdown
+</Step>
+
+<Step title="Save settings">
+Click **Save** to apply visibility settings.
+</Step>
+
+</Steps>
+
+<Callout type="info" title="Calculator Icon">
+When "Display how final grade was calculated" is enabled, students see a calculator icon next to their final grade. Clicking it shows all grade items that contributed to their final grade calculation.
+</Callout>
+
+### Hiding the Final Grade
+
+If you need to hide final grades after previously releasing them:
+
+<Steps>
+
+<Step title="Access Final Grade entry">
+Go to **Grades** > **Enter Grades**, click the dropdown next to the final grade column, and select **Enter Grades**.
+</Step>
+
+<Step title="Select all students">
+Check the boxes next to all students (or use Select All).
+</Step>
+
+<Step title="Unrelease grades">
+Click the dropdown next to **Final Grades** and select **Release/Unrelease** to toggle visibility off.
+</Step>
+
+<Step title="Save changes">
+Click **Save and Close**.
+</Step>
+
+</Steps>
+
+## Exporting Final Grades
+
+Export your gradebook for record-keeping or transfer to other systems.
+
+### Exporting to CSV or Excel
+
+<Steps>
+
+<Step title="Access Export function">
+Navigate to **Grades** > **Enter Grades** and click the **Export** button.
+</Step>
+
+<Step title="Select export options">
+Configure your export:
+- **Users**: Choose All users or filter by section/group
+- **Grade Values**: Select which values to include:
+  - Points grade
+  - Weighted grade
+  - Grade scheme symbol
+- **Key Field**: Choose the identifier (Username, Org Defined ID, etc.)
+</Step>
+
+<Step title="Choose format">
+Click **Export to CSV** or **Export to Excel** based on your needs.
+</Step>
+
+<Step title="Download the file">
+Once processing completes, click **Download** to save the file to your computer.
+</Step>
+
+</Steps>
+
+<Callout type="tip" title="End of Semester Backup">
+Always download a copy of your final gradebook at the end of each semester. This provides a permanent record in case of grade disputes, recommendation letter requests, or if you teach the course again.
+</Callout>
+
+### Export File Contents
+
+The exported file typically includes:
+- Student identifiers (username, student ID, email)
+- Individual grade item scores
+- Category totals
+- Final calculated grade
+- Final adjusted grade (if used)
+- Grade scheme symbols (if selected)
+
+## Transferring Grades to Registrar
+
+Most institutions require grades to be submitted through their Student Information System (SIS), not directly through Brightspace.
+
+### Understanding the Process
+
+<Callout type="warning" title="Brightspace Does Not Auto-Submit">
+Final grades in Brightspace do **not** automatically transfer to your institution's official records. You must separately submit grades through your registrar's system (Banner, Colleague, PeopleSoft, etc.).
+</Callout>
+
+### Institutions with Direct Integration
+
+Some institutions have Integration Pack for Student Information Systems (IPSIS) enabled, allowing direct grade submission:
+
+<Steps>
+
+<Step title="Access Submit Grades tool">
+Look for a **Submit Grades** or **Export to SIS** option in your course Grades area.
+</Step>
+
+<Step title="Verify grades">
+Review all grades before submission. Ensure:
+- All students have final grades entered
+- Grades match the format required by your registrar (often letter grades only)
+- Any overrides or special codes are correctly applied
+</Step>
+
+<Step title="Select students">
+Check the boxes next to students whose grades you want to submit.
+</Step>
+
+<Step title="Submit grades">
+Click the **Export** or **Submit** button. Wait for confirmation - do not navigate away during processing.
+</Step>
+
+<Step title="Verify acceptance">
+Check the Results column for each student. A successful transfer shows "Accepted by SIS."
+</Step>
+
+</Steps>
+
+### Common SIS Export Requirements
+
+| Requirement | Details |
+|-------------|---------|
+| Letter grades only | Many SIS systems do not accept numeric grades - apply a grade scheme first |
+| Instructor of record | Only the official instructor listed in the SIS can submit grades |
+| Submission window | Grades can only be submitted during registrar-defined periods |
+| Cross-listed courses | Submit grades separately for each section |
+
+### Manual Grade Submission
+
+If your institution does not have direct integration:
+
+1. Export your gradebook to CSV/Excel
+2. Log into your institution's grade submission portal
+3. Enter grades manually or use the portal's import function
+4. Verify all grades are recorded correctly
+
+## End of Term Procedures
+
+Follow this checklist to ensure proper grade finalization:
+
+### Pre-Submission Checklist
+
+<Steps>
+
+<Step title="Grade all outstanding work">
+Review Quick Eval and Enter Grades to ensure all submissions have been evaluated. Look for ungraded indicators.
+</Step>
+
+<Step title="Handle ungraded items">
+Decide how to treat missing submissions:
+- Go to **Grades** > **Settings** > **Calculation Options**
+- Change to "Treat ungraded items as 0" if appropriate
+- Or manually enter zeros for missing work
+</Step>
+
+<Step title="Apply any adjustments">
+If curving or rounding grades, enter Adjusted Final Grades for affected students.
+</Step>
+
+<Step title="Verify grade scheme">
+Ensure your final grade column uses the correct grade scheme (especially if your registrar requires letter grades).
+</Step>
+
+<Step title="Check weight totals">
+In weighted systems, verify all categories sum to 100%. Unused categories should be deleted, not just hidden.
+</Step>
+
+<Step title="Review for accuracy">
+Spot-check several students' grades to ensure calculations match expectations.
+</Step>
+
+</Steps>
+
+### Release and Export Checklist
+
+<Steps>
+
+<Step title="Release final grades to students">
+Use Release All or manually release grades as appropriate for your course.
+</Step>
+
+<Step title="Export gradebook backup">
+Download a CSV or Excel copy of your complete gradebook for your records.
+</Step>
+
+<Step title="Submit to registrar">
+Submit grades through your institution's official system before the deadline.
+</Step>
+
+<Step title="Verify SIS acceptance">
+Confirm all grades were accepted by checking for confirmation messages or contacting the registrar if uncertain.
+</Step>
+
+</Steps>
+
+<Callout type="danger" title="Delete Unused Items">
+If you have grade items or categories you are not using, **delete them** rather than just hiding them. Hidden items still affect final grade calculations, which can cause unexpected results.
+</Callout>
+
+## Common Final Grade Issues
+
+### Final Grade Not Showing for Students
+
+**Symptoms**: Students report they cannot see their final grade.
+
+**Solutions**:
+1. Check that you have released the final grade (look for open eye icon)
+2. Verify the correct final grade type is set to release in Settings > Calculation Options
+3. Confirm "Automatically release final grade" is enabled, or manually release grades
+4. Check if release conditions or date restrictions are hiding the grade
+
+### Calculated Grade Appears Incorrect
+
+**Symptoms**: The final calculated grade does not match expected values.
+
+**Solutions**:
+1. Verify all category weights sum to exactly 100% (for weighted systems)
+2. Check for hidden items that may still affect calculations
+3. Review "Drop ungraded items" vs "Treat as 0" setting
+4. Look for excluded or bonus items that may affect calculations
+5. Verify all grade items are in the correct categories
+
+### Grades Not Updating Automatically
+
+**Symptoms**: Final grade does not change when you enter new scores.
+
+**Solutions**:
+1. Go to Settings > Calculation Options and enable "Automatically keep final grades updated"
+2. If using Adjusted Final Grades, note that they do not auto-update - you must manually modify them
+3. Try manually recalculating: click the final grade column dropdown and select "Recalculate All"
+
+### SIS Export Errors
+
+**Symptoms**: Grades fail to transfer to the registrar system.
+
+**Common errors and solutions**:
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| "User not recognized" | You are not the instructor of record | Contact registrar to verify instructor assignment |
+| "Grade not valid" | Numeric grades submitted to letter-only system | Apply letter grade scheme to final grade column |
+| "Outside submission window" | Grade submission period closed | Contact registrar for extension |
+
+### Imported Course Has Hidden Final Grades
+
+**Symptoms**: After importing a course, final grades default to invisible even though they were visible in the original course.
+
+**Solution**: After importing, manually reconfigure grade visibility in Settings > Calculation Options. This is a known behavior when copying courses.
+
+## Best Practices
+
+### During the Semester
+
+- Enable automatic release of Calculated Final Grade with "Drop ungraded items"
+- Students can track their progress on completed work
+- Keep grade items and categories organized and correctly weighted
+
+### End of Semester
+
+- Switch to "Treat ungraded items as 0" to show true standing
+- Enter any necessary adjusted grades before the submission deadline
+- Apply appropriate grade schemes for registrar requirements
+- Export and save a backup of your complete gradebook
+
+### For Grade Disputes
+
+- Maintain exported gradebook records from each semester
+- Keep documentation of any grade adjustments and reasons
+- Use the Event Log feature to track grade changes over time
+
+## Related Guides
+
+- [Using the Setup Wizard](/docs/gradebook/setup-wizard)
+- [Creating Grade Items and Categories](/docs/gradebook/grade-items)
+- [Entering and Managing Grades](/docs/gradebook/entering-grades)
+- [Creating Rubrics](/docs/rubrics/creating-rubrics)
+- [Using Quick Eval](/docs/gradebook/quick-eval)

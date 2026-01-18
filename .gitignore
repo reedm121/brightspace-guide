@@ -45,3 +45,6 @@ CLAUDE.md
 @fix_plan.md
 PRD.md
 brightspace-guide.md
+
+# Embedding index tracking
+.embedding-index.json

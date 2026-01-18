@@ -1,0 +1,527 @@
+---
+title: "Managing Files (Manage Files Area)"
+description: "Organize and manage all files in your Brightspace course"
+category: "Course Setup"
+order: 6
+tags: ["files", "manage files", "organization", "storage"]
+---
+
+# Managing Files (Manage Files Area)
+
+## Overview
+
+The Manage Files tool is Brightspace's central file management system for your course. Think of it as the "My Documents" folder for your course - every file you upload to Content, create with the HTML Editor, or import from cloud storage ends up here. This guide covers how to access, organize, and effectively manage all your course files.
+
+## Before You Begin
+
+- You need Instructor or higher permissions in your course
+- Files in Manage Files are stored in the folder path starting with `/content/enforced/...`
+- Any files you upload directly to Content automatically appear in Manage Files
+- Deleting files from Manage Files will remove them from Content as well
+
+<Callout type="warning" title="Important">
+Moving files or folders that are linked to Content items, quizzes, discussions, or announcements will break those links. Always verify where a file is being used before moving or deleting it.
+</Callout>
+
+## Accessing Manage Files
+
+There are two ways to access the Manage Files tool in Brightspace.
+
+### Method 1: Via Course Admin
+
+<Steps>
+<Step title="Navigate to Course Admin">
+From your course homepage, click **Course Admin** (or **Course Tools** depending on your navbar configuration).
+</Step>
+
+<Step title="Select Manage Files">
+On the Course Administration page, locate and click **Manage Files** under the Site Resources section.
+</Step>
+</Steps>
+
+### Method 2: Via Content Area
+
+<Steps>
+<Step title="Go to Content">
+Navigate to **Content** in your course navbar.
+</Step>
+
+<Step title="Open Table of Contents">
+Click on **Table of Contents** in the left sidebar.
+</Step>
+
+<Step title="Access Related Tools">
+Click the **Related Tools** button and select **Manage Files** from the dropdown menu.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Quick Access">
+The Content method is useful when you are already working in the Content area and need to quickly access your file structure.
+</Callout>
+
+## Understanding the Interface
+
+The Manage Files interface consists of two main areas:
+
+- **Left Pane (Folder Tree)**: Shows your folder hierarchy. Click on any folder to view its contents in the right pane.
+- **Right Pane (File List)**: Displays the files and subfolders within the selected folder.
+
+### Toolbar Options
+
+The toolbar at the top of the file list provides these actions:
+
+| Icon | Function |
+|------|----------|
+| New Folder | Create a new folder |
+| Upload | Upload files from your computer |
+| Cut (scissors) | Cut selected files/folders for moving |
+| Copy (documents) | Copy selected files/folders |
+| Paste | Paste cut or copied items |
+| Zip | Compress selected items into a ZIP file |
+| Delete (trashcan) | Delete selected items |
+
+## Folder Structure and Organization
+
+A well-organized folder structure makes course maintenance much easier. D2L recommends creating a folder for each module or unit of content.
+
+### Creating New Folders
+
+<Steps>
+<Step title="Select the parent location">
+In the folder tree (left pane), click on the folder where you want to create a new subfolder.
+</Step>
+
+<Step title="Click New Folder">
+Click the **New Folder** button in the toolbar.
+</Step>
+
+<Step title="Name your folder">
+Enter a descriptive name for the folder. Best practice is to match folder names to your Content module names for easy identification.
+</Step>
+
+<Step title="Confirm creation">
+Click **Create** or press Enter. The new folder will appear in the folder tree.
+</Step>
+</Steps>
+
+<Callout type="info" title="Recommended Folder Structure">
+Consider organizing your folders to match your course structure:
+- Unit 1 - Introduction
+- Unit 2 - Core Concepts
+- Unit 3 - Applications
+- Assessments
+- Resources
+- Syllabus and Policies
+</Callout>
+
+### Setting Default Paths for Modules
+
+You can configure Brightspace to automatically save uploaded files to specific folders based on the Content module.
+
+<Steps>
+<Step title="Navigate to Content">
+Go to **Content** in your course navbar.
+</Step>
+
+<Step title="Open module options">
+Click the down-caret (dropdown arrow) next to the module name to open the action menu.
+</Step>
+
+<Step title="Select Set Default Path">
+Choose **Set Default Path** from the dropdown options.
+</Step>
+
+<Step title="Change the path">
+Click the **Change Path** button and navigate to the folder you created for this module.
+</Step>
+
+<Step title="Select and save">
+Click on the destination folder, then click **Select Path**. Finally, click **Save** to confirm.
+</Step>
+</Steps>
+
+From now on, all files uploaded to that module will automatically be stored in the designated folder.
+
+## Uploading Files Directly to Manage Files
+
+While you can upload files through the Content area, uploading directly to Manage Files gives you more control over organization.
+
+### Uploading Individual Files
+
+<Steps>
+<Step title="Navigate to the destination folder">
+In Manage Files, click on the folder where you want to upload your file.
+</Step>
+
+<Step title="Click Upload">
+Click the **Upload** button in the toolbar.
+</Step>
+
+<Step title="Select your files">
+Click **Upload** in the dialog that appears, then browse your computer to select files. You can select multiple files using Ctrl+Click (Windows) or Cmd+Click (Mac).
+</Step>
+
+<Step title="Complete the upload">
+Click **Upload** to transfer the files to Brightspace. A progress indicator will show the upload status.
+</Step>
+</Steps>
+
+### Uploading ZIP Files for Bulk Operations
+
+For uploading many files at once while preserving folder structure:
+
+<Steps>
+<Step title="Prepare your folder structure">
+On your computer, organize your files into folders exactly as you want them in Brightspace.
+</Step>
+
+<Step title="Create a ZIP archive">
+Select all the folders and files, right-click, and choose to compress them into a ZIP file.
+</Step>
+
+<Step title="Upload the ZIP file">
+In Manage Files, navigate to the destination folder and upload the ZIP file.
+</Step>
+
+<Step title="Unzip the archive">
+Once uploaded, click the dropdown arrow next to the ZIP file name and select **Unzip**.
+</Step>
+
+<Step title="Wait for extraction">
+A notification will appear indicating the unzip operation is running in the background. You will be notified when it completes.
+</Step>
+</Steps>
+
+<Callout type="note" title="Mac Users">
+When unzipping files that were created on a Mac, you may see an additional folder named `__MACOSX`. This is a system folder that you can safely delete.
+</Callout>
+
+<Callout type="info" title="Overwriting Files">
+If files with the same name already exist, Brightspace will ask if you want to overwrite them. If you choose not to overwrite, the new files will be ignored.
+</Callout>
+
+## Moving and Copying Files
+
+### Moving Files to a New Location
+
+<Steps>
+<Step title="Select files or folders">
+Check the boxes next to the files and/or folders you want to move.
+</Step>
+
+<Step title="Cut the selection">
+Click the **scissors icon** (Cut) in the toolbar.
+</Step>
+
+<Step title="Navigate to destination">
+In the folder tree, click on the destination folder.
+</Step>
+
+<Step title="Paste the items">
+Click the **Paste** button. The files will be moved to the new location.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Critical Warning">
+Before moving files, verify they are not linked to Content items, quizzes, discussions, or other course components. Moving linked files will break those connections.
+</Callout>
+
+### Copying Files
+
+<Steps>
+<Step title="Select files or folders">
+Check the boxes next to the items you want to copy.
+</Step>
+
+<Step title="Copy the selection">
+Click the **documents icon** (Copy) in the toolbar.
+</Step>
+
+<Step title="Navigate to destination">
+Click on the destination folder in the folder tree.
+</Step>
+
+<Step title="Paste the items">
+Click **Paste**. A copy of the files will be created in the new location.
+</Step>
+</Steps>
+
+## Renaming Files and Folders
+
+<Steps>
+<Step title="Locate the item">
+Find the file or folder you want to rename in the file list.
+</Step>
+
+<Step title="Open the context menu">
+Click the dropdown arrow (chevron) next to the file or folder name.
+</Step>
+
+<Step title="Select Rename">
+Click **Rename** from the dropdown menu.
+</Step>
+
+<Step title="Enter the new name">
+Type the new name and press Enter or click Save.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Renaming Linked Files">
+If you rename a file that is linked in Content, the link will automatically update. However, if the file is referenced by its original name in HTML content or external links, those references will break.
+</Callout>
+
+## Deleting Files
+
+### Deleting Individual Files
+
+<Steps>
+<Step title="Select the file(s)">
+Check the box next to each file you want to delete.
+</Step>
+
+<Step title="Click Delete">
+Click the **trashcan icon** (Delete) in the toolbar.
+</Step>
+
+<Step title="Confirm deletion">
+Click **Yes** when prompted to confirm.
+</Step>
+</Steps>
+
+### Bulk Deletion
+
+<Steps>
+<Step title="Select all items">
+Check the box at the top left of the file list to select all visible items.
+</Step>
+
+<Step title="Delete selected items">
+Click the **trashcan icon** and confirm when prompted.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Deletion Warning">
+When you delete files from Manage Files, they are also removed from any Content modules, assignments, or other locations where they are linked. Always check the 360-degree view before deleting.
+</Callout>
+
+### Using the 360-Degree View
+
+Before deleting a file, check where it is being used:
+
+<Steps>
+<Step title="Locate the file">
+Find the file you want to check in the file list.
+</Step>
+
+<Step title="Open the context menu">
+Click the dropdown arrow (chevron) next to the file name.
+</Step>
+
+<Step title="View usage information">
+Look for the 360-degree view or usage information option. This shows all locations in your course where the file is linked.
+</Step>
+</Steps>
+
+## Recovering Deleted Files
+
+Brightspace includes a Recycle Bin that holds deleted files for 30 days.
+
+### Accessing the Recycle Bin
+
+<Steps>
+<Step title="Open Manage Files">
+Navigate to **Course Admin > Manage Files**.
+</Step>
+
+<Step title="Locate the Recycle Bin">
+Look for the Recycle Bin option in the folder tree or toolbar.
+</Step>
+
+<Step title="Find your file">
+Browse the Recycle Bin for the file you need to restore.
+</Step>
+
+<Step title="Restore the file">
+Select the file and click **Restore**. The file will be returned to its original location.
+</Step>
+</Steps>
+
+<Callout type="info" title="Recovery Time Limit">
+Files remain in the Recycle Bin for 30 days before being permanently deleted. After this period, only D2L support can potentially restore the data (within an additional 30-day window).
+</Callout>
+
+## File Storage Limits
+
+| Limit Type | Maximum Size |
+|------------|--------------|
+| Individual file upload | 2GB per file (1.5GB recommended) |
+| Multiple files at once | 2GB total |
+| Turnitin submissions | 40MB and 400 pages |
+
+<Callout type="warning" title="Large Files">
+While Brightspace allows files up to 2GB, large files (over 50MB) can cause upload issues and slow student downloads. Consider compressing large files or using external hosting for video content.
+</Callout>
+
+<Callout type="note" title="Course Storage Limits">
+Some institutions set overall storage limits for course shells. If you encounter storage issues, contact your institution's IT support or consider using external hosting services for large media files.
+</Callout>
+
+## Linking Files from Manage Files to Content
+
+After organizing files in Manage Files, you can link them to your course Content.
+
+<Steps>
+<Step title="Navigate to Content">
+Go to **Content** in your course navbar and open the destination module.
+</Step>
+
+<Step title="Click Existing Activities">
+Click **Existing Activities** in the module toolbar.
+</Step>
+
+<Step title="Browse Manage Files">
+Select the option to browse your course files or file repository.
+</Step>
+
+<Step title="Locate and select your file">
+Navigate through the folder structure and select the file you want to add.
+</Step>
+
+<Step title="Configure display options">
+Choose how the file should display (new window, embedded, etc.) and click **Add**.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Reuse Files Efficiently">
+Files in Manage Files can be linked from multiple locations in your course. Instead of uploading duplicate copies, link to the same file from different modules. When you update the file in Manage Files, all linked instances are automatically updated.
+</Callout>
+
+## Bulk Operations
+
+### Creating ZIP Archives
+
+To download multiple files at once or create a backup:
+
+<Steps>
+<Step title="Select items to zip">
+Check the boxes next to the files and folders you want to compress.
+</Step>
+
+<Step title="Click the Zip icon">
+Click the **Zip** (folder) icon in the toolbar.
+</Step>
+
+<Step title="Wait for compression">
+The ZIP file will be created and placed in the same folder.
+</Step>
+
+<Step title="Download the archive">
+Click on the ZIP file name to download it to your computer.
+</Step>
+</Steps>
+
+### Extracting ZIP Archives
+
+<Steps>
+<Step title="Upload your ZIP file">
+Upload the ZIP archive to the appropriate folder in Manage Files.
+</Step>
+
+<Step title="Extract contents">
+Click the dropdown arrow next to the ZIP file name and select **Unzip**.
+</Step>
+
+<Step title="Wait for extraction">
+The operation runs in the background. You will receive a notification when complete.
+</Step>
+</Steps>
+
+## Finding Unused Files
+
+Over time, courses can accumulate unused files. Here is how to identify and clean them up.
+
+### Identifying Orphaned Files
+
+<Steps>
+<Step title="Review the 360-degree view">
+For each file, check the 360-degree view (context menu > view usage) to see if it is linked anywhere in your course.
+</Step>
+
+<Step title="Check Content modules">
+Review your Content modules to identify files that were removed from Content but remain in Manage Files.
+</Step>
+
+<Step title="Use accessibility tools">
+If your institution has Ally or similar tools, they can help identify files that may not be in use.
+</Step>
+</Steps>
+
+### Cleaning Up Unused Files
+
+<Steps>
+<Step title="Navigate to Manage Files">
+Go to **Course Admin > Manage Files**.
+</Step>
+
+<Step title="Review each folder">
+Systematically review folders for files no longer needed.
+</Step>
+
+<Step title="Verify before deleting">
+Always check the 360-degree view before deleting to ensure the file is not linked elsewhere.
+</Step>
+
+<Step title="Delete unused files">
+Select the files confirmed as unused and delete them.
+</Step>
+</Steps>
+
+<Callout type="tip" title="End-of-Term Cleanup">
+At the end of each term, take time to review and clean up your course files. Remove outdated assignments, old syllabus versions, and unused media to keep your course organized for future terms.
+</Callout>
+
+## Best Practices
+
+1. **Create folders before uploading**: Set up your folder structure before adding files to stay organized from the start.
+
+2. **Match folders to modules**: Name your Manage Files folders to correspond with your Content module names.
+
+3. **Set default paths**: Configure default paths for each module so uploaded files automatically go to the right folder.
+
+4. **Use descriptive file names**: Avoid generic names like "document.pdf" - use descriptive names like "Week3_Assignment_Instructions.pdf".
+
+5. **Avoid special characters**: Keep file names free of special characters (! @ # $ % ^ & *) to prevent compatibility issues.
+
+6. **Check before moving**: Always verify a file is not linked elsewhere before moving or deleting it.
+
+7. **Regular maintenance**: Schedule periodic reviews to remove unused files and maintain organization.
+
+8. **Back up important files**: Regularly download ZIP archives of critical course materials for safekeeping.
+
+## Common Issues
+
+### File not appearing after upload
+- Refresh the page
+- Check if the file is in the correct folder
+- Verify the file was under the 2GB limit
+- Try a different browser or clear your cache
+
+### Broken links after moving files
+- Files linked to Content will break if moved
+- Restore files to their original location or update the links in Content
+
+### Cannot delete files
+- Verify you have Instructor permissions
+- Check if the file is part of a published assessment
+- Some system files cannot be deleted
+
+### ZIP extraction fails
+- Ensure the ZIP file is under 2GB
+- Check for special characters in file names within the archive
+- Try creating a new ZIP file without nested folder structures
+
+## Related Guides
+
+- [Uploading Files](/docs/course-setup/uploading-files)
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)

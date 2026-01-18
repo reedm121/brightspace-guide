@@ -1,0 +1,493 @@
+---
+title: "Video Playback Problems"
+description: "Troubleshoot video playback and streaming issues"
+category: "Troubleshooting"
+order: 3
+tags: ["video", "playback", "streaming", "troubleshooting"]
+---
+
+# Video Playback Problems
+
+## Overview
+
+Video content is essential for modern online courses, but playback issues can frustrate both instructors and students. This guide covers common video playback problems in Brightspace, including issues with Kaltura media, embedded videos from YouTube and Vimeo, Video Note recordings, and mobile playback concerns.
+
+<Callout type="info" title="Quick Fix First">
+Before diving into specific troubleshooting, try these quick fixes that resolve most video issues:
+1. Perform a hard refresh: **Ctrl+Shift+R** (Windows) or **Cmd+Shift+R** (Mac)
+2. Try a different browser (Chrome or Firefox recommended)
+3. Enable third-party cookies in your browser settings
+4. Check your internet connection speed (minimum 5 Mbps for video streaming)
+</Callout>
+
+## Common Video Playback Issues
+
+### Videos Not Loading or Playing
+
+When videos display a blank screen, loading spinner, or error message:
+
+<Steps>
+<Step title="Perform a hard refresh">
+Press **Ctrl+Shift+R** (Windows/Linux) or **Cmd+Shift+R** (Mac) to force your browser to reload the page without cached data. This is different from clicking the refresh button and often resolves video loading issues.
+</Step>
+
+<Step title="Check your internet connection">
+Video streaming requires at least 5 Mbps download speed. Poor or inconsistent connections cause buffering, freezing, or complete playback failure. Test your connection at a site like speedtest.net and try a different network if speeds are low.
+</Step>
+
+<Step title="Enable third-party cookies">
+Kaltura and other video platforms embedded in Brightspace require third-party cookies. Go to your browser's privacy settings and either enable all cookies or add your institution's Brightspace domain to the allowed list.
+</Step>
+
+<Step title="Try a different browser">
+If videos work in one browser but not another, the issue is browser-specific. Google Chrome and Mozilla Firefox have the best compatibility with Brightspace video features. Safari users frequently encounter video playback problems.
+</Step>
+
+<Step title="Check for browser extension conflicts">
+Ad blockers and privacy extensions can block video content. Test in an incognito or private browsing window (which disables most extensions) to determine if an extension is causing the issue.
+</Step>
+</Steps>
+
+### Access Denied Errors
+
+When you see "Access Denied" or permission errors when trying to view videos:
+
+<Steps>
+<Step title="Update your browser">
+Access Denied messages most commonly occur in older browser versions. Update to the latest version of your browser to ensure compatibility with Kaltura and other video platforms.
+</Step>
+
+<Step title="Verify course enrollment">
+You must be enrolled in the course to view its media content. Check that you appear in the course classlist and that the course is currently active.
+</Step>
+
+<Step title="Check video permissions (instructors)">
+If students report Access Denied errors, verify the video's sharing settings in Kaltura or your media library. Videos must be published and available to course participants.
+</Step>
+
+<Step title="Clear cookies and cache">
+Outdated authentication cookies can cause access errors. Clear your browser's cookies and cache, then log back into Brightspace.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Safari and Access Denied">
+Safari users experience Access Denied errors more frequently than users of other browsers. If you consistently see this error in Safari, switch to Chrome or Firefox for video viewing.
+</Callout>
+
+## Browser Compatibility for Video
+
+Different browsers handle video content differently. Understanding these differences can help you troubleshoot playback issues.
+
+### Browser Recommendations
+
+| Browser | Video Compatibility | Notes |
+|---------|---------------------|-------|
+| Google Chrome | Excellent | Best overall compatibility; recommended by D2L |
+| Mozilla Firefox | Excellent | Reliable alternative; automatically updates |
+| Microsoft Edge | Good | Chromium-based version works well |
+| Apple Safari | Fair | Known issues with Kaltura and third-party tools |
+
+### Safari-Specific Video Issues
+
+Safari users encounter several video-related problems that do not occur in other browsers:
+
+- Kaltura media failing to load or play
+- "Access Denied" errors on videos that work in other browsers
+- Cross-site tracking blocking essential video cookies
+- Video Note recording not working correctly
+
+<Steps>
+<Step title="Disable Prevent Cross-Site Tracking">
+Go to **Safari > Settings > Privacy** and uncheck **Prevent cross-site tracking**. This setting blocks cookies that Kaltura and other video platforms require.
+</Step>
+
+<Step title="Allow cookies for video domains">
+In Safari's Privacy settings, click **Manage Website Data** and ensure cookies are allowed for Kaltura, your Brightspace domain, and any video hosting services used by your institution.
+</Step>
+
+<Step title="Use Chrome or Firefox instead">
+If video issues persist in Safari after trying these fixes, D2L recommends switching to Chrome or Firefox for accessing Brightspace video content.
+</Step>
+</Steps>
+
+## Bandwidth and Network Issues
+
+Video streaming is sensitive to network conditions. Even with a fast connection, network congestion or instability can cause problems.
+
+### Symptoms of Network-Related Video Issues
+
+- Constant buffering or loading circles
+- Video quality automatically dropping
+- Videos stopping mid-playback
+- Videos taking a long time to start
+- "Network Error" messages
+
+### Troubleshooting Network Issues
+
+<Steps>
+<Step title="Test your internet speed">
+Use a speed test service to check your current download speed. Video streaming generally requires:
+- **Standard quality (480p)**: 3-5 Mbps
+- **High quality (720p)**: 5-10 Mbps
+- **HD quality (1080p)**: 10+ Mbps
+</Step>
+
+<Step title="Move closer to your router">
+If using Wi-Fi, physical distance and obstacles reduce signal strength. Move closer to your router or connect via ethernet cable for more stable video playback.
+</Step>
+
+<Step title="Close bandwidth-heavy applications">
+Other applications streaming video, downloading files, or making video calls consume bandwidth. Close unnecessary applications while watching course videos.
+</Step>
+
+<Step title="Try a different network">
+If you are on a public or institutional network, firewall restrictions may affect video streaming. Try accessing the video from a different network (such as home Wi-Fi or mobile hotspot) to determine if network restrictions are the cause.
+</Step>
+
+<Step title="Reduce video quality">
+If your connection is slow, look for a quality selector in the video player (often a gear icon) and choose a lower resolution. Some video players automatically adjust quality based on connection speed.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Slow Computer Issues">
+Even with fast internet, an older or slow computer can cause video buffering. Close unnecessary browser tabs and applications to free up system resources for video playback.
+</Callout>
+
+## Video Format Compatibility
+
+Brightspace supports various video formats, but some work better than others.
+
+### Supported Video Formats
+
+Brightspace Media Player supports the following formats:
+- **.mp4** (recommended)
+- **.webm**
+- **.m4v**
+- **.mov** (appears as download link only)
+- **.avi** (appears as download link only)
+- **.wmv**
+- **.flv**
+- **.f4v**
+
+<Callout type="info" title="Best Format">
+**MP4 is the recommended format** for all video uploads to Brightspace. It offers the best compatibility across browsers and devices and can be embedded directly in HTML5 players.
+</Callout>
+
+### Video Format Issues
+
+<Steps>
+<Step title="Convert videos to MP4">
+If you have videos in .mpeg, .mpg, or other legacy formats that are not playing correctly, convert them to MP4 before uploading. You can use free tools like HandBrake or video editing software like Adobe Premiere Pro.
+</Step>
+
+<Step title="Check audio codec compatibility">
+Some videos play with no audio or with audio but no visual. This often indicates an unsupported audio codec. Convert the video to MP4 with standard H.264 video and AAC audio codecs.
+</Step>
+
+<Step title="Reduce file size for streaming">
+Large video files may buffer excessively. Use the "Optimize for Streaming" option when uploading to Brightspace Media Library, which enables multi-bitrate streaming for better playback on slower connections.
+</Step>
+
+<Step title="Respect file size limits">
+The Brightspace Media Library has a 2GB maximum file size. Compress larger videos before uploading, or split them into multiple parts.
+</Step>
+</Steps>
+
+### Why Some Formats Appear as Download Links
+
+Only MP4, WebM, and Ogg video formats can be embedded directly in HTML5 players. If you upload MOV or AVI files, they will appear as download links rather than embedded players. Convert these files to MP4 for inline playback.
+
+## Embedded Video Problems (YouTube, Vimeo)
+
+Brightspace supports embedding videos from many platforms, but embedded videos can have unique issues.
+
+### Supported Embedding Platforms
+
+Brightspace supports embedding from:
+- YouTube
+- Vimeo
+- Daily Motion
+- Khan Academy
+- TED
+- Discovery Channel
+- National Geographic
+- SchoolTube
+- Teacher Tube
+- And others
+
+### YouTube Video Issues
+
+<Steps>
+<Step title="Check for domain restriction errors">
+YouTube videos may show "Video unavailable. This video is restricted from being viewed on this domain" when embedded in SCORM content or certain contexts. This is a YouTube restriction, not a Brightspace issue.
+
+**Workaround**: Open the video in a new window by clicking the YouTube logo or "Watch on YouTube" link.
+</Step>
+
+<Step title="New Content Experience browser limitations">
+In the New Content Experience, some browsers (particularly Chrome and Edge) may not play YouTube-linked Interactive Videos inline. Learners need to open the Interactive Video in a new tab using the "open in a new window" link.
+</Step>
+
+<Step title="Use iframe embedding for SCORM">
+If YouTube videos do not play within SCORM files using the Embedly framework, try embedding using the `<iframe>` code from YouTube's share options. Videos embedded this way typically play correctly even in the embedded SCORM player.
+</Step>
+
+<Step title="Verify video availability">
+Check that the YouTube video is still publicly available and has not been removed or set to private by the content creator.
+</Step>
+</Steps>
+
+<Callout type="warning" title="YouTube in SCORM Files">
+When SCORM files are set to display in the embedded player, YouTube videos often fail to play due to domain restrictions. As a workaround, set the SCORM content to open in a new window, or use a different video hosting platform like Kaltura.
+</Callout>
+
+### Vimeo and Other Platforms
+
+Vimeo videos generally work more reliably than YouTube in embedded contexts. If you have flexibility in choosing where to host videos for embedding:
+
+- **Vimeo**: Works well in most embedded contexts including SCORM
+- **Kaltura**: Best integration with Brightspace; recommended for institutional use
+- **Direct MP4 files**: Most reliable for inline playback
+
+For sites other than major platforms, ensure the video URL points directly to the media file (ending in .mp4, .webm, etc.) for best compatibility.
+
+## Video Note Issues
+
+Video Note is Brightspace's built-in recording tool for creating short video messages. It has specific requirements and limitations.
+
+### Video Note Not Recording
+
+If you cannot record with Video Note:
+
+<Steps>
+<Step title="Grant camera and microphone permissions">
+When Video Note opens, your browser will request permission to access your camera and microphone. Click "Allow" when prompted. If you accidentally denied permission:
+
+**Chrome**: Click the camera icon in the address bar and select "Always allow" for your Brightspace domain.
+
+**Firefox**: Click the permissions icon (shield or lock) in the address bar and allow camera and microphone access.
+
+**Safari**: Go to Safari > Settings > Websites and allow camera and microphone for your Brightspace domain.
+</Step>
+
+<Step title="Check browser compatibility">
+Video Note works in Chrome, Firefox, Edge, and Safari, but Safari users report frequent issues where the recording option does not appear. Try Chrome or Firefox if Safari is not working.
+</Step>
+
+<Step title="Ensure a stable connection">
+Video Note requires a stable network connection throughout the recording and upload process. If your connection is unstable, the recording may fail or become corrupted during upload.
+</Step>
+
+<Step title="Check if Video Note is enabled">
+The Video Note feature must be enabled by your institution's administrator. If you do not see the "Add Video Note" option in the Insert Stuff menu, you may not have the required permission. Contact your IT department.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Safari Recording Issues">
+Safari users on macOS frequently report that the Video Note recording option does not appear, showing only the upload option. This is a known Safari compatibility issue. Use Chrome or Firefox for Video Note recordings.
+</Callout>
+
+### Video Note Limitations
+
+Be aware of these Video Note limitations:
+
+- **30-minute maximum**: Recordings are limited to 30 minutes in length
+- **6-month retention**: Video Notes are automatically deleted after 6 months
+- **No download option**: You cannot download Video Note files; they can only be played within Brightspace
+- **Course-specific**: Video Notes created in one course cannot be transferred to another
+
+<Callout type="tip" title="For Long-Term Video Content">
+If you need videos that persist longer than 6 months or can be reused across courses, record using Kaltura or another video platform and upload to your institution's media library instead of using Video Note.
+</Callout>
+
+### Video Note Upload Failures
+
+If Video Note uploads fail:
+
+1. Check your network connection stability
+2. Wait for the upload progress indicator to complete fully before navigating away
+3. Try recording a shorter test video to verify functionality
+4. Clear your browser cache and try again
+5. If uploads consistently fail, use Kaltura or upload a pre-recorded video file instead
+
+## Mobile Video Playback
+
+Video playback on mobile devices has additional considerations.
+
+### Mobile Browser Playback
+
+When accessing Brightspace through mobile browsers (Safari on iOS, Chrome on Android):
+
+<Steps>
+<Step title="Use a stable Wi-Fi connection">
+Mobile data connections can be inconsistent. Connect to Wi-Fi for more reliable video streaming, especially for longer videos.
+</Step>
+
+<Step title="Ensure adequate battery">
+Low battery can cause playback issues on mobile devices. Charge your device before watching course videos.
+</Step>
+
+<Step title="Close background apps">
+Mobile devices have limited resources. Close other applications to ensure smooth video playback.
+</Step>
+
+<Step title="Disable cross-site tracking (iOS)">
+On iPhone/iPad, go to **Settings > Safari** and turn off **Prevent Cross-Site Tracking**. This may be necessary for videos to play correctly.
+</Step>
+
+<Step title="Try desktop mode">
+If videos are not playing in mobile view, use your browser's "Request Desktop Site" option to load the full desktop version of Brightspace.
+</Step>
+</Steps>
+
+### Brightspace Pulse App Video Limitations
+
+The Brightspace Pulse mobile app has significant video limitations:
+
+- **Cannot play all video types**: Some embedded videos and interactive content do not play in Pulse
+- **External tools may not work**: Videos from LTI integrations often require the full web browser
+- **Limited offline support**: Videos cannot be downloaded for offline viewing
+
+<Callout type="warning" title="Use Browser for Important Videos">
+For quizzes with video content or videos that must be watched completely for grade purposes, access Brightspace through a desktop or laptop browser rather than the Pulse app to ensure proper playback and tracking.
+</Callout>
+
+### Mobile Video Best Practices (For Instructors)
+
+When adding videos for students who may access on mobile:
+
+1. **Test on mobile devices** before publishing
+2. **Avoid SCORM-embedded videos** when possible (limited mobile support)
+3. **Provide alternative access methods** (direct links, separate video pages)
+4. **Use responsive video players** (Kaltura, YouTube, Vimeo embed responsively)
+
+## Authentication Errors with Video
+
+Sometimes video playback fails due to authentication or session issues.
+
+### "Login Required" or Session Errors
+
+<Steps>
+<Step title="Log out and back in">
+Authentication tokens can expire. Log out of Brightspace completely, close your browser, reopen it, and log back in.
+</Step>
+
+<Step title="Check for multiple sessions">
+Having Brightspace open in multiple browsers or devices can cause session conflicts. Close all other Brightspace sessions and try the video again.
+</Step>
+
+<Step title="Clear authentication cookies">
+Go to your browser's cookie settings and clear cookies specifically for your Brightspace domain, then log in again.
+</Step>
+
+<Step title="Verify SSO (Single Sign-On) status">
+If your institution uses SSO, your SSO session may have expired even if you are still logged into Brightspace. Visit your institution's SSO portal and re-authenticate if needed.
+</Step>
+</Steps>
+
+### "Refused to Connect" Errors
+
+If you see errors like "refused to connect" or "cannot establish a connection" when loading videos:
+
+1. **Try Firefox**: This error frequently resolves when using Firefox instead of other browsers
+2. **Check for VPN conflicts**: VPN software can interfere with video authentication. Temporarily disable your VPN and try again
+3. **Wait and retry**: These errors are sometimes temporary due to server issues. Wait a few minutes and reload the page
+
+## Clearing Cache for Video Issues
+
+Many video problems stem from cached data. Here is how to clear cache specifically for video issues.
+
+### Full Cache Clear
+
+<Steps>
+<Step title="Google Chrome">
+1. Click the three-dot menu > **Settings**
+2. Click **Privacy and security** > **Clear browsing data**
+3. Set time range to "All time"
+4. Check "Cached images and files" and "Cookies and other site data"
+5. Click **Clear data**
+6. Close Chrome completely and reopen
+</Step>
+
+<Step title="Mozilla Firefox">
+1. Click the menu button > **Settings**
+2. Click **Privacy & Security**
+3. Under "Cookies and Site Data," click **Clear Data**
+4. Check both boxes and click **Clear**
+5. Close Firefox completely and reopen
+</Step>
+
+<Step title="Safari">
+1. Click **Safari** > **Settings**
+2. Go to the **Privacy** tab
+3. Click **Manage Website Data**
+4. Remove data for your Brightspace domain and any video platforms (Kaltura, YouTube, etc.)
+5. Close Safari and reopen
+</Step>
+</Steps>
+
+### Site-Specific Cache Clear
+
+If you do not want to clear all cached data, clear cache only for Brightspace:
+
+**Chrome**:
+1. Navigate to your Brightspace page
+2. Click the lock icon in the address bar
+3. Click **Site settings**
+4. Click **Clear data**
+
+**Firefox**:
+1. Navigate to your Brightspace page
+2. Click the lock icon in the address bar
+3. Click **Clear Cookies and Site Data**
+
+## When to Contact IT Support
+
+Contact your institution's IT help desk or Brightspace support when:
+
+- You have tried all troubleshooting steps and videos still do not play
+- Multiple users report the same video playback issue (system-wide problem)
+- You see error messages you cannot resolve with these steps
+- Videos were working previously but suddenly stopped
+- You need Video Note permissions enabled
+- Videos play for some users but not others in the same course
+
+### Information to Provide IT Support
+
+When contacting support about video issues, include:
+
+1. **Your username and role** (instructor, student)
+2. **Browser and version** (e.g., Chrome 120, Firefox 122)
+3. **Operating system** (Windows 11, macOS, iOS, etc.)
+4. **Specific video URL** or location in the course
+5. **Exact error message** (screenshot if possible)
+6. **What you have already tried** (cleared cache, different browser, etc.)
+7. **Does the issue affect all videos or just one?**
+8. **Does the issue occur on all devices or just one?**
+
+<Callout type="tip" title="Video of the Problem">
+If possible, use a screen recording tool to capture the video playback failure. This helps IT support understand and diagnose the issue more quickly.
+</Callout>
+
+## Summary: Video Troubleshooting Checklist
+
+When you encounter video playback issues in Brightspace:
+
+1. **Hard refresh** the page (Ctrl+Shift+R or Cmd+Shift+R)
+2. **Check internet speed** (minimum 5 Mbps for video)
+3. **Enable third-party cookies** for your Brightspace domain
+4. **Try a different browser** (Chrome or Firefox recommended)
+5. **Clear browser cache and cookies**
+6. **Test in incognito/private mode** to rule out extension conflicts
+7. **Verify video permissions** (for instructors uploading content)
+8. **Check video format** (MP4 recommended)
+9. **Update your browser** to the latest version
+10. **Contact IT support** if none of the above resolves the issue
+
+## Related Guides
+
+- [Browser Compatibility](/docs/troubleshooting/browser-compatibility)
+- [Mobile App Limitations](/docs/troubleshooting/mobile-app)
+- [Troubleshooting Common Issues](/docs/troubleshooting/common-issues)
+- [Recording Video in Brightspace](/docs/video/recording-video)
+- [Video Assignments](/docs/video/video-assignments)

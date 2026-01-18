@@ -1,0 +1,275 @@
+---
+title: "Using the Sandbox for Practice"
+description: "How to use the Brightspace sandbox environment to test features safely"
+category: "Getting Started"
+order: 5
+tags: ["sandbox", "practice", "testing", "safe environment"]
+---
+
+# Using the Sandbox for Practice
+
+## Overview
+
+A Brightspace sandbox is a personal development course where you can experiment with all Brightspace features without affecting your live courses or real students. Think of it as your private testing laboratory - a safe space to learn, build content, and make mistakes without consequences.
+
+## What is a Sandbox Course?
+
+A sandbox (sometimes called a "DEV course" or "development course") is a blank or template course that provides:
+
+- **Full access to all Brightspace tools** - Content, quizzes, assignments, gradebook, discussions, and more
+- **No real student enrollment** - Only you (and colleagues you invite) have access
+- **Permanent availability** - Unlike semester courses, sandboxes are never purged
+- **Complete privacy** - Your experiments remain invisible to everyone else
+
+<Callout type="info" title="Why Use a Sandbox?">
+Building and testing in a sandbox before your live course prevents embarrassing mistakes, broken links, and confused students. It's the professional way to develop your Brightspace skills and course materials.
+</Callout>
+
+## How to Access Your Sandbox
+
+The process for accessing or creating a sandbox varies by institution. Here are the most common methods:
+
+<Steps>
+<Step title="Check your existing courses">
+Log in to Brightspace and look at your **My Courses** widget on the homepage. Many institutions automatically create a sandbox course for all instructors. Look for courses with names like:
+- "Sandbox - [Your Name]"
+- "DEV - [Your Name]"
+- "Development Course"
+- "[Your Name] Practice Course"
+</Step>
+
+<Step title="Use the Sandbox Course Creator (if available)">
+Some institutions provide a self-service tool:
+1. Click **Tools** in the navbar
+2. Select **Sandbox Course Creator** from the dropdown
+3. Enter a name for your sandbox course
+4. Choose a template (Blank, Credit, Non-Credit, etc.)
+5. Click **Submit** to create your sandbox
+</Step>
+
+<Step title="Request a sandbox from your institution">
+If you don't see a sandbox or creation tool:
+1. Contact your institution's Teaching and Learning Center or IT Help Desk
+2. Request a Brightspace sandbox or development course
+3. Specify if you need any pre-loaded content or a blank shell
+4. Allow a few days for the request to be processed
+</Step>
+
+<Step title="Access your new sandbox">
+Once created, your sandbox appears in the **My Courses** widget. Click on it to enter and start experimenting.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Can't Find Your Sandbox?">
+If your sandbox doesn't appear in My Courses, try using the course search function or check if it's in a different semester filter. Still can't find it? Contact your Brightspace administrator.
+</Callout>
+
+## What You Can Safely Test in Your Sandbox
+
+Your sandbox is the perfect place to experiment with any Brightspace feature. Here's what you should practice:
+
+### Content and Modules
+- Create and organize modules with different structures
+- Upload files using various methods (drag-drop, file manager)
+- Test the HTML editor and formatting options
+- Experiment with release conditions and prerequisites
+- Try embedding videos and external content
+
+### Assessments
+- Build quizzes with different question types
+- Configure quiz settings (time limits, attempts, randomization)
+- Create assignments with various submission types
+- Set up rubrics and attach them to activities
+- Test Turnitin integration settings
+
+### Gradebook
+- Use the Grade Setup Wizard
+- Create grade categories and items
+- Practice different calculation methods
+- Link assessments to grade items
+- Test grade release settings
+
+### Communication
+- Create announcements
+- Set up Intelligent Agents
+- Configure calendar events
+- Test discussion forums and topics
+
+### Course Design
+- Customize your course homepage
+- Rearrange navbar items
+- Apply different themes or banners
+- Test responsive design on mobile
+
+<Callout type="warning" title="Don't Add Real Students">
+Never add actual students to your sandbox course. Sandboxes are not connected to your institution's student information system, which means grades cannot be officially recorded or transferred. Always use test accounts or colleague volunteers.
+</Callout>
+
+## Testing as a Student
+
+To truly understand the student experience, test your sandbox content from the student perspective:
+
+<Steps>
+<Step title="Use the Student Preview feature">
+1. While in your sandbox, look for the **View as Student** or **Student Preview** option
+2. This allows you to see exactly what students would see
+3. You can complete activities, take quizzes, and submit assignments
+4. Click **Exit Preview** to return to instructor view
+</Step>
+
+<Step title="Invite a colleague as a test student">
+For more realistic testing:
+1. Go to **Course Admin** > **Classlist** (or **Enrollment**)
+2. Add a colleague's email with the **Student** role
+3. Ask them to navigate your course and provide feedback
+4. They can submit assignments and take quizzes as a real student would
+</Step>
+</Steps>
+
+<Callout type="note" title="Student Preview Limitation">
+While Student Preview lets you experience content, some progress data (like content completion) cannot be easily reset. For thorough testing, consider inviting a colleague as a test student.
+</Callout>
+
+## Resetting Your Sandbox Content
+
+After extensive testing, you may want to start fresh. Unfortunately, there's no single "reset" button, but you have options:
+
+### Manual Deletion (Recommended Order)
+
+To avoid issues with linked components, delete content in this order:
+
+<Steps>
+<Step title="Delete Content/Modules">
+Navigate to **Content**, click the arrow next to **Table of Contents**, and select **Delete All Modules**. Choose to permanently delete modules, topics, and associated files.
+</Step>
+
+<Step title="Clear Manage Files">
+Go to **Course Admin** > **Manage Files**. Select all files and click the delete (trash) icon.
+</Step>
+
+<Step title="Remove Assignments">
+Navigate to **Activities** > **Assignments**. Select all assignments and use **More Actions** > **Delete**.
+</Step>
+
+<Step title="Empty Question Library">
+Go to **Activities** > **Quizzes** > **Question Library**. Select all and delete.
+</Step>
+
+<Step title="Delete Grade Items">
+Navigate to **Grades** > **Manage Grades** > **More Actions** > **Delete**. Select all items and confirm deletion.
+</Step>
+
+<Step title="Remove Discussions">
+Go to **Discussions** > **More Actions** > **Delete**. Select all forums and delete.
+</Step>
+
+<Step title="Delete Rubrics">
+Navigate to **Course Admin** > **Rubrics**. Select all and delete.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Deletion is Permanent">
+Deleted content cannot be restored through normal methods. If you've created materials you want to keep, export them first before clearing your sandbox.
+</Callout>
+
+### Request a Course Reset
+
+Some institutions allow administrators to perform a complete course reset:
+1. Contact your Brightspace administrator or IT Help Desk
+2. Request a "Course Reset" for your sandbox
+3. Understand that this permanently deletes ALL data with no recovery option
+
+## Best Practices for Sandbox Use
+
+### Before Going Live
+
+| Action | Why It Matters |
+|--------|----------------|
+| Test all links and embedded content | Broken links frustrate students |
+| Complete a quiz as a student | Ensure questions display correctly |
+| Submit a test assignment | Verify submission settings work |
+| Check mobile responsiveness | Many students use phones/tablets |
+| Have a colleague review | Fresh eyes catch issues you miss |
+
+### Workflow Tips
+
+1. **Build templates in your sandbox** - Create module structures, rubrics, and activities you can copy to multiple courses
+
+2. **Use Import/Export** - Once content works perfectly in your sandbox, export it and import into your live course
+
+3. **Document what works** - Keep notes on successful configurations so you can replicate them
+
+4. **Test before each semester** - Brightspace updates may change how features work; verify your content still functions
+
+<Callout type="tip" title="Create a Master Template">
+Consider building a "master course template" in your sandbox with your standard module structure, rubrics, and recurring assignments. Copy this template to new courses each semester to save time.
+</Callout>
+
+## Limitations of the Sandbox Environment
+
+While sandboxes are powerful, be aware of these limitations:
+
+### What Sandboxes Cannot Do
+
+- **Official grade recording** - Grades in sandboxes don't transfer to your institution's records
+- **Real student notifications** - Cannot test how announcements appear in student email
+- **Integration testing** - Some third-party tools (like publisher content) may not work without proper course setup
+- **Accurate enrollment scenarios** - You can't simulate large class sizes or complex group configurations easily
+
+### Institution-Specific Restrictions
+
+- Some institutions don't allow adding other users to sandboxes
+- Certain advanced features may be disabled in sandbox environments
+- You typically cannot delete a sandbox after it's created
+- Storage limits may apply to uploaded files
+
+<Callout type="info" title="Contact Your Institution">
+Sandbox capabilities vary significantly between institutions. If you need a feature that doesn't seem available, check with your Teaching and Learning Center - they may be able to enable it or suggest alternatives.
+</Callout>
+
+## Transferring Content to Live Courses
+
+When your sandbox content is ready for students:
+
+<Steps>
+<Step title="Export from sandbox">
+Go to **Course Admin** > **Import/Export/Copy Components**. Select **Export Components** and choose the items you want to transfer.
+</Step>
+
+<Step title="Download the export package">
+Wait for Brightspace to create your export file, then download it to your computer.
+</Step>
+
+<Step title="Import to live course">
+Navigate to your actual course with students. Go to **Course Admin** > **Import/Export/Copy Components**. Select **Import Components** and upload your export file.
+</Step>
+
+<Step title="Review and adjust">
+Check that all content imported correctly. Update any dates, release conditions, or course-specific details.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Use Copy Components">
+If both courses are in the same Brightspace instance, you can use **Copy Components from Another Org Unit** instead of export/import. This is faster and maintains more settings.
+</Callout>
+
+## Common Issues
+
+### "I can't find the sandbox creation tool"
+Not all institutions provide self-service sandbox creation. Contact your IT Help Desk to request one.
+
+### "My sandbox has old content I don't want"
+Follow the manual deletion steps above, or request an administrator reset if available.
+
+### "Student Preview won't reset my quiz attempts"
+Quiz attempt data persists in Student Preview. Create a new test student account or ask a colleague to test.
+
+### "I accidentally deleted something important"
+Check the Recycle Bin (if enabled) at **Course Admin** > **Recycle Bin**. Otherwise, you may need to recreate the content.
+
+## Related Guides
+
+- [Brightspace Overview](/docs/getting-started/overview)
+- [Understanding the Course Homepage](/docs/getting-started/course-homepage)
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Creating Quizzes](/docs/quizzes/creating-quizzes)

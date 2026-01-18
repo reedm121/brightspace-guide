@@ -1,0 +1,385 @@
+---
+title: "Course Backup and Restore"
+description: "Export course backups and restore courses from backup files"
+category: "Course Management"
+order: 3
+tags: ["backup", "restore", "export", "import", "archive"]
+---
+
+# Course Backup and Restore
+
+## Overview
+
+Backing up your Brightspace course allows you to preserve your course materials, export them for use elsewhere, or share content with colleagues. The Import/Export/Copy Components tool provides three export formats to accommodate different needs, from simple backups to cross-platform sharing.
+
+Understanding how to properly backup and restore courses is essential for:
+- Preserving your course materials before term ends
+- Sharing course content with colleagues
+- Migrating courses between institutions
+- Creating personal archives of your work
+- Recovering from accidental deletions
+
+<Callout type="warning" title="Important: Download Immediately">
+When you export a course backup, you must download the .zip file immediately when it becomes available. Brightspace does not store export files for later download. If you miss the download window, you will need to run the export process again.
+</Callout>
+
+## Backup File Formats
+
+Brightspace offers three export formats, each suited for different purposes:
+
+| Format | Best For | Compatibility |
+|--------|----------|---------------|
+| **Brightspace Package** | Backups and sharing with other Brightspace users | Brightspace LMS only |
+| **Common Cartridge 1.3** | Cross-platform sharing with other LMS systems | Blackboard, Moodle, Canvas, Sakai |
+| **Thin Common Cartridge** | LTI links and web resources | Systems supporting LTI |
+
+### Brightspace Package
+
+The Brightspace Package is the standard export format and the best choice for most backup purposes. It contains all the necessary resources to restore your course to another Brightspace instance, preserving most Brightspace-specific features like rubrics and grade settings.
+
+### Common Cartridge 1.3
+
+Common Cartridge is an open standard that allows course packages to work across different learning management systems. Use this format when:
+- Sharing courses with institutions using different LMS platforms
+- Creating Open Educational Resources (OER)
+- Ensuring long-term portability of your materials
+
+<Callout type="info" title="Common Cartridge Limitations">
+When exporting as Common Cartridge, some Brightspace-specific features will not be included, such as rubrics, intelligent agents, and certain assessment settings. The export focuses on content and basic assessment structures that are standardized across LMS platforms.
+</Callout>
+
+### Thin Common Cartridge
+
+Thin Common Cartridge is a specialized subset designed specifically for packaging Learning Tools Interoperability (LTI) links, web links, and associated metadata. Use this only when you need to share external tool integrations.
+
+## What's Included in Backups
+
+Understanding what is and isn't included in your backup helps you plan accordingly.
+
+### Included in Export
+
+- Course content and modules
+- HTML pages and files
+- Quizzes and question libraries
+- Assignments (structure and settings)
+- Discussion forums and topics
+- Rubrics (Brightspace Package only)
+- Grade schemes
+- Announcements
+- Calendar entries
+- Checklists
+- Surveys
+- H5P interactive content
+- Self-assessments
+
+### NOT Included in Export
+
+<Callout type="warning" title="Student Data Not Exported">
+Course exports are designed for course structure and content only. Student-specific data is never included in exports for privacy and practical reasons.
+</Callout>
+
+- Student submissions (assignments, discussions)
+- Grade entries and gradebook data
+- Quiz attempts and scores
+- Class roster
+- Release conditions (in most cases)
+- Intelligent Agent run history
+- Manually added calendar events
+- Third-party content stored externally (Panopto videos, Playposit, etc.)
+
+## Exporting a Course Backup
+
+<Steps>
+<Step title="Access Course Admin">
+From your course navbar, click **Course Admin**. This opens the Course Administration page with all management tools.
+</Step>
+
+<Step title="Open Import/Export/Copy Components">
+Locate and click **Import/Export/Copy Components** in the Course Administration area. This tool handles all backup, restore, and copy operations.
+</Step>
+
+<Step title="Select Export Format">
+Choose one of the three export options:
+- **Export as Brightspace Package** (recommended for backups)
+- **Export as Common Cartridge**
+- **Export as Thin Common Cartridge**
+
+Click **Start** to proceed.
+</Step>
+
+<Step title="Select Components to Export">
+You have two options:
+- Check **Select All Components** to include everything
+- Select individual component checkboxes for a partial export
+
+For a complete backup, select all components.
+</Step>
+
+<Step title="Review and Continue">
+Click **Continue** to review your selections. Verify that the components listed match what you want to export.
+</Step>
+
+<Step title="Include Course Files">
+On the confirmation screen, check the box for **Include course files in the export package**. This ensures all uploaded documents, images, and media are included.
+
+Click **Export** to begin the export process.
+</Step>
+
+<Step title="Wait for Processing">
+The export runs as a background job. You will receive a notification in your Update Alerts (bell icon) when the export is complete. Large courses may take several minutes.
+</Step>
+
+<Step title="Download the Backup File">
+When notified, click **Done** and then immediately download the .zip file to your computer. Save it in a secure location.
+
+Click **Done** again to complete the process.
+</Step>
+</Steps>
+
+<Callout type="tip" title="File Naming Convention">
+Rename your downloaded backup file with a descriptive name that includes the course name and date. For example: `BIO101_Spring2026_Backup_20260118.zip`. This makes it easier to identify backups later.
+</Callout>
+
+## Restoring from Backup (Importing)
+
+Importing a backup package restores course content into an existing course shell. The content is added to whatever already exists in the destination course.
+
+<Callout type="info" title="Import Adds Content">
+Importing does not replace existing content. All imported items are added alongside current course content. The only exception is course files with identical names, which will be overwritten. For best results, import into an empty course.
+</Callout>
+
+<Steps>
+<Step title="Open the Destination Course">
+Navigate to the course where you want to import the backup. This must be an existing course shell where you have instructor permissions.
+</Step>
+
+<Step title="Access Import/Export/Copy Components">
+Go to **Course Admin** and click **Import/Export/Copy Components**.
+</Step>
+
+<Step title="Select Import Components">
+Choose **Import Components** and click **Start**.
+</Step>
+
+<Step title="Upload the Backup File">
+In the Import Course Package dialog, click **Upload** and select the .zip backup file from your computer.
+
+<Callout type="warning" title="File Size Limit">
+The backup file must be less than 2 GB. If your backup exceeds this limit, you may need to export and import components in batches.
+</Callout>
+</Step>
+
+<Step title="Choose Import Type">
+Select your import approach:
+- **Import All Components** - Imports everything in the package
+- **Advanced Options** - Allows you to select specific components
+
+For a complete restore, choose Import All Components. For selective imports, continue to the next step.
+</Step>
+
+<Step title="Review and Manage Dates (Optional)">
+After the import, you can choose to review and adjust dates. This is helpful when restoring a course from a previous term, as you can shift all dates forward to the new term.
+</Step>
+
+<Step title="Verify the Import">
+Once complete, navigate through your course content to verify everything imported correctly. Check modules, assignments, quizzes, and discussions.
+</Step>
+</Steps>
+
+## Partial vs Full Restore
+
+### Full Restore (Import All)
+
+A full restore imports every component from the backup package. Use this when:
+- Setting up a new course from a complete backup
+- Restoring after accidental deletions
+- Creating a duplicate course
+
+### Partial Restore (Advanced Options)
+
+Partial restores let you select specific components. This is useful when:
+- You only need certain quizzes or assignments
+- You want to avoid duplicating existing content
+- You need to update specific parts of a course
+
+<Steps>
+<Step title="Choose Advanced Options">
+After uploading your backup file, select **Advanced Options** instead of Import All Components.
+</Step>
+
+<Step title="Select Components">
+The system will read the package contents. Check the boxes for only the components you want to import:
+- Content
+- Quizzes
+- Question Library
+- Assignments
+- Discussions
+- Rubrics
+- Grade Items
+- And more...
+</Step>
+
+<Step title="Select Specific Items">
+For even more granular control, expand each component category to select individual items. For example, you might import only specific quizzes rather than all quizzes.
+</Step>
+
+<Step title="Continue with Import">
+Click **Continue** twice to proceed with importing only your selected components.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Components to Avoid When Importing">
+When importing into an active course with students, avoid importing these components:
+
+- **Calendar**: Imports old calendar entries, potentially including broken Zoom links from previous terms
+- **Announcements**: Triggers notification emails to all students for each imported announcement
+- **Grade Items**: May conflict with existing gradebook setup
+
+Use Advanced Options to deselect these components.
+</Callout>
+
+## Maintaining Component Associations
+
+When course components are linked together (such as a quiz with release conditions affecting a discussion), you must export and import all related components together to preserve their associations.
+
+<Callout type="info" title="Association Requirements">
+If you're exporting linked components, export them all at the same time:
+- Content modules AND their associated files
+- Quizzes AND their release conditions AND affected discussions
+- Assignments AND their linked rubrics AND grade items
+
+Failing to include all related components will result in broken links or missing associations after import.
+</Callout>
+
+### Post-Import Checklist
+
+After importing, verify and configure these items:
+
+| Component | Action Required |
+|-----------|-----------------|
+| **Quizzes** | Imported quizzes are set to Inactive by default. Enable them manually. |
+| **Intelligent Agents** | Imported agents are disabled by default. Review and enable as needed. |
+| **Release Conditions** | May not import correctly. Verify and recreate if necessary. |
+| **Rubrics** | Check that rubrics are properly attached to assignments. |
+| **Dates** | Update all dates for the new term. |
+| **Links** | Test all external links and embedded media. |
+
+## Cross-Institution Compatibility
+
+### Sharing with Other Brightspace Institutions
+
+Brightspace Packages can be shared between different institutions using Brightspace. However, some limitations apply:
+
+- Institution-specific integrations (LTI tools) may not work
+- Links to external systems may break
+- Third-party content (publisher materials) may require separate licensing
+- Custom widgets and homepage configurations may not transfer
+
+### Sharing with Non-Brightspace Institutions
+
+For sharing with institutions using Blackboard, Canvas, Moodle, or other LMS platforms:
+
+1. Export your course as **Common Cartridge 1.3**
+2. Share the .zip file with the recipient
+3. They can import the Common Cartridge into their LMS
+
+<Callout type="info" title="Expect Some Loss">
+When converting between LMS platforms, expect some loss of functionality. Each LMS handles features differently. Basic content, files, and simple quizzes typically transfer well. Complex settings, rubrics, and advanced features may not.
+</Callout>
+
+## Backup Retention Recommendations
+
+### Personal Backup Strategy
+
+Develop a consistent backup routine:
+
+- **End of Each Term**: Export a complete backup before course access ends
+- **Major Updates**: Backup before making significant changes to course structure
+- **Before Imports**: Backup the destination course before importing new content
+- **Regular Intervals**: For actively developed courses, backup monthly
+
+### Storage Recommendations
+
+| Storage Type | Pros | Cons |
+|--------------|------|------|
+| **Local Computer** | Fast access, no internet needed | Risk of hardware failure |
+| **Cloud Storage** (OneDrive, Google Drive) | Accessible anywhere, automatic backup | Requires internet |
+| **External Drive** | Independent of computer | Can be lost or damaged |
+| **Multiple Locations** | Best protection | Requires maintenance |
+
+<Callout type="tip" title="Best Practice: Multiple Copies">
+Store at least two copies of important backups in different locations. For example, keep one copy on your computer and another in cloud storage. This protects against hardware failure, theft, or accidental deletion.
+</Callout>
+
+### Institutional Retention Policies
+
+Most institutions maintain their own retention schedules:
+
+- Courses are typically available for 4-6 years after the term ends
+- Deactivated courses may be purged after 6-8 years
+- Student data (grades, submissions) may be retained longer for accreditation
+
+<Callout type="warning" title="Don't Rely on Institutional Backups">
+While your institution maintains course data, you should not rely solely on this for your own records. Create personal backups of your course content, especially for materials you have developed yourself.
+</Callout>
+
+## Troubleshooting Backup Issues
+
+### Export Problems
+
+**Export takes too long or fails**
+- Large courses with many files take longer to export
+- Try exporting in smaller batches using component selection
+- Ensure you have a stable internet connection
+
+**Export file is too large**
+- Export components in batches rather than all at once
+- Remove unnecessary large files from your course before exporting
+- Consider exporting without embedded videos (link to external sources instead)
+
+**Missing components in export**
+- Verify you selected all components before exporting
+- Check that "Include course files" was enabled
+- Some protected or third-party content cannot be exported
+
+### Import Problems
+
+**Import fails or times out**
+- Ensure the file is under the 2 GB limit
+- Try importing during off-peak hours when server load is lower
+- Contact your IT support if the problem persists
+
+**Duplicate content appears**
+- Imports add content rather than replacing it
+- Delete duplicate items manually
+- Consider importing into an empty course shell instead
+
+**Links are broken after import**
+- External links to your old institution may no longer work
+- LTI tool links may need reconfiguration
+- Links between course items should work if all related components were imported together
+
+**Quizzes or agents are not working**
+- Quizzes import as Inactive - enable them in the Quizzes tool
+- Intelligent Agents import as disabled - enable them in Intelligent Agents settings
+- Verify quiz availability dates are set correctly
+
+**Release conditions are missing**
+- Release conditions often do not transfer
+- Recreate release conditions manually after import
+- Ensure you exported the Release Conditions component
+
+### When to Contact IT Support
+
+Contact your institution's IT help desk if:
+- Exports consistently fail despite troubleshooting
+- Import errors reference permissions or system issues
+- You need to recover a course that has been deleted
+- You need to import content from a non-standard format
+
+## Related Guides
+
+- [Copying Courses Between Terms](/docs/course-management/copying-courses)
+- [Course Templates](/docs/course-management/course-templates)
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
