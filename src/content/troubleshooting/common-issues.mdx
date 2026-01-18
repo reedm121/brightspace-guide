@@ -1,0 +1,461 @@
+---
+title: "Troubleshooting Common Issues"
+description: "Solutions to frequently encountered Brightspace problems"
+category: "Troubleshooting"
+order: 1
+tags: ["troubleshooting", "errors", "problems", "support"]
+---
+
+# Troubleshooting Common Issues
+
+## Overview
+
+This guide covers the most frequently encountered problems in Brightspace and provides step-by-step solutions. Whether you are experiencing browser issues, content visibility problems, or integration errors, you will find practical fixes here.
+
+<Callout type="info" title="Before You Begin">
+Many Brightspace issues can be resolved by clearing your browser cache, trying a different browser, or checking your internet connection. Try these basic steps first before diving into specific troubleshooting.
+</Callout>
+
+## Browser Compatibility Issues
+
+Brightspace works best with modern browsers, but some users experience display or functionality problems depending on their browser and settings.
+
+### Safari-Specific Problems
+
+Safari users frequently encounter issues with media playback, file uploads, and third-party tools.
+
+<Steps>
+<Step title="Enable cookies for Brightspace">
+Go to Safari > Settings > Privacy and uncheck "Prevent cross-site tracking" and "Block all cookies." This allows Brightspace integrations like Kaltura media to function properly.
+</Step>
+
+<Step title="Disable content blockers">
+If content is not loading, look for a shield icon in the address bar. Click it and select "Disable Protection on this page" to allow Brightspace content to display.
+</Step>
+
+<Step title="Try a different browser">
+If issues persist, use Chrome or Firefox instead. D2L recommends these browsers for the best Brightspace experience.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Safari Known Issue">
+D2L is aware of ongoing issues with Safari and is working to resolve them. Use Chrome or Firefox if you experience persistent problems with Safari.
+</Callout>
+
+### General Browser Troubleshooting
+
+<Steps>
+<Step title="Update your browser">
+Ensure you are using the latest version of Chrome, Firefox, Edge, or Safari. Outdated browsers may not support all Brightspace features.
+</Step>
+
+<Step title="Clear cache and cookies">
+In your browser settings, clear cached images, files, and cookies. This resolves many display issues caused by outdated cached data.
+</Step>
+
+<Step title="Try incognito or private mode">
+Open Brightspace in a private browsing window to test if browser extensions are causing conflicts.
+</Step>
+
+<Step title="Disable browser extensions">
+Ad blockers, privacy extensions, and other add-ons can interfere with Brightspace functionality. Temporarily disable them and reload the page.
+</Step>
+</Steps>
+
+## Cache and Cookie Problems
+
+Many Brightspace issues stem from cached data conflicts or blocked cookies.
+
+### Clearing Your Browser Cache
+
+<Steps>
+<Step title="Access browser settings">
+- **Chrome**: Click the three-dot menu > Settings > Privacy and security > Clear browsing data
+- **Firefox**: Click the menu button > Settings > Privacy & Security > Clear Data
+- **Edge**: Click the three-dot menu > Settings > Privacy, search, and services > Clear browsing data
+- **Safari**: Safari menu > Settings > Privacy > Manage Website Data
+</Step>
+
+<Step title="Select what to clear">
+Check "Cached images and files" and "Cookies and other site data." Set the time range to "All time" for a complete clear.
+</Step>
+
+<Step title="Clear and restart">
+Click "Clear data" or equivalent, then close and reopen your browser before accessing Brightspace again.
+</Step>
+</Steps>
+
+### Third-Party Cookie Errors
+
+Some Brightspace tools require third-party cookies to function.
+
+<Callout type="warning" title="My Media Error">
+If you see "It seems your browser is blocking 3rd party session cookies which are required for the Kaltura application," you need to enable third-party cookies in your browser settings for Brightspace to work with media tools.
+</Callout>
+
+To fix this:
+1. Open your browser's privacy settings
+2. Allow third-party cookies for your institution's Brightspace domain
+3. Reload the page and try again
+
+## "Page Not Found" Errors
+
+When you encounter a 404 or "Page Not Found" error in Brightspace:
+
+<Steps>
+<Step title="Check the URL">
+Verify you are accessing the correct Brightspace URL for your institution. URLs typically follow the format: `https://[institution].brightspace.com`
+</Step>
+
+<Step title="Verify course enrollment">
+The page may not exist because you are not enrolled in the course. Check your course list on the Brightspace homepage to confirm enrollment.
+</Step>
+
+<Step title="Check course availability">
+If the course has not started yet (based on the course start date), content may not be accessible. Contact your instructor if you believe the course should be available.
+</Step>
+
+<Step title="Try navigating from the homepage">
+Instead of using a bookmarked or shared link, navigate to the content through the Brightspace homepage and course navigation.
+</Step>
+
+<Step title="Clear browser cache">
+Old cached links may point to content that has been moved or reorganized. Clear your cache and try again.
+</Step>
+</Steps>
+
+## Student Cannot See Content
+
+One of the most common instructor concerns is when students report they cannot access course content.
+
+### Content Visibility Checklist
+
+<Steps>
+<Step title="Check if the course is active">
+Go to Course Admin > Course Offering Information. Ensure the course status is set to "Active." Inactive courses are invisible to students.
+</Step>
+
+<Step title="Verify course start and end dates">
+Check that the current date falls within the course's start and end dates. Students cannot access content outside these dates.
+</Step>
+
+<Step title="Review module and item visibility">
+Click the eyeball icon next to modules and items in Content. A crossed-out eye indicates the content is hidden from students.
+</Step>
+
+<Step title="Check release conditions">
+Go to the content item and review any attached release conditions. Students must meet all conditions before the content appears.
+</Step>
+
+<Step title="Verify availability dates">
+Content items can have their own start and end dates separate from the course. Check the item's settings to ensure it is currently available.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Test as a Student">
+Use the "View as Learner" feature or impersonate a test student from the Classlist to see exactly what students see. Note that "View as Learner" may not always accurately reflect hidden content - impersonating a real test student is more reliable.
+</Callout>
+
+### Common Visibility Problems
+
+| Problem | Solution |
+|---------|----------|
+| "Hidden. Conditions are inactive" | Create content in a visible state first, then add release conditions |
+| Content appears but is inaccessible | Check for prerequisite completion requirements |
+| Student enrolled but sees nothing | Course may not be active; check Course Offering Information |
+| Content disappears after date | End date has passed; extend or remove the end date |
+
+## Grade Sync Issues
+
+When grades from assignments, quizzes, or third-party tools do not appear in the gradebook:
+
+<Steps>
+<Step title="Verify the assignment is linked to a grade item">
+Open the assignment and check if it displays "Not in Gradebook." If so, click this link to associate it with an existing or new grade item.
+</Step>
+
+<Step title="Check the grade item settings">
+In Grades > Manage Grades, verify the grade item exists and has the correct point value and category assignment.
+</Step>
+
+<Step title="Confirm the grade was published">
+Some grading workflows require you to publish grades before they appear to students. Check for a "Publish" or "Save and Publish" option.
+</Step>
+
+<Step title="Check third-party tool sync settings">
+For tools like Gradescope, MindTap, or Connect, ensure the grade sync is enabled and that you have resynchronized after grading.
+</Step>
+
+<Step title="Verify roster sync for third-party tools">
+New students added after the initial roster sync may not have grades synced. Resync the roster in the third-party tool.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Third-Party Grade Overwrites">
+If you manually edit grades in Brightspace that came from an integrated tool, those changes may be overwritten during the next automatic sync. Make grade adjustments in the source tool whenever possible.
+</Callout>
+
+## Assignment Submission Failures
+
+Students frequently encounter errors when uploading assignments.
+
+### Common Upload Errors and Solutions
+
+<Steps>
+<Step title="Check file name for special characters">
+Brightspace rejects files containing these characters: `\ / : * ? " < > | ~ # % & + { }`
+
+Rename the file to remove any special characters and try again.
+</Step>
+
+<Step title="Verify file size">
+The maximum upload size is typically 1GB, but large files may time out. If uploading a video or large presentation, consider:
+- Compressing the file
+- Using a cloud storage link instead
+- Breaking the content into smaller files
+</Step>
+
+<Step title="Ensure you are uploading the correct file">
+Microsoft Word creates temporary files with names starting with `~$`. Make sure you are uploading the actual document, not the temporary file.
+</Step>
+
+<Step title="Wait for upload to complete">
+Do not click "Add" or "Submit" until the green progress bar completes. Submitting too early causes "Field is required" errors.
+</Step>
+
+<Step title="Check allowed file types">
+Review the assignment instructions for specific file type requirements (e.g., PDF only). Submit in the requested format.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Do Not Wait Until the Last Minute">
+Files may take several minutes to upload, especially on slow connections. Always submit at least 30 minutes before the deadline to avoid being locked out if technical issues occur.
+</Callout>
+
+## Quiz Timing Problems
+
+Quiz timer issues often relate to availability windows, time limits, and special access settings.
+
+### Understanding Quiz Timing
+
+- **Availability dates**: When students can see and start the quiz
+- **Time limit**: How long students have to complete the quiz once started
+- **Grace period**: Extra time after the limit before auto-submission
+
+<Callout type="info" title="Key Difference">
+Students can start a quiz during the availability window and continue beyond the end time if their time limit allows. However, if disconnected, they cannot re-enter after the availability window closes.
+</Callout>
+
+### Resolving Timer Issues
+
+<Steps>
+<Step title="Extend availability for interrupted students">
+If a student loses connection during a timed quiz and the availability window has closed, go to the quiz settings and add them to Special Access with extended end date/time.
+</Step>
+
+<Step title="Configure grace periods">
+Set a 2-5 minute grace period to account for slow internet connections or accidental early submissions. This gives students a buffer.
+</Step>
+
+<Step title="Use auto-submit for enforced limits">
+Enable auto-submission for enforced time limit quizzes. This prevents students from being locked out for forgetting to click Submit.
+</Step>
+
+<Step title="Verify special access settings">
+For students with accommodations, ensure Special Access is configured with the correct extended time limit and availability window.
+</Step>
+</Steps>
+
+## Video Playback Issues
+
+Videos embedded in Brightspace may fail to load or play for various reasons.
+
+<Steps>
+<Step title="Perform a hard refresh">
+Press Ctrl+F5 (Windows) or Cmd+Shift+R (Mac) to force the browser to reload the page without cached data.
+</Step>
+
+<Step title="Check internet speed">
+Video streaming requires at least 5 Mbps download speed. Test your connection and try a different network if buffering persists.
+</Step>
+
+<Step title="Enable third-party cookies">
+Kaltura and other video platforms require third-party cookies. Enable them in your browser's privacy settings.
+</Step>
+
+<Step title="Try opening in a new window">
+If a video does not play inline, look for an option to open it in a new window. This often resolves embedding issues.
+</Step>
+
+<Step title="Reduce videos per page (for instructors)">
+Loading many videos on one page causes slow loading. Consider spreading videos across multiple modules or using links instead of embeds.
+</Step>
+
+<Step title="Check browser security settings">
+Look for a shield icon in the address bar indicating blocked content. Click to allow the content to display.
+</Step>
+</Steps>
+
+## Turnitin Errors
+
+Turnitin integration issues commonly involve Track Changes, communication errors, and file processing problems.
+
+### Track Changes Causing Problems
+
+<Callout type="danger" title="Critical Issue">
+If Track Changes was used in Microsoft Word to edit a document, parts of the text may disappear in Turnitin. Always accept all changes and turn off Track Changes before submitting.
+</Callout>
+
+<Steps>
+<Step title="Accept all tracked changes">
+In Microsoft Word, go to Review > Accept > Accept All Changes. This incorporates all edits into the final document.
+</Step>
+
+<Step title="Turn off Track Changes">
+Ensure Track Changes is disabled: Review > Track Changes (toggle off).
+</Step>
+
+<Step title="Save as a new file">
+Save the document as a new file to ensure no tracking metadata remains.
+</Step>
+</Steps>
+
+### "Error Communicating with Turnitin"
+
+<Steps>
+<Step title="Wait and retry">
+Communication errors are often temporary. Wait a few minutes and refresh the page to check if the error resolves.
+</Step>
+
+<Step title="Do not modify settings after submissions begin">
+Changing Turnitin settings or due dates after students have submitted can cause communication errors for all existing submissions.
+</Step>
+
+<Step title="Check the error details">
+Click the error icon next to the student's submission to see specific error information. The file type may not be supported by Turnitin.
+</Step>
+
+<Step title="Request resubmission">
+If a student's file cannot be processed, ask them to submit in a different format (e.g., PDF instead of DOCX).
+</Step>
+</Steps>
+
+## Mobile App Limitations
+
+The Brightspace Pulse mobile app provides convenient access but has significant limitations.
+
+### What Pulse Cannot Do
+
+- Take quizzes or exams
+- Post or subscribe to discussions
+- Display interactive content (SCORM, H5P)
+- Edit course content
+- Submit complex assignments
+- View items without associated dates
+
+<Callout type="warning" title="Important Limitation">
+The Pulse app is NOT a substitute for the full Brightspace web experience. Certain content and activities are only available through a desktop or laptop browser.
+</Callout>
+
+### Common Pulse Issues
+
+| Issue | Solution |
+|-------|----------|
+| App crashes on login | Update the app; try uninstalling and reinstalling |
+| Cannot see announcements | Open the course homepage, which may open a Safari window |
+| Missing content | Items without dates do not appear; use the web version |
+| SSO login loops | Clear app data or try logging in through the web first |
+| Third-party tools fail | McGraw Hill, Pearson, and similar integrations require the web version |
+
+## Notification Issues
+
+Students often report not receiving email notifications for announcements, grades, or due dates.
+
+### Why Students Miss Notifications
+
+<Steps>
+<Step title="Check course start date">
+Announcements created before the course start date will not trigger email notifications. Verify the course has started.
+</Step>
+
+<Step title="Verify student notification settings">
+Students control their own notification preferences. They may have unsubscribed from announcement emails. Direct them to check their settings under their profile > Notifications.
+</Step>
+
+<Step title="Check spam and junk folders">
+Brightspace emails may be filtered as spam. Students should add the Brightspace notification email address (e.g., `d2lsupport@[institution]prod.brightspace.com`) to their contacts.
+</Step>
+
+<Step title="Confirm email address is correct">
+Students may have an outdated email address in their profile. They should verify their email in Account Settings.
+</Step>
+
+<Step title="Review course exclusions">
+Students can exclude specific courses from sending notifications. They should check their notification settings for excluded courses.
+</Step>
+</Steps>
+
+<Callout type="info" title="Instructor Limitation">
+Instructors cannot force email notifications. Whether students receive emails depends on their personal notification settings. Consider reminding students at the start of the course to enable notifications.
+</Callout>
+
+### Sending Reliable Communications
+
+For important announcements:
+1. Post the announcement in Brightspace
+2. Also send an email via the Classlist email feature
+3. Consider using Intelligent Agents for automated reminders
+
+## When to Contact IT Support
+
+Contact your institution's IT help desk or Brightspace support when:
+
+- You have tried all troubleshooting steps and the issue persists
+- You see error messages you do not understand
+- The issue affects multiple users (potential system-wide problem)
+- You need permissions or settings changed that you cannot access
+- Data appears to be lost or corrupted
+- Third-party integrations are completely non-functional
+
+<Callout type="tip" title="Brightspace 24/7 Support">
+Many institutions provide access to D2L's 24/7 Technical Support. Check your institution's Knowledge Base for contact information.
+</Callout>
+
+## Information to Provide IT Support
+
+When contacting support, provide as much detail as possible to expedite resolution:
+
+### Required Information
+
+1. **Your username and role** (instructor, student, admin)
+2. **Course name and code** (if applicable)
+3. **Browser and version** (e.g., Chrome 120, Firefox 122)
+4. **Operating system** (Windows 11, macOS Sonoma, etc.)
+5. **Device type** (desktop, laptop, tablet, phone)
+
+### Problem Details
+
+1. **Exact error message** (take a screenshot if possible)
+2. **Steps to reproduce** the issue (what did you do before the error occurred?)
+3. **When the problem started** (date and approximate time)
+4. **Frequency** (every time, intermittent, or one-time)
+5. **What you have already tried** (cleared cache, different browser, etc.)
+
+### Helpful Additions
+
+- Screenshots or screen recordings showing the issue
+- URLs of affected pages
+- Names of affected students (for student-specific issues)
+- Any recent changes made before the issue started
+
+<Callout type="tip" title="Screenshot Shortcut">
+Use Windows+Shift+S (Windows) or Cmd+Shift+4 (Mac) to quickly capture a screenshot of the error message to include in your support request.
+</Callout>
+
+## Related Guides
+
+- [Browser Compatibility Requirements](/docs/troubleshooting/browser-requirements)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
+- [Quiz Settings and Special Access](/docs/quizzes/quiz-settings)
+- [Gradebook Setup and Linking](/docs/gradebook/linking-assignments)
+- [Notification Settings](/docs/communication/announcements)
