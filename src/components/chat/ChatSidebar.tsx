@@ -1,0 +1,286 @@
+"use client";
+
+import * as React from "react";
+import { Send, MessageCircle, X, Sparkles, Loader2 } from "lucide-react";
+import { useChatStore } from "@/stores/chat-store";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+
+function formatTime(date: Date): string {
+  return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+
+interface ChatMessageItemProps {
+  role: "user" | "assistant";
+  content: string;
+  timestamp: Date;
+  sources?: string[];
+}
+
+function ChatMessageItem({
+  role,
+  content,
+  timestamp,
+  sources,
+}: ChatMessageItemProps) {
+  const isUser = role === "user";
+
+  return (
+    <div
+      className={cn(
+        "flex flex-col gap-1 px-4 py-3",
+        isUser ? "items-end" : "items-start"
+      )}
+    >
+      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+        {isUser ? (
+          <>
+            <span>You</span>
+            <span>{formatTime(timestamp)}</span>
+          </>
+        ) : (
+          <>
+            <Sparkles className="size-3" />
+            <span>Assistant</span>
+            <span>{formatTime(timestamp)}</span>
+          </>
+        )}
+      </div>
+      <div
+        className={cn(
+          "max-w-[85%] rounded-lg px-3 py-2 text-sm",
+          isUser
+            ? "bg-primary text-primary-foreground"
+            : "bg-muted text-foreground"
+        )}
+      >
+        <p className="whitespace-pre-wrap">{content}</p>
+      </div>
+      {sources && sources.length > 0 && (
+        <div className="mt-1 flex flex-wrap gap-1">
+          {sources.map((source, index) => (
+            <span
+              key={index}
+              className="inline-flex items-center rounded-full bg-secondary px-2 py-0.5 text-xs text-secondary-foreground"
+            >
+              {source}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TypingIndicator() {
+  return (
+    <div className="flex items-start gap-2 px-4 py-3">
+      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+        <Sparkles className="size-3" />
+        <span>Assistant</span>
+      </div>
+      <div className="flex items-center gap-1 rounded-lg bg-muted px-3 py-2">
+        <Loader2 className="size-4 animate-spin text-muted-foreground" />
+        <span className="text-sm text-muted-foreground">Thinking...</span>
+      </div>
+    </div>
+  );
+}
+
+export function ChatSidebar() {
+  const {
+    messages,
+    isOpen,
+    isLoading,
+    currentPage,
+    addMessage,
+    setOpen,
+    setLoading,
+  } = useChatStore();
+
+  const [inputValue, setInputValue] = React.useState("");
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
+  // Auto-scroll to bottom when new messages arrive
+  React.useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [messages, isLoading]);
+
+  // Focus input when sheet opens
+  React.useEffect(() => {
+    if (isOpen && inputRef.current) {
+      setTimeout(() => inputRef.current?.focus(), 100);
+    }
+  }, [isOpen]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmedValue = inputValue.trim();
+    if (!trimmedValue || isLoading) return;
+
+    // Add user message
+    addMessage({
+      role: "user",
+      content: trimmedValue,
+    });
+
+    setInputValue("");
+    setLoading(true);
+
+    // TODO: Implement actual API call to chat backend
+    // For now, simulate a response
+    setTimeout(() => {
+      addMessage({
+        role: "assistant",
+        content:
+          "I'm here to help you with Brightspace! This is a placeholder response. The chat backend will be implemented soon.",
+        sources: ["Brightspace Guide"],
+      });
+      setLoading(false);
+    }, 1500);
+  };
+
+  const handleAskAboutPage = () => {
+    if (!currentPage || isLoading) return;
+
+    const question = `Can you help me understand the content on this page: ${currentPage}?`;
+    addMessage({
+      role: "user",
+      content: question,
+    });
+
+    setLoading(true);
+
+    // TODO: Implement actual API call with page context
+    setTimeout(() => {
+      addMessage({
+        role: "assistant",
+        content: `I'll help you understand the "${currentPage}" page. This feature will provide contextual help based on the current page content once the backend is implemented.`,
+        sources: ["Current Page Context"],
+      });
+      setLoading(false);
+    }, 1500);
+  };
+
+  return (
+    <Sheet open={isOpen} onOpenChange={setOpen}>
+      <SheetContent
+        side="right"
+        className="flex w-full flex-col p-0 sm:max-w-md"
+      >
+        <SheetHeader className="border-b px-4 py-3">
+          <div className="flex items-center gap-2">
+            <MessageCircle className="size-5 text-primary" />
+            <SheetTitle>Brightspace Assistant</SheetTitle>
+          </div>
+          <SheetDescription>
+            Ask questions about Brightspace LMS
+          </SheetDescription>
+        </SheetHeader>
+
+        {/* Ask about this page button */}
+        {currentPage && (
+          <div className="border-b px-4 py-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleAskAboutPage}
+              disabled={isLoading}
+              className="w-full justify-start gap-2"
+            >
+              <Sparkles className="size-4" />
+              Ask about this page
+              {currentPage && (
+                <span className="ml-auto truncate text-xs text-muted-foreground">
+                  {currentPage}
+                </span>
+              )}
+            </Button>
+          </div>
+        )}
+
+        {/* Messages area */}
+        <ScrollArea className="flex-1 overflow-hidden">
+          <div ref={scrollRef} className="flex flex-col">
+            {messages.length === 0 ? (
+              <div className="flex flex-col items-center justify-center px-4 py-12 text-center">
+                <MessageCircle className="mb-4 size-12 text-muted-foreground/50" />
+                <h3 className="mb-2 font-medium">No messages yet</h3>
+                <p className="text-sm text-muted-foreground">
+                  Ask a question about Brightspace to get started!
+                </p>
+              </div>
+            ) : (
+              <>
+                {messages.map((message) => (
+                  <ChatMessageItem
+                    key={message.id}
+                    role={message.role}
+                    content={message.content}
+                    timestamp={message.timestamp}
+                    sources={message.sources}
+                  />
+                ))}
+                {isLoading && <TypingIndicator />}
+              </>
+            )}
+          </div>
+        </ScrollArea>
+
+        {/* Input area */}
+        <div className="border-t p-4">
+          <form onSubmit={handleSubmit} className="flex items-center gap-2">
+            <Input
+              ref={inputRef}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Ask about Brightspace..."
+              disabled={isLoading}
+              className="flex-1"
+            />
+            <Button
+              type="submit"
+              size="icon"
+              disabled={!inputValue.trim() || isLoading}
+            >
+              <Send className="size-4" />
+              <span className="sr-only">Send message</span>
+            </Button>
+          </form>
+        </div>
+      </SheetContent>
+    </Sheet>
+  );
+}
+
+// Export a trigger button component for use in other parts of the app
+export function ChatTriggerButton() {
+  const { setOpen, isOpen } = useChatStore();
+
+  return (
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={() => setOpen(!isOpen)}
+      aria-label={isOpen ? "Close chat" : "Open chat"}
+    >
+      {isOpen ? (
+        <X className="size-4" />
+      ) : (
+        <MessageCircle className="size-4" />
+      )}
+    </Button>
+  );
+}
