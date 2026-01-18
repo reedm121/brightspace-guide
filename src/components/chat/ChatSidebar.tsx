@@ -37,40 +37,40 @@ function ChatMessageItem({
   return (
     <div
       className={cn(
-        "flex flex-col gap-1 px-4 py-3",
+        "flex flex-col gap-1.5 px-4 py-3",
         isUser ? "items-end" : "items-start"
       )}
     >
       <div className="flex items-center gap-2 text-xs text-muted-foreground">
         {isUser ? (
           <>
-            <span>You</span>
+            <span className="font-medium">You</span>
             <span>{formatTime(timestamp)}</span>
           </>
         ) : (
           <>
-            <Sparkles className="size-3" />
-            <span>Assistant</span>
+            <Sparkles className="size-3 text-primary" />
+            <span className="font-medium">Assistant</span>
             <span>{formatTime(timestamp)}</span>
           </>
         )}
       </div>
       <div
         className={cn(
-          "max-w-[85%] rounded-lg px-3 py-2 text-sm",
+          "max-w-[85%] rounded-2xl px-4 py-2.5 text-sm shadow-sm",
           isUser
-            ? "bg-primary text-primary-foreground"
-            : "bg-muted text-foreground"
+            ? "bg-primary text-primary-foreground rounded-br-md"
+            : "bg-muted/80 text-foreground border border-border/50 rounded-bl-md"
         )}
       >
-        <p className="whitespace-pre-wrap">{content}</p>
+        <p className="whitespace-pre-wrap leading-relaxed">{content}</p>
       </div>
       {sources && sources.length > 0 && (
-        <div className="mt-1 flex flex-wrap gap-1">
+        <div className="mt-1 flex flex-wrap gap-1.5">
           {sources.map((source, index) => (
             <span
               key={index}
-              className="inline-flex items-center rounded-full bg-secondary px-2 py-0.5 text-xs text-secondary-foreground"
+              className="inline-flex items-center rounded-full bg-primary/10 text-primary px-2.5 py-0.5 text-xs font-medium"
             >
               {source}
             </span>
@@ -83,13 +83,13 @@ function ChatMessageItem({
 
 function TypingIndicator() {
   return (
-    <div className="flex items-start gap-2 px-4 py-3">
+    <div className="flex flex-col gap-1.5 px-4 py-3 items-start">
       <div className="flex items-center gap-2 text-xs text-muted-foreground">
-        <Sparkles className="size-3" />
-        <span>Assistant</span>
+        <Sparkles className="size-3 text-primary" />
+        <span className="font-medium">Assistant</span>
       </div>
-      <div className="flex items-center gap-1 rounded-lg bg-muted px-3 py-2">
-        <Loader2 className="size-4 animate-spin text-muted-foreground" />
+      <div className="flex items-center gap-2 rounded-2xl rounded-bl-md bg-muted/80 border border-border/50 px-4 py-2.5 shadow-sm">
+        <Loader2 className="size-4 animate-spin text-primary" />
         <span className="text-sm text-muted-foreground">Thinking...</span>
       </div>
     </div>
@@ -215,11 +215,13 @@ export function ChatSidebar() {
         <ScrollArea className="flex-1 overflow-hidden">
           <div ref={scrollRef} className="flex flex-col">
             {messages.length === 0 ? (
-              <div className="flex flex-col items-center justify-center px-4 py-12 text-center">
-                <MessageCircle className="mb-4 size-12 text-muted-foreground/50" />
-                <h3 className="mb-2 font-medium">No messages yet</h3>
-                <p className="text-sm text-muted-foreground">
-                  Ask a question about Brightspace to get started!
+              <div className="flex flex-col items-center justify-center px-6 py-16 text-center">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <MessageCircle className="size-8 text-primary" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">Start a conversation</h3>
+                <p className="text-sm text-muted-foreground max-w-[240px]">
+                  Ask any question about Brightspace and I&apos;ll help you find the answer.
                 </p>
               </div>
             ) : (

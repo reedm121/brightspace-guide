@@ -1,0 +1,392 @@
+---
+title: "Creating Discussion Forums and Topics"
+description: "Set up discussion forums and topics for student interaction"
+category: "Discussions"
+order: 1
+tags: ["discussions", "forums", "topics", "collaboration"]
+---
+
+# Creating Discussion Forums and Topics
+
+## Overview
+
+The Discussions tool in Brightspace provides a space for asynchronous student interaction, allowing learners to engage in thoughtful conversations outside of class time. This guide covers how to create and configure discussion forums and topics, including all available settings for controlling student participation.
+
+## Understanding Forums vs Topics vs Threads
+
+Before creating discussions, it's essential to understand Brightspace's three-level hierarchy:
+
+| Level | Description | Who Creates It |
+|-------|-------------|----------------|
+| **Forum** | Top-level container for organizing related topics | Instructor |
+| **Topic** | The actual discussion prompt where conversations happen | Instructor |
+| **Thread** | Individual student posts and their replies | Students |
+
+<Callout type="info" title="Key Concept">
+Forums are organizational containers - students cannot post directly to a forum. You must create at least one topic within a forum for students to participate. A common mistake is creating only a forum and wondering why students cannot post.
+</Callout>
+
+### Example Structure
+
+```
+Module 1 Discussions (Forum)
+    - Week 1: Introduce Yourself (Topic)
+        - Student A's Introduction (Thread)
+        - Student B's Introduction (Thread)
+    - Week 2: Readings Reflection (Topic)
+        - Student A's Reflection (Thread)
+```
+
+## Creating a Discussion Forum
+
+Forums help you organize topics into logical groups. You might create forums by module, week, or topic area.
+
+<Steps>
+
+<Step title="Navigate to Discussions">
+From your course navbar, click **Tools** (or **Activities**), then select **Discussions** from the dropdown menu.
+</Step>
+
+<Step title="Create New Forum">
+Click the **New** button, then select **New Forum** from the dropdown menu.
+</Step>
+
+<Step title="Enter Forum Details">
+- **Title**: Enter a descriptive name for your forum (e.g., "Module 1 Discussions" or "Weekly Reflections")
+- **Description**: Optionally add a description explaining the forum's purpose
+</Step>
+
+<Step title="Configure Forum Options">
+In the Options section, you can set forum-level settings that will apply to all topics within:
+
+- **Allow anonymous posts**: Students can hide their names from classmates (instructors still see names)
+- **A moderator must approve posts**: Posts require instructor approval before appearing
+- **Users must start a thread before viewing others**: Ensures original thinking before seeing peer responses
+
+<Callout type="warning" title="Important">
+Settings applied at the forum level affect ALL topics within that forum. If you need different settings for individual discussions, apply them at the topic level instead.
+</Callout>
+</Step>
+
+<Step title="Save the Forum">
+Click **Save and Close** to create your forum.
+</Step>
+
+</Steps>
+
+## Creating a Discussion Topic
+
+Topics are where the actual discussions happen. Each topic contains a prompt and settings for student participation.
+
+<Steps>
+
+<Step title="Access the Discussion Tool">
+From your course navbar, click **Tools** > **Discussions**.
+</Step>
+
+<Step title="Create New Topic">
+Click the **New** button, then select **New Topic**.
+</Step>
+
+<Step title="Enter Topic Title">
+In the **Topic Title** field, enter a clear, descriptive name for your discussion.
+</Step>
+
+<Step title="Select or Create a Forum">
+Click **Change Forum** to:
+- Select an existing forum to house this topic, OR
+- Check **Create a forum** and enter a forum title to create a new one simultaneously
+
+<Callout type="tip" title="Quick Tip">
+If you don't have any forums yet, Brightspace will automatically create one when you save your first topic.
+</Callout>
+</Step>
+
+<Step title="Add Instructions">
+Use the rich text editor to write your discussion prompt or instructions. Include:
+- Clear expectations for what students should discuss
+- Required length or format (if applicable)
+- Any resources or readings to reference
+</Step>
+
+<Step title="Configure Topic Settings">
+Continue to the sections below to configure assessment, availability, and participation settings.
+</Step>
+
+<Step title="Save the Topic">
+Click **Save and Close** to create your topic.
+</Step>
+
+</Steps>
+
+## Connecting to Grade Items
+
+If you want the discussion to count toward students' grades, you must link it to a grade item.
+
+<Steps>
+
+<Step title="Open Assessment Settings">
+While editing your topic, click the **Assessment** tab (or expand the Assessment panel).
+</Step>
+
+<Step title="Set Point Value">
+Enter a value in the **Grade Out Of** field. This is the maximum points a student can earn.
+
+<Callout type="danger" title="Important">
+Leave this field blank for ungraded discussions. Do NOT enter zero, as this creates a graded item worth 0 points.
+</Callout>
+</Step>
+
+<Step title="Link to Grade Book">
+The **In Grade Book** dropdown controls how the discussion connects to your gradebook:
+- **Automatically create a grade item**: Creates a new grade item with the same name
+- **Choose an existing grade item**: Link to a grade item you've already created
+- **Do not add to gradebook**: Keep the points visible but don't send to gradebook
+</Step>
+
+<Step title="Attach a Rubric (Optional)">
+Click **Add Rubric** to attach an existing rubric or create a new one. Using a rubric provides consistent grading criteria.
+
+<Callout type="warning" title="Points Must Match">
+Ensure your rubric's maximum points equals the "Grade Out Of" value. Brightspace does NOT warn you if these numbers don't match, which can cause grading issues.
+</Callout>
+</Step>
+
+</Steps>
+
+## Setting Availability Dates
+
+Control when students can access and post to discussions.
+
+<Steps>
+
+<Step title="Expand Availability Settings">
+While editing your topic, click **Availability Dates & Conditions** to expand the panel.
+</Step>
+
+<Step title="Set Start Date">
+Enter a **Start Date** to control when the discussion becomes available. Before this date, the topic follows your visibility setting (see below).
+</Step>
+
+<Step title="Set End Date">
+Enter an **End Date** to control when the discussion closes. After this date, the topic follows your visibility setting.
+</Step>
+
+<Step title="Choose Visibility Options">
+Select how the topic appears before start or after end dates:
+
+| Option | Before Start / After End |
+|--------|--------------------------|
+| **Visible with access restricted** | Students see only the title but cannot open the topic |
+| **Visible with submission restricted** | Students can read posts but cannot create new ones (read-only) |
+| **Hidden** | Topic is completely invisible to students |
+
+<Callout type="tip" title="Recommended">
+Most instructors use "Visible with submission restricted" for the end date so students can still review their posts after the deadline passes.
+</Callout>
+</Step>
+
+</Steps>
+
+### Locking Options vs Availability
+
+Brightspace offers two ways to control posting access:
+
+- **Availability Dates**: Control whether students can see the discussion at all
+- **Locking Options**: Control whether students can post, while still allowing viewing
+
+For most use cases, locking options provide better student experience since students can review past discussions even after participation closes.
+
+## Posting Restrictions
+
+### Must Post First to See Others
+
+This popular setting ensures students formulate their own thoughts before seeing peer responses.
+
+<Steps>
+
+<Step title="Edit Topic Settings">
+While editing your topic, expand the **Post & Completion** panel.
+</Step>
+
+<Step title="Enable Must Post First">
+Check the box for **Users must start a thread before they can read and reply to other threads in each topic**.
+</Step>
+
+</Steps>
+
+<Callout type="info" title="Behavior">
+With this setting enabled:
+- Students see only the discussion prompt initially
+- After posting their own thread, they can see and reply to all other threads
+- This cannot be combined with anonymous posting
+</Callout>
+
+### Moderation (Approval Required)
+
+Require instructor approval before posts appear to the class.
+
+<Steps>
+
+<Step title="Enable Moderation">
+In forum or topic settings, check **A moderator must approve individual posts before they display in the forum**.
+</Step>
+
+<Step title="Review Pending Posts">
+A "Moderated" badge appears next to the topic. Access pending posts through the topic's moderation queue.
+</Step>
+
+<Step title="Approve or Reject">
+Review each post and approve it to make it visible, or reject it with feedback to the student.
+</Step>
+
+</Steps>
+
+<Callout type="warning" title="Timing Consideration">
+Moderated discussions require instructor attention to approve posts. Consider the time commitment before enabling this for large classes.
+</Callout>
+
+## Anonymous Posting Options
+
+Allow students to participate without their names visible to classmates.
+
+<Steps>
+
+<Step title="Enable Anonymous Posting">
+In forum or topic settings, check **Allow anonymous posts** (may be labeled "Allow learners to hide their name from other learners").
+</Step>
+
+<Step title="Student Choice">
+When posting, students see a checkbox to make their post anonymous. They decide per-post whether to be anonymous.
+</Step>
+
+</Steps>
+
+<Callout type="info" title="Instructor Visibility">
+Instructors and administrators can ALWAYS see student names on anonymous posts. Only other students see posts as anonymous.
+</Callout>
+
+<Callout type="warning" title="Incompatibility">
+Anonymous posting cannot be used together with the "Must post first" setting. Choose one or the other.
+</Callout>
+
+## Allowing Attachments
+
+Students can attach files to their discussion posts by default. The attachment options include:
+
+- **File uploads**: Students can upload documents, images, or other files from their computer
+- **Video recordings**: Students can record and attach video directly in Brightspace
+- **Audio recordings**: Students can record audio responses
+
+To attach files when posting, students click **Add Attachments** below the text editor, then either drag-and-drop files or click **Upload** to browse.
+
+## Rating and Liking Posts
+
+Enable peer evaluation of discussion posts.
+
+<Steps>
+
+<Step title="Edit Topic Settings">
+While editing your topic, expand the **Evaluation** panel.
+</Step>
+
+<Step title="Enable Post Ratings">
+Check **Allow learners to rate posts**, then select a rating type:
+
+| Rating Type | Description |
+|-------------|-------------|
+| **Five-Star Rating** | Students rate posts on a 1-5 star scale |
+| **Up Vote / Down Vote** | Reddit-style voting with positive and negative options |
+| **Up Vote Only** | Only positive votes (like a "like" button) |
+</Step>
+
+</Steps>
+
+## Group Discussions
+
+Create private discussion spaces for student groups.
+
+<Callout type="info" title="Prerequisite">
+You must create group categories and groups BEFORE setting up group discussions. See the Groups guide for instructions.
+</Callout>
+
+<Steps>
+
+<Step title="Create Topic">
+Create a new discussion topic as normal.
+</Step>
+
+<Step title="Open Restrictions">
+Click **Availability Dates & Conditions**, then click **Manage Restrictions**.
+</Step>
+
+<Step title="Select Group Options">
+Choose your group restriction type:
+
+- **Restrict Topic and Separate Threads**: One topic visible to all groups, but students only see threads from their own group
+- **One Topic Per Group**: Creates separate topic instances, one for each group
+</Step>
+
+<Step title="Select Group Category">
+Choose the group category that contains your student groups.
+</Step>
+
+<Step title="Save Settings">
+Click **Add**, then save your topic.
+</Step>
+
+</Steps>
+
+<Callout type="danger" title="Cannot Change Later">
+Once a discussion topic has been created, you cannot change it from an open topic to a group-restricted topic (or vice versa). Plan your discussion structure before students begin posting.
+</Callout>
+
+### Multi-Section Courses
+
+You can also restrict discussions by course section (01, 02, etc.) using the same restriction interface. This is useful when teaching multiple sections of the same course.
+
+## Moderation Settings Summary
+
+| Setting | Effect |
+|---------|--------|
+| **Approval Required** | All posts require instructor approval before appearing |
+| **Must Post First** | Students must create their own thread before seeing others |
+| **Anonymous Posting** | Students can choose to hide their name from peers |
+| **Locking Options** | Control posting ability separate from visibility |
+
+## Adding Discussions to Content Modules
+
+Make discussions easily accessible within your course content:
+
+<Steps>
+
+<Step title="Navigate to Content">
+Go to **Content** and open the module where you want to add the discussion.
+</Step>
+
+<Step title="Add Existing Activity">
+Click **Existing Activities** and select **Discussions**.
+</Step>
+
+<Step title="Select the Discussion">
+Choose the forum containing your topic, then select the specific topic.
+</Step>
+
+</Steps>
+
+## Common Issues
+
+| Problem | Solution |
+|---------|----------|
+| Students can't post to forum | You need to create a topic within the forum - students cannot post directly to forums |
+| "Must post first" not working | Ensure anonymous posting is disabled - these settings are incompatible |
+| Grade not syncing | Check that "Grade Out Of" matches the grade item points and rubric points |
+| Group discussion visible to all | Group restrictions were not set before students started posting |
+
+## Related Guides
+
+- [Understanding Forums vs Topics vs Threads](/docs/discussions/forums-topics-threads)
+- [Grading Discussions](/docs/discussions/grading-discussions)
+- [Creating Groups](/docs/groups/creating-groups)
+- [Attaching Rubrics to Discussions](/docs/rubrics/attaching-rubrics)
+- [Discussion Analytics](/docs/discussions/analytics)

@@ -1,0 +1,525 @@
+---
+title: "Making Content Accessible"
+description: "Create accessible content that meets WCAG guidelines"
+category: "Accessibility"
+order: 1
+tags: ["accessibility", "WCAG", "a11y", "screen readers"]
+---
+
+# Making Content Accessible
+
+## Overview
+
+Creating accessible course content ensures all students can engage with your materials, regardless of ability. This guide covers essential accessibility practices for Brightspace content, helping you meet WCAG 2.1 AA standards and legal requirements.
+
+<Callout type="info" title="Why Accessibility Matters">
+Beginning April 24, 2026, the Americans with Disabilities Act (ADA) Title II regulations require compliance with WCAG 2.1 AA standards for all digital content, including materials shared in Brightspace courses. Accessible content benefits everyone, not just students with disabilities.
+</Callout>
+
+## Why Accessibility Matters
+
+Accessible content benefits a wide range of learners:
+
+- **Students with visual impairments** rely on screen readers and proper document structure
+- **Students who are deaf or hard of hearing** need captions and transcripts
+- **Students with cognitive disabilities** benefit from clear organization and consistent navigation
+- **Students with motor impairments** use keyboard navigation instead of a mouse
+- **All students** benefit from well-organized, clearly written content
+
+Beyond compliance, accessible design improves the learning experience for everyone. Clear headings, descriptive links, and organized content make courses easier to navigate for all students.
+
+## WCAG 2.1 Basics for Instructors
+
+The Web Content Accessibility Guidelines (WCAG) are organized around four principles, often remembered by the acronym POUR:
+
+### Perceivable
+Information must be presentable in ways users can perceive. This includes:
+- Providing text alternatives for images
+- Offering captions for videos
+- Ensuring sufficient color contrast
+
+### Operable
+Users must be able to navigate and interact with content:
+- All functionality available from keyboard
+- Users have enough time to read content
+- Content does not cause seizures
+
+### Understandable
+Information and interface operation must be understandable:
+- Text is readable
+- Content appears and operates predictably
+- Users are helped to avoid and correct mistakes
+
+### Robust
+Content must be robust enough to work with various technologies:
+- Compatible with current and future assistive technologies
+- Valid, well-formed markup
+
+<Callout type="tip" title="Focus on Level AA">
+WCAG has three conformance levels: A (minimum), AA (recommended), and AAA (enhanced). Most legal requirements specify Level AA conformance, which is what you should aim for in your courses.
+</Callout>
+
+## Using the Brightspace Accessibility Checker
+
+Brightspace includes a built-in Accessibility Checker that scans your HTML content for common accessibility issues.
+
+<Steps>
+<Step title="Open the HTML Editor">
+Navigate to any content area where you can edit HTML (Content pages, Announcements, Discussion topics, Quiz questions, etc.). Click **Edit HTML** to open the editor.
+</Step>
+
+<Step title="Create or edit your content">
+Write your content using the HTML editor tools. Use the formatting options for headings, lists, and other structural elements.
+</Step>
+
+<Step title="Run the Accessibility Checker">
+Click the **Check Accessibility** icon on the far right of the editor toolbar (it looks like a person icon). The checker will scan your content automatically.
+</Step>
+
+<Step title="Review the results">
+The Accessibility Checker will display any issues found, organized by severity:
+- **Errors**: Must be fixed for accessibility compliance
+- **Warnings**: Should be reviewed and addressed
+- **Manual Checks**: Require human judgment to verify
+</Step>
+
+<Step title="Repair issues">
+For each issue, click **Repair** to fix it or follow the provided guidance. The checker will explain what the problem is and how to resolve it.
+</Step>
+</Steps>
+
+### What the Accessibility Checker Finds
+
+| Issue Type | Examples |
+|------------|----------|
+| Missing alt text | Images without alternative text descriptions |
+| Table issues | Tables without headers or proper structure |
+| Heading problems | Skipped heading levels or missing headings |
+| Color contrast | Text that may be difficult to read |
+| Link text | Ambiguous link text like "click here" |
+
+<Callout type="warning" title="Checker Limitations">
+The Accessibility Checker cannot verify everything. It cannot determine if alt text accurately describes an image, if captions are correct, or if content is logically organized. Always perform manual checks in addition to using the automated tool.
+</Callout>
+
+## Writing Alt Text for Images
+
+Alternative text (alt text) provides a text description of images for screen reader users and when images fail to load.
+
+### When to Use Alt Text
+
+- **Informative images**: Describe what the image conveys
+- **Functional images**: Describe the action (e.g., "Submit form" for a submit button)
+- **Complex images**: Provide brief alt text plus a longer description nearby
+- **Decorative images**: Use empty alt text (`alt=""`) so screen readers skip them
+
+### Alt Text Best Practices
+
+<Steps>
+<Step title="Be concise and descriptive">
+Aim for 1-2 sentences (under 100 characters when possible). Describe what the image conveys, not every visual detail.
+
+**Good**: "Bar chart showing student enrollment increasing 25% from 2023 to 2024"
+
+**Poor**: "Chart"
+</Step>
+
+<Step title="Focus on purpose, not appearance">
+Consider why you included the image and what information it provides in context.
+
+**Good**: "Diagram of the water cycle showing evaporation, condensation, and precipitation"
+
+**Poor**: "Blue and green diagram with arrows"
+</Step>
+
+<Step title="Avoid redundant phrases">
+Do not start with "Image of" or "Picture of" as screen readers already announce that it is an image.
+
+**Good**: "Professor Smith presenting at the 2024 conference"
+
+**Poor**: "Image of Professor Smith presenting at the 2024 conference"
+</Step>
+
+<Step title="Include text in images">
+If an image contains text (like a flyer or infographic), include that text in the alt text or provide it in the surrounding content.
+</Step>
+</Steps>
+
+### Adding Alt Text in Brightspace
+
+When you insert an image in the Brightspace HTML editor:
+
+1. Click the **Insert Image** icon
+2. Select or upload your image
+3. In the **Alternative Text** field, enter your description
+4. If the image is decorative, check the box for **This image is decorative**
+5. Click **Insert**
+
+## Creating Accessible Documents
+
+HTML web pages created directly in Brightspace are the most accessible document format. When possible, create content as Brightspace pages rather than uploading documents.
+
+### When You Must Use Documents
+
+If you need to share Word documents or PDFs:
+
+<Steps>
+<Step title="Start with an accessible source document">
+Always create accessibility in your Word document first. Use built-in heading styles, add alt text to images, and use proper table structure. An inaccessible Word document will produce an inaccessible PDF.
+</Step>
+
+<Step title="Use built-in heading styles">
+Use Word's Heading 1, Heading 2, Heading 3 styles instead of manually formatting text as bold or larger. Screen readers rely on these structural styles to navigate documents.
+</Step>
+
+<Step title="Run the accessibility checker">
+In Microsoft Word, go to **Review > Check Accessibility**. Address all errors and warnings before converting to PDF.
+</Step>
+
+<Step title="Export to PDF correctly">
+When saving as PDF, select **Save As** (not Print to PDF), and enable the option for **Document structure tags for accessibility** or **Best for electronic distribution and accessibility**.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Consider HTML Instead">
+Whenever possible, copy content from documents into Brightspace HTML pages. This ensures consistent accessibility, allows the built-in accessibility checker to help you, and works better on mobile devices.
+</Callout>
+
+### Document Accessibility Checklist
+
+- [ ] Use built-in heading styles (Heading 1, 2, 3, etc.)
+- [ ] Add alt text to all informative images
+- [ ] Use Word's list formatting for bulleted and numbered lists
+- [ ] Add header rows to data tables
+- [ ] Use descriptive hyperlink text
+- [ ] Ensure sufficient color contrast
+- [ ] Use accessible fonts (at least 11-12pt for body text)
+- [ ] Run the built-in accessibility checker
+
+## Heading Structure Best Practices
+
+Proper heading structure is one of the most important accessibility features. Screen reader users navigate documents by jumping between headings.
+
+### The Heading Hierarchy
+
+| Level | Usage |
+|-------|-------|
+| Heading 1 | Page title or main topic (use only once per page) |
+| Heading 2 | Major sections |
+| Heading 3 | Subsections within Heading 2 |
+| Heading 4 | Sub-subsections within Heading 3 |
+| Heading 5-6 | Rarely needed; deeper organizational levels |
+
+### Heading Rules
+
+1. **Never skip levels**: Go from H1 to H2 to H3. Do not jump from H1 to H3.
+2. **Use only one H1**: The page title should be the only Heading 1
+3. **Do not use headings for styling**: If you want larger or bold text that is not a heading, use other formatting
+4. **Make headings descriptive**: "Module 3: Cell Division" is better than "Module 3"
+
+<Callout type="danger" title="Common Mistake">
+Making text bold and larger does not create a heading. You must use the Heading styles (H1-H6) in the editor for screen readers to recognize the structure. Bold text that looks like a heading but is not properly tagged is invisible to screen reader navigation.
+</Callout>
+
+### Creating Headings in Brightspace
+
+1. Select the text you want to make a heading
+2. In the HTML editor toolbar, click the **Format** dropdown (may show "Paragraph")
+3. Select the appropriate heading level (Heading 2, Heading 3, etc.)
+
+## Color Contrast Requirements
+
+WCAG 2.1 AA requires specific contrast ratios between text and background colors:
+
+| Element | Minimum Contrast Ratio |
+|---------|----------------------|
+| Normal text (under 18pt or 14pt bold) | 4.5:1 |
+| Large text (18pt+ or 14pt+ bold) | 3:1 |
+| User interface components | 3:1 |
+| Graphics and icons | 3:1 |
+
+### Checking Color Contrast
+
+Use a contrast checker tool like the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to verify your color combinations meet requirements.
+
+### Color Guidelines
+
+- **Never use color alone to convey meaning**: If you use red to indicate errors, also use text or icons
+- **Stick to Brightspace defaults**: The default theme colors are designed for accessibility
+- **Test your combinations**: What looks readable to you may not be for others
+- **Consider dark mode**: If your institution uses dark mode, ensure contrast works in both modes
+
+<Callout type="warning" title="Tables and Color">
+Do not rely solely on background color to indicate status in tables (like highlighting late assignments in red). Add a text column or icon to convey the same information for colorblind users and screen reader users.
+</Callout>
+
+## Video Captions and Transcripts
+
+All videos with audio must have synchronized captions. Pre-recorded audio-only content (like podcasts) requires transcripts.
+
+### Caption Requirements
+
+Captions must be:
+- **Synchronized**: Appear at the same time as the spoken words
+- **Equivalent**: Include all dialogue and important sounds
+- **Accessible**: User can turn them on/off (closed captions preferred)
+
+### What to Include in Captions
+
+- All spoken dialogue (verbatim or equivalent)
+- Speaker identification when not visually obvious
+- Important sounds (music, laughter, doorbell, etc.)
+- Tone indicators when relevant (sarcasm, whispering)
+
+### Caption Formatting Guidelines
+
+- Use 1-2 lines of text at a time
+- Keep lines under 45 characters
+- Position at bottom center (unless blocking important visual content)
+- Use readable fonts (sans-serif, white text on translucent dark background)
+
+<Steps>
+<Step title="Use auto-generated captions as a starting point">
+YouTube, Panopto, and other video platforms can generate automatic captions. These are a good start but always contain errors.
+</Step>
+
+<Step title="Edit captions for accuracy">
+Review auto-generated captions and correct errors in names, technical terms, and punctuation. Pay special attention to discipline-specific vocabulary.
+</Step>
+
+<Step title="Add speaker identification">
+If multiple people speak, indicate who is talking when it is not visually clear.
+</Step>
+
+<Step title="Include non-speech audio">
+Add descriptions of important sounds like [music playing], [door slams], or [laughter].
+</Step>
+</Steps>
+
+### Transcripts
+
+For audio-only content, provide a transcript that includes:
+- All spoken content
+- Descriptions of relevant sounds
+- Speaker identification
+
+For video content, consider providing both captions AND a transcript. Transcripts benefit deaf-blind users who use refreshable Braille displays and cannot access synchronized captions.
+
+<Callout type="tip" title="Transcript Placement">
+Provide transcripts in the same location as the media. Include a link immediately above or below the video or audio player to the transcript page or document.
+</Callout>
+
+## Accessible Tables
+
+Tables should be used for data, not for visual layout. Properly structured tables help screen reader users understand relationships between data.
+
+### Table Structure Requirements
+
+<Steps>
+<Step title="Use tables only for data">
+If you are using a table just to arrange content visually (like creating columns), use CSS layout instead. Tables should contain actual tabular data.
+</Step>
+
+<Step title="Define header rows">
+Identify which row contains column headers. In the Brightspace HTML editor, select the header row and mark it as a table header.
+</Step>
+
+<Step title="Add a caption or summary">
+Include a caption that describes what the table contains. This helps all users understand the table's purpose.
+</Step>
+
+<Step title="Keep tables simple">
+Avoid merged cells, nested tables, and complex structures. If you need to present complex data, consider breaking it into multiple simple tables.
+</Step>
+
+<Step title="Do not leave cells empty">
+Empty cells confuse screen readers. Use "N/A", "-", or "None" when a cell has no applicable data.
+</Step>
+</Steps>
+
+### Example of Accessible Table Structure
+
+```
+| Assignment | Due Date | Points | Status |
+|------------|----------|--------|--------|
+| Essay 1    | Sept 15  | 100    | Graded |
+| Quiz 1     | Sept 20  | 50     | Pending |
+| Lab Report | Sept 25  | 75     | Not Submitted |
+```
+
+The first row should be marked as a header row so screen readers announce "Assignment: Essay 1, Due Date: September 15" etc.
+
+## Link Text Best Practices
+
+Screen reader users often navigate by listening to a list of links. Descriptive link text makes this possible.
+
+### What to Avoid
+
+| Avoid | Why |
+|-------|-----|
+| "Click here" | Meaningless out of context |
+| "Read more" | Does not indicate what will be read |
+| "Link" | Screen readers already announce links |
+| Raw URLs | Screen readers read URLs letter by letter |
+| "More information" | Does not specify the topic |
+
+### Write Descriptive Links
+
+| Instead of | Use |
+|------------|-----|
+| Click here for the syllabus | Download the course syllabus (PDF) |
+| Read more | Read the complete assignment guidelines |
+| https://example.edu/policies | View the university academic policies |
+| For more information, click here | Learn about library research resources |
+
+### Link Text Guidelines
+
+1. **Make links self-explanatory**: Users should know where a link leads without reading surrounding text
+2. **Keep links concise**: Under 100 characters is ideal
+3. **Be unique**: Different links should have different text
+4. **Indicate file types**: "Download the syllabus (PDF, 2MB)" tells users what to expect
+5. **Avoid opening in new windows**: If you must, warn users: "View resources (opens in new tab)"
+
+## Testing Your Content for Accessibility
+
+Regular testing helps catch accessibility issues before students encounter them.
+
+### Automated Testing
+
+<Steps>
+<Step title="Use Brightspace Accessibility Checker">
+Run the built-in checker on all HTML content pages before publishing.
+</Step>
+
+<Step title="Check documents before uploading">
+Use Microsoft Word's accessibility checker (Review > Check Accessibility) on all documents.
+</Step>
+
+<Step title="Verify video captions">
+Review auto-generated captions for accuracy. Use your video platform's caption editor to correct errors.
+</Step>
+</Steps>
+
+### Manual Testing
+
+<Steps>
+<Step title="Test keyboard navigation">
+Try navigating your content using only the Tab, Enter, and arrow keys. Can you reach all interactive elements?
+</Step>
+
+<Step title="Review heading structure">
+Use a browser extension or the WAVE tool to visualize your heading hierarchy. Are headings in logical order without skipped levels?
+</Step>
+
+<Step title="Test with a screen reader">
+Try NVDA (free for Windows), VoiceOver (built into Mac), or JAWS to hear how your content sounds. Even a few minutes of testing reveals issues.
+</Step>
+
+<Step title="Zoom to 200%">
+Use your browser to zoom the page to 200%. Is all content still readable without horizontal scrolling?
+</Step>
+
+<Step title="Review in grayscale">
+View your content in grayscale (many browsers have developer tools for this). Can you understand all information without color?
+</Step>
+</Steps>
+
+### Using Ally (If Available)
+
+Some institutions integrate Ally with Brightspace, which provides:
+- Accessibility scores for uploaded files
+- Automatic generation of alternative formats
+- Instructor feedback on how to improve accessibility
+- Institutional accessibility reports
+
+Check with your institution's IT department to see if Ally is available.
+
+## Common Accessibility Mistakes
+
+### Mistake 1: Formatting Text to Look Like Headings
+**Problem**: Using bold or large text instead of heading styles
+**Solution**: Use the Format dropdown to apply Heading 2, Heading 3, etc.
+
+### Mistake 2: Missing or Poor Alt Text
+**Problem**: Images without descriptions or with unhelpful text like "image1.jpg"
+**Solution**: Write descriptive alt text that conveys the image's meaning and purpose
+
+### Mistake 3: Uninformative Link Text
+**Problem**: Links that say "click here" or "read more"
+**Solution**: Use descriptive text that explains where the link leads
+
+### Mistake 4: Using Color Alone to Convey Information
+**Problem**: Marking required items in red, or using only color-coding in charts
+**Solution**: Include text labels, patterns, or icons alongside color
+
+### Mistake 5: Missing Video Captions
+**Problem**: Videos without captions or with unedited auto-captions
+**Solution**: Add accurate, synchronized captions to all videos
+
+### Mistake 6: Complex Table Structures
+**Problem**: Merged cells, nested tables, or missing headers
+**Solution**: Use simple tables with clearly defined header rows
+
+### Mistake 7: Inaccessible PDFs
+**Problem**: Scanned documents or PDFs created from inaccessible source files
+**Solution**: Use properly tagged PDFs created from accessible source documents, or provide an HTML alternative
+
+### Mistake 8: Low Color Contrast
+**Problem**: Light gray text on white, or decorative color combinations
+**Solution**: Test combinations with a contrast checker and maintain 4.5:1 ratio for normal text
+
+### Mistake 9: Skipping Heading Levels
+**Problem**: Jumping from Heading 1 directly to Heading 3
+**Solution**: Use headings in order: H1, H2, H3, H4 without skipping
+
+### Mistake 10: Relying on Instructions That Reference Location or Color
+**Problem**: "Click the red button on the right"
+**Solution**: "Click the Submit button" (reference the element's name)
+
+## Quick Reference Checklist
+
+Use this checklist when creating or reviewing content:
+
+### Text and Structure
+- [ ] One Heading 1 per page (the title)
+- [ ] Headings are in logical order (H2, H3, H4) without skipped levels
+- [ ] Lists use proper list formatting (not manual dashes or numbers)
+- [ ] Text has sufficient color contrast (4.5:1 minimum)
+
+### Images
+- [ ] All informative images have meaningful alt text
+- [ ] Decorative images have empty alt text
+- [ ] Complex images have detailed descriptions nearby
+
+### Links
+- [ ] Link text describes the destination
+- [ ] No "click here" or "read more" links
+- [ ] File types indicated for downloads
+
+### Tables
+- [ ] Tables have header rows defined
+- [ ] Tables are used for data only (not layout)
+- [ ] No merged or empty cells
+
+### Multimedia
+- [ ] Videos have accurate captions
+- [ ] Audio content has transcripts
+- [ ] Media player is keyboard accessible
+
+### Documents
+- [ ] Word/PDF documents have been checked for accessibility
+- [ ] Consider HTML alternatives for documents
+
+## Related Guides
+
+- [Using the HTML Editor](/docs/course-setup/html-editor)
+- [Creating Content Modules](/docs/course-setup/creating-modules)
+- [Adding Files and Documents](/docs/course-setup/uploading-files)
+- [Recording Video in Brightspace](/docs/video/recording-video)
+
+## Additional Resources
+
+- [WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG21/) - Official W3C specifications
+- [WebAIM](https://webaim.org/) - Web Accessibility In Mind resources and tools
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Test color combinations
+- [D2L Accessibility Standards](https://www.d2l.com/accessibility/standards/) - D2L's accessibility commitments

@@ -1,0 +1,289 @@
+---
+title: "Using the Gradebook Setup Wizard"
+description: "Configure your Brightspace gradebook using the Setup Wizard"
+category: "Gradebook"
+order: 1
+tags: ["gradebook", "setup wizard", "grades", "configuration"]
+---
+
+# Using the Gradebook Setup Wizard
+
+## Overview
+
+The Gradebook Setup Wizard is a guided tool in Brightspace that helps you configure your course gradebook through a series of sequential steps. It walks you through essential decisions like choosing a grading system, setting up final grade calculations, and configuring how grades display to students.
+
+<Callout type="tip" title="When to Use the Setup Wizard">
+Use the Setup Wizard when setting up a new course or when you need to reconfigure your gradebook settings. It is recommended to complete the wizard before creating any grade items or categories to ensure consistent grade calculations throughout your course.
+</Callout>
+
+## Before You Begin
+
+Before starting the Setup Wizard, you should:
+
+- Review your course syllabus to understand your grading structure
+- Know the weight or point values for each assessment category
+- Decide whether you want to use letter grades, percentages, or points for display
+- Consider how you want to handle late or missing submissions
+
+## Accessing the Setup Wizard
+
+<Steps>
+
+<Step title="Navigate to Grades">
+From your course homepage, click on **Course Admin** in the navbar, then select **Grades** from the available tools. Alternatively, if Grades is in your navbar, click it directly.
+</Step>
+
+<Step title="Access the Setup Wizard Tab">
+Once in the Grades area, look for the **Setup Wizard** tab near the top of the page. Click on it to begin the configuration process.
+</Step>
+
+<Step title="Start the Wizard">
+Review the default settings displayed on the page. Scroll to the bottom and click **Start** to begin walking through the wizard steps.
+</Step>
+
+</Steps>
+
+<Callout type="info" title="First-Time Access">
+The first time you access Grades in a new course or sandbox, Brightspace will automatically guide you through the Setup Wizard. You can revisit and modify these settings at any time by returning to the Setup Wizard tab.
+</Callout>
+
+## Step 1: Choosing a Grading System
+
+The first and most important decision in the Setup Wizard is selecting your grading system. Brightspace offers three calculation methods:
+
+### Weighted System (Recommended)
+
+In the **Weighted** system, each category or grade item contributes a specific percentage toward the final grade, which always totals 100%.
+
+**How it works:**
+- Categories represent percentages of the final grade (e.g., Exams = 40%, Assignments = 30%, Participation = 30%)
+- Individual items within a category share that category's weight
+- Final grades are calculated as percentages
+
+**Best for:** Courses with clear category weights that mirror your syllabus structure.
+
+**Example:** If your Assignments category is worth 20% and contains 4 assignments, each assignment contributes 5% to the final grade (assuming equal weight distribution).
+
+<Callout type="tip" title="Weight Distribution Options">
+Within weighted categories, you can choose to:
+- **Distribute weights by points**: Higher point items have more impact within the category
+- **Distribute weight evenly**: All items in the category have equal weight regardless of points
+</Callout>
+
+### Points System
+
+In the **Points** system, final grades are calculated based on total points earned divided by total points possible.
+
+**How it works:**
+- Each grade item has a maximum point value
+- Final grade = (Total points earned / Total maximum points) x 100
+- Items with higher point values automatically have more impact
+
+**Best for:** Simple point accumulation without needing category percentages.
+
+<Callout type="warning" title="Points System Consideration">
+Ensure maximum points accurately reflect each item's importance. If every homework is worth 50 points but your final exam is only 80 points, homework will disproportionately affect the final grade.
+</Callout>
+
+### Formula System
+
+The **Formula** system builds on the points system but allows custom conditions and calculations.
+
+**How it works:**
+- Uses Brightspace formula syntax for advanced calculations
+- Supports rules like dropping lowest scores, minimum exam requirements, or penalties
+- Requires knowledge of Brightspace formula syntax
+
+**Best for:** Courses requiring special grading rules or conditional calculations.
+
+<Callout type="info" title="Formula System Availability">
+The Formula system may require administrator enablement at your institution. If unavailable, you can apply formulas manually to adjusted final grades at the end of the term.
+</Callout>
+
+### Comparison Table
+
+| Feature | Weighted | Points | Formula |
+|---------|----------|--------|---------|
+| Ease of setup | Easy | Easy | Advanced |
+| Category weights | Yes | No | Optional |
+| Drop lowest grade | Via category | Manual | Built-in |
+| Custom calculations | No | No | Yes |
+| Best for | Most courses | Simple grading | Complex rules |
+
+## Step 2: Final Grade Calculation Options
+
+Next, you will choose how Brightspace calculates and releases final grades:
+
+### Calculated Final Grade
+
+The system automatically calculates final grades based on grade items and their weights. You cannot manually adjust final grades without changing the underlying gradebook values.
+
+<Callout type="tip" title="Recommended During Semester">
+Use Calculated Final Grade during the semester to ensure accuracy. If you need to make adjustments at the end of the term (such as curving grades), you can enable Adjusted Final Grades later.
+</Callout>
+
+### Adjusted Final Grade
+
+This option allows you to manually override calculated final grades. Changes you make to the final grade will not be affected by subsequent grade entries.
+
+**When to use:** End of semester grade adjustments, curving, or special circumstances requiring manual intervention.
+
+### Automatic Release Option
+
+You can optionally enable automatic release of final grades to students. When enabled, students can see their calculated final grade in real-time as you enter grades.
+
+<Callout type="warning" title="Automatic Release Consideration">
+If you enable automatic grade release, D2L recommends also selecting "Drop ungraded items" so students see more accurate grade representations during the semester rather than artificially low grades from missing scores.
+</Callout>
+
+## Step 3: Handling Ungraded Items
+
+This setting determines how Brightspace treats assignments that have not yet been graded:
+
+### Drop Ungraded Items
+
+Ungraded items are excluded from the final grade calculation. This gives students a more accurate picture of their current standing based only on completed work.
+
+**Example:** If 5 items are each worth 20%, and only 2 have been graded with full credit, the student sees 100% (based on graded items only).
+
+**Best for:** Most courses during the semester.
+
+### Treat Ungraded Items as Zero
+
+Ungraded items count as zero in the final grade calculation. This shows students what their grade would be if they received no credit for remaining work.
+
+**Example:** If 5 items are each worth 20%, and only 2 have been graded with full credit, the student sees 40%.
+
+**Best for:** End of semester when you want to show actual standing including missing work.
+
+### Automatic Zero for Late Submissions
+
+Brightspace can optionally assign a zero automatically to any Assignment or Quiz not submitted by the due date.
+
+<Callout type="warning" title="Automatic Zero Caution">
+This feature applies a zero even if a submission is just one or two minutes late. Consider whether this aligns with your late work policy before enabling. Also note: if you use anonymous grading, automatic zeros can inadvertently reveal student identities.
+</Callout>
+
+### Keep Final Grade Updated Automatically
+
+When enabled, Brightspace recalculates the final grade each time you enter a new score. Note that if you manually override a final grade, this automatic updating will stop for that student.
+
+## Step 4: Grade Scheme Selection
+
+A grade scheme converts numeric scores into symbols like letter grades or text descriptions. Choose your default display format:
+
+### Percentage (Default)
+
+Students see their score as a percentage value (e.g., 87%).
+
+### Letter Grades
+
+Students see a letter grade symbol (e.g., A-, B+, C).
+
+<Callout type="info" title="Creating Custom Schemes">
+If your institution does not have a pre-configured letter grade scheme, you can create one under **Grades > Schemes > New Scheme**. Define percentage ranges for each letter grade (e.g., A = 90-100%, B = 80-89%, etc.).
+</Callout>
+
+### Custom Schemes
+
+You can create custom grade schemes with any labels you prefer, such as:
+- Pass/Fail
+- Exceeds Expectations / Meets Expectations / Needs Improvement
+- Numeric ranges with custom labels
+
+Individual grade items can use different schemes than the course default, allowing flexibility in how different assessments display to students.
+
+## Step 5: Display Options
+
+Configure what instructors and students see when viewing grades:
+
+### Instructor View Settings
+
+- **Decimal places**: Set how many decimal places appear when you view and enter grades
+- **Grade display format**: Choose between points, percentages, or scheme symbols
+
+### Student View Settings
+
+Control what students can see:
+
+- **Grade item details**: Whether students can see individual grade item scores
+- **Final grade visibility**: Whether the calculated/adjusted final grade appears
+- **Decimal precision**: How many decimal places students see
+- **Class statistics**: Whether students can see class averages or distributions
+
+<Callout type="tip" title="Test Your Display Settings">
+After completing setup, use "View as Learner" to verify your gradebook looks correct from the student perspective. Click your name in the top right corner, select "View as Learner," and navigate to Grades.
+</Callout>
+
+## Step 6: Review and Complete Setup
+
+The final step presents a summary of all your configuration choices. Review each setting carefully before finishing.
+
+- Use **Go Back** to return to any previous step and make changes
+- Click **Save** or **Finish** to complete the wizard and apply your settings
+
+## Modifying Setup Later
+
+You can change your gradebook settings at any time after completing the Setup Wizard:
+
+<Steps>
+
+<Step title="Access Grades Settings">
+From your course, navigate to **Grades** and click the **Settings** button (usually in the top right corner).
+</Step>
+
+<Step title="Navigate to Calculation Options">
+Click the **Calculation Options** tab to modify your grading system, final grade options, or ungraded item handling.
+</Step>
+
+<Step title="Adjust and Save">
+Make your desired changes and click **Save** to apply them. Changes take effect immediately for grade calculations.
+</Step>
+
+</Steps>
+
+<Callout type="warning" title="Changing Systems Mid-Semester">
+Changing from Weighted to Points (or vice versa) mid-semester can significantly alter student grades. If you must change systems, communicate with students and verify that all grades recalculate as expected.
+</Callout>
+
+## Common Setup Mistakes to Avoid
+
+### 1. Mixing Points and Weighted Systems
+
+Avoid using points-based grade items in a weighted gradebook or weighted items in a points gradebook. Decide on one approach and use it consistently throughout your course.
+
+### 2. Not Accounting for Ungraded Items Early
+
+If you select "Treat ungraded items as 0" at the start of the semester, students may see artificially low grades. Use "Drop ungraded items" during the term and consider switching near the end when you want to show true standing.
+
+### 3. Mismatched Names Between Gradebook and Activities
+
+Renaming gradebook items does not update the associated Assignment, Quiz, or Discussion name (and vice versa). Keep names consistent manually to avoid student confusion.
+
+### 4. Applying Drop Lowest Grade Too Early
+
+If you enable "Drop lowest grade" in a category before all assignments are graded, Brightspace may drop an ungraded placeholder instead of the actual lowest score. Apply this setting near the end of the semester for accurate results.
+
+### 5. Category Weights Not Totaling 100%
+
+In a weighted system, category weights should total exactly 100%. If they do not, Brightspace will proportionally adjust them, which may produce unexpected results.
+
+### 6. Forgetting to Release Final Grades
+
+Even if students can see individual grades, the final calculated grade may not be visible unless you explicitly enable it. Check your display settings to ensure students see what you intend.
+
+### 7. Not Testing the Student View
+
+Always use "View as Learner" after setup to confirm your gradebook displays correctly. What you see as an instructor may differ significantly from the student view.
+
+<Callout type="danger" title="Allowing Categories to Exceed Weight">
+Avoid enabling "Allow the category grade to exceed the category weight" unless you fully understand its implications. This setting can create confusing grade calculations and may not be fully supported by your institution's help desk.
+</Callout>
+
+## Related Guides
+
+- [Understanding Grade Calculation Methods](/docs/gradebook/calculation-methods)
+- [Creating Grade Categories](/docs/gradebook/categories)
+- [Creating Grade Items](/docs/gradebook/grade-items)
+- [Linking Assignments to Grade Items](/docs/gradebook/linking-assignments)
+- [Using Quick Eval for Grading](/docs/gradebook/quick-eval)

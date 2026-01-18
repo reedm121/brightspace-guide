@@ -1,0 +1,486 @@
+---
+title: "Creating Grade Items and Categories"
+description: "Set up grade items and organize them into categories"
+category: "Gradebook"
+order: 2
+tags: ["grade items", "categories", "gradebook", "weights"]
+---
+
+# Creating Grade Items and Categories
+
+## Overview
+
+Grade items and categories are the building blocks of your Brightspace gradebook. Understanding how they work together is essential for accurate grade calculations and organized course management.
+
+This guide covers creating different types of grade items, organizing them into categories, setting up weight distributions, and linking items to course activities.
+
+## Before You Begin
+
+- Complete the [Gradebook Setup Wizard](/docs/gradebook/setup-wizard) first
+- Decide on your grading system (Points or Weighted)
+- Have your syllabus ready with grade breakdown percentages
+- Know what assessments you will include in your course
+
+<Callout type="info" title="Grade Items vs Categories">
+A **Grade Item** is an individual gradeable activity (assignment, quiz, discussion post). Each item has its own entry and score in the gradebook. A **Grade Category** is a container that groups related items together (e.g., all homework assignments, all exams). Categories can have their own weight in the final grade calculation.
+</Callout>
+
+## Understanding Grade Item Types
+
+Brightspace offers six grade item types, but three are recommended for most use cases:
+
+| Type | Description | Links to Activities | Used in Final Grade |
+|------|-------------|---------------------|---------------------|
+| **Numeric** | Points out of a maximum value | Yes | Yes |
+| **Selectbox** | Grade scheme levels (A, B, C or custom) | Yes | Yes |
+| **Pass/Fail** | Simple pass or fail designation | No | Limited |
+| **Formula** | Calculated from other grade items | No | Yes |
+| **Calculated** | Aggregates multiple items | No | No |
+| **Text** | Comments only, no score | No | No |
+
+<Callout type="tip" title="Recommended Grade Item Types">
+For most courses, use **Numeric** grade items for assignments, quizzes, and discussions. Use **Selectbox** if you need letter grades or custom scales. Use **Formula** items only when you need custom calculations that categories cannot provide.
+</Callout>
+
+## Creating Grade Categories
+
+Categories help organize your gradebook and are essential for weighted grading systems. Common categories include Homework, Quizzes, Exams, Participation, and Projects.
+
+<Steps>
+<Step title="Navigate to Manage Grades">
+From your course, go to **Progress** (or **Assessments**) in the navbar and select **Grades**. Click the **Manage Grades** tab.
+</Step>
+
+<Step title="Create a new category">
+Click the **New** button and select **Category** from the dropdown menu.
+</Step>
+
+<Step title="Enter category details">
+On the **Properties** tab, configure the following:
+
+- **Name**: Enter a descriptive name (e.g., "Homework Assignments")
+- **Short Name**: Optional abbreviated version for display
+- **Weight**: If using weighted grading, enter the percentage this category contributes to the final grade (e.g., 20 for 20%)
+
+</Step>
+
+<Step title="Configure distribution settings">
+Choose how items within the category are weighted:
+
+- **Manually assign weight to items**: You set each item's weight individually
+- **Distribute weights by points across all items**: Items are weighted proportionally based on their point values
+- **Distribute weight evenly across all items**: All items count equally regardless of points
+</Step>
+
+<Step title="Set up grade dropping (optional)">
+To automatically drop lowest grades:
+
+1. Check **Drop ungraded items**
+2. Enter the number in **Number of lowest non-bonus items to drop for each user**
+
+This is useful for policies like "drop your two lowest quiz scores."
+</Step>
+
+<Step title="Configure restrictions (optional)">
+On the **Restrictions** tab, you can:
+
+- **Hide from users**: Conceal the category from students
+- **Has Start Date / Has End Date**: Control when the category is active
+- **Release Conditions**: Make the category visible based on conditions
+</Step>
+
+<Step title="Save the category">
+Click **Save and Close** to create the category. Repeat for each category in your grading scheme.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Weighted System Requirement">
+If you are using a weighted grading system, all category weights must add up to exactly 100%. Brightspace will display a warning if your weights do not sum correctly.
+</Callout>
+
+## Creating Numeric Grade Items
+
+Numeric grade items are the most common type and should be used for most assessments.
+
+<Steps>
+<Step title="Open Manage Grades">
+Navigate to **Grades** and select the **Manage Grades** tab. Click **New** and select **Item**.
+</Step>
+
+<Step title="Select Numeric type">
+Choose **Numeric** as the grade item type and click **Continue**.
+</Step>
+
+<Step title="Configure properties">
+Fill in the Properties tab:
+
+- **Name**: Enter the assignment name (keep it identical to the linked activity for clarity)
+- **Short Name**: Optional abbreviated version
+- **Category**: Select the appropriate category from the dropdown
+- **Max. Points**: Enter the maximum points possible
+- **Weight**: If manually assigning weights, enter the percentage within the category
+- **Can Exceed**: Check this to allow students to exceed 100% (for extra credit)
+- **Bonus**: Check if this is a bonus item that adds to the final grade
+- **Exclude from Final Grade Calculation**: Check if this item should not count toward the final grade
+</Step>
+
+<Step title="Set display options">
+Configure how the grade appears to students:
+
+- **Grade Scheme**: Choose how to display (points, percentage, letter grade)
+- **Rubric**: Optionally attach a rubric for grading
+</Step>
+
+<Step title="Configure restrictions (optional)">
+Set visibility dates and release conditions if needed.
+</Step>
+
+<Step title="Save the grade item">
+Click **Save and Close** to create the item.
+</Step>
+</Steps>
+
+## Creating Selectbox Grade Items
+
+Selectbox items allow you to grade using predefined levels from a grade scheme (like A, B, C, D, F or custom scales).
+
+<Steps>
+<Step title="Create a new item">
+From **Manage Grades**, click **New > Item** and select **Selectbox** as the type.
+</Step>
+
+<Step title="Configure selectbox settings">
+On the Properties tab:
+
+- **Name**: Enter the item name
+- **Category**: Select the parent category
+- **Grade Scheme**: Choose the grading scale to use (e.g., Letter Grades, Pass/Fail scheme)
+- **Max. Points**: Enter the maximum point value for calculation purposes
+</Step>
+
+<Step title="Save the item">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+<Callout type="info" title="When to Use Selectbox">
+Selectbox items are ideal when you want to assign letter grades directly rather than points, or when using custom grading scales. They can still be associated with assignments and contribute to final grade calculations.
+</Callout>
+
+## Creating Pass/Fail Grade Items
+
+Pass/Fail items provide simple binary grading without point values.
+
+<Steps>
+<Step title="Create the item">
+From **Manage Grades**, click **New > Item** and select **Pass/Fail**.
+</Step>
+
+<Step title="Configure settings">
+Enter the name, select a category if desired, and set any restrictions.
+</Step>
+
+<Step title="Save">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Pass/Fail Limitations">
+Pass/Fail grade items **cannot be linked** to assignments, quizzes, or discussions. Grades must be entered manually in the gradebook. For better functionality, consider using a Selectbox item with a Pass/Fail grade scheme instead.
+</Callout>
+
+## Creating Formula Grade Items
+
+Formula items automatically calculate scores based on other grade items using custom formulas.
+
+<Steps>
+<Step title="Create a formula item">
+From **Manage Grades**, click **New > Item** and select **Formula**.
+</Step>
+
+<Step title="Enter basic properties">
+Configure the name and any restrictions. Note that formula items **cannot belong to a category**.
+</Step>
+
+<Step title="Open the Formula Editor">
+Click the **Formula** button to open the Formula Editor.
+</Step>
+
+<Step title="Build your formula">
+Use the Formula Editor tools:
+
+- **Grade Item dropdown**: Insert grade items into your formula
+- **Grade Item Value**: Choose what value to use:
+  - **Points Received**: The actual score earned
+  - **Max Points**: The maximum possible points
+  - **Percent**: The percentage score achieved
+- **Operators**: Add mathematical operators (+, -, *, /)
+- **Functions**: Use built-in functions:
+  - `SUM()` - Add values together
+  - `AVG()` - Calculate average
+  - `MAX()` - Find the highest value
+  - `MIN()` - Find the lowest value
+  - `IF()` - Conditional logic
+  - `NOT()` - Reverse a boolean condition
+</Step>
+
+<Step title="Validate and preview">
+Click **Validate** to check for syntax errors. Use **Preview** to see how the formula calculates for your students.
+</Step>
+
+<Step title="Save the formula item">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Example Formulas">
+- **Average of two items**: `AVG([Item1.Percent], [Item2.Percent])`
+- **Sum of points**: `SUM([Quiz1.PointsReceived], [Quiz2.PointsReceived])`
+- **Weighted average**: `([Midterm.Percent] * 0.4) + ([Final.Percent] * 0.6)`
+</Callout>
+
+<Callout type="warning" title="Formula Limitations">
+Formula grade items cannot be linked to assignments, quizzes, or discussions. They cannot be marked as Bonus items, and they cannot reference themselves (no circular references). They also cannot reference the final grade.
+</Callout>
+
+## Linking Items to Assignments and Quizzes
+
+Grade items can be linked to Brightspace activities so scores transfer automatically to the gradebook.
+
+### Linking During Activity Creation
+
+When creating an assignment or quiz, you can create and link a grade item simultaneously:
+
+<Steps>
+<Step title="Set the grade value">
+In the assignment or quiz settings, enter a value in the **Grade Out Of** field.
+</Step>
+
+<Step title="Choose grade book option">
+Click the dropdown and select **Add to Grade Book** or **Edit or Link to Existing**.
+</Step>
+
+<Step title="Create or link">
+Choose either:
+- **Create and Link to a New Grade Item**: Automatically creates an item with the same name
+- **Link to an existing grade item**: Select from your existing grade items
+</Step>
+
+<Step title="Save the activity">
+The association is established when you save.
+</Step>
+</Steps>
+
+### Linking Existing Activities to Grade Items
+
+If you created activities and grade items separately, you can link them afterward:
+
+<Steps>
+<Step title="Edit the activity">
+Navigate to Assignments or Quizzes, click the dropdown next to the activity name, and select **Edit**.
+</Step>
+
+<Step title="Access grade settings">
+Click on the **Grade Out Of** field, then select **Edit or Link to Existing** from the dropdown.
+</Step>
+
+<Step title="Link to grade item">
+Select **Link to an existing grade item**, choose the appropriate item from the list, and click **OK**.
+</Step>
+
+<Step title="Save changes">
+Save the assignment or quiz to confirm the link.
+</Step>
+</Steps>
+
+<Callout type="info" title="Checking Associations">
+In **Grades > Manage Grades**, the **Association** column shows which activity each grade item is linked to. A dash (-) indicates no association. A ribbon icon next to an activity name indicates it is already linked to a grade item.
+</Callout>
+
+### Linking Discussion Topics
+
+Only Discussion **Topics** (not Forums or Threads) can be linked to grade items:
+
+<Steps>
+<Step title="Edit the discussion topic">
+Go to **Discussions**, click the dropdown next to the topic, and select **Edit Topic**.
+</Step>
+
+<Step title="Enable grading">
+Enter a point value in the **Grade Out Of** field.
+</Step>
+
+<Step title="Link to grade book">
+Select **Edit or Link to Existing** and choose to create a new grade item or link to an existing one.
+</Step>
+
+<Step title="Save the topic">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+## Associating Items with Categories
+
+If you created grade items before categories, or need to reorganize, you can associate items with categories.
+
+<Steps>
+<Step title="Edit the grade item">
+In **Manage Grades**, click on the grade item name to open its settings.
+</Step>
+
+<Step title="Select category">
+In the **Category** dropdown, select the appropriate category.
+</Step>
+
+<Step title="Adjust weight if needed">
+If your category uses manual weights, set the item's weight within the category.
+</Step>
+
+<Step title="Save changes">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+## Bulk Editing Grade Items
+
+Brightspace allows you to edit multiple grade items at once to save time.
+
+<Steps>
+<Step title="Select items to edit">
+In **Manage Grades**, check the boxes next to the grade items you want to modify.
+</Step>
+
+<Step title="Open Bulk Edit">
+Click **Bulk Edit** from the toolbar.
+</Step>
+
+<Step title="Make changes">
+On the Bulk Edit page, you can modify:
+- **Name**: Edit item names
+- **Short Name**: Update abbreviated names
+- **Category**: Move items to a different category
+- **Weight**: Adjust weights for multiple items
+- **Can Exceed**: Toggle whether grades can exceed 100%
+</Step>
+
+<Step title="Save all changes">
+Click **Save** to apply changes to all selected items.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Bulk Category Assignment">
+To quickly organize many items into categories, select all the items that belong together, click Bulk Edit, and set them all to the same category at once.
+</Callout>
+
+## Reordering Grade Items
+
+You can change the display order of items and categories in your gradebook:
+
+<Steps>
+<Step title="Access reorder function">
+From **Manage Grades**, click **More Actions** and select **Reorder**.
+</Step>
+
+<Step title="Set new positions">
+Use the **Sort Order** dropdown beside each item to select its new position. Other items will automatically adjust.
+</Step>
+
+<Step title="Save the order">
+Click **Save** to apply the new arrangement.
+</Step>
+</Steps>
+
+## Excluding Items from Final Grade
+
+Sometimes you want to track grades without affecting the final calculation (such as practice quizzes or self-assessments).
+
+<Steps>
+<Step title="Edit the grade item">
+Click on the grade item name in Manage Grades.
+</Step>
+
+<Step title="Enable exclusion">
+Check the box for **Exclude from Final Grade Calculation**.
+</Step>
+
+<Step title="Save">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+<Callout type="info" title="Excluded vs. Bonus Items">
+**Excluded items** do not affect the final grade at all. **Bonus items** add to the final grade but do not penalize students who do not complete them. Choose based on your grading policy.
+</Callout>
+
+## Deleting Grade Items and Categories
+
+<Steps>
+<Step title="Access delete function">
+From **Manage Grades**, click **More Actions** and select **Delete**.
+</Step>
+
+<Step title="Select items to delete">
+Check the boxes next to the items or categories you want to remove.
+</Step>
+
+<Step title="Confirm deletion">
+Click **Delete** to remove the selected items.
+</Step>
+</Steps>
+
+<Callout type="danger" title="Before Deleting">
+You cannot delete grade items that have active associations with assignments, quizzes, or discussions. Remove the association first by editing the activity and unlinking the grade item. Items with passed end dates may also be protected from deletion.
+</Callout>
+
+## Best Practices
+
+### Grade Calculation Accuracy
+
+| Recommendation | Why It Matters |
+|----------------|----------------|
+| Match gradebook to syllabus | Students expect grades to match the stated policy |
+| Keep names consistent | Use identical names for grade items and their linked activities |
+| Verify associations | Check the Association column regularly to ensure links are active |
+| Test calculations | Enter sample grades and verify the final grade calculates correctly |
+
+### Organization Tips
+
+- Create all categories before creating grade items
+- Use a consistent naming convention (e.g., "HW01 - Topic Name")
+- Group related items logically within categories
+- Use short names for cleaner gradebook display
+
+### When to Use Each Grading System
+
+- **Points System**: Best when all items have clear point values and you want simple additive grading
+- **Weighted System**: Best when your syllabus uses percentages (e.g., "Exams = 40% of final grade")
+
+## Common Issues
+
+### Grades Not Appearing in Gradebook
+
+- Verify the activity is linked to a grade item (check Association column)
+- For quizzes, ensure "Automatically update evaluations in grade book when published" is enabled
+- Check that release conditions are not hiding the item
+
+### Weights Not Adding Up to 100%
+
+- Review all category weights on the Manage Grades page
+- Remember that items outside categories may affect total weights
+- Use the weighted system validation warning to identify issues
+
+### Formula Errors
+
+- Check for unbalanced parentheses
+- Ensure you are not referencing the formula item itself
+- Verify all referenced grade items exist
+- Use the Validate button to check syntax
+
+## Related Guides
+
+- [Using the Setup Wizard](/docs/gradebook/setup-wizard)
+- [Understanding Grade Calculation Methods](/docs/gradebook/calculation-methods)
+- [Entering Grades Manually](/docs/gradebook/entering-grades)
+- [Using Quick Eval](/docs/gradebook/quick-eval)
+- [Exporting Grades](/docs/gradebook/exporting)
+- [Creating Rubrics](/docs/rubrics/creating-rubrics)

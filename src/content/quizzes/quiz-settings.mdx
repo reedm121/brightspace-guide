@@ -1,0 +1,406 @@
+---
+title: "Quiz Settings and Options"
+description: "Configure timing, attempts, display settings, and security for quizzes"
+category: "Quizzes"
+order: 3
+tags: ["quiz settings", "timing", "attempts", "security", "special access", "proctoring"]
+---
+
+# Quiz Settings and Options
+
+## Overview
+
+Brightspace quizzes offer extensive configuration options to control how students experience assessments. This guide covers all major quiz settings including timing, attempts, randomization, security features, and how to configure what students see after submission.
+
+## Before You Begin
+
+- You must have the **Manage Quizzes** permission in your course
+- Have a quiz already created (see [Creating Quizzes](/docs/quizzes/creating-quizzes))
+- Understand your institutional policies on quiz accommodations and proctoring
+
+## Timing and Display Settings
+
+The Timing & Display section controls how long students have to complete quizzes and how content is presented.
+
+### Configuring Time Limits
+
+<Steps>
+<Step title="Access the quiz settings">
+From your course, navigate to **Activities > Quizzes**. Click on the quiz name to edit it, then select the **Timing & Display** section from the left panel.
+</Step>
+
+<Step title="Enable the time limit">
+Check the **Set time limit** checkbox. In the Time Limit field, enter the number of minutes students have to complete the quiz.
+</Step>
+
+<Step title="Choose time limit behavior">
+Select what happens when the time limit expires:
+
+- **Automatically submit the quiz attempt** - The quiz will be terminated and submitted when time ends, even if some questions are unanswered
+- **Flag as "exceeded time limit" and allow the learner to continue working** - The attempt is marked as overtime but students can keep working
+- **Recommended time limit** - The time limit is suggested but not enforced
+</Step>
+
+<Step title="Save your settings">
+Click **Save** to apply your timing configuration.
+</Step>
+</Steps>
+
+<Callout type="info" title="Timing vs. Dates">
+Time limits are independent of quiz availability dates. For example, if your quiz has a 60-minute time limit and an end date of Monday at 11:59 PM, a student starting at 11:30 PM would still get the full 60 minutes if you've configured auto-submit.
+</Callout>
+
+### Synchronous vs. Asynchronous Quizzing
+
+Brightspace supports two timing modes:
+
+| Mode | Description | Best For |
+|------|-------------|----------|
+| **Asynchronous** | Each student's timer begins when they enter the quiz | Self-paced assessments, extended availability windows |
+| **Synchronous** | Timer begins at the established start date/time for all students | Live exam settings, ensuring all students test simultaneously |
+
+With synchronous quizzing, students entering late forfeit any time that has already passed. After the time limit elapses, the quiz ends for all students simultaneously.
+
+<Callout type="warning" title="Grace Period Changes">
+Recent Brightspace updates have removed the Grace Period option. The auto-submit feature now handles quiz submission when time expires. Plan your time limits accordingly.
+</Callout>
+
+### Display Options
+
+In the Timing & Display section, you can also configure:
+
+- **Disable right-click** - Prevents students from copying quiz question text
+- **Disable email, instant messages, and alerts** - Helps students focus by blocking Brightspace notifications during the quiz
+- **Show hints** - Allow or hide hints attached to questions
+- **Show question feedback** - Control whether immediate feedback appears
+
+## Attempt Settings
+
+Control how many times students can take a quiz and how grades are calculated.
+
+<Steps>
+<Step title="Access attempt settings">
+In the quiz editor, select **Attempts and Completion** from the left panel.
+</Step>
+
+<Step title="Set attempts allowed">
+Click **Manage Attempts**. In the popup window, select the number of attempts from the dropdown menu (1 through unlimited).
+</Step>
+
+<Step title="Configure overall grade calculation">
+Choose how the final quiz grade is determined when multiple attempts are allowed:
+
+- **Highest Attempt** - Uses the best score
+- **Lowest Attempt** - Uses the lowest score
+- **Average of All Attempts** - Calculates the mean of all attempts
+- **First Attempt** - Uses only the first attempt
+- **Last Attempt** - Uses the most recent attempt (default)
+</Step>
+
+<Step title="Set advanced attempt options (optional)">
+Configure whether students must complete an attempt before starting a new one, and whether to show previous attempt feedback.
+</Step>
+</Steps>
+
+## Randomization Options
+
+Randomization helps maintain assessment integrity by showing different question orders or selections to each student.
+
+### Shuffle Questions
+
+<Steps>
+<Step title="Enable question shuffling">
+In the **Timing & Display** section, check **Shuffle questions and sections within the quiz**. This randomizes the order of questions for each student.
+</Step>
+</Steps>
+
+### Shuffle Answer Choices
+
+<Steps>
+<Step title="Enable answer shuffling">
+When creating or editing individual questions, check the **Shuffle answer choices** option. This displays answer options in a different order for each student.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Answers to Avoid Shuffling">
+If you have answers like "All of the above" or "A and B only," avoid shuffling for those questions, or rephrase the answer choices.
+</Callout>
+
+### Question Pools (Random Question Selection)
+
+For more advanced randomization, use Question Pools to randomly select questions from a larger bank:
+
+<Steps>
+<Step title="Add a question pool section">
+In the quiz builder, click **Add** and select **Question Pool**.
+</Step>
+
+<Step title="Configure the pool">
+- Give your pool a title (students don't see this)
+- Enter the number of questions to randomly select
+- Set the points per question
+</Step>
+
+<Step title="Add questions to the pool">
+Add more questions to the pool than will be selected. Brightspace randomly draws the specified number for each student.
+</Step>
+</Steps>
+
+## Quiz Results Display Settings
+
+Control what students see immediately after submitting their quiz and at later times.
+
+<Callout type="info" title="Default Behavior">
+By default, students see only their overall score after submission. They do not see questions, their answers, or any feedback unless you configure additional views.
+</Callout>
+
+### Configuring the Primary View
+
+The Primary View displays immediately when students submit their quiz.
+
+<Steps>
+<Step title="Access evaluation settings">
+In the quiz editor, select **Evaluation and Feedback** from the left panel.
+</Step>
+
+<Step title="Edit the primary view">
+Click **Edit View** next to Primary View.
+</Step>
+
+<Step title="Configure display options">
+Select what students can see:
+
+- **Attempt grade** - Show/hide the overall score
+- **Questions** - Choose from:
+  - Don't show questions
+  - Show all questions
+  - Show incorrect questions only
+  - Show correct questions only
+- **Additional options** (when showing questions):
+  - Display correct answers
+  - Display learner responses
+  - Display question scores
+</Step>
+
+<Step title="Add optional elements">
+- **Custom message** - Add text students see after submission
+- **Statistics** - Show class average or grade distribution
+</Step>
+</Steps>
+
+<Callout type="warning" title="Manually Graded Questions">
+If your quiz includes written response or other manually graded questions, avoid showing the attempt grade immediately. Students will see zeros for ungraded questions, which can cause confusion.
+</Callout>
+
+### Creating Additional Submission Views
+
+Additional views let you control when students can see more information, such as releasing answers after all students have completed the quiz.
+
+<Steps>
+<Step title="Add an additional view">
+In the Evaluation and Feedback section, click **+ Additional View**.
+</Step>
+
+<Step title="Name your view">
+Give the view a descriptive name (e.g., "Show Answers After Due Date").
+</Step>
+
+<Step title="Set view restrictions">
+Choose when this view becomes active:
+
+- **Date** - Specify a date and time
+- **Minutes after submission** - Set a delay
+- **Attempts** - After a specific attempt number
+</Step>
+
+<Step title="Configure view details">
+Set what this view displays (same options as Primary View).
+</Step>
+</Steps>
+
+### Creating a Shutdown View
+
+To prevent students from accessing quiz content after a certain time, create a "Shutdown View":
+
+<Steps>
+<Step title="Create an additional view">
+Click **+ Additional View** and name it "Shutdown View."
+</Step>
+
+<Step title="Configure to hide questions">
+Set **Questions** to "Don't show."
+</Step>
+
+<Step title="Set the shutdown date">
+Enter the date/time when you want to stop showing quiz details.
+</Step>
+</Steps>
+
+<Callout type="tip" title="View Priority">
+Only the most recent applicable view is active. Your shutdown view will override earlier views once its date/time is reached.
+</Callout>
+
+## Special Access for Individual Students
+
+Special Access allows you to provide accommodations for specific students on a per-quiz basis.
+
+<Steps>
+<Step title="Access special access settings">
+In the quiz editor, go to **Availability Dates & Conditions** and click **Manage Special Access**.
+</Step>
+
+<Step title="Choose access type">
+Select one of the following:
+
+- **Allow users with special access to submit outside normal availability** - Students with special access can access the quiz outside the standard dates, but all other students can still access normally
+- **Allow only users with special access to see this folder** - Only students with special access can see the quiz
+</Step>
+
+<Step title="Add students">
+Click **Add Users to Special Access**, then select the students who need accommodations.
+</Step>
+
+<Step title="Configure individual settings">
+For each student, you can customize:
+
+- **Start/End dates** - Different availability window
+- **Due date** - Different due date
+- **Time limit multiplier** - e.g., 1.5 for time-and-a-half
+- **Extra time** - Add a specific number of extra minutes
+- **Attempts allowed** - Override the default number of attempts
+</Step>
+
+<Step title="Save special access">
+Click **Save** to apply the special access settings.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Course-Level Accommodations">
+For students who need extended time on ALL quizzes in a course, use the **Accommodations** feature in the Classlist instead. Navigate to **Tools > Classlist**, click the dropdown next to the student's name, and select **Edit Accommodations**. This automatically applies to every quiz.
+</Callout>
+
+## Security Options
+
+Brightspace provides several options to enhance quiz security.
+
+### Password Protection
+
+<Steps>
+<Step title="Set a quiz password">
+In the **Availability Dates & Conditions** section, enter a password in the **Password** field.
+</Step>
+
+<Step title="Distribute the password">
+Share the password with students only when they should access the quiz (e.g., at the start of a proctored exam).
+</Step>
+</Steps>
+
+### IP Address Restrictions
+
+Restrict quiz access to specific network locations, useful for ensuring students take exams in designated computer labs.
+
+<Steps>
+<Step title="Access IP restrictions">
+In **Availability Dates & Conditions**, click **Manage IP Restrictions**.
+</Step>
+
+<Step title="Add IP ranges">
+Click **Manage IP Range** and enter the starting and ending IP addresses for each allowed range.
+</Step>
+
+<Step title="Save restrictions">
+Click **Add** for each range, then **Save** to apply.
+</Step>
+</Steps>
+
+<Callout type="warning" title="IP Limitation">
+IP addresses on campus are not room-specific. Students may be able to access the quiz from nearby locations within the same network range. Also, Brightspace only sees external-facing IP addresses, so don't use internal network addresses.
+</Callout>
+
+### Respondus LockDown Browser
+
+Respondus LockDown Browser is a third-party tool that prevents students from accessing other applications, printing, or taking screenshots during a quiz.
+
+<Steps>
+<Step title="Access the LockDown Browser tab">
+In your course, go to **Activities > Quizzes**, then select the **LockDown Browser** tab.
+</Step>
+
+<Step title="Select your quiz">
+Find the quiz you want to secure and click on its settings.
+</Step>
+
+<Step title="Enable LockDown Browser">
+Choose whether LockDown Browser is required or optional for the quiz.
+</Step>
+
+<Step title="Configure Monitor (optional)">
+If your institution has Respondus Monitor, enable webcam recording for remote proctoring.
+</Step>
+</Steps>
+
+<Callout type="info" title="LockDown Browser Limitations">
+LockDown Browser does not work with Chromebooks, iPhones, Linux, or Xbox. Students can potentially use external devices (phones) to look up information. The tool is most effective in proctored settings with institution-owned computers.
+</Callout>
+
+### Proctoring Integration (Honorlock, Respondus Monitor)
+
+Many institutions integrate third-party proctoring tools with Brightspace:
+
+- **Respondus Monitor** - Uses webcam and video analytics to detect potential cheating during remote exams
+- **Honorlock** - AI-powered proctoring with live proctor intervention options
+- **Proctorio** - Browser-based remote proctoring
+
+<Callout type="warning" title="Proctoring Considerations">
+Remote proctoring tools can increase student stress and generate false positives that require instructor review. Consider whether high-stakes remote proctoring is necessary, and provide clear instructions and a practice quiz before graded assessments.
+</Callout>
+
+Contact your institution's IT or instructional technology department for specific setup instructions, as proctoring tool configuration varies by institution.
+
+## Auto-Submit Settings
+
+Configure whether quizzes automatically submit when time expires.
+
+<Steps>
+<Step title="Access timing settings">
+In the **Timing & Display** section, ensure a time limit is set.
+</Step>
+
+<Step title="Select auto-submit behavior">
+Choose **Automatically submit the quiz attempt** from the time limit expiry options.
+</Step>
+</Steps>
+
+When auto-submit is enabled:
+- Students receive a warning when time is running low
+- The quiz is submitted automatically when the timer reaches zero
+- Any unanswered questions remain blank in the submission
+
+## Common Issues
+
+### Students Report Losing Time
+
+- Verify time limits are set correctly
+- Check for browser or internet connectivity issues
+- Review the quiz attempt log for timing details
+- Consider adding a small buffer to time limits
+
+### Accommodations Not Applying
+
+- Ensure special access is saved correctly
+- Verify the student is in the special access list
+- Check that course-level accommodations in Classlist are configured if needed
+
+### Students Can't Access Quiz
+
+- Verify availability dates are correct
+- Check IP restrictions if enabled
+- Ensure password was entered correctly
+- Verify the student is enrolled in the course
+
+## Related Guides
+
+- [Creating Quizzes](/docs/quizzes/creating-quizzes)
+- [Question Types](/docs/quizzes/question-types)
+- [Grading Quizzes](/docs/quizzes/grading-quizzes)
+- [Quiz Availability and Release Conditions](/docs/quizzes/quiz-availability)

@@ -2,9 +2,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-// This will be replaced with actual MDX content loading
-// For now, we'll use placeholder content
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getGuideBySlug, getAllGuideSlugs, getAdjacentGuides } from "@/lib/mdx";
+import { mdxComponents } from "@/components/mdx/MDXComponents";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypePrettyCode from "rehype-pretty-code";
 
 interface PageProps {
   params: Promise<{
@@ -12,108 +15,180 @@ interface PageProps {
   }>;
 }
 
-// Placeholder content for guides - will be replaced with actual MDX loading
-const guides: Record<string, { title: string; content: React.ReactNode }> = {
-  "getting-started/overview": {
-    title: "Brightspace Overview",
-    content: (
-      <div className="prose prose-slate dark:prose-invert max-w-none">
-        <p className="lead">
-          A comprehensive introduction to D2L Brightspace LMS and its key features for educators.
-        </p>
-        <h2>What is Brightspace?</h2>
-        <p>
-          Brightspace is a cloud-based Learning Management System (LMS) developed by D2L (Desire2Learn).
-          It provides a comprehensive platform for creating, managing, and delivering educational content to students.
-        </p>
-        <h2>Key Features</h2>
-        <ul>
-          <li><strong>Content Management</strong>: Organize course materials into structured modules</li>
-          <li><strong>Assessment Tools</strong>: Create assignments, quizzes, and discussions</li>
-          <li><strong>Gradebook</strong>: Track and calculate student grades</li>
-          <li><strong>Communication</strong>: Send announcements and manage notifications</li>
-        </ul>
-        <div className="rounded-lg border bg-blue-50 p-4 dark:bg-blue-950">
-          <p className="text-sm">
-            <strong>Tip:</strong> If you&apos;re new to Brightspace, we recommend starting with the Interface Tour
-            guide to familiarize yourself with the layout and navigation.
-          </p>
-        </div>
-      </div>
-    ),
-  },
-  "getting-started/logging-in": {
-    title: "Logging In to Brightspace",
-    content: (
-      <div className="prose prose-slate dark:prose-invert max-w-none">
-        <p className="lead">
-          Step-by-step instructions for accessing your Brightspace account.
-        </p>
-        <h2>Before You Begin</h2>
-        <ul>
-          <li>You need your institution credentials (username/email and password)</li>
-          <li>A modern web browser (Chrome, Firefox, Safari, or Edge recommended)</li>
-          <li>A stable internet connection</li>
-        </ul>
-        <h2>Step-by-Step Instructions</h2>
-        <ol>
-          <li>Navigate to your institution&apos;s Brightspace URL</li>
-          <li>Enter your credentials (username and password)</li>
-          <li>Complete any additional authentication (MFA if required)</li>
-          <li>Access your courses from the homepage</li>
-        </ol>
-      </div>
-    ),
-  },
-};
-
 export default async function GuidePage({ params }: PageProps) {
   const { slug } = await params;
-  const slugPath = slug.join("/");
-  const guide = guides[slugPath];
+  const guide = getGuideBySlug(slug);
 
   if (!guide) {
     notFound();
   }
 
+  const { prev, next } = getAdjacentGuides(slug);
+
+  // Format the breadcrumb segments
+  const formatSegment = (segment: string) =>
+    segment
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
   return (
-    <article className="space-y-8">
-      <div className="space-y-2">
-        <nav className="flex items-center text-sm text-muted-foreground">
-          <Link href="/docs" className="hover:text-foreground">
+    <article className="mdx-content animate-fade-in space-y-8">
+      {/* Breadcrumb navigation */}
+      <div className="space-y-4">
+        <nav
+          aria-label="breadcrumb"
+          className="flex items-center text-sm text-muted-foreground"
+        >
+          <Link
+            href="/docs"
+            className="transition-colors hover:text-foreground"
+          >
             Docs
           </Link>
-          <ChevronRight className="mx-1 h-4 w-4" />
           {slug.map((segment, index) => (
             <span key={segment} className="flex items-center">
-              {index > 0 && <ChevronRight className="mx-1 h-4 w-4" />}
-              <span className={index === slug.length - 1 ? "text-foreground" : ""}>
-                {segment.split("-").map(word =>
-                  word.charAt(0).toUpperCase() + word.slice(1)
-                ).join(" ")}
-              </span>
+              <ChevronRight className="mx-1.5 h-4 w-4 opacity-50" />
+              {index < slug.length - 1 ? (
+                <Link
+                  href={`/docs/${slug.slice(0, index + 1).join("/")}`}
+                  className="transition-colors hover:text-foreground"
+                >
+                  {formatSegment(segment)}
+                </Link>
+              ) : (
+                <span className="font-medium text-foreground">
+                  {formatSegment(segment)}
+                </span>
+              )}
             </span>
           ))}
         </nav>
-        <h1 className="text-4xl font-bold tracking-tight">{guide.title}</h1>
+
+        {/* Page header */}
+        <div className="space-y-2">
+          {guide.frontmatter.category && (
+            <p className="text-sm font-medium text-primary">
+              {guide.frontmatter.category}
+            </p>
+          )}
+          <h1 className="text-4xl font-bold tracking-tight text-foreground">
+            {guide.frontmatter.title}
+          </h1>
+          {guide.frontmatter.description && (
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              {guide.frontmatter.description}
+            </p>
+          )}
+        </div>
+
+        {/* Separator after header */}
+        <hr className="border-t border-slate-200 dark:border-slate-700" />
       </div>
 
-      {guide.content}
+      {/* MDX Content */}
+      <div className="prose-documentation">
+        <MDXRemote
+          source={guide.content}
+          components={mdxComponents}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm],
+              rehypePlugins: [
+                rehypeSlug,
+                [
+                  rehypePrettyCode,
+                  {
+                    theme: "github-dark",
+                    keepBackground: true,
+                    defaultLang: "plaintext",
+                  },
+                ],
+              ],
+            },
+          }}
+        />
+      </div>
 
-      <div className="flex items-center justify-between pt-8 border-t">
-        <Button variant="ghost" asChild>
-          <Link href="/docs">
-            <ChevronLeft className="mr-2 h-4 w-4" />
-            Back to Docs
-          </Link>
-        </Button>
+      {/* Tags */}
+      {guide.frontmatter.tags && guide.frontmatter.tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-200 dark:border-slate-700">
+          <span className="text-sm text-muted-foreground">Tags:</span>
+          {guide.frontmatter.tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Navigation footer */}
+      <div className="flex items-center justify-between gap-4 pt-8 border-t border-slate-200 dark:border-slate-700">
+        {prev ? (
+          <Button variant="ghost" asChild className="group">
+            <Link
+              href={`/docs/${prev.slug.join("/")}`}
+              className="flex items-center gap-2"
+            >
+              <ChevronLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
+              <div className="text-left">
+                <p className="text-xs text-muted-foreground">Previous</p>
+                <p className="text-sm font-medium">{prev.frontmatter.title}</p>
+              </div>
+            </Link>
+          </Button>
+        ) : (
+          <Button variant="ghost" asChild>
+            <Link href="/docs" className="flex items-center gap-2">
+              <ChevronLeft className="h-4 w-4" />
+              <span>Back to Docs</span>
+            </Link>
+          </Button>
+        )}
+
+        {next && (
+          <Button variant="ghost" asChild className="group ml-auto">
+            <Link
+              href={`/docs/${next.slug.join("/")}`}
+              className="flex items-center gap-2"
+            >
+              <div className="text-right">
+                <p className="text-xs text-muted-foreground">Next</p>
+                <p className="text-sm font-medium">{next.frontmatter.title}</p>
+              </div>
+              <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </Button>
+        )}
       </div>
     </article>
   );
 }
 
+// Generate static params for all guides
 export function generateStaticParams() {
-  return Object.keys(guides).map((slug) => ({
-    slug: slug.split("/"),
+  const slugs = getAllGuideSlugs();
+  return slugs.map((slug) => ({
+    slug,
   }));
+}
+
+// Generate metadata for each guide
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const guide = getGuideBySlug(slug);
+
+  if (!guide) {
+    return {
+      title: "Not Found",
+    };
+  }
+
+  return {
+    title: `${guide.frontmatter.title} | BrightspaceGuide`,
+    description: guide.frontmatter.description,
+  };
 }

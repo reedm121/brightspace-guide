@@ -1,0 +1,412 @@
+---
+title: "External Tool Integrations"
+description: "Connect third-party tools and publisher content to Brightspace"
+category: "Integrations"
+order: 1
+tags: ["integrations", "LTI", "third-party", "external tools"]
+---
+
+# External Tool Integrations
+
+## Overview
+
+Brightspace supports integration with a wide variety of third-party tools and publisher content through Learning Tools Interoperability (LTI). This guide covers how to work with external learning tools, publisher integrations, cloud storage connections, and video conferencing platforms.
+
+## Before You Begin
+
+- Your institution must have the external tool configured by an administrator
+- You need instructor-level access to your Brightspace course
+- For publisher integrations, you may need an instructor account with the publisher
+- Students will need access codes or licenses for most publisher content
+
+<Callout type="info" title="Administrator Configuration Required">
+Most external tool integrations must first be set up by your institution's Brightspace administrator. If a tool you need is not available, contact your IT department to request its installation.
+</Callout>
+
+## Understanding LTI (Learning Tools Interoperability)
+
+LTI is an industry standard developed by IMS Global that allows learning management systems like Brightspace to securely connect with external educational tools and content providers. Think of LTI as a bridge that enables:
+
+- **Single sign-on**: Students access external tools without separate logins
+- **Grade passback**: Scores from external tools automatically sync to your Brightspace gradebook
+- **Deep linking**: Create links directly to specific content or activities
+- **Roster sync**: Student enrollment data syncs between systems
+
+### LTI Versions
+
+| Version | Features | Status |
+|---------|----------|--------|
+| LTI 1.0/1.1 | Basic launch and grade passback | Legacy (still supported) |
+| LTI 1.3 | Enhanced security, better content discovery | Current standard |
+| LTI Advantage | Deep linking, names and roles, assignment and grade services | Recommended |
+
+<Callout type="tip" title="LTI 1.3 Recommended">
+If your institution is setting up new integrations, LTI 1.3 (LTI Advantage) is recommended for the latest features and improved security.
+</Callout>
+
+## Adding External Learning Tools to Your Course
+
+Once an LTI tool has been configured by your administrator, you can add it to your course content.
+
+<Steps>
+<Step title="Navigate to your course content">
+Open your Brightspace course and click **Content** in the course navbar. Select the module where you want to add the external tool.
+</Step>
+
+<Step title="Add the external tool">
+Click **Existing Activities** and select the name of the external tool from the dropdown menu. If you see **External Learning Tools**, click that to see all available tools.
+</Step>
+
+<Step title="Configure the tool link">
+Depending on the tool, you may be prompted to:
+- Sign in to your account with the external provider
+- Select specific content or activities to link
+- Configure grade sync settings
+- Set availability dates
+
+Complete the configuration as required by the specific tool.
+</Step>
+
+<Step title="Verify the link appears in your module">
+The external tool link will appear in your module with a distinctive icon. Click on the link to test it and ensure it launches correctly.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Access LTI Tools Through Content">
+LTI assignments do NOT appear under Quick Eval or the Assignments link on the Course navbar. You must access and grade LTI-linked content by clicking the link within the module.
+</Callout>
+
+## Common Integrations
+
+### Zoom LTI Pro
+
+Zoom LTI Pro allows you to schedule, join, and manage Zoom meetings directly within Brightspace. Instructors can use it for distance learning, office hours, and study groups.
+
+**Key Features:**
+- Schedule Zoom meetings that appear in the Brightspace calendar
+- Students can join meetings with a single click
+- Attendance tracking integrates with Brightspace
+- Cloud recordings can be linked in course content
+
+<Steps>
+<Step title="Access Zoom in your course">
+Navigate to **Content** and click **Existing Activities** > **Zoom LTI Pro** (or similar name depending on your institution's configuration).
+</Step>
+
+<Step title="Schedule a meeting">
+Click **Schedule a New Meeting** and configure:
+- Meeting topic and description
+- Date and time
+- Duration
+- Security settings (waiting room, passcode)
+</Step>
+
+<Step title="Post to calendar (optional)">
+Enable the option to post the meeting to the Brightspace calendar so students receive reminders.
+</Step>
+</Steps>
+
+### Microsoft Teams
+
+Microsoft Teams can be integrated with Brightspace for virtual classes, meetings, and collaborative assignments.
+
+**Available Integrations:**
+- **Teams Meetings**: Schedule and join Teams meetings from Brightspace
+- **Teams Classes**: Create Teams class spaces linked to your Brightspace courses
+- **Teams Assignments**: Use Teams assignment features with grade passback
+
+<Callout type="info" title="Microsoft 365 Integration">
+The Microsoft Teams integration requires your institution to have Microsoft 365 configured. Contact your IT department if Teams is not available in your course.
+</Callout>
+
+## Publisher Content Integrations
+
+Publisher integrations allow you to connect courseware like McGraw Hill Connect, Pearson MyLab, and Cengage MindTap directly to your Brightspace course with automatic grade synchronization.
+
+### McGraw Hill Connect Integration
+
+McGraw Hill Connect provides online homework, adaptive learning, and course content. When integrated with Brightspace, students access Connect through your course and grades sync automatically.
+
+<Steps>
+<Step title="Add McGraw Hill Connect to a module">
+In your course **Content**, create or select a module. Click **Existing Activities** > **McGraw Hill Connect**.
+</Step>
+
+<Step title="Sign in or create your account">
+If this is your first time using the integration:
+- Click **Create Account** to create a new McGraw Hill Connect account
+- Or sign in to an existing McGraw Hill account
+
+Your Brightspace and McGraw Hill accounts will be linked.
+</Step>
+
+<Step title="Set up your Connect course">
+Follow the prompts to either:
+- Create a new Connect section for your course
+- Link to an existing Connect section you have already set up
+</Step>
+
+<Step title="Deploy assignments to Brightspace">
+In Connect, select the assignments you want students to complete. Choose the D2L module as the destination and click **Deploy**. Deployed assignments will show a D2L logo in Connect.
+</Step>
+
+<Step title="Verify gradebook columns">
+Check your Brightspace gradebook to confirm grade columns were created for the deployed assignments. Grades will sync automatically when students submit work.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Important: Copying Courses">
+McGraw Hill changed their integration process. If you copy your course from a previous semester with McGraw Hill links, you must delete the old links and re-pair using the new process. The old links will not work in your new course.
+</Callout>
+
+**Student Requirements:**
+- Students will need to purchase or enter a license key for McGraw Hill content
+- First-time users must create a McGraw Hill account
+
+### Pearson MyLab Integration
+
+Pearson MyLab and Mastering products integrate with Brightspace to provide homework, tutorials, and assessments with grade synchronization.
+
+<Steps>
+<Step title="Add Pearson to your course">
+In **Content**, select your module and click **Existing Activities**. Choose **Access Pearson** (LTI 1.3) or **MyLab and Mastering** (LTI 1.1) depending on your institution's setup.
+</Step>
+
+<Step title="Link your Pearson course">
+Sign in to your Pearson account and follow the prompts to connect your MyLab or Mastering course to your Brightspace section.
+</Step>
+
+<Step title="Configure grade sync">
+In your Pearson course:
+1. Navigate to **Grade sync** at the top of the page
+2. Select the assignments you want included in your Brightspace gradebook
+3. Enable **Automatic Grade Sync** for continuous synchronization
+</Step>
+
+<Step title="Wait for sync to complete">
+After enabling grade sync, it can take up to 15 minutes for assignments to appear in your Brightspace gradebook. Look for the "Items synced" confirmation message.
+</Step>
+</Steps>
+
+<Callout type="info" title="Grade Categories and Weighting">
+Weighted scores and grade categories from Pearson are NOT transferred to Brightspace. You must set up categories and weighting manually in your Brightspace gradebook.
+</Callout>
+
+**Transition Note:** If your institution currently uses LTI 1.1, a transition to LTI 1.3 (Access Pearson) may be required. Contact your LMS administrator to verify which version is installed.
+
+### Cengage MindTap Integration
+
+Cengage MindTap provides interactive course content and assignments that integrate seamlessly with Brightspace.
+
+<Steps>
+<Step title="Access MindTap through Content">
+Open your Brightspace course **Content** tab. Create or select a module for your MindTap content. Click **Existing Activities** > **Cengage** or similar.
+</Step>
+
+<Step title="Link your Cengage account">
+Sign in to your Cengage instructor account. This links your Brightspace and Cengage accounts for future use.
+</Step>
+
+<Step title="Select your textbook or create a course">
+On the Select Title page:
+- Search for your textbook or product
+- Filter by Platform (MindTap) or License Type
+- Select your product and click **Continue**
+</Step>
+
+<Step title="Configure your MindTap course">
+Before adding links to specific activities:
+- Add and organize assigned activities and course materials
+- Configure grading, attempts, feedback, and time limits
+- Set due dates and point values
+- Use consistent scheduling across your course
+</Step>
+
+<Step title="Create deep links to activities">
+Add links from Brightspace to specific activities in MindTap. These "deep links" allow data exchange between systems, including automatic grade sync.
+</Step>
+</Steps>
+
+**Date Synchronization:**
+- Due dates set in MindTap sync to Brightspace automatically
+- Date changes in MindTap overwrite dates set in Brightspace
+- Ensure both systems use the same time zone for consistency
+
+<Callout type="tip" title="Best Practice for Multi-Section Courses">
+For courses with multiple sections, first create your complete MindTap course with all learning path and scoring settings, then duplicate it for each section before linking to Brightspace.
+</Callout>
+
+## Grade Passback from External Tools
+
+Most LTI-integrated tools support automatic grade synchronization with your Brightspace gradebook.
+
+### How Grade Passback Works
+
+1. When you add an LTI link for a graded activity, Brightspace automatically creates a corresponding grade column
+2. Students access the external tool through the link in your course content
+3. When students complete and submit work in the external tool, scores are sent back to Brightspace
+4. Grades appear in your Brightspace gradebook automatically
+
+### Troubleshooting Grade Sync Issues
+
+| Issue | Solution |
+|-------|----------|
+| Grades not appearing | Wait 15-30 minutes; check that automatic sync is enabled in the external tool |
+| Duplicate grade columns | May occur when migrating from LTI 1.1 to 1.3; delete the duplicate and verify settings |
+| Scores not matching | Check point values in both systems; verify no weighting conflicts |
+| Missing students | Ensure students have launched the LTI link at least once to establish the connection |
+
+<Callout type="warning" title="Delete Activities Carefully">
+When you delete an assignment, quiz, or LTI link, always delete it from within the Content module rather than from the external tool. Deleting from the tool side can leave broken links and cause sync issues.
+</Callout>
+
+## OneDrive Integration
+
+Brightspace integrates with Microsoft OneDrive, allowing you to add files directly from your cloud storage to your course.
+
+<Steps>
+<Step title="Navigate to your content module">
+Go to **Content** and select the module where you want to add the OneDrive file.
+</Step>
+
+<Step title="Add from OneDrive">
+Click **Existing Activities** > **OneDrive**. If this is your first time, you may need to sign in to your Microsoft account.
+</Step>
+
+<Step title="Select your file">
+Browse your OneDrive and select the file you want to add. Click **Select** to add it to your module.
+</Step>
+</Steps>
+
+**Important Considerations:**
+
+- **Live updates**: Changes you make to the document in OneDrive are immediately reflected in Brightspace
+- **Default permissions**: Files are set to "Read Only" by default; change permissions if students need to edit
+- **Student submissions**: When students submit OneDrive files to assignments, a copy is created at submission time; later changes in OneDrive are NOT reflected
+
+<Callout type="info" title="File Size Limit">
+Brightspace has a 2 GB upload limit for files. For larger files, consider linking to external storage or breaking content into smaller pieces.
+</Callout>
+
+## Google Drive Integration
+
+Similar to OneDrive, Brightspace supports direct integration with Google Drive for adding content to your courses.
+
+<Steps>
+<Step title="Navigate to your content module">
+Open **Content** and select the module where you want to add Google Drive content.
+</Step>
+
+<Step title="Add from Google Drive">
+Click **Existing Activities** > **Google Drive**. The first time you use this, you will need to sign in to your Google account and grant permissions.
+</Step>
+
+<Step title="Select your file">
+Browse your Google Drive, select the file you want to add, and confirm the selection.
+</Step>
+</Steps>
+
+**Key Features:**
+
+- Files from Google Drive link directly to the live document
+- Any edits you make in Google Drive appear instantly in Brightspace
+- Works with Google Docs, Sheets, Slides, and other Google Workspace files
+- Students can also submit Google Drive files to assignments and discussions
+
+<Callout type="tip" title="Link vs. Upload">
+When you add a Google Drive or OneDrive file, you are creating a link to the live document. This is different from uploading a static copy. Choose linking when you want updates to reflect automatically; upload a copy when you want a fixed snapshot.
+</Callout>
+
+## Troubleshooting Integration Issues
+
+### Common Problems and Solutions
+
+**Tool not appearing in Existing Activities:**
+- The tool may not be installed at your institution
+- Your role may not have permission to use the tool
+- Contact your IT administrator to verify the tool is available
+
+**"Connection failed" or launch errors:**
+- Clear your browser cache and cookies
+- Try a different browser or incognito/private window
+- Ensure pop-ups are not being blocked
+- The external service may be experiencing downtime
+
+**Students cannot access the tool:**
+- Verify students have clicked the LTI link at least once to establish their connection
+- Check that students have the required access code or license
+- Ensure availability dates are configured correctly
+- Have students try a different browser
+
+**Grades not syncing:**
+- Verify automatic grade sync is enabled in the external tool
+- Check that the grade column exists in your Brightspace gradebook
+- Wait 15-30 minutes for sync to complete
+- Look for error messages in the external tool's grade sync settings
+
+<Callout type="warning" title="Mobile App Limitations">
+It is recommended to access LTI links on a computer using a web browser rather than through the Brightspace Pulse app or mobile device. Some tools may not function correctly on mobile.
+</Callout>
+
+### When to Contact Support
+
+Contact your institution's IT help desk when:
+- A tool you need is not available in your course
+- You receive persistent error messages after troubleshooting
+- Grade sync continues to fail after following troubleshooting steps
+- You need to upgrade from LTI 1.1 to LTI 1.3
+
+Contact the publisher/tool vendor when:
+- You have issues with your instructor account or license
+- Content within the tool is not displaying correctly
+- You need training on using the tool's features
+- Students are having account or access code issues
+
+## Requesting New Tool Integrations
+
+If you need an external tool that is not currently available in Brightspace, follow this process:
+
+<Steps>
+<Step title="Document your requirements">
+Prepare information about the tool:
+- Tool name and vendor
+- Purpose and how it will be used in your course
+- Number of students who will use it
+- Any licensing or cost information
+</Step>
+
+<Step title="Contact your IT/LMS administrator">
+Submit a request through your institution's IT ticketing system or contact your LMS administrator directly. Include all the information gathered above.
+</Step>
+
+<Step title="Provide vendor contact information">
+IT administrators will need to work with the tool vendor to:
+- Obtain LTI credentials (Client ID, Secret, URLs)
+- Configure the tool deployment
+- Set appropriate permissions and org unit access
+</Step>
+
+<Step title="Allow time for configuration">
+LTI tool setup requires coordination between your institution and the vendor. Allow adequate time before the semester begins for testing and configuration.
+</Step>
+</Steps>
+
+<Callout type="info" title="Pilot Programs">
+For new tools, consider running a small pilot with one or two courses before wide deployment. This helps identify any issues before scaling to more students.
+</Callout>
+
+## Best Practices
+
+1. **Test before the semester**: Always test LTI links and grade sync before students need to use them
+2. **Provide clear instructions**: Include guidance for students on how to access and use external tools
+3. **Monitor grade sync**: Periodically check that grades are syncing correctly throughout the semester
+4. **Keep accounts linked**: Avoid changing email addresses or passwords mid-semester as this can break integrations
+5. **Use consistent time zones**: Ensure Brightspace and external tools use the same time zone for due dates
+6. **Document access requirements**: Clearly communicate any access codes, licenses, or accounts students need to purchase
+
+## Related Guides
+
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Gradebook Setup](/docs/gradebook/setup-wizard)
+- [Content Visibility and Release Conditions](/docs/course-setup/release-conditions)
+- [Uploading Files](/docs/course-setup/uploading-files)

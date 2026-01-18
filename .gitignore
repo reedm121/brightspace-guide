@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Development/internal files
+CLAUDE.md
+@fix_plan.md
+PRD.md
+brightspace-guide.md

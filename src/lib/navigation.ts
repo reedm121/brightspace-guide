@@ -78,6 +78,14 @@ export const navigation: NavItem[] = [
     ],
   },
   {
+    title: "Accessibility",
+    href: "/docs/accessibility",
+    icon: "accessibility",
+    children: [
+      { title: "Making Content Accessible", href: "/docs/accessibility/making-content-accessible" },
+    ],
+  },
+  {
     title: "Troubleshooting",
     href: "/docs/troubleshooting",
     icon: "alert-circle",

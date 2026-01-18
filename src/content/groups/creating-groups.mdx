@@ -1,0 +1,443 @@
+---
+title: "Creating and Managing Groups"
+description: "Set up student groups for collaborative work and group assignments"
+category: "Groups"
+order: 1
+tags: ["groups", "collaboration", "teams", "group work"]
+---
+
+# Creating and Managing Groups
+
+## Overview
+
+Groups in Brightspace allow you to organize students into smaller clusters within your course for collaborative projects, discussions, and assignments. This guide covers everything you need to know about creating, configuring, and managing groups effectively.
+
+## Before You Begin
+
+- You need Instructor or TA permissions in the course
+- Decide on your group structure (size, enrollment method, workspaces needed)
+- Consider whether students should self-enroll or be assigned automatically/manually
+
+## Understanding Group Categories vs Groups
+
+In Brightspace, groups are organized using a two-level hierarchy:
+
+| Term | Definition |
+|------|------------|
+| **Group Category** | A container that holds related groups and defines their settings (enrollment type, size, workspaces) |
+| **Group** | An individual team of students within a category |
+
+<Callout type="info" title="Example">
+If you have a course project where students work in teams of 4, you would create a Group Category called "Project Teams" containing individual groups like "Team 1", "Team 2", etc.
+</Callout>
+
+Students can belong to multiple groups across different categories in the same course. For example, a student could be in "Project Team 3" and also in "Discussion Group A".
+
+## Creating a Group Category
+
+<Steps>
+<Step title="Access the Groups tool">
+From your course navbar, click **Tools** and select **Groups** from the dropdown menu. This opens the Manage Groups page.
+</Step>
+
+<Step title="Create a new category">
+Click the **New Category** button at the top of the page.
+</Step>
+
+<Step title="Enter category details">
+1. Enter a **Category Name** (e.g., "Project Teams", "Lab Groups", "Study Groups")
+2. Optionally add a **Description** to explain the purpose of these groups
+</Step>
+
+<Step title="Select an enrollment type">
+Choose how students will be assigned to groups from the **Enrollment Type** dropdown. See the next section for detailed explanations of each option.
+</Step>
+
+<Step title="Configure additional options">
+Select any workspaces you want to create for the groups:
+- **Set up discussion areas** - Creates a private discussion topic for each group
+- **Set up lockers** - Creates a shared file storage space for each group
+- **Set up assignment submission folders** - Creates a group assignment dropbox
+
+These options can also be added later by editing the category.
+</Step>
+
+<Step title="Save the category">
+Click **Save** to create the category and its groups.
+</Step>
+</Steps>
+
+## Enrollment Types Explained
+
+Brightspace offers several enrollment types to accommodate different teaching scenarios:
+
+### Manual Enrollment Options
+
+| Type | Description | Best For |
+|------|-------------|----------|
+| **# of Groups - No Auto Enrollment** | Creates a specified number of empty groups for you to fill manually | When you want complete control over group composition |
+
+### Automatic Enrollment Options
+
+| Type | Description | Best For |
+|------|-------------|----------|
+| **Groups of #** | Creates groups with a maximum number of students; Brightspace assigns students automatically | When group size matters more than the number of groups |
+| **# of Groups** | Creates a specified number of groups; students are distributed automatically | When you need a specific number of groups |
+
+<Callout type="tip" title="Advanced Properties for Automatic Enrollment">
+When using automatic enrollment types, you can configure:
+- **Auto-enroll new users**: Automatically adds late-joining students to groups
+- **Randomize users in groups**: Assigns students randomly instead of alphabetically
+</Callout>
+
+### Self-Enrollment Options
+
+| Type | Description | Best For |
+|------|-------------|----------|
+| **Groups of # - Self Enrollment** | Students choose their group; maximum size per group is enforced | When students should form their own teams with size limits |
+| **# of Groups - Self Enrollment** | Students choose from a fixed number of groups | When you need a specific number of teams |
+| **# of Groups, Capacity of # - Self Enrollment** | Students choose from fixed groups with a capacity limit | When you need specific numbers of both groups and students per group |
+
+### Special Options
+
+| Type | Description | Best For |
+|------|-------------|----------|
+| **Single user, member-specific groups** | Creates individual groups named after each student | Peer review or individual project tracking |
+
+## Configuring Self-Enrollment Settings
+
+When using self-enrollment options, you can configure additional restrictions:
+
+<Steps>
+<Step title="Set enrollment period">
+Define when students can enroll:
+- **Start Date**: When self-enrollment opens (select "Now" for immediate access)
+- **Expiry Date**: When self-enrollment closes
+
+Students cannot join or leave groups outside this window.
+</Step>
+
+<Step title="Configure unenrolled user handling">
+Enable **Allocate unenrolled users** to automatically assign students who did not choose a group after the enrollment deadline passes.
+
+<Callout type="warning" title="Note">
+When unenrolled users are automatically allocated, group capacity limits may be exceeded.
+</Callout>
+</Step>
+
+<Step title="Make groups visible">
+Ensure the category and group descriptions are visible to students so they can make informed choices.
+</Step>
+</Steps>
+
+## Creating Groups Within a Category
+
+If you need to add additional groups to an existing category:
+
+<Steps>
+<Step title="Navigate to the category">
+Go to **Tools** > **Groups** and select your category from the **View Categories** dropdown.
+</Step>
+
+<Step title="Add a new group">
+Click the dropdown arrow next to the category name and select **Add Group**.
+</Step>
+
+<Step title="Configure the group">
+Enter a **Group Name** and optionally add a description. Click **Save**.
+</Step>
+</Steps>
+
+<Callout type="info" title="Limitation">
+You can add new groups to a category, but you cannot change the default maximum size of groups after creation. However, you can manually add students beyond the capacity limit.
+</Callout>
+
+## Adding Students to Groups
+
+### Manual Enrollment
+
+<Steps>
+<Step title="Access enrollment options">
+Go to **Tools** > **Groups**, select your category, then click on a specific group name.
+</Step>
+
+<Step title="Enroll users">
+Click **Enroll Users** at the top of the page.
+</Step>
+
+<Step title="Select students">
+Check the boxes next to students you want to add to this group. To remove students, uncheck their boxes.
+</Step>
+
+<Step title="Save changes">
+Click **Save** to apply the enrollment changes.
+</Step>
+</Steps>
+
+### Bulk Enrollment via CSV
+
+For large courses, you can import group memberships using a CSV file:
+
+<Steps>
+<Step title="Prepare your CSV file">
+Create a CSV file with columns for student identifier and group name.
+</Step>
+
+<Step title="Import the file">
+Go to **Tools** > **Groups**, click the dropdown arrow next to the category, and select **Import**.
+</Step>
+
+<Step title="Upload and process">
+Upload your CSV file and map the columns to the appropriate fields.
+</Step>
+</Steps>
+
+## Group Workspaces
+
+### Group Lockers
+
+Group lockers provide a shared digital storage space (1 GB) where group members can:
+- Upload and share documents, videos, and images
+- Create folders to organize files
+- Download and edit shared materials
+- Collaborate on project files
+
+<Callout type="info" title="Privacy">
+Group lockers are only accessible to group members and instructors. Files cannot be made public.
+</Callout>
+
+To enable group lockers:
+
+<Steps>
+<Step title="Edit the category">
+Go to **Tools** > **Groups**, click the dropdown arrow next to your category, and select **Edit Category**.
+</Step>
+
+<Step title="Enable lockers">
+Under Additional Options, check **Set up lockers**.
+</Step>
+
+<Step title="Save">
+Click **Save** to create lockers for all groups in the category.
+</Step>
+</Steps>
+
+### Group Discussions
+
+Group discussions create private discussion topics where only group members can see and respond to posts. Instructors can view all group discussions.
+
+To enable group discussions:
+
+<Steps>
+<Step title="Edit the category">
+Go to **Tools** > **Groups**, click the dropdown arrow next to your category, and select **Edit Category**.
+</Step>
+
+<Step title="Enable discussions">
+Under Additional Options, check **Set up discussion areas**.
+</Step>
+
+<Step title="Save">
+Click **Save** to create discussion topics for all groups.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Graded Discussions">
+When setting up graded group discussions, each group gets their own topic. The group name is automatically added to thread titles to help instructors identify which group posted.
+</Callout>
+
+## Restricting Content by Group
+
+You can restrict access to content, discussions, or assignments to specific groups:
+
+### Restricting Discussion Forums
+
+<Steps>
+<Step title="Edit the forum or topic">
+Go to **Discussions**, click the dropdown arrow next to the forum/topic, and select **Edit**.
+</Step>
+
+<Step title="Access restrictions">
+Click **Availability Dates & Conditions** on the right panel, then select **Manage Restrictions** under Group and Section Restrictions.
+</Step>
+
+<Step title="Add group restrictions">
+Check **Restrict this forum to the following groups and sections**, then click **Add Groups and Sections**.
+</Step>
+
+<Step title="Select groups">
+Choose the specific groups that should have access, then click **Add**.
+</Step>
+
+<Step title="Save">
+Click **Save and Close** to apply the restrictions.
+</Step>
+</Steps>
+
+### Restricting Content Modules
+
+<Steps>
+<Step title="Edit the content item">
+Navigate to **Content**, click the dropdown arrow next to the module or topic, and select **Edit Properties In-place** or **Edit**.
+</Step>
+
+<Step title="Add release conditions">
+Under **Release Conditions**, click **Create** or **Attach Existing**.
+</Step>
+
+<Step title="Configure group condition">
+Select **Group Enrollment** as the condition type and specify which group(s) should see the content.
+</Step>
+
+<Step title="Save">
+Click **Save** to apply the restriction.
+</Step>
+</Steps>
+
+## Group Assignments
+
+Group assignments allow one member to submit on behalf of the entire group, and all members receive the same grade.
+
+### Creating a Group Assignment
+
+<Steps>
+<Step title="Create a new assignment">
+Go to **Assignments** and click **New Assignment**.
+</Step>
+
+<Step title="Configure basic settings">
+Enter the assignment name, instructions, and point value.
+</Step>
+
+<Step title="Set as group assignment">
+Click the **Submission & Completion** tab. Under **Assignment Type**, select **Group Assignment**.
+</Step>
+
+<Step title="Select the group category">
+Choose the Group Category containing the groups that will complete this assignment.
+</Step>
+
+<Step title="Save">
+Click **Save and Close**.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Important">
+The group category must be created before you can link it to an assignment.
+</Callout>
+
+### Grading Group Assignments
+
+When you grade a group assignment:
+- Enter one grade for the group submission
+- All group members automatically receive the same grade
+- Feedback given to the group is visible to all members
+
+**To give different grades to individual members:**
+
+<Steps>
+<Step title="Grade the group submission first">
+Evaluate the assignment as normal through the Assignments tool.
+</Step>
+
+<Step title="Navigate to Grades">
+Go to the **Grades** tool and click **Enter Grades** next to the grade item.
+</Step>
+
+<Step title="Modify individual grades">
+Change grades for individual students as needed. Students will only see their own grade and the group feedback.
+</Step>
+</Steps>
+
+## Viewing Group Membership
+
+To see which students are in each group:
+
+<Steps>
+<Step title="Access Groups">
+Go to **Tools** > **Groups**.
+</Step>
+
+<Step title="Select the category">
+Choose the category from the **View Categories** dropdown.
+</Step>
+
+<Step title="View enrollments">
+Click on a group name to see its members, or click the dropdown arrow next to the category and select **View Enrollments** to see all group memberships at once.
+</Step>
+</Steps>
+
+<Callout type="info" title="Privacy Note">
+Group membership is visible to all members of the same group. There is no way to make group membership private in Brightspace.
+</Callout>
+
+## Modifying Groups After Creation
+
+### Editing Category Settings
+
+<Steps>
+<Step title="Access the category">
+Go to **Tools** > **Groups**, click the dropdown arrow next to the category name.
+</Step>
+
+<Step title="Select Edit Category">
+Click **Edit Category** to modify settings.
+</Step>
+
+<Step title="Make changes">
+You can:
+- Change the category name and description
+- Add discussion topics or lockers that were not set up initially
+- Modify self-enrollment dates (for self-enrollment categories)
+- Adjust enrollment settings
+</Step>
+
+<Step title="Save">
+Click **Save** to apply changes.
+</Step>
+</Steps>
+
+### Moving Students Between Groups
+
+<Steps>
+<Step title="Access enrollment">
+Go to **Tools** > **Groups**, select the category, then click the dropdown arrow and select **Enroll Users**.
+</Step>
+
+<Step title="Modify memberships">
+- Check boxes to add students to groups
+- Uncheck boxes to remove students from groups
+</Step>
+
+<Step title="Save changes">
+Click **Save**.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Impact of Moving Students">
+When moving students between groups:
+- **Discussion posts** remain with the old group and do not count toward grades if linked to a grade item
+- **Assignment submissions** stay with the old group
+- The student receives grades achieved by their new group on future group submissions
+</Callout>
+
+## Common Issues
+
+### Cannot change group size after creation
+Group size cannot be modified after a category is created. However, you can manually add students beyond the capacity limit. Plan your group sizes carefully before creation.
+
+### Self-enrollment capacity changes
+For self-enrollment groups only, the capacity can be changed before the sign-up expiry date.
+
+### Students in wrong groups
+Use the Enroll Users feature to manually move students. Remember that prior work (discussions, submissions) stays with the original group.
+
+### Group workspaces not appearing
+Edit the category and enable the desired workspaces (discussions, lockers, assignments). They can be added after initial creation.
+
+## Related Guides
+
+- [Group Assignments](/docs/assignments/group-assignments)
+- [Group Discussions](/docs/discussions/group-discussions)
+- [Release Conditions](/docs/course-setup/release-conditions)
+- [Managing Class Sections](/docs/groups/sections)

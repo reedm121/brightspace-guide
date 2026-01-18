@@ -1,0 +1,323 @@
+---
+title: "Creating Quizzes"
+description: "Build quizzes and assessments in Brightspace"
+category: "Quizzes"
+order: 1
+tags: ["quizzes", "assessments", "tests", "exams"]
+---
+
+# Creating Quizzes
+
+## Overview
+
+Brightspace's Quiz tool allows you to create tests, exams, and assessments with various question types. This guide covers the complete process of creating a quiz, from initial setup through configuration of timing, attempts, and gradebook integration.
+
+## Before You Begin
+
+- You need **Instructor** or **Teaching Assistant** permissions in the course
+- Decide whether your quiz will be graded and contribute to the final grade
+- Consider whether you want to build questions directly or import from the Question Library
+- Plan your quiz settings: time limits, attempts allowed, availability dates
+
+<Callout type="info" title="New Quiz Creation Experience">
+As of July 2023, Brightspace uses the **New Quiz Creation Experience** exclusively. The interface now resembles the Assignments tool, with settings panels on the right side of the screen instead of tabs at the top.
+</Callout>
+
+## Creating a New Quiz
+
+<Steps>
+<Step title="Navigate to the Quizzes tool">
+From your course navbar, click **Assessments** and select **Quizzes** from the dropdown menu.
+
+You will see a list of any existing quizzes in your course.
+</Step>
+
+<Step title="Create a new quiz">
+Click the **New Quiz** button at the top of the page.
+
+The quiz creation screen will open with:
+- A main editing area on the left for your quiz name, instructions, and questions
+- Settings panels on the right side for configuration options
+</Step>
+
+<Step title="Enter quiz name and basic information">
+1. Enter a descriptive **Name** for your quiz (e.g., "Chapter 3 Quiz" or "Midterm Exam")
+2. In the **Grade Out Of** field, enter the total points for the quiz
+3. Add **Instructions** in the rich text editor to explain expectations, allowed materials, or special instructions for students
+</Step>
+
+<Step title="Configure gradebook connection">
+By default, new quizzes show **In Grade Book** which automatically creates a grade item.
+
+Click the dropdown to change this:
+- **In Grade Book** (default) - Creates a new grade item automatically
+- **Edit or Link to Existing** - Connect to a grade item you already created
+- **Not in Grade Book** - Use for practice quizzes or ungraded assessments
+
+<Callout type="tip" title="Grade Synchronization">
+When connected to the gradebook, ensure "Automatically update evaluations in grade book when published" is enabled in the Assessment settings. This pushes quiz scores to the gradebook automatically.
+</Callout>
+</Step>
+</Steps>
+
+## Adding Questions to Your Quiz
+
+You have two options for adding questions: creating them directly in the quiz or importing from the Question Library.
+
+### Adding Questions Directly
+
+<Steps>
+<Step title="Click Add/Edit Questions">
+In the quiz editing area, click **Add/Edit Questions** to enter the question editor.
+</Step>
+
+<Step title="Create a new question">
+Click **New** and select your question type:
+- **Multiple Choice** - Students select one correct answer
+- **Multi-Select** - Students select multiple correct answers
+- **True/False** - Binary choice questions
+- **Written Response** - Short answer or essay questions
+- **Fill in the Blanks** - Students complete missing words
+- **Matching** - Connect items from two columns
+- **Ordering** - Arrange items in correct sequence
+- **Arithmetic** - Math problems with calculated answers
+- **Significant Figures** - Scientific notation questions
+</Step>
+
+<Step title="Configure question settings">
+1. Enter the question text in the rich text editor
+2. Add answer options (for multiple choice/matching)
+3. Mark the correct answer(s)
+4. Set the **Points** value for the question
+5. Optionally add **Feedback** for correct/incorrect responses
+6. Click **Save** when finished
+</Step>
+
+<Step title="Add more questions">
+Repeat the process to add additional questions. Click **Done Editing Questions** when finished.
+</Step>
+</Steps>
+
+### Importing Questions from the Question Library
+
+<Callout type="tip" title="Best Practice">
+Building questions in the Question Library first allows you to reuse them across multiple quizzes and enables randomization through question pools.
+</Callout>
+
+<Steps>
+<Step title="Access import options">
+In the question editor, click **Add Existing** and select **Browse Question Library**.
+</Step>
+
+<Step title="Select questions to import">
+1. Navigate to the section/folder containing your questions
+2. Check the boxes next to questions you want to import
+3. Click **Import** to add them to your quiz
+</Step>
+
+<Step title="Create a question pool (optional)">
+For randomized questions:
+1. Click **New** and select **Question Pool**
+2. Name the pool and click **Browse Question Library**
+3. Select the section containing your questions
+4. Click **Import**
+5. Set the **Number of Questions to Select** (e.g., "5 out of 20")
+
+This randomly selects a subset of questions for each student.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Copying Quizzes with Pools">
+When copying quizzes containing question pools to another course, always copy the entire Question Library as well. Otherwise, questions become "orphaned" and cannot be edited or reused properly.
+</Callout>
+
+## Quiz Timing Settings
+
+Configure time limits in the **Timing & Display** section on the right panel.
+
+### Time Limit Options
+
+| Setting | Description |
+|---------|-------------|
+| **No Time Limit** | Students can take as long as needed |
+| **Recommended Time Limit** | Guides students but does not enforce |
+| **Enforced Time Limit** | Strict limit with consequences for exceeding |
+
+### Enforced Time Limit Behavior
+
+When an enforced time limit expires, choose what happens:
+
+1. **Automatically submit the quiz attempt** (Default) - The quiz submits when time runs out, preventing further changes
+2. **Flag as "exceeded time limit" and allow continued work** - Students can continue, but you see they went over time
+3. **Do nothing** - Functions as a recommended limit only
+
+### Grace Period
+
+Enable a grace period to give students extra time after the enforced limit to finish their current question or review before automatic submission.
+
+<Callout type="info" title="Synchronous vs Asynchronous">
+Choose whether students take the quiz on their own time (asynchronously) or together at a designated time (synchronously). This affects how timing is displayed and managed.
+</Callout>
+
+## Availability Dates
+
+Set when students can access the quiz in the **Availability Dates & Conditions** section.
+
+<Steps>
+<Step title="Set Start Date">
+The **Start Date** determines when students can enter and begin the quiz. Before this date, students can see the quiz exists but cannot start it.
+</Step>
+
+<Step title="Set End Date">
+The **End Date** is when the quiz closes completely. After this date, students cannot access the quiz at all.
+
+<Callout type="warning" title="End Date vs Due Date">
+The **End Date** overrides the **Due Date**. If your end date is before your due date, students will lose access before the assignment is technically "due."
+</Callout>
+</Step>
+
+<Step title="Set Due Date (optional)">
+The **Due Date** indicates when the quiz should be completed but does not prevent access. It appears on the course calendar and helps students plan.
+</Step>
+</Steps>
+
+## Attempt Limits
+
+Configure in the **Attempts & Completion** section.
+
+<Steps>
+<Step title="Set attempts allowed">
+Click **Manage Attempts** and select from the dropdown:
+- **1 attempt** (default for most exams)
+- **2-10 attempts** (for practice quizzes)
+- **Unlimited** (for self-paced learning)
+</Step>
+
+<Step title="Configure grade calculation for multiple attempts">
+When allowing multiple attempts, choose how the final grade is calculated:
+- **Highest Attempt** - Best score counts
+- **Lowest Attempt** - Worst score counts
+- **Average of All Attempts** - Mean score
+- **First Attempt** - Only initial attempt counts
+- **Last Attempt** (default) - Most recent attempt counts
+</Step>
+
+<Step title="Enable retake incorrect only (optional)">
+Check **Retake Incorrect Questions Only** to allow students to only re-answer questions they got wrong on subsequent attempts.
+</Step>
+</Steps>
+
+## Randomization Options
+
+Shuffle questions to reduce cheating and create varied quiz experiences.
+
+In the **Timing & Display** section:
+
+1. Enable **Shuffle Quiz** to randomize the order of questions for each student
+2. Within individual questions, you can also shuffle answer options
+
+<Callout type="tip" title="Question Pools for True Randomization">
+For maximum variety, use Question Pools to randomly select different questions for each student from a larger bank, not just shuffle the same questions in different orders.
+</Callout>
+
+## Password Protection
+
+Add a password requirement in the **Availability Dates & Conditions** section.
+
+1. Find the **Password** field
+2. Enter your chosen password
+3. Students must enter this password exactly (case-sensitive) to access the quiz
+
+<Callout type="info" title="Common Use Case">
+Instructors typically display the password in the classroom when administering in-person proctored exams, ensuring students are physically present.
+</Callout>
+
+## Special Access
+
+Grant specific students different settings (accommodations, extensions).
+
+<Steps>
+<Step title="Access Special Access settings">
+In the **Availability Dates & Conditions** section, click **Special Access**.
+</Step>
+
+<Step title="Add users">
+Click **Add Users to Special Access** and select the students who need accommodations.
+</Step>
+
+<Step title="Configure individual settings">
+For each student, you can override:
+- Start/End/Due dates
+- Time limit (extended time)
+- Number of attempts allowed
+</Step>
+</Steps>
+
+## Previewing and Testing Your Quiz
+
+<Callout type="warning" title="Always Preview">
+Always preview your quiz before making it available to students. Test the accuracy of content, question display, and auto-grading.
+</Callout>
+
+<Steps>
+<Step title="Access quiz preview">
+From the Quizzes list, click the dropdown arrow next to your quiz name and select **Preview**.
+
+Alternatively, while editing the quiz, click the **Preview** button.
+</Step>
+
+<Step title="Configure preview options">
+Choose whether to enable **Bypass Restrictions** to ignore time limits and availability dates during preview, or uncheck it to experience the quiz exactly as students will.
+</Step>
+
+<Step title="Complete the preview">
+1. Click **Start Quiz!**
+2. Answer the questions as a student would
+3. Submit the quiz
+4. Review the auto-grading and feedback
+5. Click **Exit Preview** to return to quiz management
+</Step>
+
+<Step title="Make adjustments">
+Based on your preview, edit questions, adjust settings, or fix any issues before releasing the quiz to students.
+</Step>
+</Steps>
+
+## Publishing Your Quiz
+
+New quizzes are visible to students by default once saved. To control visibility:
+
+1. Toggle the **Visibility** setting in the quiz properties
+2. Set appropriate **Start Date** to control when students can access it
+3. Use **Release Conditions** for more complex availability rules
+
+<Callout type="info" title="Auto-Publish Results">
+By default, quiz attempt results automatically publish to learners and the gradebook. Disable this in the Assessment settings if you want to review results before students see their scores.
+</Callout>
+
+## Common Issues
+
+### Quiz not appearing in gradebook
+- Verify the quiz is set to "In Grade Book" not "Not in Grade Book"
+- Check that "Automatically update evaluations in grade book when published" is enabled
+- Confirm the grade item visibility dates include the current date
+
+### Students cannot access the quiz
+- Check the Start Date has passed
+- Verify the End Date has not passed
+- Confirm the quiz visibility is turned on
+- Check for any Release Conditions that may be blocking access
+
+### Time limit not working as expected
+- Ensure you selected "Enforced Time Limit" not "Recommended"
+- Check the "When time limit expires" setting matches your intention
+- Verify no Special Access overrides are in place
+
+## Related Guides
+
+- [Question Types Overview](/docs/quizzes/question-types)
+- [Building Question Libraries](/docs/quizzes/question-library)
+- [Quiz Settings Deep Dive](/docs/quizzes/quiz-settings)
+- [Grading Quizzes](/docs/quizzes/grading-quizzes)
+- [Gradebook Setup](/docs/gradebook/setup-wizard)
+- [Release Conditions](/docs/course-setup/release-conditions)

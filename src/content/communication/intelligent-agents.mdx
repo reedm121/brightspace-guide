@@ -1,0 +1,611 @@
+---
+title: "Using Intelligent Agents"
+description: "Automate communications and actions based on student activity"
+category: "Communication"
+order: 2
+tags: ["intelligent agents", "automation", "notifications", "alerts"]
+---
+
+# Using Intelligent Agents
+
+## What Are Intelligent Agents?
+
+Intelligent Agents are powerful automation tools in Brightspace that monitor your course for specific student activity and automatically take actions when certain criteria are met. Think of them as automated assistants that watch your course around the clock and respond to student behavior without requiring your constant attention.
+
+Intelligent Agents can:
+- **Send automated emails** to students based on their activity (or inactivity)
+- **Generate reports** on students who meet specific criteria
+- **Modify enrollments** by adding students to groups or other courses
+- **Track engagement** by monitoring login activity, course access, and content completion
+
+<Callout type="info" title="Permission Required">
+To use Intelligent Agents, you need the "Manage Agents" permission assigned to your role. If you don't see the Intelligent Agents option in your course, contact your institution's administrator.
+</Callout>
+
+## Common Use Cases
+
+Intelligent Agents are most commonly used for:
+
+### Student Outreach and Support
+| Use Case | Criteria | Action |
+|----------|----------|--------|
+| **Welcome message** | Student enrolls in course | Send welcome email with course overview |
+| **Inactivity reminder** | No login for 7+ days | Send "We miss you" reminder email |
+| **At-risk alert** | Grade below 60% | Notify student and/or instructor |
+| **Missing assignment** | Assignment not submitted by due date | Send reminder email |
+
+### Positive Reinforcement
+| Use Case | Criteria | Action |
+|----------|----------|--------|
+| **Quiz congratulations** | Score 90%+ on quiz | Send congratulatory message |
+| **Module completion** | Completed all content in module | Acknowledge achievement |
+| **Perfect attendance** | Accessed course every week | Send encouragement |
+
+### Course Management
+| Use Case | Criteria | Action |
+|----------|----------|--------|
+| **Group assignment** | Met specific release conditions | Auto-enroll in group |
+| **Progress tracking** | Completed prerequisite content | Notify instructor |
+| **End-of-term reminder** | Course end date approaching | Send final checklist |
+
+## Creating a New Intelligent Agent
+
+<Steps>
+<Step>
+### Access Intelligent Agents
+
+Navigate to your course and click **Course Admin** in the navbar. Under the **Communication** section, select **Intelligent Agents**.
+
+Alternatively, if Intelligent Agents is in your navbar: Click **Tools** in the navbar, then select **Intelligent Agents** from the dropdown menu.
+</Step>
+
+<Step>
+### Create a New Agent
+
+On the Agent List page, click the **New Agent** button. You'll see a configuration form with several sections to complete.
+</Step>
+
+<Step>
+### Configure Basic Information
+
+Enter the following basic details:
+- **Agent Name** (required): A descriptive name like "Weekly Inactivity Reminder" or "Low Grade Alert"
+- **Description** (optional): Explain the agent's purpose for future reference
+- **Category** (optional): Group related agents together (e.g., "Student Engagement", "Grading Alerts")
+
+Under **Status**, check **Agent is enabled** if you want the agent to start running immediately. Leave unchecked to configure now and enable later.
+</Step>
+
+<Step>
+### Set Up Scheduling
+
+Expand the **Scheduling** section to determine when and how often the agent runs:
+
+| Frequency | Best For |
+|-----------|----------|
+| **No Schedule** | Manual runs only; use for one-time checks |
+| **One-Time Run** | Single automated run at a specific date/time |
+| **Hourly** | Time-sensitive alerts (use sparingly) |
+| **Daily** | Most common; good for activity reminders |
+| **Weekly** | Progress check-ins, participation reminders |
+| **Monthly** | Long-term progress updates |
+| **Annually** | Course milestones |
+
+Set the **Start Date** and **End Date** to align with your course schedule.
+
+<Callout type="warning" title="Scheduling Best Practice">
+Schedule agent runs within your course start and end dates. Agents automatically disable when a course becomes inactive or passes its end date. Avoid scheduling during holidays to prevent confusing students.
+</Callout>
+</Step>
+
+<Step>
+### Define Criteria (Conditions)
+
+The **Criteria** section determines which students trigger the agent. You must configure at least one criterion.
+</Step>
+
+<Step>
+### Configure Actions
+
+In the **Actions** section, specify what happens when students meet the criteria. The most common action is sending an email notification.
+</Step>
+
+<Step>
+### Save the Agent
+
+Click **Save and Close** to save your agent. If enabled, it will begin running on the next scheduled time.
+</Step>
+</Steps>
+
+## Available Condition Types
+
+Intelligent Agents can monitor various types of student activity:
+
+### Login Activity
+Monitor whether students have logged into Brightspace:
+- **User has not logged in for at least X days**: Identify inactive students
+- **User has logged in within the last X days**: Target recently active students
+
+<Callout type="info" title="Note">
+Login Activity tracks Brightspace-wide login, not course-specific access. Use Course Activity for course-specific monitoring.
+</Callout>
+
+### Course Activity
+Monitor whether students have accessed your specific course:
+- **User has not accessed this course for at least X days**: Find students who haven't visited
+- **User has accessed this course within the last X days**: Target engaged students
+
+### Release Conditions
+Use Brightspace's release conditions system for advanced criteria:
+
+| Condition Type | Example |
+|----------------|---------|
+| **Assignment submission** | Student has/hasn't submitted Assignment 1 |
+| **Quiz completion** | Student scored below 70% on Quiz 2 |
+| **Quiz attempts** | Student hasn't attempted the Midterm |
+| **Content viewed** | Student has viewed all Week 1 materials |
+| **Discussion posts** | Student hasn't posted in Discussion Forum |
+| **Grade achieved** | Student's grade is below 60% |
+| **Group enrollment** | Student is/isn't in a specific group |
+
+To add release conditions:
+1. In the Criteria section, click **Create** or **Attach Existing** under Release Conditions
+2. Select the condition type from the dropdown
+3. Configure the specific parameters
+4. Add multiple conditions using AND/OR logic
+
+### Role in Classlist
+Specify which users the agent applies to:
+- **All users**: Every person enrolled in the course
+- **Users with specific roles**: Target only Learners, TAs, or other roles
+- **Learners only**: Most common choice for student-focused agents
+
+## Configuring Actions
+
+### Email Notifications
+
+The most common agent action is sending automated emails.
+
+<Steps>
+<Step>
+### Enable Email Action
+
+In the Actions section, check **Send an email when criteria are satisfied**.
+</Step>
+
+<Step>
+### Configure Recipients
+
+In the **To** field, enter email addresses. Use `{InitiatingUser}` to automatically send to the student who triggered the agent.
+
+You can also add:
+- Your own email address (to receive copies)
+- `{InitiatingUserAuditors}` for student auditors
+- `{InitiatingUserParents}` for parent contacts (if configured)
+</Step>
+
+<Step>
+### Write the Subject Line
+
+Create a clear, descriptive subject. You can use replace strings:
+
+```
+Reminder: Check in with {OrgUnitName}
+```
+</Step>
+
+<Step>
+### Compose the Message
+
+Write your email body using the HTML editor. Use replace strings to personalize:
+
+```
+Dear {InitiatingUserFirstName},
+
+We noticed you haven't logged into {OrgUnitName} recently.
+Your last visit was on {LastCourseAccessDate}.
+
+Please log in at {LoginPath} to stay on track with the course materials.
+
+Best regards,
+Your Instructor
+```
+</Step>
+
+<Step>
+### Set Repetition Frequency
+
+Choose how often to send emails to the same student:
+- **Only the first time the criteria are satisfied**: One email per student, ever
+- **Every time the agent is run, while criteria are satisfied**: Repeated reminders (use carefully to avoid spam)
+</Step>
+
+<Step>
+### Add Attachments (Optional)
+
+Click **Add Attachments** to include files with your email, such as study guides or resource documents.
+</Step>
+</Steps>
+
+### Enrollment Changes
+
+If you have the appropriate permissions, agents can automatically:
+- **Enroll users** in another course with a specified role
+- **Add users to groups** within the current course
+- **Unenroll users** from courses
+
+<Callout type="warning" title="Enrollment Permissions">
+Enrollment change actions require additional permissions. Contact your administrator if you need this functionality and it's not available.
+</Callout>
+
+## Email Template Variables (Replace Strings)
+
+Replace strings automatically insert personalized information into your emails. Click "What replacement strings can I use?" in the email editor to see the full list.
+
+### User Information
+
+| Replace String | Inserts |
+|----------------|---------|
+| `{InitiatingUser}` | Student's email address (use in To/Cc/Bcc fields) |
+| `{InitiatingUserFirstName}` | Student's first name |
+| `{InitiatingUserLastName}` | Student's last name |
+| `{InitiatingUserUserName}` | Student's username |
+| `{InitiatingUserOrgDefinedId}` | Student's ID number |
+
+### Activity Dates
+
+| Replace String | Inserts |
+|----------------|---------|
+| `{LastCourseAccessDate}` | Date student last accessed the course |
+| `{LastLoginDate}` | Date student last logged into Brightspace |
+
+### Course Information
+
+| Replace String | Inserts |
+|----------------|---------|
+| `{OrgUnitName}` | Course name (e.g., "Introduction to Psychology") |
+| `{OrgUnitCode}` | Course code (e.g., "PSY101-Fall2024") |
+| `{OrgUnitStartDate}` | Course start date |
+| `{OrgUnitEndDate}` | Course end date |
+| `{OrgName}` | Organization/institution name |
+
+### System Information
+
+| Replace String | Inserts |
+|----------------|---------|
+| `{LoginPath}` | Direct link to login page |
+
+### Example Email Template
+
+```
+Subject: Important: You're falling behind in {OrgUnitName}
+
+Dear {InitiatingUserFirstName},
+
+I noticed that you haven't accessed {OrgUnitName} since {LastCourseAccessDate}.
+I wanted to reach out and make sure everything is okay.
+
+Here are some things you may have missed:
+- New lecture materials in Module 3
+- Discussion Forum 2 (due this Friday)
+- Quiz 2 opens tomorrow
+
+Please log in at {LoginPath} and let me know if you're experiencing any
+difficulties. I'm here to help!
+
+Best regards,
+Professor Smith
+{OrgUnitName}
+```
+
+## Scheduling Agent Runs
+
+### Schedule Options
+
+| Option | Description | Use When |
+|--------|-------------|----------|
+| **No Schedule** | Agent only runs manually | Testing or one-time reports |
+| **One-Time Run** | Runs once at specified date/time | Single announcements |
+| **Hourly** | Runs every hour | Urgent, time-sensitive alerts |
+| **Daily** | Runs once per day | Most engagement monitoring |
+| **Weekly** | Runs once per week | Progress summaries |
+| **Monthly** | Runs once per month | Long-term check-ins |
+| **Annually** | Runs once per year | Milestone celebrations |
+
+### Setting the Schedule
+
+1. Expand the **Scheduling** section
+2. Select your desired **Frequency**
+3. For daily/weekly/monthly, choose the **Time** and **Day** to run
+4. Set **Start Date**: When the agent begins monitoring
+5. Set **End Date**: When the agent stops (align with course end)
+
+<Callout type="tip" title="Timing Tip">
+Schedule agents to run in the morning (e.g., 8:00 AM) so students receive notifications at the start of their day rather than late at night.
+</Callout>
+
+## Manual vs Automatic Execution
+
+### Automatic Execution
+- Agent runs on the defined schedule without intervention
+- Best for ongoing monitoring (inactivity alerts, progress tracking)
+- Enable the agent and set a schedule; Brightspace handles the rest
+
+### Manual Execution
+- You manually trigger the agent when needed
+- Useful for one-time checks or testing
+- To run manually:
+  1. Go to **Intelligent Agents**
+  2. Click the dropdown arrow next to the agent name
+  3. Select **Run Now**
+
+### Practice Run
+A practice run lets you see which students meet the criteria **without** sending any emails or taking actions:
+
+1. Click the dropdown arrow next to the agent
+2. Select **Practice Run**
+3. Review the list of students who would be affected
+4. Adjust criteria if needed before enabling the real agent
+
+<Callout type="warning" title="Important Distinction">
+**Practice Run** = Preview only, no actions taken
+**Run Now** = Actually sends emails and performs actions
+</Callout>
+
+## Testing Agents Before Enabling
+
+Always test your agents before enabling them for your entire class:
+
+<Steps>
+<Step>
+### Create the Agent (Disabled)
+
+Configure all settings but leave **Agent is enabled** unchecked.
+</Step>
+
+<Step>
+### Run a Practice Run
+
+Click the dropdown next to the agent and select **Practice Run**. This shows which students currently meet the criteria without sending any emails.
+</Step>
+
+<Step>
+### Review the Results
+
+Check the student list. Ask yourself:
+- Are the right students being identified?
+- Are any students incorrectly included or excluded?
+- Is the number of students reasonable?
+</Step>
+
+<Step>
+### Test with Yourself
+
+If you have a test student account, use it to verify the email looks correct:
+1. Temporarily add a release condition that only you meet
+2. Run the agent manually
+3. Check your email for the message
+4. Verify replace strings populate correctly
+</Step>
+
+<Step>
+### Adjust and Enable
+
+Make any necessary adjustments to criteria or email content, then check **Agent is enabled** and save.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Test in Sandbox">
+If your institution provides a sandbox course, create and test agents there before using them in live courses.
+</Callout>
+
+## Viewing Agent History and Logs
+
+### Checking Run History
+
+1. Navigate to **Intelligent Agents** in your course
+2. The Agent List shows:
+   - **Last Run**: Date and time of most recent execution
+   - **Next Run**: When the agent will run next (if scheduled)
+   - **Results**: Number of students who met criteria
+
+### Viewing Detailed Results
+
+1. Click the **Results** link or number next to an agent
+2. View the list of students who triggered the agent
+3. See when each student was identified
+4. Check what action was taken (email sent, enrollment changed, etc.)
+
+### Exporting Results
+
+1. Click the dropdown arrow next to the agent
+2. Select **Export** or access the results page
+3. Download a CSV file with:
+   - Student names and IDs
+   - Date/time criteria were met
+   - Actions taken
+
+<Callout type="info" title="Historical Data">
+Agent results are retained even after the agent is disabled or deleted. You can restore deleted agents to access their historical data.
+</Callout>
+
+### Understanding the Results Page
+
+The results page shows:
+- **User**: Student name
+- **Date Satisfied**: When criteria were first met
+- **Last Run Date**: Most recent agent evaluation
+- **Email Sent**: Whether notification was delivered
+- **Enrollment Changed**: Whether enrollment action was taken
+
+## Example Agent Configurations
+
+### Example 1: Weekly Inactivity Reminder
+
+**Purpose**: Nudge students who haven't accessed the course in a week
+
+| Setting | Value |
+|---------|-------|
+| **Name** | Weekly Inactivity Reminder |
+| **Schedule** | Weekly, Monday at 9:00 AM |
+| **Criteria - Role** | Learners only |
+| **Criteria - Course Activity** | Has not accessed course for 7+ days |
+| **Action** | Send email to `{InitiatingUser}` |
+| **Repetition** | Every time criteria are satisfied |
+
+**Email Template**:
+```
+Subject: We miss you in {OrgUnitName}!
+
+Hi {InitiatingUserFirstName},
+
+It's been over a week since you last visited {OrgUnitName}.
+Don't fall behind - log in today to catch up on new materials!
+
+{LoginPath}
+```
+
+---
+
+### Example 2: Low Quiz Score Alert
+
+**Purpose**: Reach out to students struggling with assessments
+
+| Setting | Value |
+|---------|-------|
+| **Name** | Quiz 1 Score Below 70% |
+| **Schedule** | One-Time Run (day after quiz due date) |
+| **Criteria - Role** | Learners only |
+| **Criteria - Release Condition** | Quiz 1 score less than 70% |
+| **Action** | Send email to `{InitiatingUser}` |
+| **Repetition** | Only first time criteria are satisfied |
+
+**Email Template**:
+```
+Subject: {OrgUnitName} - Quiz 1 Support Available
+
+Dear {InitiatingUserFirstName},
+
+I noticed Quiz 1 was challenging for you. That's okay -
+this material takes practice!
+
+Here are some resources that might help:
+- Review the Chapter 2 study guide
+- Visit office hours (Tuesdays 2-4 PM)
+- Schedule a tutoring session
+
+You've got this!
+```
+
+---
+
+### Example 3: Assignment Submission Reminder
+
+**Purpose**: Remind students about upcoming deadlines
+
+| Setting | Value |
+|---------|-------|
+| **Name** | Essay 1 Not Submitted Reminder |
+| **Schedule** | One-Time Run (2 days before due date) |
+| **Criteria - Role** | Learners only |
+| **Criteria - Release Condition** | Essay 1 submission is empty |
+| **Action** | Send email to `{InitiatingUser}` |
+| **Repetition** | Only first time criteria are satisfied |
+
+**Email Template**:
+```
+Subject: Reminder: Essay 1 due in 2 days!
+
+Hi {InitiatingUserFirstName},
+
+This is a friendly reminder that Essay 1 is due on Friday at 11:59 PM.
+
+I don't see a submission from you yet. If you're having trouble,
+please reach out before the deadline.
+
+Good luck with your writing!
+```
+
+---
+
+### Example 4: Course Completion Congratulations
+
+**Purpose**: Celebrate student achievement
+
+| Setting | Value |
+|---------|-------|
+| **Name** | All Modules Completed |
+| **Schedule** | Daily at 6:00 PM |
+| **Criteria - Role** | Learners only |
+| **Criteria - Release Condition** | Completed all content topics |
+| **Action** | Send email to `{InitiatingUser}` |
+| **Repetition** | Only first time criteria are satisfied |
+
+**Email Template**:
+```
+Subject: Congratulations on completing {OrgUnitName}!
+
+Dear {InitiatingUserFirstName},
+
+You did it! You've completed all the course materials in {OrgUnitName}.
+
+This is a significant achievement, and you should be proud of
+your dedication and hard work.
+
+Best wishes for continued success!
+```
+
+## Troubleshooting
+
+### Agent Not Running
+
+- **Check if enabled**: Verify "Agent is enabled" is checked
+- **Verify schedule**: Ensure start/end dates include the current date
+- **Check criteria**: At least one criterion must be set
+- **Review permissions**: You need "Manage Agents" permission
+
+### Emails Not Being Received
+
+- **Check recipient field**: Ensure `{InitiatingUser}` is in the To field
+- **Verify student email**: Students must have valid email addresses
+- **Check spam folders**: Brightspace emails may be filtered
+- **Review email settings**: Your institution may have email restrictions
+
+### Wrong Students Triggered
+
+- **Review release conditions**: Ensure conditions match your intent
+- **Check timing**: Conditions are evaluated at run time, not submission time
+- **Verify date ranges**: Login/Course Activity uses the specified number of days
+
+<Callout type="info" title="Condition Evaluation">
+Intelligent Agents evaluate criteria at the moment they run. A student who met criteria yesterday but not today won't be triggered in today's run.
+</Callout>
+
+## Best Practices
+
+1. **Name agents descriptively**: Use names like "Week 3 Discussion Reminder" instead of "Agent 1"
+
+2. **Use categories**: Group related agents (e.g., "Engagement", "Assessments", "Milestones")
+
+3. **Start with practice runs**: Always preview results before enabling
+
+4. **Don't over-automate**: Too many emails can overwhelm students and reduce effectiveness
+
+5. **Personalize messages**: Use replace strings to make emails feel individual
+
+6. **Align with course calendar**: Set schedules that match your syllabus
+
+7. **Review results regularly**: Check if agents are triggering as expected
+
+8. **Disable when done**: Turn off agents after they've served their purpose
+
+9. **Document your agents**: Use the description field to explain the agent's purpose
+
+10. **Coordinate with TAs**: Ensure everyone knows which automated messages students receive
+
+## Related Guides
+
+- [Creating Announcements](/docs/communication/announcements)
+- [Release Conditions](/docs/course-setup/release-conditions)
+- [Email Integration](/docs/communication/email)
+- [Groups and Sections](/docs/groups/creating-groups)

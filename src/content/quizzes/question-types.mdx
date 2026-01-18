@@ -1,0 +1,690 @@
+---
+title: "Quiz Question Types"
+description: "Overview of all available question types in Brightspace quizzes"
+category: "Quizzes"
+order: 2
+tags: ["questions", "question types", "multiple choice", "quiz", "assessment"]
+---
+
+# Quiz Question Types
+
+## Overview
+
+Brightspace offers 12 different question types for building quizzes and assessments. Each question type serves a specific purpose, from simple true/false questions to complex arithmetic problems with variables. Understanding these question types helps you create effective assessments that accurately measure student learning.
+
+<Callout type="info" title="Auto-Grading vs Manual Grading">
+Most question types in Brightspace are auto-graded, meaning students receive immediate scores. Written Response and Likert questions require manual grading by the instructor.
+</Callout>
+
+## Before You Begin
+
+- Access to the Question Library in your Brightspace course
+- Understanding of your assessment goals
+- Content prepared for your questions
+- Point values determined for each question
+
+---
+
+## True/False Questions (T/F)
+
+True/False questions present a statement that students must identify as correct or incorrect. These are ideal for testing factual knowledge and basic comprehension.
+
+<Steps>
+<Step title="Create a new True/False question">
+Navigate to **Quizzes** from the course navbar, click the **Question Library** tab, select a folder, click **New**, and choose **True or False (T/F)**.
+</Step>
+
+<Step title="Enter your question">
+Type your statement in the **Question Text** field. Write clear, unambiguous statements that are definitively true or false.
+</Step>
+
+<Step title="Set the correct answer">
+Select whether the statement is **True** or **False** as the correct answer.
+</Step>
+
+<Step title="Configure point value">
+Enter the number of points this question is worth in the **Points** field.
+</Step>
+
+<Step title="Add feedback (optional)">
+Click **Options** and select **Add Feedback** to provide explanations for both correct and incorrect responses.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Best Practice">
+Avoid negative statements in True/False questions as they can confuse students. For example, use "The sky is blue" instead of "The sky is not green."
+</Callout>
+
+---
+
+## Multiple Choice Questions (M/C)
+
+Multiple Choice questions present a question or statement with several possible answers, where students select the single best answer. This is the most commonly used question type.
+
+<Steps>
+<Step title="Create a new Multiple Choice question">
+In the Question Library, click **New** and select **Multiple Choice (M/C)**.
+</Step>
+
+<Step title="Enter your question">
+Type your question in the **Question Text** field. Be specific about what you are asking.
+</Step>
+
+<Step title="Add answer options">
+Enter each possible answer in the **Value** fields. Click **Add Answer** to create additional options. A typical question has 4-5 choices.
+</Step>
+
+<Step title="Mark the correct answer">
+Select the radio button next to the correct answer to indicate it as the right choice.
+</Step>
+
+<Step title="Configure scoring">
+Set the point value for the question. You can also configure partial credit using **Custom Weight** to assign percentage values to answers.
+</Step>
+
+<Step title="Randomize answer order (optional)">
+Select **Randomize answers** to shuffle the order of choices for each student, reducing the chance of cheating.
+</Step>
+</Steps>
+
+### Partial Credit Options
+
+Multiple choice questions support partial credit through **Custom Weight**:
+
+| Setting | Description |
+|---------|-------------|
+| 100% | Fully correct answer |
+| 50% | Partially correct answer |
+| 0% | Incorrect answer |
+| Negative % | Penalty for selecting wrong answer |
+
+<Callout type="warning" title="Avoid Common Pitfalls">
+Do not use "All of the above" or "None of the above" when randomizing answers, as these options become confusing when moved to different positions.
+</Callout>
+
+---
+
+## Multi-Select Questions (M-S)
+
+Multi-Select questions require students to identify one or more correct answers from a list. Unlike Multiple Choice, students can select multiple options.
+
+<Steps>
+<Step title="Create a new Multi-Select question">
+In the Question Library, click **New** and select **Multi-Select (M-S)**.
+</Step>
+
+<Step title="Enter your question">
+Type your question in the **Question Text** field. Clearly indicate that students should select all correct answers.
+</Step>
+
+<Step title="Add answer options">
+Enter all possible answers in the **Value** fields. Mark each correct answer by checking the corresponding checkbox.
+</Step>
+
+<Step title="Choose a grading method">
+Select your preferred grading approach from the available options.
+</Step>
+</Steps>
+
+### Multi-Select Grading Methods
+
+| Method | Description |
+|--------|-------------|
+| **Right Minus Wrong** | Points for correct selections minus points for incorrect selections. Students cannot receive negative scores. |
+| **Correct Selections** | Students receive points for each correct choice selected and each incorrect choice not selected. |
+| **All or Nothing** | Students must select all correct answers and no incorrect answers to receive any points. |
+
+<Callout type="info" title="Example">
+For a 2-point question with 4 answer choices using "Right Minus Wrong": each selection is worth 0.5 points. If a student selects 2 correct answers and 1 incorrect answer, they receive 0.5 points (1 - 0.5 = 0.5).
+</Callout>
+
+---
+
+## Written Response Questions (WR)
+
+Written Response questions are open-ended essay questions that require manual grading. They allow students to demonstrate critical thinking and compose detailed answers.
+
+<Steps>
+<Step title="Create a new Written Response question">
+In the Question Library, click **New** and select **Written Response (WR)**.
+</Step>
+
+<Step title="Enter your question">
+Type your essay prompt or question in the **Question Text** field. Be specific about expectations, word count requirements, or topics to address.
+</Step>
+
+<Step title="Enable HTML Editor (optional)">
+Check **Enable HTML Editor for learner responses** to allow students to format their answers with bold, italics, lists, and other formatting.
+</Step>
+
+<Step title="Enable attachments (optional)">
+Check **Enable inserted images and attachments** to allow students to upload files, embed images, or attach supporting documents. Maximum file size is 100MB per file.
+</Step>
+
+<Step title="Add an answer key">
+Click **Options** > **Add Answer Key** to provide grading guidelines for yourself or other evaluators.
+</Step>
+
+<Step title="Configure response box size">
+Click **Options** > **Add Custom Size** to set the dimensions of the text entry area.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Auto-Save Behavior">
+Written responses without the HTML Editor auto-save approximately every 30 seconds. When the HTML Editor is enabled, students should click outside the text box frequently to trigger manual saves. Advise students to compose longer answers in a separate document first.
+</Callout>
+
+---
+
+## Short Answer Questions (SA)
+
+Short Answer questions require students to type a brief response that is checked against a list of acceptable answers. These are auto-graded based on text matching.
+
+<Steps>
+<Step title="Create a new Short Answer question">
+In the Question Library, click **New** and select **Short Answer (SA)**.
+</Step>
+
+<Step title="Enter your question">
+Type your question in the **Question Text** field. Be precise about the expected format of the answer.
+</Step>
+
+<Step title="Add acceptable answers">
+Enter all acceptable variations of the correct answer in the **Answer** fields. Click **Add Answer** for additional variations.
+</Step>
+
+<Step title="Choose evaluation method">
+For each answer, select the evaluation type:
+- **Case Insensitive**: Matches text regardless of capitalization
+- **Case Sensitive**: Requires exact capitalization match
+- **Regular Expression**: Uses pattern matching for flexible answer checking
+</Step>
+
+<Step title="Configure answer weights">
+Assign percentage weights to each answer if some variations are more correct than others.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Best Practice">
+Include common misspellings, abbreviations, and alternate phrasings as acceptable answers to account for minor variations. For example, for "United States," also accept "US," "USA," and "United States of America."
+</Callout>
+
+---
+
+## Multi-Short Answer Questions (MSA)
+
+Multi-Short Answer questions require students to provide multiple answers in separate input boxes, all relating to a single question. This is useful for questions with multiple correct components.
+
+<Steps>
+<Step title="Create a new Multi-Short Answer question">
+In the Question Library, click **New** and select **Multi-Short Answer (MSA)**.
+</Step>
+
+<Step title="Enter your question">
+Type your question in the **Question Text** field. Explain that multiple answers are required.
+</Step>
+
+<Step title="Configure input boxes">
+Set the number of **Input boxes** you want students to see. You can configure rows and columns for the answer fields.
+</Step>
+
+<Step title="Add acceptable answers">
+Enter all possible correct answers and their weights. Multiple students answers are checked against this answer set.
+</Step>
+
+<Step title="Set evaluation method">
+Choose **Case Insensitive**, **Case Sensitive**, or **Regular Expression** for each answer field.
+</Step>
+</Steps>
+
+<Callout type="info" title="Weight Calculation">
+D2L recommends that the weight of answers equals 100% divided by the number of required answers. For a question requiring 4 answers, each should be worth 25%.
+</Callout>
+
+---
+
+## Fill in the Blanks Questions (FIB)
+
+Fill in the Blanks questions present an incomplete sentence, statement, or phrase with one or more blanks that students must complete.
+
+<Steps>
+<Step title="Create a new Fill in the Blanks question">
+In the Question Library, click **New** and select **Fill in the Blanks (FIB)**.
+</Step>
+
+<Step title="Build your question with blanks">
+Enter text in **Text #1** field, then enter the hidden answer in **Blank #1** field. Continue with **Text #2** for the next portion of text.
+</Step>
+
+<Step title="Add additional blanks">
+Click **Add Blank** to create more blank spaces. Repeat the pattern of text followed by blank.
+</Step>
+
+<Step title="Set acceptable answers for each blank">
+For each blank, enter acceptable answers. Select the comparison method:
+- **Text**: Case-insensitive matching
+- **Case-Sensitive Text**: Exact case matching
+- **Regular Expression**: Pattern-based matching
+</Step>
+
+<Step title="Configure grading">
+Choose between:
+- **Students will receive part marks**: Points distributed evenly across blanks
+- **Students must answer all blanks correctly**: All-or-nothing grading
+</Step>
+
+<Step title="Set weights for blanks">
+Assign percentage weights to each blank. Ensure total weights equal 100%.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Best Practice">
+Keep blank answers to one or two words for accurate auto-grading. Longer phrases increase the chance of minor variations causing incorrect grading.
+</Callout>
+
+---
+
+## Matching Questions (MAT)
+
+Matching questions require students to correctly pair items from two columns using drop-down menus.
+
+<Steps>
+<Step title="Create a new Matching question">
+In the Question Library, click **New** and select **Matching (MAT)**.
+</Step>
+
+<Step title="Enter your question">
+Type instructions in the **Question Text** field explaining what students should match.
+</Step>
+
+<Step title="Add choices (right column)">
+Enter items in the **Choices Value** fields. These appear in the drop-down menus students select from. Click **Add Choice** to add more options.
+</Step>
+
+<Step title="Add matches (left column)">
+Enter items in the **Match Value** fields. These are the prompts students will match to choices. Click **Add Match** to add more items.
+</Step>
+
+<Step title="Set correct pairings">
+For each Match item, select the corresponding correct Choice from the drop-down menu.
+</Step>
+
+<Step title="Select grading method">
+Choose your preferred grading approach from the options below.
+</Step>
+</Steps>
+
+### Matching Question Grading Options
+
+| Method | Description |
+|--------|-------------|
+| **Equally Weighted** | Total points divided equally among all matches. Students earn partial credit for each correct pair. |
+| **All or Nothing** | Students must match all pairs correctly to receive any points. |
+| **Right Minus Wrong** | Points for correct matches minus points for incorrect matches. |
+
+<Callout type="tip" title="Distractor Strategy">
+Add extra choices (distractors) that do not match any items. This prevents students from using process of elimination to guess the final answers.
+</Callout>
+
+---
+
+## Ordering Questions (ORD)
+
+Ordering questions require students to arrange a series of items into the correct sequence or order.
+
+<Steps>
+<Step title="Create a new Ordering question">
+In the Question Library, click **New** and select **Ordering (ORD)**.
+</Step>
+
+<Step title="Enter your question">
+Type instructions in the **Question Text** field explaining what order students should arrange items (chronological, sequential, by importance, etc.).
+</Step>
+
+<Step title="Add items to order">
+Enter each item in the **Value** fields. Click **Add Item** to create additional items.
+</Step>
+
+<Step title="Set the correct order">
+Use the **Correct Order** drop-down menus to specify the correct sequence. The first item in order should be set to "1".
+</Step>
+
+<Step title="Configure grading">
+Select your grading method:
+- **Equally Weighted**: Partial credit for items in correct positions
+- **All or Nothing**: Full credit only for perfect ordering
+</Step>
+
+<Step title="Preview your question">
+Click **Preview** to see how items will appear to students. Brightspace automatically randomizes the initial display order.
+</Step>
+</Steps>
+
+<Callout type="info" title="Randomization">
+Brightspace automatically shuffles the item order when displaying the question to students. Students rearrange items using drop-down menus or drag-and-drop functionality.
+</Callout>
+
+---
+
+## Arithmetic Questions (2+2)
+
+Arithmetic questions allow you to create math problems with variables that generate unique numbers for each student. This prevents cheating and tests mathematical understanding.
+
+<Steps>
+<Step title="Create a new Arithmetic question">
+In the Question Library, click **New** and select **Arithmetic (2+2)**.
+</Step>
+
+<Step title="Enter your question with variables">
+Type your problem in the **Question Text** field. Enclose variables in curly braces: `{x}`, `{y}`, `{z}`. Example: "You have `{x}` apples and `{y}` oranges. How many fruits total?"
+</Step>
+
+<Step title="Define your variables">
+For each variable, set:
+- **Name**: The variable identifier (e.g., x)
+- **Min**: Minimum value
+- **Max**: Maximum value
+- **Decimal Places**: Number of decimals allowed
+- **Step**: Increment between values
+</Step>
+
+<Step title="Enter the formula">
+In the **Formula** field, enter the mathematical expression that calculates the correct answer. Use standard operators: `+`, `-`, `*`, `/`, `^` (exponent).
+</Step>
+
+<Step title="Set answer precision">
+Use the **Answer Precision** field to define decimal places in the answer. Check **Enforce Precision** to require exact decimal formatting.
+</Step>
+
+<Step title="Configure tolerance">
+Set tolerance levels to accept rounded or estimated answers. Options include absolute difference or percentage deviation.
+</Step>
+</Steps>
+
+### Supported Mathematical Operations
+
+| Operation | Syntax | Example |
+|-----------|--------|---------|
+| Addition | `+` | `{x} + {y}` |
+| Subtraction | `-` | `{x} - {y}` |
+| Multiplication | `*` | `{x} * {y}` |
+| Division | `/` | `{x} / {y}` |
+| Exponent | `^` | `{x} ^ 2` |
+| Sine | `sin()` | `sin({x})` |
+| Cosine | `cos()` | `cos({x})` |
+| Tangent | `tan()` | `tan({x})` |
+| Natural Log | `ln()` | `ln({x})` |
+| Pi | `pi` | `pi * {r} ^ 2` |
+| Euler's number | `e` | `e ^ {x}` |
+
+<Callout type="warning" title="Variable Case Sensitivity">
+Variables are case sensitive. A lowercase `{y}` is different from uppercase `{Y}`. Be consistent throughout your question and formula.
+</Callout>
+
+---
+
+## Significant Figures Questions (x10)
+
+Significant Figures questions require students to answer in scientific notation with a specified number of significant figures. This question type is commonly used in math and science courses.
+
+<Steps>
+<Step title="Create a new Significant Figures question">
+In the Question Library, click **New** and select **Significant Figures (x10)**.
+</Step>
+
+<Step title="Enter your question with variables">
+Type your problem in the **Question Text** field. Use curly braces for variables that will generate random values: `{a}`, `{b}`, etc.
+</Step>
+
+<Step title="Define your variables">
+Set the name, minimum, maximum, decimal places, and step for each variable, similar to Arithmetic questions.
+</Step>
+
+<Step title="Enter the formula">
+Provide the mathematical formula that calculates the correct answer.
+</Step>
+
+<Step title="Set significant figures requirement">
+From the **Significant Figures** drop-down, select the required number of significant figures for student answers.
+</Step>
+
+<Step title="Configure deduction for incorrect sig figs">
+Use the **Deduct** drop-down to set the percentage penalty for answers with incorrect significant figures but correct numerical value.
+</Step>
+
+<Step title="Set tolerance">
+Configure tolerance to accept near-accurate answers within a specified range.
+</Step>
+
+<Step title="Add units (optional)">
+Enter a unit type (mm, kg, m/s, etc.) and set the percentage weight assigned to including correct units.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Student Instructions">
+Clearly state the required number of significant figures in your question text or quiz instructions. Example: "Express your answer in scientific notation with 3 significant figures."
+</Callout>
+
+---
+
+## Likert Scale Questions (LIK)
+
+Likert questions gather opinions or attitudes by asking participants to rate statements on a scale. These are primarily used in surveys rather than graded quizzes.
+
+<Callout type="warning" title="Surveys Only">
+Likert questions can only be used in the **Surveys** tool and cannot be imported into graded quizzes. They are not auto-graded and do not award points.
+</Callout>
+
+<Steps>
+<Step title="Access the Surveys tool">
+Navigate to **Activities** > **Surveys** in your course navbar.
+</Step>
+
+<Step title="Create or edit a survey">
+Create a new survey or select an existing one, then click **Add/Edit Questions**.
+</Step>
+
+<Step title="Create a new Likert question">
+Click **New** and select **Likert (LIK)**.
+</Step>
+
+<Step title="Add introductory text">
+In the **Introductory Text** field, explain how participants should respond to the scale items.
+</Step>
+
+<Step title="Define the scale">
+Set up your rating scale options. Common scales include:
+- Strongly Agree to Strongly Disagree
+- Very Satisfied to Very Dissatisfied
+- Always to Never
+</Step>
+
+<Step title="Add scale items">
+Enter statements that participants will rate using your defined scale.
+</Step>
+</Steps>
+
+### Common Likert Scale Examples
+
+| Scale Type | Options |
+|------------|---------|
+| Agreement | Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree |
+| Frequency | Always, Often, Sometimes, Rarely, Never |
+| Satisfaction | Very Satisfied, Satisfied, Neutral, Dissatisfied, Very Dissatisfied |
+| Importance | Very Important, Important, Moderately Important, Slightly Important, Not Important |
+
+---
+
+## Adding Images to Questions
+
+You can add images to any question type to create visual assessments or provide context.
+
+<Steps>
+<Step title="Open the question editor">
+Create a new question or edit an existing one.
+</Step>
+
+<Step title="Access the image insert tool">
+In the **Question Text** field, click the **Insert Stuff** icon in the toolbar.
+</Step>
+
+<Step title="Upload your image">
+Click **My Computer** to upload an image file from your device.
+</Step>
+
+<Step title="Set image dimensions">
+Resize the image to fit properly. Recommended widths:
+- Small: 300 pixels
+- Medium: 450 pixels
+- Large: 650 pixels (maximum recommended)
+</Step>
+
+<Step title="Add alt text">
+Provide alternative text for accessibility purposes.
+</Step>
+</Steps>
+
+<Callout type="info" title="Image File Types">
+Brightspace supports common image formats including JPG, PNG, GIF, and BMP. Keep file sizes reasonable for faster loading.
+</Callout>
+
+---
+
+## Question Point Values
+
+Every question type allows you to assign point values that contribute to the total quiz score.
+
+### Setting Point Values
+
+<Steps>
+<Step title="Enter points during question creation">
+When creating any question, enter the point value in the **Points** field.
+</Step>
+
+<Step title="Modify points after creation">
+Edit the question and update the **Points** field, or adjust points directly in the quiz's Manage Questions view.
+</Step>
+
+<Step title="Use decimal values">
+Points can include decimals (e.g., 2.5 points) for precise weighting.
+</Step>
+</Steps>
+
+### Quiz Point Calculation
+
+| Setting | Behavior |
+|---------|----------|
+| **Auto-calculate** | Quiz total equals sum of all question points |
+| **Fixed total** | You set the total; individual question points are weighted proportionally |
+
+<Callout type="tip" title="Hiding Point Values">
+You can hide point values from students in the quiz settings under **Timing & Display**. This helps learners focus on answering all questions equally without being distracted by point distributions.
+</Callout>
+
+---
+
+## Partial Credit Configuration
+
+Many question types support partial credit to award points for partially correct answers.
+
+### Partial Credit by Question Type
+
+| Question Type | Partial Credit Options |
+|---------------|------------------------|
+| Multiple Choice | Custom Weight percentage per answer |
+| Multi-Select | Correct Selections, Right Minus Wrong, or All or Nothing |
+| Matching | Equally Weighted, Right Minus Wrong, or All or Nothing |
+| Ordering | Equally Weighted or All or Nothing |
+| Fill in the Blanks | Part marks or All blanks correct |
+| Short Answer | Weight percentage per acceptable answer |
+| Multi-Short Answer | Weight percentage per answer |
+
+### Configuring Partial Credit
+
+<Steps>
+<Step title="Open grading options">
+When creating or editing a question, look for the **Grading** or **Options** section.
+</Step>
+
+<Step title="Select grading method">
+Choose your preferred approach (e.g., Equally Weighted, Right Minus Wrong).
+</Step>
+
+<Step title="Assign weights (if applicable)">
+For answer-level weighting, enter percentage values that total 100%.
+</Step>
+
+<Step title="Preview point calculations">
+Test the question to verify partial credit calculations work as expected.
+</Step>
+</Steps>
+
+---
+
+## Adding Feedback and Hints
+
+All question types support feedback and hints to enhance the learning experience.
+
+### Adding Feedback
+
+<Steps>
+<Step title="Open question options">
+Click the **Options** button below the question.
+</Step>
+
+<Step title="Select Add Feedback">
+Choose **Add Feedback** from the drop-down menu.
+</Step>
+
+<Step title="Enter feedback text">
+Provide explanations for correct answers, incorrect answers, or both. You can include:
+- Why the correct answer is right
+- Common misconceptions addressed
+- Links to course content for review
+</Step>
+</Steps>
+
+### Adding Hints
+
+<Steps>
+<Step title="Enable hints in quiz settings">
+When creating or editing the quiz, go to the **Properties** tab and check **Allow Hints**.
+</Step>
+
+<Step title="Add hint to individual questions">
+Click **Options** > **Add Hint** and enter helpful information without giving away the answer.
+</Step>
+</Steps>
+
+<Callout type="info" title="Displaying Feedback">
+Students only see feedback if you configure a **Submission View** that shows questions and feedback. Go to **Quiz Settings** > **Submission Views** to configure what students see after submission.
+</Callout>
+
+---
+
+## Question Type Summary
+
+| Question Type | Code | Auto-Graded | Best For |
+|---------------|------|-------------|----------|
+| True/False | T/F | Yes | Factual recall |
+| Multiple Choice | M/C | Yes | Single correct answer |
+| Multi-Select | M-S | Yes | Multiple correct answers |
+| Written Response | WR | No | Essays, critical thinking |
+| Short Answer | SA | Yes | Brief factual responses |
+| Multi-Short Answer | MSA | Yes | Multiple brief answers |
+| Fill in the Blanks | FIB | Yes | Vocabulary, definitions |
+| Matching | MAT | Yes | Associations, relationships |
+| Ordering | ORD | Yes | Sequences, processes |
+| Arithmetic | 2+2 | Yes | Math calculations |
+| Significant Figures | x10 | Yes | Scientific notation |
+| Likert | LIK | No | Surveys only |
+
+---
+
+## Related Guides
+
+- [Creating Quizzes](/docs/quizzes/creating-quizzes) - Build your first quiz in Brightspace
+- [Quiz Settings](/docs/quizzes/quiz-settings) - Configure time limits, attempts, and availability
+- [Question Library](/docs/quizzes/question-library) - Organize and reuse questions
+- [Grading Quizzes](/docs/quizzes/grading-quizzes) - Review attempts and provide scores
+- [Quiz Results Display](/docs/quizzes/quiz-results) - Control what students see after submission

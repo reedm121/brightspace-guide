@@ -23,8 +23,8 @@ export default function DocsLayout({
             <Sidebar />
           </ScrollArea>
         </aside>
-        <main className="relative py-6 lg:gap-10 lg:py-8">
-          <div className="mx-auto w-full min-w-0 max-w-3xl px-4 md:px-8">
+        <main className="relative py-6 lg:py-8">
+          <div className="mx-auto w-full min-w-0 max-w-4xl px-6 md:px-8 lg:px-12">
             {children}
           </div>
         </main>

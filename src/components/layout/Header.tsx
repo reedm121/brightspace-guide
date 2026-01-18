@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import { Search, MessageCircle, Menu, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -36,11 +37,13 @@ export function Header({ onToggleChat, isChatOpen }: HeaderProps) {
       <div className="container flex h-14 items-center px-4">
         {/* Logo and Title - Left */}
         <div className="flex items-center gap-2">
-          <a href="/" className="flex items-center gap-2 font-semibold">
-            <BookOpen className="h-5 w-5 text-primary" />
+          <Link href="/" className="flex items-center gap-2 font-semibold hover:opacity-80 transition-opacity">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+              <BookOpen className="h-4 w-4 text-primary-foreground" />
+            </div>
             <span className="hidden sm:inline-block">BrightspaceGuide</span>
             <span className="sm:hidden">BSG</span>
-          </a>
+          </Link>
         </div>
 
         {/* Spacer */}
@@ -107,67 +110,69 @@ export function Header({ onToggleChat, isChatOpen }: HeaderProps) {
             <SheetContent side="left" className="w-[280px]">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2">
-                  <BookOpen className="h-5 w-5 text-primary" />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+                    <BookOpen className="h-4 w-4 text-primary-foreground" />
+                  </div>
                   BrightspaceGuide
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-6">
-                <a
+                <Link
                   href="/"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
-                </a>
-                <a
-                  href="/getting-started"
+                </Link>
+                <Link
+                  href="/docs/getting-started/overview"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Getting Started
-                </a>
-                <a
-                  href="/course-setup"
+                </Link>
+                <Link
+                  href="/docs/course-setup/creating-modules"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Course Setup
-                </a>
-                <a
-                  href="/assignments"
+                </Link>
+                <Link
+                  href="/docs/assignments/creating-assignments"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Assignments
-                </a>
-                <a
-                  href="/quizzes"
+                </Link>
+                <Link
+                  href="/docs/quizzes/creating-quizzes"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Quizzes
-                </a>
-                <a
-                  href="/gradebook"
+                </Link>
+                <Link
+                  href="/docs/gradebook/setup-wizard"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Gradebook
-                </a>
-                <a
-                  href="/discussions"
+                </Link>
+                <Link
+                  href="/docs/discussions/forums-vs-topics"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Discussions
-                </a>
-                <a
-                  href="/troubleshooting"
+                </Link>
+                <Link
+                  href="/docs/troubleshooting/common-errors"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Troubleshooting
-                </a>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>

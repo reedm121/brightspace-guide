@@ -1,0 +1,479 @@
+---
+title: "Content Visibility and Release Conditions"
+description: "Control when and how students can access course content"
+category: "Course Setup"
+order: 3
+tags: ["release conditions", "visibility", "availability", "restrictions"]
+---
+
+# Content Visibility and Release Conditions
+
+## Overview
+
+Brightspace provides multiple ways to control when and how students can access your course content. Understanding these visibility options is essential for creating structured learning paths, managing course pacing, and ensuring students engage with materials in the intended order.
+
+This guide covers all aspects of content visibility, from simple hide/show toggles to complex release conditions that create adaptive learning experiences.
+
+## Before You Begin
+
+- You need Instructor access to your Brightspace course
+- Content items must exist before you can modify their visibility
+- Plan your course structure before implementing complex release conditions
+- Consider communicating visibility restrictions to students in advance
+
+<Callout type="info" title="Important">
+Students cannot see release conditions attached to content items. They may not realize materials are hidden from them or may think there is a technical problem. Always inform students about any release conditions in your course.
+</Callout>
+
+## Hidden vs Visible Content
+
+The simplest way to control content visibility is using the Hidden/Visible toggle. This is a binary setting that immediately controls whether students can see an item.
+
+### Understanding Visibility States
+
+Brightspace uses several visibility states:
+
+| State | What Students See | When to Use |
+|-------|-------------------|-------------|
+| **Visible** | Content is accessible | Ready for students |
+| **Hidden** | Content is completely hidden | Work in progress or not yet needed |
+| **Hidden with conditions inactive** | Content is hidden until conditions are met | Conditional access |
+| **Visible if conditions active** | Content appears when conditions are met | Adaptive learning paths |
+
+### Setting Content Visibility
+
+<Steps>
+<Step title="Navigate to Content">
+From your course navbar, click **Content** to access the content area.
+</Step>
+
+<Step title="Locate the content item">
+Find the module or topic you want to modify.
+</Step>
+
+<Step title="Access the visibility toggle">
+Click the **eye icon** next to the content item, or click the three-dot menu (...) and select **Hide from Users** or **Make Visible to Users**.
+</Step>
+
+<Step title="Confirm the change">
+The eye icon will update to reflect the new status:
+- **Open eye**: Visible to students
+- **Crossed-out eye**: Hidden from students
+</Step>
+</Steps>
+
+<Callout type="warning" title="Visibility Override">
+The Hidden/Visible toggle overrides all other availability settings. If content is set to Hidden, students will not see it regardless of any start/end dates or release conditions you have configured.
+</Callout>
+
+## Draft Status
+
+While Brightspace previously used "Draft" and "Published" terminology, the current interface uses "Hidden" and "Visible" consistently across content, assignments, discussions, and quizzes.
+
+### Key Points About Draft/Hidden Content
+
+- **Hidden content** is not viewable by students but remains visible to instructors
+- Use this for content you are actively working on
+- Hidden items display a visual indicator (crossed-out eye) in the instructor view
+- You can still organize and edit hidden content before making it visible
+
+<Callout type="tip" title="Best Practice">
+Keep content hidden while you are building or revising it. Once finalized, set it to visible or add appropriate release conditions.
+</Callout>
+
+## Start/End Date Availability
+
+Date-based availability allows you to automatically show or hide content based on specific dates and times.
+
+### Configuring Date Restrictions
+
+<Steps>
+<Step title="Edit the content item">
+Click the three-dot menu (...) next to your content item and select **Edit Properties in Place**.
+</Step>
+
+<Step title="Expand Availability Dates & Conditions">
+Click on the **Availability Dates & Conditions** section to expand it.
+</Step>
+
+<Step title="Set the start date">
+Enter a **Start Date** to specify when students can first access the content. Before this date, the content will be hidden.
+</Step>
+
+<Step title="Set the end date (optional)">
+Enter an **End Date** to specify when access should be removed. After this date, students will no longer be able to view the content.
+</Step>
+
+<Step title="Save your changes">
+Click **Save** to apply the date restrictions.
+</Step>
+</Steps>
+
+### How Date Restrictions Work
+
+- Content with a future start date is hidden until that date/time
+- Content with a past end date becomes inaccessible
+- Date restrictions appear in the course calendar
+- The visibility toggle must still be set to **Visible** for dates to work
+
+<Callout type="info" title="Time Zone Note">
+All dates use the time zone configured in your Brightspace account settings. Ensure your time zone is correct to avoid confusion.
+</Callout>
+
+## Release Conditions Overview
+
+Release conditions create custom learning paths by making content available only when students meet specific criteria. This powerful feature enables adaptive learning experiences tailored to individual student progress.
+
+### What Release Conditions Do
+
+- Hide content until students meet specified requirements
+- Create prerequisite relationships between content items
+- Enable self-paced learning with automatic content unlocking
+- Provide differentiated content based on student performance or group membership
+
+### When to Use Release Conditions
+
+| Scenario | Example |
+|----------|---------|
+| **Prerequisites** | Require viewing Lecture 1 before accessing Lecture 2 |
+| **Grade-based access** | Unlock remedial content for students scoring below 70% |
+| **Group-specific content** | Show different materials to different project groups |
+| **Completion-based progression** | Release the next module after completing all activities |
+| **Assessment preparation** | Require reviewing study materials before taking a quiz |
+
+## Release Condition Types
+
+Brightspace offers numerous condition types organized by category:
+
+### Classlist Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Group Enrollment** | User must be enrolled in a specific group |
+| **Section Enrollment** | User must be enrolled in a specific section |
+| **Org Unit Enrollment** | User must be enrolled in a specific organizational unit |
+| **Role in Current Org Unit** | User must have a specific role |
+| **Date of Enrollment** | Based on when the user enrolled in the course |
+
+### Content Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Visited Content Topic** | User has viewed a specific content item |
+| **Visited All Content Topics** | User has viewed all topics in a module |
+| **Not Visited Content Topic** | User has NOT viewed a specific item |
+| **Completed Content Topic** | User has marked a topic as complete |
+| **Not Completed Content Topic** | User has NOT completed a topic |
+
+### Grade Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Grade Value on Grade Item** | User achieved a specific score/percentage |
+| **Score on Associated Rubric** | User received a specific rubric score |
+| **No Grade Received** | User has not yet been graded |
+| **Released Final Grade Score** | Based on the released final grade |
+
+### Quiz and Assignment Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Score on a Quiz** | User achieved a specific quiz score |
+| **Completed Quiz Attempt** | User has submitted a quiz attempt |
+| **No Completed Quiz Attempt** | User has NOT attempted the quiz |
+| **Score on Selected Questions** | Based on performance on specific questions |
+
+### Discussion Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Posts Authored in Topic** | User has created posts in a discussion |
+| **No Posts Authored** | User has NOT posted to a discussion |
+
+### Survey Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Completed Survey Attempt** | User has submitted a survey |
+| **No Completed Survey Attempt** | User has NOT completed the survey |
+
+### Competency Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **Competency Achieved** | User has achieved a competency |
+| **Learning Objective Achieved** | User has achieved a learning objective |
+| **Achievement Level** | User has reached a specific achievement level |
+
+## Creating Release Conditions
+
+<Steps>
+<Step title="Navigate to the content item">
+Go to **Content** and locate the module or topic you want to restrict.
+</Step>
+
+<Step title="Open the edit panel">
+Click the three-dot menu (...) and select **Edit Properties in Place**, or click **Edit** from the dropdown.
+</Step>
+
+<Step title="Expand Availability Dates & Conditions">
+Click to expand the **Availability Dates & Conditions** section.
+</Step>
+
+<Step title="Add a release condition">
+Click **Create** or **Add Release Condition** under the Release Conditions area.
+</Step>
+
+<Step title="Select the condition type">
+From the **Condition Type** dropdown, choose the type of condition you want to create.
+</Step>
+
+<Step title="Configure the condition details">
+Depending on the condition type, specify the required details:
+- For grade conditions: select the grade item and enter the threshold
+- For content conditions: select the target content item
+- For group conditions: select the group
+</Step>
+
+<Step title="Save the release condition">
+Click **Create** to add the condition, then **Save** to apply changes to the content item.
+</Step>
+</Steps>
+
+<Callout type="tip" title="Reusing Conditions">
+Once you create a release condition, it is saved in your course. You can attach the same condition to multiple items without recreating it.
+</Callout>
+
+## Multiple Conditions (AND vs OR Logic)
+
+When you attach multiple release conditions to a single item, you can choose whether students must meet all conditions or just any one of them.
+
+### AND Logic (All Conditions Must Be Met)
+
+This is the **default behavior**. Students must satisfy every attached condition before gaining access.
+
+**Example:** A student must:
+- Be enrolled in Group A **AND**
+- Have viewed the Week 1 lecture **AND**
+- Have scored 70% or higher on Quiz 1
+
+All three conditions must be true for the student to see the content.
+
+### OR Logic (Any Condition Must Be Met)
+
+Students only need to meet one of the attached conditions to gain access.
+
+**Example:** A student can access content if they:
+- Scored 80% or higher on Quiz 1 **OR**
+- Completed the practice exercises **OR**
+- Posted twice in the discussion forum
+
+Meeting any single condition grants access.
+
+### Configuring Multiple Conditions
+
+<Steps>
+<Step title="Add your first condition">
+Create your first release condition following the steps above.
+</Step>
+
+<Step title="Add additional conditions">
+Click **Create** or **Add Release Condition** again to add more conditions.
+</Step>
+
+<Step title="Select the logic type">
+Look for the option that says **All conditions must be met** or **Any condition must be met** and select the appropriate logic for your needs.
+</Step>
+
+<Step title="Save your changes">
+Click **Save** to apply all conditions to the content item.
+</Step>
+</Steps>
+
+<Callout type="warning" title="Avoid Circular Conditions">
+Never create conditions that students cannot meet. For example, do not require viewing Topic B to access Topic A if Topic A is required to access Topic B. This creates an impossible situation.
+</Callout>
+
+## Viewing Content as a Student (Preview)
+
+Brightspace offers a preview feature to see your course from a student perspective. However, there are important limitations to understand.
+
+### Using View as Student
+
+<Steps>
+<Step title="Click your profile">
+Click on your name or profile icon in the top-right corner of Brightspace.
+</Step>
+
+<Step title="Select View as Student">
+Click **View as Student** from the dropdown menu.
+</Step>
+
+<Step title="If first time, select the role">
+If prompted, click **Change** and select **Student** from the role list.
+</Step>
+
+<Step title="Browse your course">
+Navigate through your course to see what students see.
+</Step>
+
+<Step title="Exit preview mode">
+Click your profile again and select your instructor role to return to normal view.
+</Step>
+</Steps>
+
+### Preview Mode Limitations
+
+<Callout type="warning" title="Important Limitations">
+- **Release conditions are NOT bypassed** - Items with release conditions remain hidden in preview mode
+- **Group restrictions are NOT bypassed** - Group-specific content remains hidden
+- **You cannot submit work** - Quiz attempts and assignment submissions do not work
+- **You are still you** - Any posts or emails sent in preview mode come from your account
+</Callout>
+
+### Testing Release Conditions
+
+Since preview mode does not bypass release conditions, consider these alternatives:
+
+1. **Test Account**: Request a test student account from your IT department
+2. **Colleague Preview**: Ask a colleague with student access to review
+3. **Manual Check**: Review the conditions logic carefully before publishing
+4. **Student Feedback**: Ask early-access students to report any issues
+
+## Common Use Cases
+
+### Prerequisites and Sequential Learning
+
+Create a linear path through your content where students must complete each item before accessing the next.
+
+**Setup:**
+1. Set a release condition on Topic 2 requiring "Visited Content Topic: Topic 1"
+2. Set a release condition on Topic 3 requiring "Visited Content Topic: Topic 2"
+3. Continue for subsequent topics
+
+### Self-Paced Learning Modules
+
+Allow students to progress through modules at their own pace while ensuring they engage with all required materials.
+
+**Setup:**
+1. Create completion requirements for each topic
+2. Set release conditions on the module assessment requiring completion of all topics
+3. Release the next module based on achieving a minimum score on the current module's assessment
+
+### Remediation Content
+
+Provide additional support materials for students who struggle with assessments.
+
+**Setup:**
+1. Create a "Remediation" module with extra resources
+2. Set a release condition: "Grade value on Quiz 1 is less than 70%"
+3. Students who score below 70% automatically see the remediation materials
+
+### Group-Specific Content
+
+Deliver different materials to different project groups or sections.
+
+**Setup:**
+1. Create separate modules for each group's content
+2. Set release conditions based on group enrollment
+3. Each group only sees their relevant materials
+
+### Mastery-Based Progression
+
+Require demonstrated understanding before advancing to new concepts.
+
+**Setup:**
+1. Create a formative quiz for each concept
+2. Set release conditions on advanced content requiring a minimum quiz score
+3. Students must demonstrate mastery before proceeding
+
+## Troubleshooting Visibility Issues
+
+When students report they cannot see content, systematically check these common causes:
+
+### Quick Troubleshooting Checklist
+
+<Steps>
+<Step title="Check the visibility toggle">
+Ensure the eye icon shows the item as **Visible** (open eye), not Hidden.
+</Step>
+
+<Step title="Verify date restrictions">
+Check that the current date is within the Start and End date range.
+</Step>
+
+<Step title="Review release conditions">
+Confirm the student has met all required release conditions.
+</Step>
+
+<Step title="Check group enrollment">
+If using group-based conditions, verify the student is in the correct group.
+</Step>
+
+<Step title="Confirm course is active">
+Ensure the course itself is set to Active, not Inactive.
+</Step>
+
+<Step title="Check student enrollment">
+Verify the student is properly enrolled in the course.
+</Step>
+</Steps>
+
+### Common Issues and Solutions
+
+| Issue | Likely Cause | Solution |
+|-------|--------------|----------|
+| Student sees course but cannot enter | Start date not reached | Adjust start date or wait |
+| Content completely invisible | Visibility set to Hidden | Toggle to Visible |
+| Some students see content, others do not | Group or section restriction | Check group enrollment |
+| Content visible but inaccessible | End date has passed | Extend or remove end date |
+| Content hidden despite visible setting | Unmet release condition | Check condition requirements |
+| File shows infinite loading | Known issue with Office files | Convert to PDF or allow download |
+
+### Checking a Specific Student's Conditions
+
+1. Go to **Classlist** and find the student
+2. Click on the student's name
+3. Navigate to their progress or completion data
+4. Verify they have met the required conditions
+
+<Callout type="tip" title="Browser Issues">
+If content displays incorrectly, ask the student to:
+- Clear browser cache and cookies
+- Try an incognito/private window
+- Try a different browser
+- Disable browser extensions
+</Callout>
+
+## Best Practices
+
+### Planning Release Conditions
+
+- **Map out your course structure** before implementing conditions
+- **Start simple** - add complexity only when needed
+- **Test thoroughly** before students access the course
+- **Document your conditions** for future reference and course copies
+
+### Performance Considerations
+
+- **Avoid excessive conditions** - too many can slow page loading
+- **Keep conditions straightforward** - complex logic can be hard to troubleshoot
+- **Reuse existing conditions** when possible
+
+### Communication
+
+- **Inform students** about release conditions at the start of the course
+- **Explain the rationale** for prerequisites and gated content
+- **Provide clear guidance** on what students need to do to unlock content
+
+<Callout type="info" title="Calendar Visibility">
+Release condition dates appear in the course calendar. Students can see when content will become available, even if they cannot see the content itself yet.
+</Callout>
+
+## Related Guides
+
+- [Creating and Organizing Modules](/docs/course-setup/creating-modules)
+- [Quiz Availability Settings](/docs/quizzes/quiz-settings)
+- [Assignment Due Dates and Availability](/docs/assignments/due-dates)
+- [Creating Groups](/docs/groups/creating-groups)
+- [Class Progress Tracking](/docs/analytics/class-progress)

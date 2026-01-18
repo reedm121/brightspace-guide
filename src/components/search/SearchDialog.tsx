@@ -103,26 +103,26 @@ const SAMPLE_RESULTS: SearchResult[] = [
 ]
 
 /**
- * Category icon mapping
+ * Category icon and color mapping
  */
-const getCategoryIcon = (category: string) => {
+const getCategoryConfig = (category: string): { icon: typeof BookOpen; color: string } => {
   switch (category) {
     case "Getting Started":
-      return BookOpen
+      return { icon: BookOpen, color: "text-blue-500" }
     case "Course Setup":
-      return Settings
+      return { icon: Settings, color: "text-emerald-500" }
     case "Assignments":
-      return FileText
+      return { icon: FileText, color: "text-orange-500" }
     case "Quizzes":
-      return GraduationCap
+      return { icon: GraduationCap, color: "text-purple-500" }
     case "Gradebook":
-      return BarChart
+      return { icon: BarChart, color: "text-teal-500" }
     case "Discussions":
-      return MessageSquare
+      return { icon: MessageSquare, color: "text-pink-500" }
     case "Communication":
-      return MessageSquare
+      return { icon: MessageSquare, color: "text-amber-500" }
     default:
-      return FileText
+      return { icon: FileText, color: "text-muted-foreground" }
   }
 }
 
@@ -207,16 +207,21 @@ export function SearchDialog() {
       />
       <CommandList>
         <CommandEmpty>
-          <div className="flex flex-col items-center gap-2 py-6">
-            <Search className="h-10 w-10 text-muted-foreground" />
-            <p className="text-sm text-muted-foreground">
-              No guides found for &quot;{searchQuery}&quot;
-            </p>
+          <div className="flex flex-col items-center gap-3 py-8">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+              <Search className="h-6 w-6 text-muted-foreground" />
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-medium">No results found</p>
+              <p className="text-xs text-muted-foreground mt-1">
+                No guides found for &quot;{searchQuery}&quot;
+              </p>
+            </div>
           </div>
         </CommandEmpty>
 
         {Object.entries(groupedResults).map(([category, results]) => {
-          const CategoryIcon = getCategoryIcon(category)
+          const { icon: CategoryIcon, color } = getCategoryConfig(category)
 
           return (
             <CommandGroup key={category} heading={category}>
@@ -225,10 +230,10 @@ export function SearchDialog() {
                   key={result.slug}
                   value={`${result.title} ${result.description} ${result.excerpt}`}
                   onSelect={() => handleSelect(result.slug)}
-                  className="flex flex-col items-start gap-1 py-3"
+                  className="flex flex-col items-start gap-1.5 py-3"
                 >
                   <div className="flex w-full items-center gap-2">
-                    <CategoryIcon className="h-4 w-4 shrink-0 text-muted-foreground" />
+                    <CategoryIcon className={`h-4 w-4 shrink-0 ${color}`} />
                     <span className="font-medium">{result.title}</span>
                     <Badge variant="secondary" className="ml-auto text-xs">
                       {result.category}

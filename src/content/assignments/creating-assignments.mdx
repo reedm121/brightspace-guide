@@ -1,0 +1,359 @@
+---
+title: "Creating Assignment Folders"
+description: "Set up assignment submission folders (Dropbox) in Brightspace"
+category: "Assignments"
+order: 1
+tags: ["assignments", "dropbox", "submissions", "folders"]
+---
+
+# Creating Assignment Folders
+
+## Overview
+
+Assignment folders (historically called "Dropbox" in Brightspace) allow you to collect student work, provide feedback, and assign grades all in one place. This guide covers everything you need to know about creating and configuring assignment submission folders.
+
+<Callout type="info" title="Assignments vs. Dropbox">
+You may see both terms used interchangeably. "Dropbox" was the original name for the assignment submission tool in Brightspace. D2L has since renamed it to "Assignments," but many institutions and documentation still reference the Dropbox name. They are the same feature.
+</Callout>
+
+## Before You Begin
+
+- Ensure you have Instructor or TA access to the course
+- If linking to the gradebook, create your grade item first (recommended)
+- For group assignments, set up your Groups and Group Categories beforehand
+- Plan your submission requirements (file types, due dates, etc.)
+
+## Creating a New Assignment Folder
+
+<Steps>
+
+<Step title="Navigate to Assignments">
+From your course navbar, click **Assessments** and select **Assignments** from the dropdown menu. This opens the Assignments tool where you can manage all submission folders.
+</Step>
+
+<Step title="Create New Assignment">
+Click the **New Assignment** button at the top of the page. You will be taken to the assignment creation screen with several configuration options.
+</Step>
+
+<Step title="Enter Basic Information">
+- **Name**: Enter a clear, descriptive title for the assignment
+- **Grade Out Of**: Set the maximum points (leave blank for ungraded assignments)
+- **Instructions**: Use the HTML editor to provide detailed submission instructions
+
+<Callout type="tip" title="Writing Clear Instructions">
+Include specific details about file format requirements, naming conventions, and what content should be included. Students appreciate knowing exactly what is expected.
+</Callout>
+</Step>
+
+<Step title="Add Attachments (Optional)">
+Click **Add a File** to attach rubrics, templates, or supplementary materials. You can upload files from your computer or link to files already in your course.
+</Step>
+
+<Step title="Configure Settings">
+Expand the various settings panels to configure submission type, availability dates, and other options (detailed in sections below).
+</Step>
+
+<Step title="Set Visibility">
+At the bottom of the page, toggle the **Visibility** switch to make the assignment visible to students. By default, new assignments are hidden.
+</Step>
+
+<Step title="Save the Assignment">
+Click **Save and Close** to create the assignment, or **Save** to continue editing.
+</Step>
+
+</Steps>
+
+## Configuring Submission Types
+
+Brightspace offers five submission types to accommodate different assignment formats:
+
+### File Submission (Default)
+
+Students upload one or more files to complete the assignment. This is the most common submission type.
+
+**Options:**
+- **Files Allowed Per Submission**: Choose "Unlimited" or "One File"
+- **Submission File Types**: Restrict to specific extensions (e.g., .pdf, .docx) or allow all file types
+
+<Callout type="warning" title="File Name Characters">
+Students cannot submit files with special characters in the filename. Advise them to use only letters, numbers, and spaces in their filenames.
+</Callout>
+
+### Text Submission
+
+Students type their response directly into Brightspace using the built-in text editor. No file upload is required or allowed.
+
+**Best for:** Short answers, reflections, or responses that don't require formatting
+
+### File or Text Submission
+
+Gives students the flexibility to either upload a file or type directly into Brightspace.
+
+**Best for:** Assignments where some students may prefer to write online while others want to upload a formatted document
+
+### On Paper Submission
+
+Students submit a physical paper copy to the instructor in person. No digital submission occurs in Brightspace, but you can still:
+- Track which students have submitted
+- Enter grades and feedback
+- Upload scanned copies back to students
+
+**Completion Options:**
+- Manually marked as completed by the learner
+- Automatically on evaluation
+- Automatically on due date
+
+### Observed in Person
+
+For performance-based assessments like presentations, demonstrations, or in-class activities where no submission is required.
+
+**Best for:** Oral presentations, lab demonstrations, participation grades
+
+**Completion Options:**
+- Manually marked as completed by the learner
+- Automatically on evaluation
+- Automatically on due date
+
+<Callout type="info" title="On Paper & Observed Assignments">
+For "On Paper" and "Observed in Person" assignments, students won't see a submission area. They will only see the assignment details and any attached files. You can still use these assignment types to provide grades and feedback through Brightspace.
+</Callout>
+
+## Setting Due Dates and Availability
+
+### Key Dates
+
+| Date Type | Purpose |
+|-----------|---------|
+| **Start Date** | When students can first access and submit to the assignment |
+| **Due Date** | The deadline for on-time submissions (late submissions are flagged) |
+| **End Date** | The final cutoff after which no submissions are accepted |
+
+<Steps>
+
+<Step title="Access Availability Settings">
+In the assignment editor, click on **Availability Dates & Conditions** to expand the date settings.
+</Step>
+
+<Step title="Set Start Date">
+Enable the **Start Date** checkbox and select when the assignment should become available. Students cannot view or submit before this date.
+</Step>
+
+<Step title="Set Due Date">
+Enable the **Due Date** checkbox and set your deadline. Submissions after this date will be marked as "Late" in the submission list, but students can still submit unless you set an end date.
+</Step>
+
+<Step title="Set End Date (Optional)">
+Enable the **End Date** checkbox to set a hard cutoff. After this date:
+- Students can view the assignment details
+- Students **cannot** submit or modify their submission
+- The Submit button will be disabled
+</Step>
+
+</Steps>
+
+<Callout type="tip" title="Strategy for Late Submissions">
+If you want to accept late work: Set a due date but leave the end date blank or set it later than the due date.
+
+If you want to stop all submissions at the deadline: Set the due date and end date to the same time.
+</Callout>
+
+## Enabling Late Submissions
+
+### Allowing Late Work
+
+To accept late submissions, simply set the **End Date** to a date after your **Due Date**, or leave the End Date blank entirely. Submissions received after the due date will be flagged as "Late."
+
+### Viewing Late Submissions
+
+When grading, late submissions are clearly marked with a "Late" indicator showing exactly how much time elapsed between the due date and the submission.
+
+### Applying Late Penalties
+
+<Callout type="warning" title="No Automatic Late Penalties">
+Brightspace does not have a built-in feature to automatically deduct points for late submissions. You must calculate and apply late penalties manually when grading.
+</Callout>
+
+**Workarounds used by instructors:**
+
+1. **Manual Deduction**: Note the lateness when grading and subtract points accordingly
+
+2. **Formula Grade Item**: Create a calculated grade item that deducts a percentage based on days late
+
+3. **Negative Bonus Item**: Create a separate "Late Penalty" grade item with negative points
+
+## Connecting to Grade Items
+
+Linking assignments to your gradebook ensures grades sync automatically between the Assignments tool and the Gradebook.
+
+<Steps>
+
+<Step title="Open Grade Settings">
+In the assignment editor, locate the grade settings area. Click on **Not in Gradebook** or **Edit or Link to Existing**.
+</Step>
+
+<Step title="Choose Linking Option">
+Select one of the following:
+- **Create and link to a new grade item** - Creates a matching grade item automatically
+- **Link to an existing grade item** - Choose from grade items you've already created
+</Step>
+
+<Step title="Configure the Link">
+If creating new: The grade item will use the same name and point value as your assignment.
+
+If linking existing: Select the grade item from the dropdown. Make sure the "Grade Out Of" values match!
+
+<Callout type="warning" title="Grade Item Already Linked">
+Each grade item can only be linked to one assignment. If a grade item doesn't appear in the dropdown, it may already be connected to another activity.
+</Callout>
+</Step>
+
+<Step title="Verify the Connection">
+After saving, you'll see a ribbon icon next to assignments that are linked to the gradebook. Grades entered in either Assignments or Gradebook will sync automatically.
+</Step>
+
+</Steps>
+
+### Ungraded vs. Excluded Assignments
+
+- **Ungraded**: Leave "Grade Out Of" blank. No grades are tracked.
+- **Not in Gradebook**: Grades are visible in Assignments but not in Gradebook.
+- **Excluded from Final Grade**: Grade appears in Gradebook but doesn't affect the final calculated grade.
+
+## Assignment Categories
+
+Assignment categories help organize your Assignments page (note: these are separate from Gradebook categories).
+
+### Creating Categories
+
+1. From the Assignments page, click **More Actions** > **Manage Categories**
+2. Click **Add Category**
+3. Enter a category name and click **Save**
+
+### Assigning to Categories
+
+When creating or editing an assignment, select a category from the **Category** dropdown at the top of the editor.
+
+### Using Bulk Edit
+
+To quickly assign categories to multiple assignments:
+1. Click **More Actions** > **Bulk Edit**
+2. Select the assignments you want to modify
+3. Update the Category field for selected items
+
+## Submission Instructions Best Practices
+
+Include these elements in your assignment instructions:
+
+- **Purpose**: Why students are completing this assignment
+- **Requirements**: Specific criteria that must be met
+- **Format**: File type, length, formatting requirements
+- **Naming Convention**: How to name submitted files
+- **Rubric Reference**: Note if a rubric is attached
+- **Resources**: Links to helpful materials or examples
+
+Example instruction template:
+
+```
+## Assignment Overview
+[Brief description of the assignment purpose]
+
+## Requirements
+- [Requirement 1]
+- [Requirement 2]
+- [Requirement 3]
+
+## Submission Format
+- File Type: PDF only
+- File Name: LastName_FirstName_AssignmentName.pdf
+- Maximum Length: 5 pages
+
+## Grading
+This assignment will be graded using the attached rubric. Review it before submitting.
+```
+
+## Notification Settings
+
+### Instructor Notifications
+
+To receive email alerts when students submit:
+
+1. Click on your profile icon in the top-right corner
+2. Select **Notifications**
+3. Under Instant Notifications, check the boxes for Assignment-related alerts
+4. Click **Save**
+
+### Per-Assignment Notifications
+
+Some versions of Brightspace allow you to set notifications for specific students:
+
+1. In the assignment editor, go to **Submission & Completion**
+2. Look for notification options
+3. Add specific student email addresses if you want alerts for their submissions
+
+<Callout type="info" title="Student Notifications">
+Students control their own notification preferences. Remind them to enable assignment notifications in their account settings if they want email reminders about due dates.
+</Callout>
+
+## Group vs. Individual Assignments
+
+### Individual Assignments (Default)
+
+Each student submits their own work and receives their own grade. This is the default setting.
+
+### Group Assignments
+
+Allow a group to submit one assignment that applies to all members.
+
+**Prerequisites:**
+- Groups must be created using the **Groups** tool before creating the assignment
+- Groups should be organized into Group Categories
+
+<Steps>
+
+<Step title="Create Groups First">
+Navigate to **Communication** > **Groups** and set up your groups and categories if you haven't already.
+</Step>
+
+<Step title="Enable Group Submission">
+In the assignment editor, go to **Submission & Completion** and change the Assignment Type from "Individual" to "Group Assignment."
+</Step>
+
+<Step title="Select Group Category">
+Choose the appropriate Group Category from the dropdown. All groups within that category will have access to the assignment.
+
+<Callout type="warning" title="One Category Per Assignment">
+You can only link one Group Category per assignment. If different groups need different assignments, create separate Group Categories.
+</Callout>
+</Step>
+
+<Step title="Save and Verify">
+Save the assignment. Any member of a group can submit on behalf of the entire group.
+</Step>
+
+</Steps>
+
+### How Group Submissions Work
+
+- Any group member can make the submission
+- All group members can view and download the submission
+- The grade you assign applies to all group members
+- To give different grades to group members, you must adjust individual grades in the Gradebook after initial grading
+
+## Common Issues and Solutions
+
+| Issue | Solution |
+|-------|----------|
+| Students can't see the assignment | Check visibility toggle and start date |
+| "Assignment not available" error | Verify start date has passed and no release conditions are blocking access |
+| Can't link to grade item | The grade item may already be linked to another activity |
+| Students can't submit after due date | Check if an end date is set that has passed |
+| Group assignment shows as individual | Ensure groups exist and correct Group Category is selected |
+| File upload fails | Check for special characters in filename or file size limits |
+
+## Related Guides
+
+- [Viewing and Grading Submissions](/docs/assignments/grading-submissions)
+- [Creating Rubrics](/docs/rubrics/creating-rubrics)
+- [Setting Up Groups](/docs/groups/creating-groups)
+- [Gradebook Setup](/docs/gradebook/setup-wizard)
+- [Release Conditions](/docs/course-setup/release-conditions)

@@ -1,0 +1,320 @@
+---
+title: "Enabling Turnitin for Plagiarism Detection"
+description: "Set up and use Turnitin plagiarism detection in Brightspace assignments"
+category: "Assignments"
+order: 3
+tags: ["turnitin", "plagiarism", "originality", "academic integrity"]
+---
+
+# Enabling Turnitin for Plagiarism Detection
+
+## Overview
+
+Turnitin is an integrated plagiarism detection tool in Brightspace that compares student submissions against a vast database of academic papers, web content, and previously submitted assignments. It generates a Similarity Report that highlights text matching other sources and provides a percentage score indicating how much of the submission appears in other works.
+
+<Callout type="info" title="Important Distinction">
+Turnitin does not detect plagiarism directly. It identifies similarity to other sources. As an instructor, you must review the Similarity Report to determine whether academic misconduct has occurred. Matches may be legitimate (proper citations, common phrases, bibliographies).
+</Callout>
+
+## Before You Begin
+
+- Your institution must have Turnitin integration enabled in Brightspace
+- You need an existing assignment created in Brightspace (or create one during this process)
+- Turnitin works best with prose-based documents (essays, research papers, reports)
+
+## Enabling Turnitin on an Assignment
+
+<Steps>
+<Step title="Navigate to the Assignment">
+Go to your course in Brightspace and click **Assignments** in the navigation bar. Either create a new assignment or click on an existing assignment and select **Edit Assignment**.
+</Step>
+
+<Step title="Access Turnitin Settings">
+Scroll down to the **Evaluation & Feedback** section at the bottom of the assignment settings. Click **Manage Turnitin** to open the Turnitin configuration options.
+</Step>
+
+<Step title="Enable the Similarity Report">
+Check the box for **Enable Similarity Report for this folder**. This activates Turnitin's plagiarism checking for all submissions to this assignment.
+</Step>
+
+<Step title="Configure Student Access (Optional)">
+Check **Allow learners to see similarity scores in their submission folder** if you want students to view their own Similarity Reports. This can serve as a valuable learning tool for understanding proper citation and paraphrasing.
+</Step>
+
+<Step title="Enable Online Grading (Optional)">
+If you want to grade submissions using Turnitin Feedback Studio rather than Brightspace's built-in tools, check **Enable Online Grading for this folder**. You can also select **Automatically sync grades as Draft** to transfer scores to Brightspace.
+</Step>
+
+<Step title="Save Your Changes">
+Click **Save** or **Update** to apply the Turnitin settings to your assignment.
+</Step>
+</Steps>
+
+## Turnitin Settings Options
+
+Click **More Options** in the Turnitin settings to access additional configuration:
+
+### Submission Settings
+
+| Setting | Description |
+|---------|-------------|
+| **Store submissions in repository** | By default, student papers are added to the standard Turnitin database. Uncheck this if you don't want submissions stored. |
+| **Allow resubmissions** | Permits students to submit multiple times before the due date. Useful for drafts. |
+| **Generate reports immediately** | Creates Similarity Reports as soon as students submit. |
+
+### Exclusion Settings
+
+| Setting | Description |
+|---------|-------------|
+| **Exclude bibliography** | Removes Works Cited/References sections from similarity checking |
+| **Exclude quoted text** | Ignores properly quoted passages |
+| **Exclude small matches** | Filters out matches below a specified word count or percentage |
+
+<Callout type="tip" title="Use Exclusions Wisely">
+Excluding bibliographies and quoted text often reduces false positives. However, be aware that students could exploit these exclusions to hide copied content within quote blocks.
+</Callout>
+
+### Template Exclusion
+
+If you provide students with an assignment template (with headers, instructions, or formatting), you can upload it to Turnitin. The template text will automatically be excluded from Similarity Reports, preventing false matches.
+
+## Understanding the Similarity Report
+
+The Similarity Report shows the percentage of submitted text that matches content in Turnitin's database. This score is displayed as a colored percentage bar next to each submission.
+
+### Similarity Score Color Codes
+
+| Color | Score Range | Meaning |
+|-------|-------------|---------|
+| Blue | 0% | No matching text found |
+| Green | 1-24% | Low similarity - typically includes common phrases or properly cited quotes |
+| Yellow | 25-49% | Moderate similarity - may include substantial content matches |
+| Orange | 50-74% | High similarity - significant matched content requiring review |
+| Red | 75-100% | Very high similarity - most text matches other sources |
+
+<Callout type="warning" title="Scores Are Not Judgments">
+A high similarity score does not automatically indicate plagiarism. Scores above 20% warrant closer examination, but context matters. A paper with extensive properly-cited quotations may legitimately have a higher score.
+</Callout>
+
+### What Affects Similarity Scores
+
+- **Quoted material**: Properly cited quotes will match their original sources
+- **Common phrases**: Widely-used expressions and technical terminology
+- **Bibliography/References**: Reference sections often match published citation formats
+- **Previous submissions**: If students submitted drafts, their final paper matches those drafts
+- **Standard formatting**: Headers, footers, and boilerplate text
+
+## Viewing the Originality Report
+
+<Steps>
+<Step title="Access Assignment Submissions">
+Navigate to **Assignments** in your course. Click the dropdown arrow (chevron) next to the assignment name and select **View Submissions**.
+</Step>
+
+<Step title="Locate the Similarity Score">
+In the submissions list, you'll see a colored percentage bar next to each submission with Turnitin enabled. This is the overall similarity score.
+</Step>
+
+<Step title="Open the Full Report">
+Click on the percentage bar to open the complete Turnitin Similarity Report. This launches Turnitin Feedback Studio in a new window.
+</Step>
+
+<Step title="Review Matched Content">
+In the Similarity Report:
+- Highlighted text indicates matches to other sources
+- Click on highlighted sections to see the matching source
+- Use the **Match Overview** panel on the right to see all sources
+- Click individual sources to view the percentage matched from each
+</Step>
+
+<Step title="Exclude False Positives">
+If you identify legitimate matches (proper citations, common phrases), you can exclude them:
+1. Click on the highlighted match
+2. Select **Exclude Source** or **Exclude Text**
+3. The similarity score will recalculate
+</Step>
+</Steps>
+
+## Interpreting Similarity Scores
+
+### Context Is Essential
+
+When reviewing Similarity Reports, consider:
+
+- **Assignment type**: Research papers naturally have more citations than personal reflections
+- **Subject area**: Technical fields may have more standardized terminology
+- **Source quality**: Is the match from an academic paper or a content farm?
+- **Match distribution**: One large match is more concerning than many small ones
+
+### Red Flags to Watch For
+
+- Large blocks of text matching a single source (not cited)
+- Matches to essay mill websites or paper repositories
+- Patchwork plagiarism: sentences from multiple sources stitched together
+- Near-identical submissions between students in the same class
+
+### When a High Score Is Acceptable
+
+- Extensive properly-cited direct quotes (in disciplines where this is expected)
+- Legal documents, technical standards, or required boilerplate language
+- Re-analysis of student's own previously submitted work (with permission)
+- Template text you provided for the assignment
+
+## GradeMark for Feedback
+
+Turnitin Feedback Studio includes GradeMark, a tool for providing inline feedback on student papers.
+
+### Using QuickMarks
+
+QuickMarks are pre-built comment bubbles for common feedback:
+
+<Steps>
+<Step title="Open a Submission">
+Click on a student submission to open it in Feedback Studio.
+</Step>
+
+<Step title="Access QuickMarks">
+Click the **QuickMarks** icon in the toolbar (speech bubble icon).
+</Step>
+
+<Step title="Apply Comments">
+Drag and drop QuickMark comments directly onto the student's text where you want feedback to appear. Students can click on these to see detailed explanations.
+</Step>
+
+<Step title="Create Custom QuickMarks">
+Click the settings icon in the QuickMarks menu to create your own reusable comments tailored to your course.
+</Step>
+</Steps>
+
+### Entering Grades
+
+1. Enter the grade in the scoring box in the upper-right corner of Feedback Studio
+2. Grades save automatically as drafts
+3. To transfer grades to Brightspace: Return to the submissions list, select the students, and click **Publish Feedback**
+
+<Callout type="info" title="Publishing Required">
+Brightspace does not automatically release Turnitin feedback or grades. You must actively select submissions and click **Publish Feedback** to make scores and comments visible to students.
+</Callout>
+
+## Student View of Turnitin Results
+
+When you enable student access to Similarity Reports, here's what students see:
+
+### Accessing Their Report
+
+1. Students navigate to **Assignments** in the course
+2. They click on their submitted assignment
+3. The similarity score appears next to their submission
+4. Clicking the score opens the Similarity Report
+
+### What Students Can Do
+
+- View highlighted matches and matching sources
+- Understand which parts of their writing triggered similarity flags
+- Use this information to improve citation practices before final submission (if resubmissions are allowed)
+
+<Callout type="tip" title="Learning Opportunity">
+Allowing students to see their Similarity Reports before the final deadline (with resubmissions enabled) helps them learn about proper citation and paraphrasing. This turns Turnitin into a teaching tool rather than just an enforcement mechanism.
+</Callout>
+
+## Common Turnitin Issues
+
+### Track Changes in Word Documents
+
+<Callout type="danger" title="Critical Issue">
+If students submit Word documents with Track Changes enabled, Turnitin will detect ALL text in the document - including deleted text and revision history. This can dramatically inflate similarity scores with false matches.
+</Callout>
+
+**Solution**: Instruct students to:
+1. Accept or reject all changes in their document
+2. Turn off Track Changes completely
+3. Save the document as a new file
+4. Or convert to PDF before submitting
+
+### Text Disappearing in Grading View
+
+Word documents with Track Changes may display incorrectly in Turnitin's online grading view, with portions of text missing or jumbled.
+
+**Solution**: Have students submit final documents as PDFs.
+
+### Other Common Errors
+
+| Issue | Solution |
+|-------|----------|
+| "File type not supported" | Re-save as PDF, DOCX, or TXT and resubmit |
+| "Submission too short" | Documents must contain at least 20 words (100+ characters) |
+| "XML cannot be parsed" | Ensure filename is under 40 characters; try saving as PDF |
+| Report not generating | Wait 15-30 minutes; reports may take time during high-traffic periods |
+| 100% match on resubmission | Exclude student's own previous submissions from the report |
+
+### File Type Limitations
+
+Turnitin supports common document formats but works best with:
+- Microsoft Word (.doc, .docx)
+- PDF files
+- Plain text (.txt)
+- Rich Text Format (.rtf)
+- PowerPoint (.ppt, .pptx)
+
+<Callout type="warning" title="PDF Recommendation">
+For the most reliable results, recommend that students submit final papers as PDF files. This preserves formatting and avoids Track Changes issues.
+</Callout>
+
+## When NOT to Use Turnitin
+
+Turnitin is designed for prose-based academic writing. It is not appropriate for all assignment types.
+
+### Avoid Turnitin For
+
+| Assignment Type | Why |
+|-----------------|-----|
+| **Programming/Code Assignments** | Turnitin is trained on prose, not code. It cannot reliably assess code similarity or detect AI-generated code. Use specialized tools like MOSS (Measure of Software Similarity) or Codequiry instead. |
+| **Math Assignments with Code** | MATLAB, Python, or other code snippets will generate false positives due to standard syntax and common solutions. |
+| **Creative Writing Portfolios** | Students may intentionally reference or remix existing works. High similarity may be the point. |
+| **Group Projects with Shared Documents** | Members will have matching sections. Requires careful exclusion management. |
+| **Reflective Journals** | Personal reflection assignments rarely benefit from plagiarism checking. |
+| **Open-Book Exams/Direct Quote Assignments** | Where copying from sources is expected and allowed. |
+
+<Callout type="info" title="Programming Assignments">
+For code-based assignments, Turnitin explicitly notes that their AI detection "does not reliably detect AI-generated text in code." Common programming patterns produce similar code across different students even without plagiarism.
+</Callout>
+
+### Alternative Approaches
+
+- **For code**: Use MOSS, Codequiry, or Copyleaks Code
+- **For shared content**: Create clear boundaries about what collaboration is permitted
+- **For all assignments**: Combine Turnitin with in-class discussions, oral defenses, or process documentation
+
+## Best Practices
+
+### For Instructors
+
+1. **Set clear expectations**: Include Turnitin information in your syllabus
+2. **Explain the tool**: Help students understand similarity vs. plagiarism
+3. **Allow drafts**: Enable resubmissions so students can learn from early reports
+4. **Review reports thoughtfully**: Don't rely solely on the percentage score
+5. **Use exclusions**: Configure bibliography and quote exclusions appropriately
+
+### For Students
+
+Include these guidelines in your assignment instructions:
+
+1. Accept all Track Changes before submitting Word documents
+2. Submit as PDF when possible
+3. Cite all sources properly using the required citation style
+4. Use quotation marks for direct quotes
+5. Paraphrase thoughtfully - don't just swap synonyms
+6. Review your Similarity Report if available
+
+## Related Guides
+
+- [Creating Assignment Folders](/docs/assignments/creating-assignments)
+- [Viewing and Grading Submissions](/docs/assignments/grading-submissions)
+- [Using Rubrics](/docs/rubrics/creating-rubrics)
+- [Academic Integrity Best Practices](/docs/troubleshooting/turnitin-issues)
+
+## Additional Resources
+
+- [Turnitin Guides - Understanding the Similarity Score](https://guides.turnitin.com/hc/en-us/articles/23435833938701-Understanding-the-similarity-score)
+- [D2L Community - Assignments and Turnitin](https://community.d2l.com/brightspace/kb/articles/3408-assignments-and-turnitin)
+- [Turnitin Guides - Known Issues](https://guides.turnitin.com/hc/en-us/articles/27391564023565-Known-issues)
