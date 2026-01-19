@@ -46,10 +46,10 @@ const SAMPLE_RESULTS: SearchResult[] = [
   },
   {
     slug: "course-setup/creating-modules",
-    title: "Creating and Organizing Modules",
-    description: "Build your course structure with modules",
+    title: "Creating and Organizing Modules/Units",
+    description: "Build your course structure with modules or units",
     category: "Course Setup",
-    excerpt: "Learn how to create, organize, and manage content modules to structure your course effectively.",
+    excerpt: "Learn how to create, organize, and manage content modules (or units) to structure your course effectively.",
   },
   {
     slug: "course-setup/uploading-content",

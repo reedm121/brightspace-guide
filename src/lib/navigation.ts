@@ -15,11 +15,12 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    title: "Course Setup",
+    title: "Content",
     href: "/docs/course-setup",
     icon: "folder",
     children: [
-      { title: "Creating Modules", href: "/docs/course-setup/creating-modules" },
+      { title: "Overview", href: "/docs/course-setup/overview" },
+      { title: "Creating Modules/Units", href: "/docs/course-setup/creating-modules" },
       { title: "Uploading Files", href: "/docs/course-setup/uploading-files" },
       { title: "HTML Editor", href: "/docs/course-setup/html-editor" },
       { title: "Web Links", href: "/docs/course-setup/web-links" },
@@ -33,6 +34,7 @@ export const navigation: NavItem[] = [
     href: "/docs/assignments",
     icon: "file-text",
     children: [
+      { title: "Overview", href: "/docs/assignments/overview" },
       { title: "Creating Assignments", href: "/docs/assignments/creating-assignments" },
       { title: "Submission Settings", href: "/docs/assignments/submission-settings" },
       { title: "Special Access", href: "/docs/assignments/special-access" },
@@ -45,6 +47,7 @@ export const navigation: NavItem[] = [
     href: "/docs/quizzes",
     icon: "help-circle",
     children: [
+      { title: "Overview", href: "/docs/quizzes/overview" },
       { title: "Creating Quizzes", href: "/docs/quizzes/creating-quizzes" },
       { title: "Question Types", href: "/docs/quizzes/question-types" },
       { title: "Question Library", href: "/docs/quizzes/question-library" },
@@ -53,36 +56,56 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    title: "Gradebook",
-    href: "/docs/gradebook",
-    icon: "bar-chart",
-    children: [
-      { title: "Setup Wizard", href: "/docs/gradebook/setup-wizard" },
-      { title: "Grade Categories", href: "/docs/gradebook/grade-categories" },
-      { title: "Grade Items", href: "/docs/gradebook/grade-items" },
-      { title: "Entering Grades", href: "/docs/gradebook/entering-grades" },
-      { title: "Quick Eval", href: "/docs/gradebook/quick-eval" },
-      { title: "Final Grades", href: "/docs/gradebook/final-grades" },
-    ],
-  },
-  {
-    title: "Rubrics",
-    href: "/docs/rubrics",
-    icon: "clipboard-list",
-    children: [
-      { title: "Creating Rubrics", href: "/docs/rubrics/creating-rubrics" },
-      { title: "Using Rubrics", href: "/docs/rubrics/using-rubrics" },
-    ],
-  },
-  {
     title: "Discussions",
     href: "/docs/discussions",
     icon: "message-square",
     children: [
+      { title: "Overview", href: "/docs/discussions/overview" },
       { title: "Forums vs Topics", href: "/docs/discussions/forums-vs-topics" },
       { title: "Creating Discussions", href: "/docs/discussions/creating-discussions" },
       { title: "Moderating", href: "/docs/discussions/moderating-discussions" },
       { title: "Grading Discussions", href: "/docs/discussions/grading-discussions" },
+    ],
+  },
+  {
+    title: "Classlist",
+    href: "/docs/classlist",
+    icon: "users-round",
+    children: [
+      { title: "Overview", href: "/docs/classlist/overview" },
+    ],
+  },
+  {
+    title: "Grades",
+    href: "/docs/gradebook",
+    icon: "bar-chart",
+    children: [
+      { title: "Overview", href: "/docs/gradebook/overview" },
+      { title: "Setup Wizard", href: "/docs/gradebook/setup-wizard" },
+      { title: "Grade Items", href: "/docs/gradebook/grade-items" },
+      { title: "Entering Grades", href: "/docs/gradebook/entering-grades" },
+      { title: "Final Grades", href: "/docs/gradebook/final-grades" },
+    ],
+  },
+  {
+    title: "Class Progress",
+    href: "/docs/analytics",
+    icon: "trending-up",
+    children: [
+      { title: "Overview", href: "/docs/analytics/overview" },
+      { title: "Using Class Progress", href: "/docs/analytics/class-progress" },
+      { title: "Content Completion", href: "/docs/analytics/content-completion" },
+    ],
+  },
+  {
+    title: "Course Admin",
+    href: "/docs/course-admin",
+    icon: "settings",
+    children: [
+      { title: "Overview", href: "/docs/course-admin/overview" },
+      { title: "Copying Courses", href: "/docs/course-management/copying-courses" },
+      { title: "Course Templates", href: "/docs/course-management/course-templates" },
+      { title: "Backup & Restore", href: "/docs/course-management/backup-restore" },
     ],
   },
   {
@@ -107,12 +130,12 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    title: "Analytics",
-    href: "/docs/analytics",
-    icon: "trending-up",
+    title: "Rubrics",
+    href: "/docs/rubrics",
+    icon: "clipboard-list",
     children: [
-      { title: "Class Progress", href: "/docs/analytics/class-progress" },
-      { title: "Content Completion", href: "/docs/analytics/content-completion" },
+      { title: "Creating Rubrics", href: "/docs/rubrics/creating-rubrics" },
+      { title: "Using Rubrics", href: "/docs/rubrics/using-rubrics" },
     ],
   },
   {
@@ -133,16 +156,6 @@ export const navigation: NavItem[] = [
       { title: "External Tools", href: "/docs/integrations/external-tools" },
       { title: "Zoom & Teams", href: "/docs/integrations/zoom-teams" },
       { title: "Publisher Content", href: "/docs/integrations/publisher-content" },
-    ],
-  },
-  {
-    title: "Course Management",
-    href: "/docs/course-management",
-    icon: "settings",
-    children: [
-      { title: "Copying Courses", href: "/docs/course-management/copying-courses" },
-      { title: "Course Templates", href: "/docs/course-management/course-templates" },
-      { title: "Backup & Restore", href: "/docs/course-management/backup-restore" },
     ],
   },
   {

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { Send, MessageCircle, X, Sparkles, Loader2, FileText } from "lucide-react";
 import { useChatStore } from "@/stores/chat-store";
 import { Button } from "@/components/ui/button";
@@ -65,7 +66,33 @@ function ChatMessageItem({
             : "bg-muted/80 text-foreground border border-border/50 rounded-bl-md"
         )}
       >
-        <p className="whitespace-pre-wrap leading-relaxed">{content}</p>
+        {isUser ? (
+          <p className="whitespace-pre-wrap leading-relaxed">{content}</p>
+        ) : (
+          <div className="prose prose-sm dark:prose-invert max-w-none prose-p:my-1 prose-ul:my-1 prose-ol:my-1 prose-li:my-0.5 prose-headings:my-2 prose-code:bg-slate-200 prose-code:text-slate-800 dark:prose-code:bg-slate-700 dark:prose-code:text-slate-200 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-xs prose-pre:bg-slate-800 prose-pre:text-slate-200 prose-pre:p-2 prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
+            <ReactMarkdown
+              components={{
+                // Override links to use Next.js Link for internal navigation
+                a: ({ href, children }) => {
+                  if (href?.startsWith("/")) {
+                    return (
+                      <Link href={href} className="text-primary hover:underline">
+                        {children}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <a href={href} target="_blank" rel="noopener noreferrer">
+                      {children}
+                    </a>
+                  );
+                },
+              }}
+            >
+              {content}
+            </ReactMarkdown>
+          </div>
+        )}
       </div>
       {sources && sources.length > 0 && (
         <div className="mt-1 flex flex-wrap gap-1.5 max-w-[85%]">

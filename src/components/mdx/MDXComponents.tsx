@@ -6,7 +6,9 @@ import {
   AlertTriangle,
   BookOpen,
   ExternalLink,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 
 // =============================================================================
 // CALLOUT COMPONENT
@@ -184,6 +186,54 @@ export function CodeBlock({ children, className, title }: CodeBlockProps) {
 }
 
 // =============================================================================
+// CARDS COMPONENT
+// Grid container for card links
+// =============================================================================
+
+interface CardsProps {
+  children: React.ReactNode;
+}
+
+export function Cards({ children }: CardsProps) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 my-6">
+      {children}
+    </div>
+  );
+}
+
+// =============================================================================
+// CARD COMPONENT
+// Individual card link for navigation
+// =============================================================================
+
+interface CardProps {
+  title: string;
+  href: string;
+  children: React.ReactNode;
+}
+
+export function Card({ title, href, children }: CardProps) {
+  return (
+    <Link
+      href={href}
+      className="group relative flex flex-col rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-primary/50 hover:shadow-md dark:border-slate-700 dark:bg-slate-800/50 dark:hover:border-primary/50"
+    >
+      <h3 className="mb-2 font-semibold text-foreground group-hover:text-primary transition-colors">
+        {title}
+      </h3>
+      <p className="text-sm text-muted-foreground flex-1">
+        {children}
+      </p>
+      <div className="mt-3 flex items-center text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
+        Learn more
+        <ArrowRight className="ml-1 h-4 w-4" />
+      </div>
+    </Link>
+  );
+}
+
+// =============================================================================
 // MDX COMPONENTS MAPPING
 // All the styled components for MDX rendering
 // =============================================================================
@@ -194,6 +244,8 @@ export const mdxComponents = {
   Steps,
   Step,
   CodeBlock,
+  Cards,
+  Card,
 
   // Headings with proper hierarchy and spacing
   h1: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (

@@ -1,0 +1,216 @@
+---
+title: "Grades"
+description: "Track, calculate, and manage student grades with Brightspace's Gradebook"
+category: "Gradebook"
+order: 0
+tags: ["grades", "gradebook", "grading", "assessment", "overview"]
+---
+
+# Grades
+
+## What is the Gradebook?
+
+The **Gradebook** (also called **Grades**) is where you track and calculate student grades in Brightspace. It's the central hub for all grading activities—entering scores, calculating totals, viewing student progress, and releasing final grades.
+
+The Gradebook connects to assignments, quizzes, and discussions, automatically receiving scores from those tools. You can also create grade items for work assessed outside of Brightspace.
+
+## Why Use the Gradebook?
+
+A properly configured Gradebook provides significant benefits:
+
+| Benefit | Description |
+|---------|-------------|
+| **Automatic Calculations** | Weighted categories and running totals calculate automatically |
+| **Integration** | Scores from assignments and quizzes flow in automatically |
+| **Transparency** | Students see their grades and understand how they're calculated |
+| **Efficiency** | Grade multiple students quickly with spreadsheet-like entry |
+| **Flexibility** | Support for points, weighted, or formula-based grading |
+| **Export** | Send grades to your institution's student information system |
+
+<Callout type="tip" title="Set Up Early">
+Configure your Gradebook at the start of the semester. A well-organized Gradebook saves hours of work later and helps students understand expectations from day one.
+</Callout>
+
+## Understanding Gradebook Structure
+
+The Brightspace Gradebook has a hierarchical structure:
+
+```
+Gradebook
+├── Categories (optional groupings)
+│   ├── Grade Item (e.g., "Homework 1")
+│   ├── Grade Item (e.g., "Homework 2")
+│   └── Grade Item (e.g., "Homework 3")
+├── Final Calculated Grade
+└── Final Adjusted Grade
+```
+
+### Grade Items
+Individual graded elements in your course:
+- Linked to assignments, quizzes, or discussions
+- Or manually created for in-class work, participation, etc.
+
+### Categories
+Optional groupings for organizing grade items:
+- "Homework" with 10 assignments
+- "Exams" with midterm and final
+- "Participation" with weekly entries
+- Categories can have their own weighting and rules
+
+### Final Grade
+The calculated overall course grade:
+- **Final Calculated Grade**: Automatically computed from your grading scheme
+- **Final Adjusted Grade**: Manually adjusted (for instructor overrides)
+
+## Grading Systems
+
+Brightspace supports several grading approaches:
+
+| System | Description | Best For |
+|--------|-------------|----------|
+| **Points** | Total points earned / total points possible | Simple courses with few grade items |
+| **Weighted** | Categories have percentage weights (e.g., Exams 40%) | Most courses with multiple assignment types |
+| **Formula** | Custom calculations using Brightspace formulas | Complex grading schemes |
+
+<Callout type="info" title="Most Common">
+The **Weighted** system is most commonly used. For example: Homework 20%, Quizzes 20%, Midterm 25%, Final 35%.
+</Callout>
+
+## Accessing the Gradebook
+
+To access Grades in your course:
+
+1. From your course navbar, click **Grades**
+2. You'll see the "Enter Grades" view by default
+
+### Gradebook Views
+- **Enter Grades**: Spreadsheet view for entering and viewing scores
+- **Manage Grades**: Set up categories and grade items
+- **Schemes**: Define letter grade cutoffs
+- **Setup Wizard**: Guided initial configuration
+
+## Key Features
+
+### Grade Entry
+- Spreadsheet-style entry for quick data input
+- Click any cell to enter a grade directly
+- Import grades from CSV files
+- Supports points, percentages, or letter grades
+
+### Automatic Score Transfer
+When you grade in:
+- Assignments → Score transfers to linked grade item
+- Quizzes → Score transfers automatically
+- Discussions → Score transfers if linked to grade item
+
+### Calculations
+- Running totals show current standing
+- Drop lowest/highest scores
+- Bonus points and extra credit
+- Custom formulas for complex schemes
+
+### Student View
+Students see:
+- Individual scores on each item
+- Category totals (if configured)
+- Running course grade
+- Grade scheme (letter grade cutoffs)
+
+### Grade Release
+Control what students see:
+- Hide grades until you're ready to release
+- Hide final grade until end of term
+- Show/hide category statistics
+
+## Gradebook Guides
+
+Get started with these detailed guides:
+
+<Cards>
+  <Card title="Setup Wizard" href="/docs/gradebook/setup-wizard">
+    Use the guided wizard for initial Gradebook configuration
+  </Card>
+  <Card title="Grade Items" href="/docs/gradebook/grade-items">
+    Create and configure individual grade items
+  </Card>
+  <Card title="Entering Grades" href="/docs/gradebook/entering-grades">
+    Enter and modify student grades efficiently
+  </Card>
+  <Card title="Final Grades" href="/docs/gradebook/final-grades">
+    Calculate and release final course grades
+  </Card>
+</Cards>
+
+## Gradebook Workflow
+
+A typical Gradebook workflow:
+
+```
+1. Run Setup Wizard (start of semester)
+   ↓
+2. Create Categories (Homework, Exams, etc.)
+   ↓
+3. Create Grade Items (or let activities auto-create them)
+   ↓
+4. Link Activities to Grade Items
+   ↓
+5. Set Grade Scheme (letter grade cutoffs)
+   ↓
+6. Throughout Semester: Grade Work
+   ↓
+7. Scores Flow to Gradebook Automatically
+   ↓
+8. End of Semester: Calculate Final Grades
+   ↓
+9. Export to Student Information System
+```
+
+## Best Practices
+
+### Initial Setup
+- Use the Setup Wizard for guided configuration
+- Match your syllabus grading breakdown exactly
+- Create all categories before adding grade items
+- Test with a "fake" student to verify calculations
+
+### During the Semester
+- Don't manually override calculated grades unless necessary
+- Use "exempt" for students who shouldn't have an item counted
+- Keep grade items named consistently with their linked activities
+- Check for ungraded items regularly
+
+### Grade Visibility
+- Keep the Final Grade hidden until the end of the term
+- Consider showing running totals so students know where they stand
+- Release grades promptly after assignments are graded
+
+### End of Semester
+- Review all incomplete or missing grades
+- Check final grade calculations carefully
+- Use Final Adjusted Grade only when necessary
+- Export and back up grades before term ends
+
+## Common Questions
+
+**What's the difference between Final Calculated and Final Adjusted Grade?**
+- **Final Calculated**: Automatically computed based on your grading scheme
+- **Final Adjusted**: A manual override you can set (use sparingly)
+
+**Why isn't a grade showing up in the Gradebook?**
+Check that the activity (assignment/quiz) is properly linked to a grade item. If you created them separately, you need to connect them.
+
+**Can students see their grades?**
+Yes, unless you've hidden specific items or the entire Gradebook. Students see their own grades only—not classmates' grades.
+
+**How do I drop the lowest score?**
+Configure this in the category settings. You can drop lowest, drop highest, or keep only the best N scores.
+
+**Can I import grades from Excel?**
+Yes, export the Gradebook to CSV, edit in Excel, then import the updated CSV back into Brightspace.
+
+## Related Guides
+
+- [Creating Assignments](/docs/assignments/creating-assignments) - Link assignments to grade items
+- [Creating Quizzes](/docs/quizzes/creating-quizzes) - Auto-create grade items from quizzes
+- [Creating Rubrics](/docs/rubrics/creating-rubrics) - Use rubrics for consistent grading
+- [Quick Eval](/docs/gradebook/quick-eval) - Efficient grading workflow

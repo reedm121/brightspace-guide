@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -364,7 +365,7 @@
 
 /* Pre element */
 [data-rehype-pretty-code-figure] pre {
-  @apply m-0 overflow-x-auto bg-slate-950 p-4 text-sm leading-relaxed dark:bg-slate-900;
+  @apply m-0 overflow-x-auto bg-slate-950 p-4 text-sm leading-relaxed text-slate-200 dark:bg-slate-900;
 }
 
 /* Code element */
@@ -398,6 +399,18 @@
 /* Inline code from rehype-pretty-code */
 [data-rehype-pretty-code-figure] code[data-language] {
   @apply rounded-none bg-transparent p-0;
+}
+
+/* Inline code styling (not in code blocks) */
+.prose-documentation :not(pre) > code,
+.mdx-content :not(pre) > code {
+  @apply rounded-md bg-slate-200 px-1.5 py-0.5 font-mono text-sm font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-200;
+}
+
+/* Ensure code inside pre blocks uses appropriate colors */
+.prose-documentation pre code,
+.mdx-content pre code {
+  @apply bg-transparent text-slate-200;
 }
 
 /* Anchor link styles for headings */
