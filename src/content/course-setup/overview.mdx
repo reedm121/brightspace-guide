@@ -3,7 +3,7 @@ title: "Content"
 description: "Organize and deliver course materials using Brightspace's Content tool"
 category: "Course Setup"
 order: 0
-tags: ["content", "modules", "course materials", "overview"]
+tags: ["content", "modules", "units", "course materials", "overview"]
 ---
 
 # Content
@@ -20,7 +20,7 @@ The Content tool provides:
 
 | Benefit | Description |
 |---------|-------------|
-| **Organization** | Group materials into logical modules (by week, topic, or unit) |
+| **Organization** | Group materials into logical modules/units (by week, topic, or theme) |
 | **Sequencing** | Control the order students encounter materials |
 | **Conditional Access** | Release content based on dates, grades, or completion of other items |
 | **Tracking** | Monitor which students have accessed which materials |
@@ -36,8 +36,8 @@ Content in Brightspace follows a hierarchical structure:
 
 ```
 Content Area
-└── Module (e.g., "Week 1" or "Unit: Photosynthesis")
-    └── Sub-Module (optional nesting)
+└── Module/Unit (e.g., "Week 1" or "Unit: Photosynthesis")
+    └── Sub-Module/Sub-Unit (optional nesting)
         └── Topics (individual items)
             - Files (PDFs, documents, presentations)
             - HTML pages (text, images, embedded media)
@@ -45,14 +45,18 @@ Content Area
             - Activities (assignments, quizzes, discussions)
 ```
 
-### Modules
-Modules are containers that organize your course materials. Most instructors create modules for each week or unit of the course. Modules can contain:
+<Callout type="info" title="Modules vs. Units — Same Feature, Different Names">
+Brightspace has two content experiences: the **Classic Content Experience** uses "Modules" while the **New Content Experience** uses "Units." Both are functionally identical — the terminology depends on which experience your institution has enabled.
+</Callout>
+
+### Modules/Units
+Modules (or units) are containers that organize your course materials. Most instructors create modules/units for each week or topic of the course. They can contain:
 - Individual content items (files, pages, links)
 - Links to course activities (assignments, quizzes, discussions)
-- Sub-modules for additional organization
+- Sub-modules/sub-units for additional organization
 
 ### Topics
-Topics are the individual items within a module—the actual content students interact with. A topic might be:
+Topics are the individual items within a module/unit—the actual content students interact with. A topic might be:
 - A PDF reading
 - An HTML page you created
 - A link to an external video
@@ -66,13 +70,13 @@ To access the Content tool:
 2. You'll see the Table of Contents on the left and content items on the right
 
 <Callout type="info" title="Navigation Tip">
-The **Table of Contents** sidebar lets you quickly navigate between modules. Click any module name to jump directly to it.
+The **Table of Contents** sidebar lets you quickly navigate between modules/units. Click any module/unit name to jump directly to it.
 </Callout>
 
 ## Key Features
 
 ### Multiple Upload Methods
-- Drag and drop files directly into modules
+- Drag and drop files directly into modules/units
 - Upload from your computer
 - Link from OneDrive, Google Drive, or other cloud storage
 - Create HTML content directly in Brightspace
@@ -99,7 +103,7 @@ Control when content becomes available:
 Get started with these detailed guides:
 
 <Cards>
-  <Card title="Creating Modules" href="/docs/course-setup/creating-modules">
+  <Card title="Creating Modules/Units" href="/docs/course-setup/creating-modules">
     Set up the organizational structure for your course
   </Card>
   <Card title="Uploading Files" href="/docs/course-setup/uploading-files">
@@ -125,13 +129,13 @@ Get started with these detailed guides:
 ## Best Practices
 
 ### Organizing Your Course
-- Use a consistent naming convention for modules (e.g., "Week 1: Introduction" or "Module 1: Foundations")
-- Place the most important items at the top of each module
-- Include a brief overview or instructions at the start of each module
-- Don't create too many levels of sub-modules—2 levels deep is usually sufficient
+- Use a consistent naming convention for modules/units (e.g., "Week 1: Introduction" or "Module 1: Foundations")
+- Place the most important items at the top of each module/unit
+- Include a brief overview or instructions at the start of each module/unit
+- Don't create too many levels of sub-modules/sub-units—2 levels deep is usually sufficient
 
 ### Content Visibility
-- Hide modules that aren't ready for students yet
+- Hide modules/units that aren't ready for students yet
 - Use the "Draft" status for content you're still developing
 - Preview your course as a student to verify what they see
 
@@ -148,8 +152,8 @@ No. Hidden modules and topics are completely invisible to students. Only items s
 **What's the difference between hiding content and using release conditions?**
 Hiding content makes it invisible. Release conditions can either hide content OR show it as locked (visible but inaccessible) until conditions are met.
 
-**Can I reorder modules after creating them?**
-Yes. Drag and drop modules in the Table of Contents to reorder them, or use the "Reorder" option from the module's context menu.
+**Can I reorder modules/units after creating them?**
+Yes. Drag and drop modules/units in the Table of Contents to reorder them, or use the "Reorder" option from the module/unit's context menu.
 
 **How do I copy content from another course?**
 Use the Import/Export feature in Course Admin, or copy individual items using the "Copy" option. See the Course Management guides for details.
