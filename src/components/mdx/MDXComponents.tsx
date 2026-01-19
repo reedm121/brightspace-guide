@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import { ImageLightbox } from "./ImageLightbox";
 
 // =============================================================================
 // CALLOUT COMPONENT
@@ -506,18 +507,11 @@ export const mdxComponents = {
     />
   ),
 
-  // Images
+  // Images with lightbox
   img: ({
     src,
     alt,
-    ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className="my-6 rounded-lg border border-slate-200 shadow-sm dark:border-slate-700"
-      src={src}
-      alt={alt || ""}
-      {...props}
-    />
+    <ImageLightbox src={typeof src === "string" ? src : undefined} alt={alt} />
   ),
 };

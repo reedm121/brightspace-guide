@@ -222,11 +222,11 @@ export async function generateChatResponse(
   // Search for relevant documents
   const searchResults = await searchDocuments(query, 5);
 
-  // Build context from search results
+  // Build context from search results - include URLs so AI can link to them
   const context = searchResults
     .map(
       (result, i) =>
-        `[Source ${i + 1}: ${result.metadata.title}]\n${result.content}`
+        `[Source ${i + 1}: ${result.metadata.title}] (URL: ${result.metadata.url})\n${result.content}`
     )
     .join("\n\n---\n\n");
 
@@ -236,14 +236,18 @@ export async function generateChatResponse(
 Your role:
 - Answer questions about Brightspace clearly and accurately
 - Provide step-by-step instructions when appropriate
-- Do NOT include source citations in your response - sources are shown separately in the UI
+- **IMPORTANT: Always include links to relevant guides in your response using markdown format: [Guide Title](url)**
+  - Each source below includes a URL - use these URLs to create helpful links
+  - Example: "For more details, check out [Creating Quizzes](/docs/quizzes/creating-quizzes)."
+  - Include at least one link in every response when relevant documentation exists
+  - Place links naturally within your response, such as "Learn more in our [Assignment Submissions guide](/docs/assignments/submissions)"
 - If you're unsure or the information isn't in the provided context, say "I couldn't find this in our guides" and suggest contacting IT support
 - Never make up information - accuracy is critical
 - Keep responses concise and actionable
 
 ${currentPage ? `The user is currently viewing: ${currentPage}` : ""}
 
-Use the following documentation to answer the question:
+Use the following documentation to answer the question. Each source includes a URL you should link to:
 
 ${context}`;
 

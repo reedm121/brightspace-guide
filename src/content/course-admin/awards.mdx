@@ -1,0 +1,335 @@
+---
+title: "Awards and Badges"
+description: "Motivate students with digital badges and certificates in Brightspace"
+category: "Course Admin"
+order: 1
+tags: ["awards", "badges", "certificates", "gamification", "motivation"]
+---
+
+# Awards and Badges
+
+## Overview
+
+The **Awards** tool in Brightspace allows you to create digital badges and certificates to recognize student achievements. Awards can be granted automatically based on conditions (like completing a module or achieving a grade threshold) or manually by instructors.
+
+![Awards Tool](/images/docs/course-setup/awards-main.png)
+*The Awards tool showing available badges with their icons, names, and release conditions.*
+
+<Callout type="info" title="Tool Availability">
+The Awards tool may not be enabled at all institutions. If you don't see Awards in Course Admin, contact your Brightspace administrator.
+</Callout>
+
+## Why Use Awards?
+
+Awards and badges tap into gamification principles to increase student motivation:
+
+| Benefit | Description |
+|---------|-------------|
+| **Recognition** | Acknowledge student accomplishments publicly or privately |
+| **Motivation** | Give students something to work toward beyond grades |
+| **Progress Markers** | Help students see their advancement through the course |
+| **Engagement** | Add an element of fun and achievement to learning |
+| **Completion Incentive** | Encourage students to complete optional content |
+
+<Callout type="tip" title="Research-Backed">
+Studies show that digital badges can increase student engagement and motivation, particularly for completing optional or supplemental materials. They're most effective when tied to meaningful achievements.
+</Callout>
+
+## Types of Awards
+
+Brightspace supports two types of awards:
+
+### Badges
+
+- **Visual icons** displayed on student profiles
+- Can be earned multiple times (or limited to once)
+- Typically represent smaller achievements
+- Examples: "Discussion Champion," "Perfect Quiz Score," "Early Bird Submitter"
+
+### Certificates
+
+- **Formal documents** that can be printed or downloaded
+- Usually awarded once for significant achievements
+- Can include customized text and student information
+- Examples: "Course Completion Certificate," "Honor Roll," "Excellence Award"
+
+## Accessing the Awards Tool
+
+To access Awards:
+
+1. Go to **Course Admin** in your course navbar
+2. Under the **Learner Management** or **Student Success** section, click **Awards**
+3. You'll see a list of available awards and tools to create new ones
+
+## Creating a Badge
+
+<Steps>
+<Step title="Open the Awards Tool">
+Navigate to **Course Admin** > **Awards** and click **Add Award to Course** or **Create Award**.
+</Step>
+
+<Step title="Choose Badge Type">
+Select **Badge** as the award type.
+</Step>
+
+<Step title="Enter Badge Details">
+Configure the badge settings:
+
+- **Name**: A clear, descriptive name (e.g., "Discussion Master")
+- **Description**: Explain what the badge represents and how to earn it
+- **Availability**: Set whether the badge is available (visible to students)
+</Step>
+
+<Step title="Upload or Select an Icon">
+Choose an image for the badge:
+
+- **Upload**: Use your own image (recommended size: 100x100 pixels, PNG or JPG)
+- **Select from library**: Choose from built-in badge icons (if available)
+
+The icon should be visually distinctive and relate to the achievement.
+</Step>
+
+<Step title="Set Award Criteria">
+Choose how the badge is earned:
+
+- **Manual**: You award the badge to students individually
+- **Automatic (Release Conditions)**: Badge is awarded when conditions are met
+
+For automatic awards, click **Add Release Condition** and configure criteria like:
+- Completed all content in a module
+- Achieved a grade threshold
+- Submitted an assignment
+- Posted in a discussion
+</Step>
+
+<Step title="Configure Additional Settings">
+- **Credits** (optional): Assign a point value if using a badge economy
+- **Expiry** (optional): Set if the badge should expire after a certain time
+- **Evidence** (optional): Require evidence for manual awards
+</Step>
+
+<Step title="Save the Badge">
+Click **Save** to create the badge. It will appear in your course's award list.
+</Step>
+</Steps>
+
+## Creating a Certificate
+
+<Steps>
+<Step title="Open the Awards Tool">
+Navigate to **Course Admin** > **Awards**.
+</Step>
+
+<Step title="Choose Certificate Type">
+Click **Add Award** and select **Certificate**.
+</Step>
+
+<Step title="Enter Certificate Details">
+- **Name**: The certificate title (e.g., "Course Completion Certificate")
+- **Description**: What the certificate recognizes
+</Step>
+
+<Step title="Design the Certificate">
+Customize the certificate appearance:
+
+- **Template**: Select from available templates or create a custom design
+- **Logo**: Add your institution or course logo
+- **Text**: Customize the certificate text using merge fields:
+  - `{FirstName}` - Student's first name
+  - `{LastName}` - Student's last name
+  - `{Date}` - Date awarded
+  - `{CourseName}` - Course title
+
+Example text:
+```
+This certifies that {FirstName} {LastName} has successfully completed
+{CourseName} on {Date}.
+```
+</Step>
+
+<Step title="Set Award Criteria">
+Configure when the certificate is awarded:
+
+- **Manual**: You issue certificates individually
+- **Automatic**: Use release conditions (e.g., final grade ≥ 70%)
+</Step>
+
+<Step title="Save the Certificate">
+Click **Save** to create the certificate.
+</Step>
+</Steps>
+
+## Setting Up Release Conditions for Awards
+
+Automatic awards use release conditions to determine when students earn them.
+
+### Common Release Condition Examples
+
+| Achievement | Release Condition |
+|-------------|-------------------|
+| Complete all readings | Content topic visited for all items in Module X |
+| Pass the course | Final calculated grade ≥ passing threshold |
+| Perfect quiz score | Quiz score = 100% |
+| Submit all assignments | Assignment submitted for all required assignments |
+| Active discussant | Post count in discussion ≥ specified number |
+
+### Creating Compound Conditions
+
+You can require multiple conditions using AND/OR logic:
+
+- **All conditions (AND)**: Student must meet every condition
+- **Any condition (OR)**: Student must meet at least one condition
+
+Example: "Earn the 'Course Champion' badge by completing ALL modules AND achieving a final grade of 85% or higher."
+
+<Callout type="warning" title="Condition Timing">
+Automatic awards are evaluated when students meet conditions. There may be a slight delay between meeting conditions and receiving the award. Awards are not retroactive—students must meet conditions after the award is created.
+</Callout>
+
+## Awarding Badges Manually
+
+For awards without automatic conditions, you grant them manually:
+
+<Steps>
+<Step title="Open the Award">
+In the Awards tool, click on the badge or certificate you want to award.
+</Step>
+
+<Step title="View Eligible Students">
+Click **Award** or **Issue Award** to see the list of students.
+</Step>
+
+<Step title="Select Recipients">
+Check the boxes next to students who should receive the award.
+</Step>
+
+<Step title="Add Evidence (Optional)">
+If required, add notes explaining why the student earned the award.
+</Step>
+
+<Step title="Issue the Award">
+Click **Award** or **Issue** to grant the badge/certificate to selected students.
+</Step>
+</Steps>
+
+## Managing Awarded Badges
+
+### Viewing Who Has Earned Awards
+
+1. Open the Awards tool
+2. Click on an award to see its details
+3. View the list of students who have earned it
+4. See the date each student earned the award
+
+### Revoking an Award
+
+If an award was given in error:
+
+1. Open the award details
+2. Find the student in the awarded list
+3. Click **Revoke** or the delete icon
+4. Confirm the revocation
+
+<Callout type="info" title="Revocation Visibility">
+Students are typically not notified when an award is revoked, but the badge will disappear from their profile.
+</Callout>
+
+## Student View of Awards
+
+Students can view their awards in several places:
+
+### Awards Page
+Students can access an Awards page showing:
+- Badges they've earned
+- Badges available in the course
+- Progress toward earning badges
+- Certificates they can download
+
+### Profile Display
+Earned badges may appear on student profiles (depending on institution settings), allowing peers to see achievements.
+
+### Notifications
+Students may receive notifications when they earn a badge, encouraging them to continue engaging with the course.
+
+## Best Practices
+
+### Designing Effective Awards
+
+- **Make them meaningful**: Award badges for genuine achievements, not trivial tasks
+- **Be specific**: "Completed Week 3 Module" is better than "Participation"
+- **Use clear icons**: Choose visuals that represent the achievement
+- **Write good descriptions**: Help students understand what the badge represents
+
+### Strategic Implementation
+
+- **Start small**: Begin with a few key awards rather than overwhelming students
+- **Balance effort and reward**: Higher achievements should have more prestigious awards
+- **Consider optional content**: Badges work well for incentivizing supplemental materials
+- **Communicate the system**: Explain to students what awards are available and how to earn them
+
+### What to Award
+
+**Good candidates for badges:**
+- Module completion
+- Perfect scores on assessments
+- Active discussion participation
+- Submitting work early
+- Completing optional enrichment content
+- Peer helping (if you can track it)
+
+**Good candidates for certificates:**
+- Course completion
+- Achieving honors/distinction
+- Completing a certificate program
+- Significant milestones
+
+<Callout type="tip" title="Student Input">
+Consider asking students what achievements they'd like recognized. Awards are most motivating when students value earning them.
+</Callout>
+
+## Integrating Awards with Course Design
+
+### Gamification Strategy
+
+If using multiple awards, consider a cohesive system:
+
+1. **Tiered badges**: Bronze, Silver, Gold levels for progressive achievement
+2. **Category badges**: Different badge types for different skills (writing, analysis, collaboration)
+3. **Unlockable content**: Use badges as release conditions for bonus content
+4. **Leaderboard**: Some institutions enable badge leaderboards (check privacy implications)
+
+### Combining with Other Tools
+
+- **Release Conditions**: Unlock content when students earn certain badges
+- **Intelligent Agents**: Send congratulations when badges are earned
+- **Gradebook**: While badges don't directly affect grades, you can create a participation grade that considers badge earning
+- **Class Progress**: Monitor which students are engaging with badge-worthy activities
+
+## Common Issues
+
+### Award Not Being Granted Automatically
+
+- Verify release conditions are set correctly
+- Check that the award is set to "Available"
+- Ensure the student hasn't already earned the award (if it's one-time only)
+- Release conditions may have a processing delay
+
+### Students Can't See Awards
+
+- Confirm the Awards tool is available to students in your course
+- Check that specific awards are set to "Available"
+- Verify the Awards page or widget is accessible from student navigation
+
+### Certificate Not Printing Correctly
+
+- Check the certificate template for proper formatting
+- Verify merge fields are correctly formatted
+- Test by awarding yourself (if possible) or previewing the certificate
+- Try a different browser if display issues persist
+
+## Related Guides
+
+- [Release Conditions](/docs/course-setup/release-conditions) - Set up automatic award criteria
+- [Intelligent Agents](/docs/communication/intelligent-agents) - Automate congratulations messages
+- [Course Admin Overview](/docs/course-admin/overview) - Other administrative tools
+- [Class Progress](/docs/analytics/class-progress) - Track student engagement

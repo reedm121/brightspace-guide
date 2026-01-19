@@ -27,6 +27,7 @@ export const navigation: NavItem[] = [
       { title: "Manage Files", href: "/docs/course-setup/manage-files" },
       { title: "Release Conditions", href: "/docs/course-setup/release-conditions" },
       { title: "Learning Paths", href: "/docs/course-setup/learning-paths" },
+      { title: "Checklists", href: "/docs/course-setup/checklists" },
     ],
   },
   {
@@ -53,6 +54,7 @@ export const navigation: NavItem[] = [
       { title: "Question Library", href: "/docs/quizzes/question-library" },
       { title: "Quiz Settings", href: "/docs/quizzes/quiz-settings" },
       { title: "Grading Quizzes", href: "/docs/quizzes/grading-quizzes" },
+      { title: "Surveys", href: "/docs/quizzes/surveys" },
     ],
   },
   {
@@ -73,6 +75,7 @@ export const navigation: NavItem[] = [
     icon: "users-round",
     children: [
       { title: "Overview", href: "/docs/classlist/overview" },
+      { title: "Attendance", href: "/docs/classlist/attendance" },
     ],
   },
   {
@@ -106,6 +109,8 @@ export const navigation: NavItem[] = [
       { title: "Copying Courses", href: "/docs/course-management/copying-courses" },
       { title: "Course Templates", href: "/docs/course-management/course-templates" },
       { title: "Backup & Restore", href: "/docs/course-management/backup-restore" },
+      { title: "Awards & Badges", href: "/docs/course-admin/awards" },
+      { title: "Learning Outcomes", href: "/docs/course-admin/learning-outcomes" },
     ],
   },
   {

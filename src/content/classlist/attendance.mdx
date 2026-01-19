@@ -1,0 +1,309 @@
+---
+title: "Attendance Tracking"
+description: "Track and manage student attendance in your Brightspace course"
+category: "Classlist"
+order: 1
+tags: ["attendance", "classlist", "tracking", "roster"]
+---
+
+# Attendance Tracking
+
+## Overview
+
+The **Attendance** tool in Brightspace allows you to track student attendance for face-to-face, hybrid, or synchronous online classes. You can create attendance registers, record attendance for each class session, and export attendance data for reporting purposes.
+
+![Attendance Tool](/images/docs/groups/attendance-main.png)
+*The Attendance tool showing attendance registers with session dates, attendance status icons, and overall attendance percentages.*
+
+<Callout type="info" title="Tool Availability">
+The Attendance tool may not be enabled at all institutions. If you do not see Attendance in your course, contact your Brightspace administrator to request it be enabled.
+</Callout>
+
+## Why Track Attendance?
+
+Attendance tracking serves several purposes:
+
+| Purpose | Description |
+|---------|-------------|
+| **Participation Grades** | Include attendance as part of students overall grades |
+| **Early Intervention** | Identify students missing class before they fall too far behind |
+| **Compliance** | Meet institutional or financial aid attendance requirements |
+| **Documentation** | Keep records for academic appeals or grade disputes |
+| **Engagement Insights** | Correlate attendance with course performance |
+
+## Accessing Attendance
+
+To access the Attendance tool:
+
+1. From your course navbar, look for **Attendance** (may be under **Tools** or **Course Admin**)
+2. If you do not see it in the navbar, go to **Course Admin** and look for **Attendance**
+3. Click to open the Attendance Register
+
+<Callout type="tip" title="Add to Navbar">
+If you use Attendance frequently, ask your administrator to add it directly to your course navbar for quick access.
+</Callout>
+
+## Creating an Attendance Register
+
+Before you can take attendance, you need to create an attendance register (also called an attendance scheme).
+
+<Steps>
+<Step title="Access Attendance Settings">
+From the Attendance tool, click **Attendance Registers** or **New Register** to create a new register.
+</Step>
+
+<Step title="Name Your Register">
+Enter a descriptive name for the register (e.g., Fall 2024 Attendance or Lab Section Attendance). You can have multiple registers if needed (e.g., one for lecture, one for lab).
+</Step>
+
+<Step title="Define Attendance Statuses">
+Configure the status options students can be marked with:
+
+| Default Status | Abbreviation | Typical Use |
+|----------------|--------------|-------------|
+| **Present** | P | Student attended the session |
+| **Absent** | A | Student did not attend |
+| **Late** | L | Student arrived late |
+| **Excused** | E | Absence is excused (documentation provided) |
+
+You can customize these statuses, add new ones, or change the abbreviations and assigned percentages.
+</Step>
+
+<Step title="Set Percentage Values">
+Assign a percentage value to each status that reflects how much credit students receive:
+- Present: 100%
+- Late: 75% or 50%
+- Excused: 100% (counts as present)
+- Absent: 0%
+
+These percentages are used to calculate the overall attendance score.
+</Step>
+
+<Step title="Configure Cause for Concern">
+Set a threshold for when students should be flagged as at-risk:
+- Example: Flag students whose attendance falls below 80%
+- This helps you quickly identify students who may need intervention
+</Step>
+
+<Step title="Save the Register">
+Click **Save** to create your attendance register.
+</Step>
+</Steps>
+
+## Adding Attendance Sessions
+
+After creating a register, add sessions for each class meeting.
+
+<Steps>
+<Step title="Open Your Register">
+Click on your attendance register to open it.
+</Step>
+
+<Step title="Add a New Session">
+Click **Add Session** or the **+** icon to create a new session.
+</Step>
+
+<Step title="Enter Session Details">
+- **Session Name**: Give the session a name (e.g., Week 1 - Monday or Sept 5 Lecture)
+- **Date**: Enter the date of the class session
+- **Description** (optional): Add notes about what was covered
+</Step>
+
+<Step title="Save the Session">
+Click **Save**. The session will appear as a column in your attendance grid.
+</Step>
+</Steps>
+
+### Bulk Session Creation
+
+For courses with regular meeting times, you can create multiple sessions at once:
+
+1. Click **Bulk Create Sessions** (if available)
+2. Select the start and end dates of your term
+3. Choose which days of the week the class meets
+4. Enter a naming pattern (e.g., Week n or use dates)
+5. Click **Create** to generate all sessions at once
+
+<Callout type="warning" title="Holiday Adjustments">
+Bulk-created sessions do not account for holidays or breaks. Review and delete sessions that fall on days when class will not meet.
+</Callout>
+
+## Taking Attendance
+
+Once you have sessions set up, you can record attendance for each class.
+
+<Steps>
+<Step title="Open the Attendance Tool">
+Navigate to **Attendance** in your course.
+</Step>
+
+<Step title="Select the Session">
+Find today's session in the attendance grid or click on the session column.
+</Step>
+
+<Step title="Mark Each Student">
+For each student, click the status dropdown or icon to mark their attendance:
+- **P** = Present
+- **A** = Absent
+- **L** = Late
+- **E** = Excused
+
+You can also use keyboard shortcuts to speed up entry.
+</Step>
+
+<Step title="Add Notes (Optional)">
+Click on a student's attendance cell to add notes (e.g., Arrived 15 minutes late or Medical documentation provided).
+</Step>
+
+<Step title="Save Your Changes">
+Attendance is typically auto-saved, but click **Save** if you see that option to ensure your entries are recorded.
+</Step>
+</Steps>
+
+### Quick Attendance Entry
+
+For faster attendance taking:
+
+1. Click **Set Status for All Users** at the top of a session column
+2. Choose the default status (e.g., Present)
+3. All students are marked with that status
+4. Go back and change only the exceptions (absences, late arrivals)
+
+This is much faster than marking each student individually when most students are present.
+
+## Viewing Attendance Data
+
+### Attendance Grid View
+
+The main attendance view shows:
+- **Rows**: Each student in your classlist
+- **Columns**: Each attendance session
+- **Cells**: Status for each student/session combination
+- **Summary Column**: Overall attendance percentage for each student
+
+### Filtering and Sorting
+
+- **Sort by name**: Click the Name column header
+- **Sort by attendance**: Click the attendance percentage column
+- **Filter by status**: Show only students with specific attendance patterns
+- **Filter by concern**: Show only students below the cause-for-concern threshold
+
+### Individual Student View
+
+Click a student name to see:
+- Their attendance for all sessions
+- Overall attendance percentage
+- Any notes associated with their attendance
+- Trend over time
+
+## Connecting Attendance to Grades
+
+You can link attendance to your gradebook so it counts toward students final grades.
+
+<Steps>
+<Step title="Create a Grade Item">
+In the Gradebook, create a new grade item for attendance (e.g., Class Participation or Attendance).
+</Step>
+
+<Step title="Link to Attendance Register">
+When creating or editing the attendance register:
+1. Look for the **Grade Item** option
+2. Select the grade item you created
+3. The attendance percentage will automatically sync to the gradebook
+</Step>
+
+<Step title="Configure Calculation">
+Decide how attendance translates to points:
+- **Direct percentage**: 95% attendance = 95/100 points
+- **Tiered grading**: Set thresholds (e.g., 90%+ attendance = full credit)
+</Step>
+</Steps>
+
+<Callout type="warning" title="Sync Timing">
+Attendance grades may not sync to the gradebook in real-time. Check periodically to ensure the sync is working, especially before final grade submission.
+</Callout>
+
+## Exporting Attendance Data
+
+Export attendance records for reporting or backup:
+
+<Steps>
+<Step title="Open Attendance">
+Navigate to the Attendance tool in your course.
+</Step>
+
+<Step title="Select Export">
+Click **Export** or look for an export option in the menu.
+</Step>
+
+<Step title="Choose Format">
+Select your preferred format:
+- **CSV**: For spreadsheet programs (Excel, Google Sheets)
+- **PDF**: For printed reports
+</Step>
+
+<Step title="Select Data Range">
+Choose which sessions to include:
+- All sessions
+- Specific date range
+- Selected sessions only
+</Step>
+
+<Step title="Download the File">
+Click **Export** or **Download** to save the file to your computer.
+</Step>
+</Steps>
+
+## Best Practices
+
+### For Accurate Tracking
+
+- Take attendance at a consistent time each class (beginning vs. end)
+- Use the Late status rather than marking late arrivals as absent
+- Add notes for unusual circumstances
+- Back up your attendance data periodically by exporting
+
+### For Student Success
+
+- Review attendance weekly to identify at-risk students
+- Reach out to students with multiple absences early
+- Consider using Intelligent Agents to automate absence notifications
+- Be flexible with excused absences for documented reasons
+
+### For Grading Fairness
+
+- Clearly communicate your attendance policy in the syllabus
+- Be consistent in how you apply the policy
+- Have a process for handling excused absences
+- Consider whether attendance should affect grades or just be tracked
+
+<Callout type="tip" title="Combine with Class Progress">
+Use attendance data alongside Class Progress analytics to get a fuller picture of student engagement. A student logging into Brightspace but missing class (or vice versa) may need different types of support.
+</Callout>
+
+## Common Issues
+
+### Students Not Appearing in Attendance
+
+- Verify the student is enrolled in the course
+- Check if they were added after the register was created
+- Refresh the attendance page
+
+### Attendance Not Syncing to Gradebook
+
+- Verify the grade item is linked to the register
+- Check that the grade item point value matches expectations
+- Wait a few minutes and refresh, as sync may be delayed
+
+### Missing Sessions
+
+- Sessions may have been accidentally deleted
+- Check if you are viewing the correct attendance register
+- Recreate missing sessions and re-enter attendance data
+
+## Related Guides
+
+- [Classlist Overview](/docs/classlist/overview) - View and manage your course roster
+- [Class Progress](/docs/analytics/class-progress) - Track student engagement beyond attendance
+- [Intelligent Agents](/docs/communication/intelligent-agents) - Automate absence notifications
+- [Grade Items](/docs/gradebook/grade-items) - Connect attendance to grades
